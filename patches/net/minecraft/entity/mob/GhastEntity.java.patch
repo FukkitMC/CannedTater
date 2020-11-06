@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/GhastEntity.java
++++ b/net/minecraft/entity/mob/GhastEntity.java
+@@ -296,3 +296,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

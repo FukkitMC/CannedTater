@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/command/TimeCommand.java
++++ b/net/minecraft/server/command/TimeCommand.java
+@@ -67,3 +67,5 @@
+       return i;
+    }
+ }
++
++// Fukkit Marker

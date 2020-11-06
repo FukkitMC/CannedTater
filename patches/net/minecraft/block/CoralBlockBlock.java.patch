@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/CoralBlockBlock.java
++++ b/net/minecraft/block/CoralBlockBlock.java
+@@ -58,3 +58,5 @@
+       return this.getDefaultState();
+    }
+ }
++
++// Fukkit Marker

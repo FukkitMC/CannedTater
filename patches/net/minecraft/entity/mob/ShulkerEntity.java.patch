@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/ShulkerEntity.java
++++ b/net/minecraft/entity/mob/ShulkerEntity.java
+@@ -577,3 +577,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

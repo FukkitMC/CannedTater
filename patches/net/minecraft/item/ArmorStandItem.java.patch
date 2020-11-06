@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/ArmorStandItem.java
++++ b/net/minecraft/item/ArmorStandItem.java
+@@ -73,3 +73,5 @@
+       stand.setBodyRotation(eulerAngle2);
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/ChunkSerializer.java
++++ b/net/minecraft/world/ChunkSerializer.java
+@@ -512,3 +512,5 @@
+       return listTag;
+    }
+ }
++
++// Fukkit Marker

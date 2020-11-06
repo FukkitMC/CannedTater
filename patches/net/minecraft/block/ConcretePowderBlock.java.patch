@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/ConcretePowderBlock.java
++++ b/net/minecraft/block/ConcretePowderBlock.java
+@@ -72,3 +72,5 @@
+       return state.getTopMaterialColor(world, pos).color;
+    }
+ }
++
++// Fukkit Marker

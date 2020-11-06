@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/ArmorItem.java
++++ b/net/minecraft/item/ArmorItem.java
+@@ -117,3 +117,5 @@
+       return this.toughness;
+    }
+ }
++
++// Fukkit Marker

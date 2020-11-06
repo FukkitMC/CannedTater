@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/InfestedBlock.java
++++ b/net/minecraft/block/InfestedBlock.java
+@@ -63,3 +63,5 @@
+       return ((Block)REGULAR_TO_INFESTED.get(regularBlock)).getDefaultState();
+    }
+ }
++
++// Fukkit Marker

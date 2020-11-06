@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/CartographyTableScreenHandler.java
++++ b/net/minecraft/screen/CartographyTableScreenHandler.java
+@@ -202,3 +202,5 @@
+       });
+    }
+ }
++
++// Fukkit Marker

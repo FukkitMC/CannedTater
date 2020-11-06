@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/passive/PandaEntity.java
++++ b/net/minecraft/entity/passive/PandaEntity.java
+@@ -1101,3 +1101,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

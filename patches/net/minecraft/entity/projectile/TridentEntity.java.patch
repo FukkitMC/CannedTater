@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/projectile/TridentEntity.java
++++ b/net/minecraft/entity/projectile/TridentEntity.java
+@@ -209,3 +209,5 @@
+       ENCHANTED = DataTracker.registerData(TridentEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    }
+ }
++
++// Fukkit Marker

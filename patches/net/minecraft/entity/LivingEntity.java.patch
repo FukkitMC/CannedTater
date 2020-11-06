@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/LivingEntity.java
++++ b/net/minecraft/entity/LivingEntity.java
+@@ -3178,3 +3178,5 @@
+       SLEEPING_DIMENSIONS = EntityDimensions.fixed(0.2F, 0.2F);
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/entity/AbstractFurnaceBlockEntity.java
++++ b/net/minecraft/block/entity/AbstractFurnaceBlockEntity.java
+@@ -499,3 +499,5 @@
+ 
+    }
+ }
++
++// Fukkit Marker

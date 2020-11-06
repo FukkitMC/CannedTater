@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/passive/TurtleEntity.java
++++ b/net/minecraft/entity/passive/TurtleEntity.java
+@@ -719,3 +719,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

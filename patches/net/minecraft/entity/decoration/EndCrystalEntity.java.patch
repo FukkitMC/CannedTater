@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/decoration/EndCrystalEntity.java
++++ b/net/minecraft/entity/decoration/EndCrystalEntity.java
+@@ -146,3 +146,5 @@
+       SHOW_BOTTOM = DataTracker.registerData(EndCrystalEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    }
+ }
++
++// Fukkit Marker

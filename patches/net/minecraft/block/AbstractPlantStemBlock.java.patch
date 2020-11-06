@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/AbstractPlantStemBlock.java
++++ b/net/minecraft/block/AbstractPlantStemBlock.java
+@@ -94,3 +94,5 @@
+       AGE = Properties.AGE_25;
+    }
+ }
++
++// Fukkit Marker

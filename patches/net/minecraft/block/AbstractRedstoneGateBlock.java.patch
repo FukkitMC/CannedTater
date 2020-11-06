@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/AbstractRedstoneGateBlock.java
++++ b/net/minecraft/block/AbstractRedstoneGateBlock.java
+@@ -193,3 +193,5 @@
+       POWERED = Properties.POWERED;
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/command/argument/BlockArgumentParser.java
++++ b/net/minecraft/command/argument/BlockArgumentParser.java
+@@ -527,3 +527,5 @@
+       return this.tagProperties;
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/EntityType.java
++++ b/net/minecraft/entity/EntityType.java
+@@ -729,3 +729,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/AnvilScreenHandler.java
++++ b/net/minecraft/screen/AnvilScreenHandler.java
+@@ -283,3 +283,5 @@
+       return this.levelCost.get();
+    }
+ }
++
++// Fukkit Marker

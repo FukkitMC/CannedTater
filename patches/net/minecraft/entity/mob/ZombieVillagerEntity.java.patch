@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/ZombieVillagerEntity.java
++++ b/net/minecraft/entity/mob/ZombieVillagerEntity.java
+@@ -315,3 +315,5 @@
+       VILLAGER_DATA = DataTracker.registerData(ZombieVillagerEntity.class, TrackedDataHandlerRegistry.VILLAGER_DATA);
+    }
+ }
++
++// Fukkit Marker

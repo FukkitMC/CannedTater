@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/FireChargeItem.java
++++ b/net/minecraft/item/FireChargeItem.java
+@@ -45,3 +45,5 @@
+       world.playSound((PlayerEntity)null, pos, SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.BLOCKS, 1.0F, (RANDOM.nextFloat() - RANDOM.nextFloat()) * 0.2F + 1.0F);
+    }
+ }
++
++// Fukkit Marker

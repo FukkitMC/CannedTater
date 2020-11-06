@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/gen/PillagerSpawner.java
++++ b/net/minecraft/world/gen/PillagerSpawner.java
+@@ -114,3 +114,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

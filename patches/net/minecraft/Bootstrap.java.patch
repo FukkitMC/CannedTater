@@ -1,0 +1,8 @@
+--- a/net/minecraft/Bootstrap.java
++++ b/net/minecraft/Bootstrap.java
+@@ -127,3 +127,5 @@
+       LOGGER = LogManager.getLogger();
+    }
+ }
++
++// Fukkit Marker

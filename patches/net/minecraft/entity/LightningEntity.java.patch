@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/LightningEntity.java
++++ b/net/minecraft/entity/LightningEntity.java
+@@ -133,3 +133,5 @@
+       return new EntitySpawnS2CPacket(this);
+    }
+ }
++
++// Fukkit Marker

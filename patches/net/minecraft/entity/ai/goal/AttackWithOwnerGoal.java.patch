@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/ai/goal/AttackWithOwnerGoal.java
++++ b/net/minecraft/entity/ai/goal/AttackWithOwnerGoal.java
+@@ -41,3 +41,5 @@
+       super.start();
+    }
+ }
++
++// Fukkit Marker

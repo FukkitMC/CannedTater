@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/BanEntry.java
++++ b/net/minecraft/server/BanEntry.java
+@@ -71,3 +71,5 @@
+       json.addProperty("reason", this.reason);
+    }
+ }
++
++// Fukkit Marker

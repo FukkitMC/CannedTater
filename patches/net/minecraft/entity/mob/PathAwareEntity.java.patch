@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/PathAwareEntity.java
++++ b/net/minecraft/entity/mob/PathAwareEntity.java
+@@ -72,3 +72,5 @@
+    protected void updateForLeashLength(float leashLength) {
+    }
+ }
++
++// Fukkit Marker

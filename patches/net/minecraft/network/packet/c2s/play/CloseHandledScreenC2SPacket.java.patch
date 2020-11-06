@@ -1,0 +1,8 @@
+--- a/net/minecraft/network/packet/c2s/play/CloseHandledScreenC2SPacket.java
++++ b/net/minecraft/network/packet/c2s/play/CloseHandledScreenC2SPacket.java
+@@ -30,3 +30,5 @@
+       buf.writeByte(this.syncId);
+    }
+ }
++
++// Fukkit Marker

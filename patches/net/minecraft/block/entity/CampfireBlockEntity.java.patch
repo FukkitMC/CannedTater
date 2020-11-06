@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/entity/CampfireBlockEntity.java
++++ b/net/minecraft/block/entity/CampfireBlockEntity.java
+@@ -190,3 +190,5 @@
+ 
+    }
+ }
++
++// Fukkit Marker

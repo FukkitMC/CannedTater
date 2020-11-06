@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/MushroomPlantBlock.java
++++ b/net/minecraft/block/MushroomPlantBlock.java
+@@ -104,3 +104,5 @@
+       this.trySpawningBigMushroom(world, pos, state, random);
+    }
+ }
++
++// Fukkit Marker

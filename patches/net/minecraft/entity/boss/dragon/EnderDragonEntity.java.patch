@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/boss/dragon/EnderDragonEntity.java
++++ b/net/minecraft/entity/boss/dragon/EnderDragonEntity.java
+@@ -878,3 +878,5 @@
+       CLOSE_PLAYER_PREDICATE = (new TargetPredicate()).setBaseMaxDistance(64.0D);
+    }
+ }
++
++// Fukkit Marker

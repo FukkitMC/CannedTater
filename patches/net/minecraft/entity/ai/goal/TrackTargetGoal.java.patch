@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/ai/goal/TrackTargetGoal.java
++++ b/net/minecraft/entity/ai/goal/TrackTargetGoal.java
+@@ -135,3 +135,5 @@
+       return this;
+    }
+ }
++
++// Fukkit Marker

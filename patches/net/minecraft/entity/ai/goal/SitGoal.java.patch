@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/ai/goal/SitGoal.java
++++ b/net/minecraft/entity/ai/goal/SitGoal.java
+@@ -42,3 +42,5 @@
+       this.tameable.setInSittingPose(false);
+    }
+ }
++
++// Fukkit Marker

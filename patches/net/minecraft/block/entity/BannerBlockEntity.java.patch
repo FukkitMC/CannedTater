@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/entity/BannerBlockEntity.java
++++ b/net/minecraft/block/entity/BannerBlockEntity.java
+@@ -183,3 +183,5 @@
+       return this.baseColor;
+    }
+ }
++
++// Fukkit Marker

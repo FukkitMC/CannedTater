@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/TeleportTarget.java
++++ b/net/minecraft/world/TeleportTarget.java
+@@ -15,3 +15,5 @@
+       this.pitch = pitch;
+    }
+ }
++
++// Fukkit Marker

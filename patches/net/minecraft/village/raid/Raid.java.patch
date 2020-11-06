@@ -1,0 +1,8 @@
+--- a/net/minecraft/village/raid/Raid.java
++++ b/net/minecraft/village/raid/Raid.java
+@@ -846,3 +846,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

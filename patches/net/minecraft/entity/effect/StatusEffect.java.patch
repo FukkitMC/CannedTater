@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/effect/StatusEffect.java
++++ b/net/minecraft/entity/effect/StatusEffect.java
+@@ -194,3 +194,5 @@
+       return this.type == StatusEffectType.BENEFICIAL;
+    }
+ }
++
++// Fukkit Marker

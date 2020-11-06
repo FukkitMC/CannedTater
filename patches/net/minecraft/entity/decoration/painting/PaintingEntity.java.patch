@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/decoration/painting/PaintingEntity.java
++++ b/net/minecraft/entity/decoration/painting/PaintingEntity.java
+@@ -125,3 +125,5 @@
+       return new PaintingSpawnS2CPacket(this);
+    }
+ }
++
++// Fukkit Marker

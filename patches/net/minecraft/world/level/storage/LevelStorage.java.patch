@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/level/storage/LevelStorage.java
++++ b/net/minecraft/world/level/storage/LevelStorage.java
+@@ -507,3 +507,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

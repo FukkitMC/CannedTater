@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/boss/CommandBossBar.java
++++ b/net/minecraft/entity/boss/CommandBossBar.java
+@@ -198,3 +198,5 @@
+       super.removePlayer(player);
+    }
+ }
++
++// Fukkit Marker

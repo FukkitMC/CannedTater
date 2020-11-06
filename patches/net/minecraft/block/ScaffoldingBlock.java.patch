@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/ScaffoldingBlock.java
++++ b/net/minecraft/block/ScaffoldingBlock.java
+@@ -158,3 +158,5 @@
+       BOTTOM_OUTLINE_SHAPE = VoxelShapes.union(COLLISION_SHAPE, NORMAL_OUTLINE_SHAPE, voxelShape7, voxelShape6, voxelShape9, voxelShape8);
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/ServerWorldAccess.java
++++ b/net/minecraft/world/ServerWorldAccess.java
+@@ -16,3 +16,5 @@
+       entity.streamPassengersRecursively().forEach(this::spawnEntity);
+    }
+ }
++
++// Fukkit Marker

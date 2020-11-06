@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/ObserverBlock.java
++++ b/net/minecraft/block/ObserverBlock.java
+@@ -107,3 +107,5 @@
+       POWERED = Properties.POWERED;
+    }
+ }
++
++// Fukkit Marker

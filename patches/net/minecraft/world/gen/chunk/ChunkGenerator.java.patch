@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/gen/chunk/ChunkGenerator.java
++++ b/net/minecraft/world/gen/chunk/ChunkGenerator.java
+@@ -354,3 +354,5 @@
+       CODEC = Registry.CHUNK_GENERATOR.dispatchStable(ChunkGenerator::getCodec, Function.identity());
+    }
+ }
++
++// Fukkit Marker

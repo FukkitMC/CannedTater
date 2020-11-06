@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/ai/goal/EatGrassGoal.java
++++ b/net/minecraft/entity/ai/goal/EatGrassGoal.java
+@@ -83,3 +83,5 @@
+       GRASS_PREDICATE = BlockStatePredicate.forBlock(Blocks.GRASS);
+    }
+ }
++
++// Fukkit Marker

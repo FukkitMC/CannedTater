@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/ai/goal/SkeletonHorseTrapTriggerGoal.java
++++ b/net/minecraft/entity/ai/goal/SkeletonHorseTrapTriggerGoal.java
+@@ -81,3 +81,5 @@
+       return itemStack;
+    }
+ }
++
++// Fukkit Marker

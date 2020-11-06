@@ -1,0 +1,8 @@
+--- a/net/minecraft/command/EntitySelectorReader.java
++++ b/net/minecraft/command/EntitySelectorReader.java
+@@ -617,3 +617,5 @@
+       this.selectsAdvancements = selectsAdvancements;
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/projectile/thrown/ThrownItemEntity.java
++++ b/net/minecraft/entity/projectile/thrown/ThrownItemEntity.java
+@@ -77,3 +77,5 @@
+       ITEM = DataTracker.registerData(ThrownItemEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
+    }
+ }
++
++// Fukkit Marker

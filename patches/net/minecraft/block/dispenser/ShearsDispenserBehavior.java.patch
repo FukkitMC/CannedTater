@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/dispenser/ShearsDispenserBehavior.java
++++ b/net/minecraft/block/dispenser/ShearsDispenserBehavior.java
+@@ -70,3 +70,5 @@
+       return false;
+    }
+ }
++
++// Fukkit Marker

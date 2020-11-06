@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/WeightedPressurePlateBlock.java
++++ b/net/minecraft/block/WeightedPressurePlateBlock.java
+@@ -60,3 +60,5 @@
+       POWER = Properties.POWER;
+    }
+ }
++
++// Fukkit Marker

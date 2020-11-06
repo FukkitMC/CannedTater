@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/FireBlock.java
++++ b/net/minecraft/block/FireBlock.java
+@@ -430,3 +430,5 @@
+       field_26657 = Block.createCuboidShape(0.0D, 0.0D, 15.0D, 16.0D, 16.0D, 16.0D);
+    }
+ }
++
++// Fukkit Marker

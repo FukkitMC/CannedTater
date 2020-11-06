@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/EndPortalBlock.java
++++ b/net/minecraft/block/EndPortalBlock.java
+@@ -63,3 +63,5 @@
+       return false;
+    }
+ }
++
++// Fukkit Marker

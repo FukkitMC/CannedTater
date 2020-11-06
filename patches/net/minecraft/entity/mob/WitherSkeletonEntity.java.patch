@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/WitherSkeletonEntity.java
++++ b/net/minecraft/entity/mob/WitherSkeletonEntity.java
+@@ -106,3 +106,5 @@
+       return effect.getEffectType() == StatusEffects.WITHER ? false : super.canHaveStatusEffect(effect);
+    }
+ }
++
++// Fukkit Marker

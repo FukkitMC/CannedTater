@@ -1,0 +1,8 @@
+--- a/net/minecraft/datafixer/Schemas.java
++++ b/net/minecraft/datafixer/Schemas.java
+@@ -544,3 +544,5 @@
+       };
+    }
+ }
++
++// Fukkit Marker

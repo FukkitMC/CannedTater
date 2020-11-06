@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/RedstoneTorchBlock.java
++++ b/net/minecraft/block/RedstoneTorchBlock.java
+@@ -147,3 +147,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

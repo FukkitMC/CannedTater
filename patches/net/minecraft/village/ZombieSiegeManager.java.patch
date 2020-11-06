@@ -1,0 +1,8 @@
+--- a/net/minecraft/village/ZombieSiegeManager.java
++++ b/net/minecraft/village/ZombieSiegeManager.java
+@@ -139,3 +139,5 @@
+       SIEGE_DONE;
+    }
+ }
++
++// Fukkit Marker

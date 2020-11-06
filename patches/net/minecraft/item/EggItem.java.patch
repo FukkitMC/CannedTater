@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/EggItem.java
++++ b/net/minecraft/item/EggItem.java
+@@ -32,3 +32,5 @@
+       return TypedActionResult.success(itemStack, world.isClient());
+    }
+ }
++
++// Fukkit Marker

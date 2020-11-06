@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/OreBlock.java
++++ b/net/minecraft/block/OreBlock.java
+@@ -40,3 +40,5 @@
+ 
+    }
+ }
++
++// Fukkit Marker

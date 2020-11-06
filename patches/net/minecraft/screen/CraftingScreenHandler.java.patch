@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/CraftingScreenHandler.java
++++ b/net/minecraft/screen/CraftingScreenHandler.java
+@@ -180,3 +180,5 @@
+       return RecipeBookCategory.CRAFTING;
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/loot/condition/RandomChanceWithLootingLootCondition.java
++++ b/net/minecraft/loot/condition/RandomChanceWithLootingLootCondition.java
+@@ -58,3 +58,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

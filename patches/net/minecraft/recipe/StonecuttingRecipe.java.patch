@@ -1,0 +1,8 @@
+--- a/net/minecraft/recipe/StonecuttingRecipe.java
++++ b/net/minecraft/recipe/StonecuttingRecipe.java
+@@ -22,3 +22,5 @@
+       return new ItemStack(Blocks.STONECUTTER);
+    }
+ }
++
++// Fukkit Marker

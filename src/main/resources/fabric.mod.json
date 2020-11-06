@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "canned-tater",
+  "version": "1.0.0",
+  "mixins": [
+    "mixins.canned-tater.json"
+  ],
+  "entrypoints": {
+    "mm:early_risers": [
+      "io.github.fukkitmc.fukkit.prelaunch.FukkitEarlyRiser::run"
+    ]
+  },
+  "authors": ["ramidzkh"],
+  "license": ["LGPL-3.0-or-later"]
+}

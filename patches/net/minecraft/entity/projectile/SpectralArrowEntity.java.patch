@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/projectile/SpectralArrowEntity.java
++++ b/net/minecraft/entity/projectile/SpectralArrowEntity.java
+@@ -56,3 +56,5 @@
+       tag.putInt("Duration", this.duration);
+    }
+ }
++
++// Fukkit Marker

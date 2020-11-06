@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/BoneMealItem.java
++++ b/net/minecraft/item/BoneMealItem.java
+@@ -163,3 +163,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

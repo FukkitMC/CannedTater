@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/MobEntity.java
++++ b/net/minecraft/entity/mob/MobEntity.java
+@@ -1451,3 +1451,5 @@
+       MOB_FLAGS = DataTracker.registerData(MobEntity.class, TrackedDataHandlerRegistry.BYTE);
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/advancement/AdvancementManager.java
++++ b/net/minecraft/advancement/AdvancementManager.java
+@@ -174,3 +174,5 @@
+       void onClear();
+    }
+ }
++
++// Fukkit Marker

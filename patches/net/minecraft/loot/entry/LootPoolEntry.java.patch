@@ -1,0 +1,8 @@
+--- a/net/minecraft/loot/entry/LootPoolEntry.java
++++ b/net/minecraft/loot/entry/LootPoolEntry.java
+@@ -81,3 +81,5 @@
+       public abstract LootPoolEntry build();
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/FilledMapItem.java
++++ b/net/minecraft/item/FilledMapItem.java
+@@ -405,3 +405,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

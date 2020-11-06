@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/TntEntity.java
++++ b/net/minecraft/entity/TntEntity.java
+@@ -123,3 +123,5 @@
+       FUSE = DataTracker.registerData(TntEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    }
+ }
++
++// Fukkit Marker

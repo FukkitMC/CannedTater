@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/ScreenHandler.java
++++ b/net/minecraft/screen/ScreenHandler.java
+@@ -698,3 +698,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

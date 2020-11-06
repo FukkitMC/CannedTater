@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/AbstractFurnaceScreenHandler.java
++++ b/net/minecraft/screen/AbstractFurnaceScreenHandler.java
+@@ -182,3 +182,5 @@
+       return this.category;
+    }
+ }
++
++// Fukkit Marker

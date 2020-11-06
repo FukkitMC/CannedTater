@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/BlockView.java
++++ b/net/minecraft/world/BlockView.java
+@@ -154,3 +154,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

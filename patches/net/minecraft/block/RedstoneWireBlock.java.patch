@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/RedstoneWireBlock.java
++++ b/net/minecraft/block/RedstoneWireBlock.java
+@@ -520,3 +520,5 @@
+ 
+    }
+ }
++
++// Fukkit Marker

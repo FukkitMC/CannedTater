@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/world/ChunkTicketType.java
++++ b/net/minecraft/server/world/ChunkTicketType.java
+@@ -72,3 +72,5 @@
+       return this.expiryTicks;
+    }
+ }
++
++// Fukkit Marker

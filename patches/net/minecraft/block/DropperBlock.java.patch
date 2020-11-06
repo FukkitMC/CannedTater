@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/DropperBlock.java
++++ b/net/minecraft/block/DropperBlock.java
+@@ -58,3 +58,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

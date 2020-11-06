@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/RedstoneOreBlock.java
++++ b/net/minecraft/block/RedstoneOreBlock.java
+@@ -114,3 +114,5 @@
+       LIT = RedstoneTorchBlock.LIT;
+    }
+ }
++
++// Fukkit Marker

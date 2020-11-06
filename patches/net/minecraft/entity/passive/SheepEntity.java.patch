@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/passive/SheepEntity.java
++++ b/net/minecraft/entity/passive/SheepEntity.java
+@@ -374,3 +374,5 @@
+       }, SheepEntity::getDyedColor)));
+    }
+ }
++
++// Fukkit Marker

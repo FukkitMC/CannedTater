@@ -1,0 +1,8 @@
+--- a/net/minecraft/fluid/LavaFluid.java
++++ b/net/minecraft/fluid/LavaFluid.java
+@@ -212,3 +212,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

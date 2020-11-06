@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/IceBlock.java
++++ b/net/minecraft/block/IceBlock.java
+@@ -54,3 +54,5 @@
+       return PistonBehavior.NORMAL;
+    }
+ }
++
++// Fukkit Marker

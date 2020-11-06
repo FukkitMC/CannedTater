@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/LeadItem.java
++++ b/net/minecraft/item/LeadItem.java
+@@ -58,3 +58,5 @@
+       return bl ? ActionResult.SUCCESS : ActionResult.PASS;
+    }
+ }
++
++// Fukkit Marker

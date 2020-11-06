@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/dedicated/AbstractPropertiesHandler.java
++++ b/net/minecraft/server/dedicated/AbstractPropertiesHandler.java
+@@ -238,3 +238,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

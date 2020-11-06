@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/command/EffectCommand.java
++++ b/net/minecraft/server/command/EffectCommand.java
+@@ -132,3 +132,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

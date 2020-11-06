@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/MinecartItem.java
++++ b/net/minecraft/item/MinecartItem.java
+@@ -98,3 +98,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

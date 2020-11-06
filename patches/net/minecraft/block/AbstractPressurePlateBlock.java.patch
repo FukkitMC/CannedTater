@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/AbstractPressurePlateBlock.java
++++ b/net/minecraft/block/AbstractPressurePlateBlock.java
+@@ -125,3 +125,5 @@
+ 
+    protected abstract BlockState setRedstoneOutput(BlockState state, int rsOut);
+ }
++
++// Fukkit Marker

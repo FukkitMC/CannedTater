@@ -1,0 +1,8 @@
+--- a/net/minecraft/recipe/RecipeManager.java
++++ b/net/minecraft/recipe/RecipeManager.java
+@@ -155,3 +155,5 @@
+       this.recipes = ImmutableMap.copyOf(map);
+    }
+ }
++
++// Fukkit Marker

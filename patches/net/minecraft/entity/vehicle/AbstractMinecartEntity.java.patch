@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/vehicle/AbstractMinecartEntity.java
++++ b/net/minecraft/entity/vehicle/AbstractMinecartEntity.java
+@@ -854,3 +854,5 @@
+       COMMAND_BLOCK;
+    }
+ }
++
++// Fukkit Marker

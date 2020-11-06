@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/border/WorldBorder.java
++++ b/net/minecraft/world/border/WorldBorder.java
+@@ -511,3 +511,5 @@
+       VoxelShape asVoxelShape();
+    }
+ }
++
++// Fukkit Marker

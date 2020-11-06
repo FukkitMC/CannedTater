@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/slot/FurnaceOutputSlot.java
++++ b/net/minecraft/screen/slot/FurnaceOutputSlot.java
+@@ -46,3 +46,5 @@
+       this.amount = 0;
+    }
+ }
++
++// Fukkit Marker

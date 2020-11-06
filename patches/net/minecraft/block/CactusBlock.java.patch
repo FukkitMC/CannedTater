@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/CactusBlock.java
++++ b/net/minecraft/block/CactusBlock.java
+@@ -110,3 +110,5 @@
+       OUTLINE_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
+    }
+ }
++
++// Fukkit Marker

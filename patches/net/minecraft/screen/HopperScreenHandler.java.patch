@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/HopperScreenHandler.java
++++ b/net/minecraft/screen/HopperScreenHandler.java
+@@ -71,3 +71,5 @@
+       this.inventory.onClose(player);
+    }
+ }
++
++// Fukkit Marker

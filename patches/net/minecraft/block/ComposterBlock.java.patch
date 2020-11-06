@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/ComposterBlock.java
++++ b/net/minecraft/block/ComposterBlock.java
+@@ -385,3 +385,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

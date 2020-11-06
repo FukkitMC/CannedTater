@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/ChestBlock.java
++++ b/net/minecraft/block/ChestBlock.java
+@@ -352,3 +352,5 @@
+       };
+    }
+ }
++
++// Fukkit Marker

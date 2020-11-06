@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/sapling/SaplingGenerator.java
++++ b/net/minecraft/block/sapling/SaplingGenerator.java
+@@ -48,3 +48,5 @@
+       return true;
+    }
+ }
++
++// Fukkit Marker

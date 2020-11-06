@@ -1,0 +1,8 @@
+--- a/net/minecraft/enchantment/Enchantments.java
++++ b/net/minecraft/enchantment/Enchantments.java
+@@ -90,3 +90,5 @@
+       VANISHING_CURSE = register("vanishing_curse", new VanishingCurseEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlot.values()));
+    }
+ }
++
++// Fukkit Marker

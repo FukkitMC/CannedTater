@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/rcon/RconCommandOutput.java
++++ b/net/minecraft/server/rcon/RconCommandOutput.java
+@@ -49,3 +49,5 @@
+       return this.server.shouldBroadcastRconToOps();
+    }
+ }
++
++// Fukkit Marker

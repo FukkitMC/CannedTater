@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/gen/PhantomSpawner.java
++++ b/net/minecraft/world/gen/PhantomSpawner.java
+@@ -94,3 +94,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

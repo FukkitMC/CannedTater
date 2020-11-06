@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/ai/goal/EscapeDangerGoal.java
++++ b/net/minecraft/entity/ai/goal/EscapeDangerGoal.java
+@@ -99,3 +99,5 @@
+       return blockPos2;
+    }
+ }
++
++// Fukkit Marker

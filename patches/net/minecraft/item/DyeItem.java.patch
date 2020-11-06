@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/DyeItem.java
++++ b/net/minecraft/item/DyeItem.java
+@@ -43,3 +43,5 @@
+       return (DyeItem)DYES.get(color);
+    }
+ }
++
++// Fukkit Marker

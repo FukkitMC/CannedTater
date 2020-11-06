@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/LeavesBlock.java
++++ b/net/minecraft/block/LeavesBlock.java
+@@ -116,3 +116,5 @@
+       PERSISTENT = Properties.PERSISTENT;
+    }
+ }
++
++// Fukkit Marker

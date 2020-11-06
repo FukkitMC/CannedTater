@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/ai/goal/StepAndDestroyBlockGoal.java
++++ b/net/minecraft/entity/ai/goal/StepAndDestroyBlockGoal.java
+@@ -140,3 +140,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

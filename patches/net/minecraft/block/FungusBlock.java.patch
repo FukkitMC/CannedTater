@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/FungusBlock.java
++++ b/net/minecraft/block/FungusBlock.java
+@@ -42,3 +42,5 @@
+       ((ConfiguredFeature)this.field_22135.get()).generate(world, world.getChunkManager().getChunkGenerator(), random, pos);
+    }
+ }
++
++// Fukkit Marker

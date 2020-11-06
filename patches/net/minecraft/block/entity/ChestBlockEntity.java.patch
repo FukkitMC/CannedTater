@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/entity/ChestBlockEntity.java
++++ b/net/minecraft/block/entity/ChestBlockEntity.java
+@@ -238,3 +238,5 @@
+       return GenericContainerScreenHandler.createGeneric9x3(syncId, playerInventory, this);
+    }
+ }
++
++// Fukkit Marker

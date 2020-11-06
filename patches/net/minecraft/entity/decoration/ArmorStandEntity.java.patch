@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/decoration/ArmorStandEntity.java
++++ b/net/minecraft/entity/decoration/ArmorStandEntity.java
+@@ -826,3 +826,5 @@
+       };
+    }
+ }
++
++// Fukkit Marker

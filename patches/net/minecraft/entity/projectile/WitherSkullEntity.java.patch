@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/projectile/WitherSkullEntity.java
++++ b/net/minecraft/entity/projectile/WitherSkullEntity.java
+@@ -125,3 +125,5 @@
+       CHARGED = DataTracker.registerData(WitherSkullEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    }
+ }
++
++// Fukkit Marker

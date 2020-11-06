@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/ai/brain/task/LookTargetUtil.java
++++ b/net/minecraft/entity/ai/brain/task/LookTargetUtil.java
+@@ -162,3 +162,5 @@
+       }).orElseGet(Stream::empty);
+    }
+ }
++
++// Fukkit Marker

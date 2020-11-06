@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/MobSpawnerLogic.java
++++ b/net/minecraft/world/MobSpawnerLogic.java
+@@ -294,3 +294,5 @@
+       return this.field_9159;
+    }
+ }
++
++// Fukkit Marker

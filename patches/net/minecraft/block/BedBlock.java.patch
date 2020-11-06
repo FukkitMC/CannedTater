@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/BedBlock.java
++++ b/net/minecraft/block/BedBlock.java
+@@ -336,3 +336,5 @@
+       EAST_SHAPE = VoxelShapes.union(TOP_SHAPE, LEG_3_SHAPE, LEG_4_SHAPE);
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/SpawnerBlock.java
++++ b/net/minecraft/block/SpawnerBlock.java
+@@ -33,3 +33,5 @@
+       return ItemStack.EMPTY;
+    }
+ }
++
++// Fukkit Marker

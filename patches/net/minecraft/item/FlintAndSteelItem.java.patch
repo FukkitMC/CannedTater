@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/FlintAndSteelItem.java
++++ b/net/minecraft/item/FlintAndSteelItem.java
+@@ -56,3 +56,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

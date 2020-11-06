@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/passive/WanderingTraderEntity.java
++++ b/net/minecraft/entity/passive/WanderingTraderEntity.java
+@@ -259,3 +259,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

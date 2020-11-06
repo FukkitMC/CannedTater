@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/ModifiableWorld.java
++++ b/net/minecraft/world/ModifiableWorld.java
+@@ -78,3 +78,5 @@
+       return false;
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/passive/MooshroomEntity.java
++++ b/net/minecraft/entity/passive/MooshroomEntity.java
+@@ -273,3 +273,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/DragonEggBlock.java
++++ b/net/minecraft/block/DragonEggBlock.java
+@@ -66,3 +66,5 @@
+       return false;
+    }
+ }
++
++// Fukkit Marker

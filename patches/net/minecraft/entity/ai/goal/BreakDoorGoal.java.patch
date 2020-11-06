@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/ai/goal/BreakDoorGoal.java
++++ b/net/minecraft/entity/ai/goal/BreakDoorGoal.java
+@@ -80,3 +80,5 @@
+       return this.difficultySufficientPredicate.test(difficulty);
+    }
+ }
++
++// Fukkit Marker

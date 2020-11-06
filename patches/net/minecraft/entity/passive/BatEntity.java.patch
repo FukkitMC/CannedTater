@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/passive/BatEntity.java
++++ b/net/minecraft/entity/passive/BatEntity.java
+@@ -228,3 +228,5 @@
+       CLOSE_PLAYER_PREDICATE = (new TargetPredicate()).setBaseMaxDistance(4.0D).includeTeammates();
+    }
+ }
++
++// Fukkit Marker

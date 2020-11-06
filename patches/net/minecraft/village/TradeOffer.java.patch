@@ -1,0 +1,8 @@
+--- a/net/minecraft/village/TradeOffer.java
++++ b/net/minecraft/village/TradeOffer.java
+@@ -204,3 +204,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

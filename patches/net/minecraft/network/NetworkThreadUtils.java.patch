@@ -1,0 +1,8 @@
+--- a/net/minecraft/network/NetworkThreadUtils.java
++++ b/net/minecraft/network/NetworkThreadUtils.java
+@@ -27,3 +27,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

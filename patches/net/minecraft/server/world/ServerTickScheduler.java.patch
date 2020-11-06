@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/world/ServerTickScheduler.java
++++ b/net/minecraft/server/world/ServerTickScheduler.java
+@@ -208,3 +208,5 @@
+       return this.scheduledTickActions.size();
+    }
+ }
++
++// Fukkit Marker

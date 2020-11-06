@@ -1,0 +1,8 @@
+--- a/net/minecraft/structure/Structure.java
++++ b/net/minecraft/structure/Structure.java
+@@ -882,3 +882,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

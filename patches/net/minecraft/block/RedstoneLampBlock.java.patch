@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/RedstoneLampBlock.java
++++ b/net/minecraft/block/RedstoneLampBlock.java
+@@ -51,3 +51,5 @@
+       LIT = RedstoneTorchBlock.LIT;
+    }
+ }
++
++// Fukkit Marker

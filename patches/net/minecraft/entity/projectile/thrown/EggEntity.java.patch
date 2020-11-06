@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/projectile/thrown/EggEntity.java
++++ b/net/minecraft/entity/projectile/thrown/EggEntity.java
+@@ -71,3 +71,5 @@
+       return Items.EGG;
+    }
+ }
++
++// Fukkit Marker

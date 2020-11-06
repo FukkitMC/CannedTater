@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/PoweredRailBlock.java
++++ b/net/minecraft/block/PoweredRailBlock.java
+@@ -257,3 +257,5 @@
+       POWERED = Properties.POWERED;
+    }
+ }
++
++// Fukkit Marker

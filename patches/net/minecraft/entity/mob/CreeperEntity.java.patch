@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/CreeperEntity.java
++++ b/net/minecraft/entity/mob/CreeperEntity.java
+@@ -274,3 +274,5 @@
+       IGNITED = DataTracker.registerData(CreeperEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    }
+ }
++
++// Fukkit Marker

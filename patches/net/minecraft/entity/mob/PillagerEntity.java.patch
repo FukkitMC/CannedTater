@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/PillagerEntity.java
++++ b/net/minecraft/entity/mob/PillagerEntity.java
+@@ -269,3 +269,5 @@
+       CHARGING = DataTracker.registerData(PillagerEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    }
+ }
++
++// Fukkit Marker

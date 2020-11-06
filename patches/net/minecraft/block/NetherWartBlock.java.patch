@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/NetherWartBlock.java
++++ b/net/minecraft/block/NetherWartBlock.java
+@@ -57,3 +57,5 @@
+       AGE_TO_SHAPE = new VoxelShape[]{Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D), Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 11.0D, 16.0D), Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D)};
+    }
+ }
++
++// Fukkit Marker

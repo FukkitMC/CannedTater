@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/level/LevelProperties.java
++++ b/net/minecraft/world/level/LevelProperties.java
+@@ -455,3 +455,5 @@
+       return this.levelInfo.withCopiedGameRules();
+    }
+ }
++
++// Fukkit Marker

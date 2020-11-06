@@ -1,0 +1,8 @@
+--- a/net/minecraft/loot/function/LootingEnchantLootFunction.java
++++ b/net/minecraft/loot/function/LootingEnchantLootFunction.java
+@@ -98,3 +98,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

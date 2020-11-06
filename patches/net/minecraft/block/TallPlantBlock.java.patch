@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/TallPlantBlock.java
++++ b/net/minecraft/block/TallPlantBlock.java
+@@ -112,3 +112,5 @@
+       HALF = Properties.DOUBLE_BLOCK_HALF;
+    }
+ }
++
++// Fukkit Marker

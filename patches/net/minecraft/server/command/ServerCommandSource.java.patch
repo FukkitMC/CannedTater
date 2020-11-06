@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/command/ServerCommandSource.java
++++ b/net/minecraft/server/command/ServerCommandSource.java
+@@ -266,3 +266,5 @@
+       return this.server.getRegistryManager();
+    }
+ }
++
++// Fukkit Marker

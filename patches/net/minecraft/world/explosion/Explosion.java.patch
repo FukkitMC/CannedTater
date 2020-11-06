@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/explosion/Explosion.java
++++ b/net/minecraft/world/explosion/Explosion.java
+@@ -346,3 +346,5 @@
+       DESTROY;
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/village/MerchantInventory.java
++++ b/net/minecraft/village/MerchantInventory.java
+@@ -145,3 +145,5 @@
+       return this.merchantRewardedExperience;
+    }
+ }
++
++// Fukkit Marker

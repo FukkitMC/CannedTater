@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/PlayerScreenHandler.java
++++ b/net/minecraft/screen/PlayerScreenHandler.java
+@@ -213,3 +213,5 @@
+       EQUIPMENT_SLOT_ORDER = new EquipmentSlot[]{EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET};
+    }
+ }
++
++// Fukkit Marker

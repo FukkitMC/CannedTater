@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/SpongeBlock.java
++++ b/net/minecraft/block/SpongeBlock.java
+@@ -85,3 +85,5 @@
+       return i > 0;
+    }
+ }
++
++// Fukkit Marker

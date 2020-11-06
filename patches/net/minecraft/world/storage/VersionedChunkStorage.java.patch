@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/storage/VersionedChunkStorage.java
++++ b/net/minecraft/world/storage/VersionedChunkStorage.java
+@@ -73,3 +73,5 @@
+       this.worker.close();
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/ShulkerBoxScreenHandler.java
++++ b/net/minecraft/screen/ShulkerBoxScreenHandler.java
+@@ -76,3 +76,5 @@
+       this.inventory.onClose(player);
+    }
+ }
++
++// Fukkit Marker

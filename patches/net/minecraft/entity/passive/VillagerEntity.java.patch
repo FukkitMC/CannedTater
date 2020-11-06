@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/passive/VillagerEntity.java
++++ b/net/minecraft/entity/passive/VillagerEntity.java
+@@ -951,3 +951,5 @@
+       });
+    }
+ }
++
++// Fukkit Marker

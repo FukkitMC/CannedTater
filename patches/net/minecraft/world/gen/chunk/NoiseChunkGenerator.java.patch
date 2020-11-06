@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/gen/chunk/NoiseChunkGenerator.java
++++ b/net/minecraft/world/gen/chunk/NoiseChunkGenerator.java
+@@ -657,3 +657,5 @@
+       AIR = Blocks.AIR.getDefaultState();
+    }
+ }
++
++// Fukkit Marker

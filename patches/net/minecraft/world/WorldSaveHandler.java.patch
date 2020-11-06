@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/WorldSaveHandler.java
++++ b/net/minecraft/world/WorldSaveHandler.java
+@@ -75,3 +75,5 @@
+       return strings;
+    }
+ }
++
++// Fukkit Marker

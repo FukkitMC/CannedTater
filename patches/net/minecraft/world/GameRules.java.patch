@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/GameRules.java
++++ b/net/minecraft/world/GameRules.java
+@@ -547,3 +547,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

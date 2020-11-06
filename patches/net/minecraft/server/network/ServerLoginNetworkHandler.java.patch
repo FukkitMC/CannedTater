@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/network/ServerLoginNetworkHandler.java
++++ b/net/minecraft/server/network/ServerLoginNetworkHandler.java
+@@ -216,3 +216,5 @@
+       ACCEPTED;
+    }
+ }
++
++// Fukkit Marker

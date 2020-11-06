@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/DaylightDetectorBlock.java
++++ b/net/minecraft/block/DaylightDetectorBlock.java
+@@ -98,3 +98,5 @@
+       SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D);
+    }
+ }
++
++// Fukkit Marker

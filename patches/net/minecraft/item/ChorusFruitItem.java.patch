@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/ChorusFruitItem.java
++++ b/net/minecraft/item/ChorusFruitItem.java
+@@ -45,3 +45,5 @@
+       return itemStack;
+    }
+ }
++
++// Fukkit Marker

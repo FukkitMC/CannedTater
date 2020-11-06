@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/dispenser/ItemDispenserBehavior.java
++++ b/net/minecraft/block/dispenser/ItemDispenserBehavior.java
+@@ -48,3 +48,5 @@
+       pointer.getWorld().syncWorldEvent(2000, pointer.getBlockPos(), side.getId());
+    }
+ }
++
++// Fukkit Marker

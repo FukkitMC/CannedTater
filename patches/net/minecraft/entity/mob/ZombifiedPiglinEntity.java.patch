@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/ZombifiedPiglinEntity.java
++++ b/net/minecraft/entity/mob/ZombifiedPiglinEntity.java
+@@ -226,3 +226,5 @@
+       field_25609 = Durations.betweenSeconds(4, 6);
+    }
+ }
++
++// Fukkit Marker

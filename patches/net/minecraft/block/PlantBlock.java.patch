@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/PlantBlock.java
++++ b/net/minecraft/block/PlantBlock.java
+@@ -33,3 +33,5 @@
+       return type == NavigationType.AIR && !this.collidable ? true : super.canPathfindThrough(state, world, pos, type);
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/recipe/SmokingRecipe.java
++++ b/net/minecraft/recipe/SmokingRecipe.java
+@@ -20,3 +20,5 @@
+       return RecipeSerializer.SMOKING;
+    }
+ }
++
++// Fukkit Marker

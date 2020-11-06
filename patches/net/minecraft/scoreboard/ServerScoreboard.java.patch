@@ -1,0 +1,8 @@
+--- a/net/minecraft/scoreboard/ServerScoreboard.java
++++ b/net/minecraft/scoreboard/ServerScoreboard.java
+@@ -227,3 +227,5 @@
+       REMOVE;
+    }
+ }
++
++// Fukkit Marker

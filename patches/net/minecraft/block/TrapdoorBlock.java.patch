@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/TrapdoorBlock.java
++++ b/net/minecraft/block/TrapdoorBlock.java
+@@ -160,3 +160,5 @@
+       OPEN_TOP_SHAPE = Block.createCuboidShape(0.0D, 13.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    }
+ }
++
++// Fukkit Marker

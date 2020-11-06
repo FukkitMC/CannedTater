@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/dedicated/ServerPropertiesLoader.java
++++ b/net/minecraft/server/dedicated/ServerPropertiesLoader.java
+@@ -26,3 +26,5 @@
+       return this;
+    }
+ }
++
++// Fukkit Marker

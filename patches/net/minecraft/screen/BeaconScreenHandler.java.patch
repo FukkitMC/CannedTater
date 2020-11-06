@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/BeaconScreenHandler.java
++++ b/net/minecraft/screen/BeaconScreenHandler.java
+@@ -165,3 +165,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

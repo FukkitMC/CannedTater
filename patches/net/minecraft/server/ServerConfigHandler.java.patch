@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/ServerConfigHandler.java
++++ b/net/minecraft/server/ServerConfigHandler.java
+@@ -466,3 +466,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

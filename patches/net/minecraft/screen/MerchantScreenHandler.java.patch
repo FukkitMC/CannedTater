@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/MerchantScreenHandler.java
++++ b/net/minecraft/screen/MerchantScreenHandler.java
+@@ -250,3 +250,5 @@
+       return this.leveled;
+    }
+ }
++
++// Fukkit Marker

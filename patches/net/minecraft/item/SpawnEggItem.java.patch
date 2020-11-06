@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/SpawnEggItem.java
++++ b/net/minecraft/item/SpawnEggItem.java
+@@ -180,3 +180,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

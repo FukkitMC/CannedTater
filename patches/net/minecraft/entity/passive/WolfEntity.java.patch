@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/passive/WolfEntity.java
++++ b/net/minecraft/entity/passive/WolfEntity.java
+@@ -540,3 +540,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

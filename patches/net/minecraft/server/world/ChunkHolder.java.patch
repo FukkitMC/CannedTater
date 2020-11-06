@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/world/ChunkHolder.java
++++ b/net/minecraft/server/world/ChunkHolder.java
+@@ -444,3 +444,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

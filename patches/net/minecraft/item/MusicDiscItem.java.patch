@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/MusicDiscItem.java
++++ b/net/minecraft/item/MusicDiscItem.java
+@@ -80,3 +80,5 @@
+       return this.sound;
+    }
+ }
++
++// Fukkit Marker

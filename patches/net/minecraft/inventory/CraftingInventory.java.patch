@@ -1,0 +1,8 @@
+--- a/net/minecraft/inventory/CraftingInventory.java
++++ b/net/minecraft/inventory/CraftingInventory.java
+@@ -91,3 +91,5 @@
+ 
+    }
+ }
++
++// Fukkit Marker

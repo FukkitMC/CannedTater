@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/StonecutterScreenHandler.java
++++ b/net/minecraft/screen/StonecutterScreenHandler.java
+@@ -228,3 +228,5 @@
+       });
+    }
+ }
++
++// Fukkit Marker

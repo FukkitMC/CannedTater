@@ -1,0 +1,8 @@
+--- a/net/minecraft/enchantment/DamageEnchantment.java
++++ b/net/minecraft/enchantment/DamageEnchantment.java
+@@ -62,3 +62,5 @@
+ 
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/BambooBlock.java
++++ b/net/minecraft/block/BambooBlock.java
+@@ -205,3 +205,5 @@
+       STAGE = Properties.STAGE;
+    }
+ }
++
++// Fukkit Marker

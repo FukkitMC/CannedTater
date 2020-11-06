@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/NetherPortalBlock.java
++++ b/net/minecraft/block/NetherPortalBlock.java
+@@ -136,3 +136,5 @@
+       Z_SHAPE = Block.createCuboidShape(6.0D, 0.0D, 0.0D, 10.0D, 16.0D, 16.0D);
+    }
+ }
++
++// Fukkit Marker

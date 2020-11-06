@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/AbstractButtonBlock.java
++++ b/net/minecraft/block/AbstractButtonBlock.java
+@@ -193,3 +193,5 @@
+       EAST_PRESSED_SHAPE = Block.createCuboidShape(0.0D, 6.0D, 5.0D, 1.0D, 10.0D, 11.0D);
+    }
+ }
++
++// Fukkit Marker

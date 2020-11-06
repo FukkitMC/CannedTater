@@ -1,0 +1,8 @@
+--- a/net/minecraft/item/CrossbowItem.java
++++ b/net/minecraft/item/CrossbowItem.java
+@@ -367,3 +367,5 @@
+       return 8;
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/CarvedPumpkinBlock.java
++++ b/net/minecraft/block/CarvedPumpkinBlock.java
+@@ -158,3 +158,5 @@
+       };
+    }
+ }
++
++// Fukkit Marker

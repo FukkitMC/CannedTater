@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/command/GameModeCommand.java
++++ b/net/minecraft/server/command/GameModeCommand.java
+@@ -66,3 +66,5 @@
+       return i;
+    }
+ }
++
++// Fukkit Marker

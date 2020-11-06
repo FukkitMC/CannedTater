@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/ElderGuardianEntity.java
++++ b/net/minecraft/entity/mob/ElderGuardianEntity.java
+@@ -91,3 +91,5 @@
+       SCALE = EntityType.ELDER_GUARDIAN.getWidth() / EntityType.GUARDIAN.getWidth();
+    }
+ }
++
++// Fukkit Marker

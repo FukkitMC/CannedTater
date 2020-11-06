@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/passive/HorseBaseEntity.java
++++ b/net/minecraft/entity/passive/HorseBaseEntity.java
+@@ -1044,3 +1044,5 @@
+       OWNER_UUID = DataTracker.registerData(HorseBaseEntity.class, TrackedDataHandlerRegistry.OPTIONAL_UUID);
+    }
+ }
++
++// Fukkit Marker

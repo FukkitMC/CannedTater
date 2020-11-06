@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/attribute/ClampedEntityAttribute.java
++++ b/net/minecraft/entity/attribute/ClampedEntityAttribute.java
+@@ -27,3 +27,5 @@
+       return value;
+    }
+ }
++
++// Fukkit Marker

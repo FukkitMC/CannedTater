@@ -1,0 +1,8 @@
+--- a/net/minecraft/recipe/ShapelessRecipe.java
++++ b/net/minecraft/recipe/ShapelessRecipe.java
+@@ -127,3 +127,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

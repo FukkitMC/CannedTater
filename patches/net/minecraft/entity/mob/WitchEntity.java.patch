@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/WitchEntity.java
++++ b/net/minecraft/entity/mob/WitchEntity.java
+@@ -246,3 +246,5 @@
+       DRINKING = DataTracker.registerData(WitchEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    }
+ }
++
++// Fukkit Marker

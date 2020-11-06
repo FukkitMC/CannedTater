@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/chunk/WorldChunk.java
++++ b/net/minecraft/world/chunk/WorldChunk.java
+@@ -880,3 +880,5 @@
+       CHECK;
+    }
+ }
++
++// Fukkit Marker

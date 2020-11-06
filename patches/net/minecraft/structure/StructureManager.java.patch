@@ -1,0 +1,8 @@
+--- a/net/minecraft/structure/StructureManager.java
++++ b/net/minecraft/structure/StructureManager.java
+@@ -237,3 +237,5 @@
+       this.structures.remove(id);
+    }
+ }
++
++// Fukkit Marker

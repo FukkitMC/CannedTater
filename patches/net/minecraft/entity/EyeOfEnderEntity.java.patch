@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/EyeOfEnderEntity.java
++++ b/net/minecraft/entity/EyeOfEnderEntity.java
+@@ -198,3 +198,5 @@
+       ITEM = DataTracker.registerData(EyeOfEnderEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
+    }
+ }
++
++// Fukkit Marker

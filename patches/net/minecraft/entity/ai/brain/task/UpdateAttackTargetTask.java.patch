@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/ai/brain/task/UpdateAttackTargetTask.java
++++ b/net/minecraft/entity/ai/brain/task/UpdateAttackTargetTask.java
+@@ -46,3 +46,5 @@
+       entity.getBrain().forget(MemoryModuleType.CANT_REACH_WALK_TARGET_SINCE);
+    }
+ }
++
++// Fukkit Marker

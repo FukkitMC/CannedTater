@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/data/DataTracker.java
++++ b/net/minecraft/entity/data/DataTracker.java
+@@ -305,3 +305,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/GrassBlock.java
++++ b/net/minecraft/block/GrassBlock.java
+@@ -65,3 +65,5 @@
+ 
+    }
+ }
++
++// Fukkit Marker

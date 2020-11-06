@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/boss/dragon/phase/PhaseManager.java
++++ b/net/minecraft/entity/boss/dragon/phase/PhaseManager.java
+@@ -44,3 +44,5 @@
+       return this.phases[i];
+    }
+ }
++
++// Fukkit Marker

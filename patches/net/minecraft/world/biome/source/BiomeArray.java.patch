@@ -1,0 +1,8 @@
+--- a/net/minecraft/world/biome/source/BiomeArray.java
++++ b/net/minecraft/world/biome/source/BiomeArray.java
+@@ -112,3 +112,5 @@
+       VERTICAL_BIT_MASK = (1 << VERTICAL_SECTION_COUNT) - 1;
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/screen/Generic3x3ContainerScreenHandler.java
++++ b/net/minecraft/screen/Generic3x3ContainerScreenHandler.java
+@@ -79,3 +79,5 @@
+       this.inventory.onClose(player);
+    }
+ }
++
++// Fukkit Marker

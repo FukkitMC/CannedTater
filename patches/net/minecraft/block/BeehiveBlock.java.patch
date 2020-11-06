@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/BeehiveBlock.java
++++ b/net/minecraft/block/BeehiveBlock.java
+@@ -297,3 +297,5 @@
+       HONEY_LEVEL = Properties.HONEY_LEVEL;
+    }
+ }
++
++// Fukkit Marker

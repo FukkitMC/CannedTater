@@ -1,0 +1,8 @@
+--- a/net/minecraft/server/command/CommandManager.java
++++ b/net/minecraft/server/command/CommandManager.java
+@@ -326,3 +326,5 @@
+       void parse(StringReader stringReader) throws CommandSyntaxException;
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/block/dispenser/ProjectileDispenserBehavior.java
++++ b/net/minecraft/block/dispenser/ProjectileDispenserBehavior.java
+@@ -34,3 +34,5 @@
+       return 1.1F;
+    }
+ }
++
++// Fukkit Marker

@@ -1,0 +1,8 @@
+--- a/net/minecraft/network/packet/s2c/play/WorldBorderS2CPacket.java
++++ b/net/minecraft/network/packet/s2c/play/WorldBorderS2CPacket.java
+@@ -148,3 +148,5 @@
+       SET_WARNING_BLOCKS;
+    }
+ }
++
++// Fukkit Marker

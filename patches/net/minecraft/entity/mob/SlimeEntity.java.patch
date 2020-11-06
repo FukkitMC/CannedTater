@@ -1,0 +1,8 @@
+--- a/net/minecraft/entity/mob/SlimeEntity.java
++++ b/net/minecraft/entity/mob/SlimeEntity.java
+@@ -489,3 +489,5 @@
+       }
+    }
+ }
++
++// Fukkit Marker
