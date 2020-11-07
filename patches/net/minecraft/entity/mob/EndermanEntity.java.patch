@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/mob/EndermanEntity.java
 +++ b/net/minecraft/entity/mob/EndermanEntity.java
+@@ -301,7 +301,7 @@
+ 
+    @Nullable
+    public BlockState getCarriedBlock() {
+-      return (BlockState)((Optional)this.dataTracker.get(CARRIED_BLOCK)).orElse((Object)null);
++      return (BlockState)(this.dataTracker.get(CARRIED_BLOCK)).orElse(null);
+    }
+ 
+    public boolean damage(DamageSource source, float amount) {
 @@ -536,3 +536,5 @@
        }
     }

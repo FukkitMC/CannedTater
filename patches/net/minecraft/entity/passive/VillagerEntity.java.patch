@@ -1,5 +1,22 @@
 --- a/net/minecraft/entity/passive/VillagerEntity.java
 +++ b/net/minecraft/entity/passive/VillagerEntity.java
+@@ -915,14 +915,14 @@
+ 
+    public void sleep(BlockPos pos) {
+       super.sleep(pos);
+-      this.brain.remember(MemoryModuleType.LAST_SLEPT, (Object)this.world.getTime());
++      this.brain.remember(MemoryModuleType.LAST_SLEPT, this.world.getTime());
+       this.brain.forget(MemoryModuleType.WALK_TARGET);
+       this.brain.forget(MemoryModuleType.CANT_REACH_WALK_TARGET_SINCE);
+    }
+ 
+    public void wakeUp() {
+       super.wakeUp();
+-      this.brain.remember(MemoryModuleType.LAST_WOKEN, (Object)this.world.getTime());
++      this.brain.remember(MemoryModuleType.LAST_WOKEN, this.world.getTime());
+    }
+ 
+    private boolean hasRecentlyWorkedAndSlept(long worldTime) {
 @@ -951,3 +951,5 @@
        });
     }

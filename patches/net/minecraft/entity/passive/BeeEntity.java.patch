@@ -1,6 +1,14 @@
 --- a/net/minecraft/entity/passive/BeeEntity.java
 +++ b/net/minecraft/entity/passive/BeeEntity.java
-@@ -1188,3 +1188,5 @@
+@@ -1123,7 +1123,6 @@
+             vec3d3 = BeeEntity.this.getRotationVec(0.0F);
+          }
+ 
+-         int i = true;
+          Vec3d vec3d4 = TargetFinder.findAirTarget(BeeEntity.this, 8, 7, vec3d3, 1.5707964F, 2, 1);
+          return vec3d4 != null ? vec3d4 : TargetFinder.findGroundTarget(BeeEntity.this, 8, 4, -2, vec3d3, 1.5707963705062866D);
+       }
+@@ -1188,3 +1187,5 @@
        }
     }
  }

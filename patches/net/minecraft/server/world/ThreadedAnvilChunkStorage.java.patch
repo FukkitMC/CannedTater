@@ -1,5 +1,45 @@
 --- a/net/minecraft/server/world/ThreadedAnvilChunkStorage.java
 +++ b/net/minecraft/server/world/ThreadedAnvilChunkStorage.java
+@@ -359,7 +359,7 @@
+          LOGGER.info("ThreadedAnvilChunkStorage ({}): All chunks are saved", this.saveDir.getName());
+       } else {
+          this.chunkHolders.values().stream().filter(ChunkHolder::isAccessible).forEach((chunkHolder) -> {
+-            Chunk chunk = (Chunk)chunkHolder.getSavingFuture().getNow((Object)null);
++            Chunk chunk = (Chunk)chunkHolder.getSavingFuture().getNow(null);
+             if (chunk instanceof ReadOnlyChunk || chunk instanceof WorldChunk) {
+                this.save(chunk);
+                chunkHolder.updateAccessibleStatus();
+@@ -544,9 +544,9 @@
+             } catch (Exception var8) {
+                CrashReport crashReport = CrashReport.create(var8, "Exception generating new chunk");
+                CrashReportSection crashReportSection = crashReport.addElement("Chunk to be generated");
+-               crashReportSection.add("Location", (Object)String.format("%d,%d", chunkPos.x, chunkPos.z));
+-               crashReportSection.add("Position hash", (Object)ChunkPos.toLong(chunkPos.x, chunkPos.z));
+-               crashReportSection.add("Generator", (Object)this.chunkGenerator);
++               crashReportSection.add("Location", String.format("%d,%d", chunkPos.x, chunkPos.z));
++               crashReportSection.add("Position hash", ChunkPos.toLong(chunkPos.x, chunkPos.z));
++               crashReportSection.add("Generator", this.chunkGenerator);
+                throw new CrashException(crashReport);
+             }
+          }, (unloaded) -> {
+@@ -802,7 +802,7 @@
+          Optional<WorldChunk> optional2 = optional.flatMap((chunk) -> {
+             return chunk instanceof WorldChunk ? Optional.of((WorldChunk)chunk) : Optional.empty();
+          });
+-         csvWriter.printRow(chunkPos.x, chunkPos.z, chunkHolder.getLevel(), optional.isPresent(), optional.map(Chunk::getStatus).orElse((Object)null), optional2.map(WorldChunk::getLevelType).orElse((Object)null), getFutureStatus(chunkHolder.getAccessibleFuture()), getFutureStatus(chunkHolder.getTickingFuture()), getFutureStatus(chunkHolder.getEntityTickingFuture()), this.ticketManager.getTicket(entry.getLongKey()), !this.isTooFarFromPlayersToSpawnMobs(chunkPos), optional2.map((worldChunk) -> {
++         csvWriter.printRow(chunkPos.x, chunkPos.z, chunkHolder.getLevel(), optional.isPresent(), optional.map(Chunk::getStatus).orElse(null), optional2.map(WorldChunk::getLevelType).orElse(null), getFutureStatus(chunkHolder.getAccessibleFuture()), getFutureStatus(chunkHolder.getTickingFuture()), getFutureStatus(chunkHolder.getEntityTickingFuture()), this.ticketManager.getTicket(entry.getLongKey()), !this.isTooFarFromPlayersToSpawnMobs(chunkPos), optional2.map((worldChunk) -> {
+             return Stream.of(worldChunk.getEntitySectionArray()).mapToInt(TypeFilterableList::size).sum();
+          }).orElse(0), optional2.map((worldChunk) -> {
+             return worldChunk.getBlockEntities().size();
+@@ -813,7 +813,7 @@
+ 
+    private static String getFutureStatus(CompletableFuture<Either<WorldChunk, ChunkHolder.Unloaded>> completableFuture) {
+       try {
+-         Either<WorldChunk, ChunkHolder.Unloaded> either = (Either)completableFuture.getNow((Object)null);
++         Either<WorldChunk, ChunkHolder.Unloaded> either = (Either)completableFuture.getNow(null);
+          return either != null ? (String)either.map((worldChunk) -> {
+             return "done";
+          }, (unloaded) -> {
 @@ -1267,3 +1267,5 @@
        }
     }

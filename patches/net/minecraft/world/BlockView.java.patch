@@ -1,5 +1,14 @@
 --- a/net/minecraft/world/BlockView.java
 +++ b/net/minecraft/world/BlockView.java
+@@ -124,7 +124,7 @@
+             double w = t * (q > 0 ? 1.0D - MathHelper.fractionalPart(h) : MathHelper.fractionalPart(h));
+             double x = u * (r > 0 ? 1.0D - MathHelper.fractionalPart(i) : MathHelper.fractionalPart(i));
+ 
+-            Object object2;
++            T object2;
+             do {
+                if (v > 1.0D && w > 1.0D && x > 1.0D) {
+                   return blockRaycaster.apply(raycastContext);
 @@ -154,3 +154,5 @@
        }
     }

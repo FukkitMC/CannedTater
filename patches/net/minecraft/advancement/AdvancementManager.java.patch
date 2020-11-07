@@ -1,5 +1,14 @@
 --- a/net/minecraft/advancement/AdvancementManager.java
 +++ b/net/minecraft/advancement/AdvancementManager.java
+@@ -65,7 +65,7 @@
+    }
+ 
+    public void load(Map<Identifier, Advancement.Task> map) {
+-      Function function = Functions.forMap(this.advancements, (Object)null);
++      Function function = Functions.forMap(this.advancements, null);
+ 
+       label42:
+       while(!map.isEmpty()) {
 @@ -174,3 +174,5 @@
        void onClear();
     }

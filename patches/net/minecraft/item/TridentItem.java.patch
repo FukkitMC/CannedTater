@@ -1,5 +1,32 @@
 --- a/net/minecraft/item/TridentItem.java
 +++ b/net/minecraft/item/TridentItem.java
+@@ -58,7 +58,7 @@
+             int j = EnchantmentHelper.getRiptide(stack);
+             if (j <= 0 || playerEntity.isTouchingWaterOrRain()) {
+                if (!world.isClient) {
+-                  stack.damage(1, (LivingEntity)playerEntity, (Consumer)((p) -> {
++                  stack.damage(1, (LivingEntity)playerEntity, ((p) -> {
+                      p.sendToolBreakStatus(user.getActiveHand());
+                   }));
+                   if (j == 0) {
+@@ -125,7 +125,7 @@
+    }
+ 
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+-      stack.damage(1, (LivingEntity)attacker, (Consumer)((e) -> {
++      stack.damage(1, (LivingEntity)attacker, ((e) -> {
+          e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND);
+       }));
+       return true;
+@@ -133,7 +133,7 @@
+ 
+    public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
+       if ((double)state.getHardness(world, pos) != 0.0D) {
+-         stack.damage(2, (LivingEntity)miner, (Consumer)((e) -> {
++         stack.damage(2, (LivingEntity)miner, ((e) -> {
+             e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND);
+          }));
+       }
 @@ -149,3 +149,5 @@
        return 1;
     }

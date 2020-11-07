@@ -1,6 +1,12 @@
 --- a/net/minecraft/entity/ai/brain/task/OpenDoorsTask.java
 +++ b/net/minecraft/entity/ai/brain/task/OpenDoorsTask.java
-@@ -162,3 +162,5 @@
+@@ -157,8 +157,10 @@
+       if (brain.getOptionalMemory(MemoryModuleType.DOORS_TO_CLOSE).isPresent()) {
+          ((Set)brain.getOptionalMemory(MemoryModuleType.DOORS_TO_CLOSE).get()).add(globalPos);
+       } else {
+-         brain.remember(MemoryModuleType.DOORS_TO_CLOSE, (Object)Sets.newHashSet(new GlobalPos[]{globalPos}));
++         brain.remember(MemoryModuleType.DOORS_TO_CLOSE, Sets.newHashSet(new GlobalPos[]{globalPos}));
+       }
  
     }
  }

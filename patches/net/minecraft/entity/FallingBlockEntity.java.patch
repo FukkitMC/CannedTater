@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/FallingBlockEntity.java
 +++ b/net/minecraft/entity/FallingBlockEntity.java
+@@ -273,7 +273,7 @@
+ 
+    public void populateCrashReport(CrashReportSection section) {
+       super.populateCrashReport(section);
+-      section.add("Immitating BlockState", (Object)this.block.toString());
++      section.add("Immitating BlockState", this.block.toString());
+    }
+ 
+    public BlockState getBlockState() {
 @@ -292,3 +292,5 @@
        BLOCK_POS = DataTracker.registerData(FallingBlockEntity.class, TrackedDataHandlerRegistry.BLOCK_POS);
     }

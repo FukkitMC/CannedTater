@@ -1,5 +1,22 @@
 --- a/net/minecraft/entity/passive/FoxEntity.java
 +++ b/net/minecraft/entity/passive/FoxEntity.java
+@@ -316,13 +316,13 @@
+ 
+    private List<UUID> getTrustedUuids() {
+       List<UUID> list = Lists.newArrayList();
+-      list.add(((Optional)this.dataTracker.get(OWNER)).orElse((Object)null));
+-      list.add(((Optional)this.dataTracker.get(OTHER_TRUSTED)).orElse((Object)null));
++      list.add((this.dataTracker.get(OWNER)).orElse(null));
++      list.add((this.dataTracker.get(OTHER_TRUSTED)).orElse(null));
+       return list;
+    }
+ 
+    private void addTrustedUuid(@Nullable UUID uuid) {
+-      if (((Optional)this.dataTracker.get(OWNER)).isPresent()) {
++      if ((this.dataTracker.get(OWNER)).isPresent()) {
+          this.dataTracker.set(OTHER_TRUSTED, Optional.ofNullable(uuid));
+       } else {
+          this.dataTracker.set(OWNER, Optional.ofNullable(uuid));
 @@ -1394,3 +1394,5 @@
        }
     }

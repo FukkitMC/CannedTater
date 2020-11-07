@@ -1,5 +1,14 @@
 --- a/net/minecraft/recipe/RecipeManager.java
 +++ b/net/minecraft/recipe/RecipeManager.java
+@@ -116,7 +116,7 @@
+ 
+    public Optional<? extends Recipe<?>> get(Identifier id) {
+       return this.recipes.values().stream().map((map) -> {
+-         return (Recipe)map.get(id);
++         return map.get(id);
+       }).filter(Objects::nonNull).findFirst();
+    }
+ 
 @@ -155,3 +155,5 @@
        this.recipes = ImmutableMap.copyOf(map);
     }

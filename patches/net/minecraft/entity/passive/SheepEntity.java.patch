@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/passive/SheepEntity.java
 +++ b/net/minecraft/entity/passive/SheepEntity.java
+@@ -202,7 +202,7 @@
+       if (itemStack.getItem() == Items.SHEARS) {
+          if (!this.world.isClient && this.isShearable()) {
+             this.sheared(SoundCategory.PLAYERS);
+-            itemStack.damage(1, (LivingEntity)player, (Consumer)((playerEntity) -> {
++            itemStack.damage(1, (LivingEntity)player, ((playerEntity) -> {
+                playerEntity.sendToolBreakStatus(hand);
+             }));
+             return ActionResult.SUCCESS;
 @@ -374,3 +374,5 @@
        }, SheepEntity::getDyedColor)));
     }

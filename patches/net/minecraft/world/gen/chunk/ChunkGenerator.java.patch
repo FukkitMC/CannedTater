@@ -1,5 +1,14 @@
 --- a/net/minecraft/world/gen/chunk/ChunkGenerator.java
 +++ b/net/minecraft/world/gen/chunk/ChunkGenerator.java
+@@ -219,7 +219,7 @@
+          biome.generateFeatureStep(accessor, this, region, m, chunkRandom, blockPos);
+       } catch (Exception var14) {
+          CrashReport crashReport = CrashReport.create(var14, "Biome decoration");
+-         crashReport.addElement("Generation").add("CenterX", (Object)i).add("CenterZ", (Object)j).add("Seed", (Object)m).add("Biome", (Object)biome);
++         crashReport.addElement("Generation").add("CenterX", i).add("CenterZ", j).add("Seed", m).add("Biome", biome);
+          throw new CrashException(crashReport);
+       }
+    }
 @@ -354,3 +354,5 @@
        CODEC = Registry.CHUNK_GENERATOR.dispatchStable(ChunkGenerator::getCodec, Function.identity());
     }

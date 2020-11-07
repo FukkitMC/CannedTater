@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/passive/HorseBaseEntity.java
 +++ b/net/minecraft/entity/passive/HorseBaseEntity.java
+@@ -143,7 +143,7 @@
+ 
+    @Nullable
+    public UUID getOwnerUuid() {
+-      return (UUID)((Optional)this.dataTracker.get(OWNER_UUID)).orElse((Object)null);
++      return (UUID)(this.dataTracker.get(OWNER_UUID)).orElse(null);
+    }
+ 
+    public void setOwnerUuid(@Nullable UUID uuid) {
 @@ -1044,3 +1044,5 @@
        OWNER_UUID = DataTracker.registerData(HorseBaseEntity.class, TrackedDataHandlerRegistry.OPTIONAL_UUID);
     }

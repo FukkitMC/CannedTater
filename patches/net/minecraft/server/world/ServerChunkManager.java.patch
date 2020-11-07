@@ -1,5 +1,30 @@
 --- a/net/minecraft/server/world/ServerChunkManager.java
 +++ b/net/minecraft/server/world/ServerChunkManager.java
+@@ -162,11 +162,11 @@
+          if (chunkHolder == null) {
+             return null;
+          } else {
+-            Either<Chunk, ChunkHolder.Unloaded> either = (Either)chunkHolder.getValidFutureFor(ChunkStatus.FULL).getNow((Object)null);
++            Either<Chunk, ChunkHolder.Unloaded> either = (Either)chunkHolder.getValidFutureFor(ChunkStatus.FULL).getNow(null);
+             if (either == null) {
+                return null;
+             } else {
+-               Chunk chunk2 = (Chunk)either.left().orElse((Object)null);
++               Chunk chunk2 = (Chunk)either.left().orElse(null);
+                if (chunk2 != null) {
+                   this.putInCache(l, chunk2, ChunkStatus.FULL);
+                   if (chunk2 instanceof WorldChunk) {
+@@ -182,8 +182,8 @@
+ 
+    private void initChunkCaches() {
+       Arrays.fill(this.chunkPosCache, ChunkPos.MARKER);
+-      Arrays.fill(this.chunkStatusCache, (Object)null);
+-      Arrays.fill(this.chunkCache, (Object)null);
++      Arrays.fill(this.chunkStatusCache, null);
++      Arrays.fill(this.chunkCache, null);
+    }
+ 
+    @Environment(EnvType.CLIENT)
 @@ -527,3 +527,5 @@
        }
     }

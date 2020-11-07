@@ -1,6 +1,39 @@
 --- a/net/minecraft/server/network/ServerPlayerEntity.java
 +++ b/net/minecraft/server/network/ServerPlayerEntity.java
-@@ -1432,3 +1432,5 @@
+@@ -45,6 +45,7 @@
+ import net.minecraft.item.WrittenBookItem;
+ import net.minecraft.nbt.CompoundTag;
+ import net.minecraft.nbt.NbtOps;
++import net.minecraft.nbt.Tag;
+ import net.minecraft.network.MessageType;
+ import net.minecraft.network.Packet;
+ import net.minecraft.network.packet.c2s.play.ClientSettingsC2SPacket;
+@@ -302,7 +303,7 @@
+          tag.putInt("SpawnZ", this.spawnPointPosition.getZ());
+          tag.putBoolean("SpawnForced", this.spawnPointSet);
+          tag.putFloat("SpawnAngle", this.spawnAngle);
+-         DataResult var10000 = Identifier.CODEC.encodeStart(NbtOps.INSTANCE, this.spawnPointDimension.getValue());
++         DataResult<Tag> var10000 = Identifier.CODEC.encodeStart(NbtOps.INSTANCE, this.spawnPointDimension.getValue());
+          Logger var10001 = LOGGER;
+          var10001.getClass();
+          var10000.resultOrPartial(var10001::error).ifPresent((tagx) -> {
+@@ -486,7 +487,6 @@
+          Text text = this.getDamageTracker().getDeathMessage();
+          this.networkHandler.sendPacket(new CombatEventS2CPacket(this.getDamageTracker(), CombatEventS2CPacket.Type.ENTITY_DIED, text), (future) -> {
+             if (!future.isSuccess()) {
+-               int i = true;
+                String string = text.asTruncatedString(256);
+                Text text2 = new TranslatableText("death.attack.message_too_long", new Object[]{(new LiteralText(string)).formatted(Formatting.YELLOW)});
+                Text text3 = (new TranslatableText("death.attack.even_more_magic", new Object[]{this.getDisplayName()})).styled((style) -> {
+@@ -1192,7 +1192,6 @@
+    public void sendMessage(Text message, MessageType type, UUID senderUuid) {
+       this.networkHandler.sendPacket(new GameMessageS2CPacket(message, type, senderUuid), (future) -> {
+          if (!future.isSuccess() && (type == MessageType.GAME_INFO || type == MessageType.SYSTEM)) {
+-            int i = true;
+             String string = message.asTruncatedString(256);
+             Text text2 = (new LiteralText(string)).formatted(Formatting.YELLOW);
+             this.networkHandler.sendPacket(new GameMessageS2CPacket((new TranslatableText("multiplayer.message_not_delivered", new Object[]{text2})).formatted(Formatting.RED), MessageType.SYSTEM, senderUuid));
+@@ -1432,3 +1431,5 @@
        return this.textStream;
     }
  }

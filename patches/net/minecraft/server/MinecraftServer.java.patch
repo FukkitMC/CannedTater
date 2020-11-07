@@ -1,6 +1,36 @@
 --- a/net/minecraft/server/MinecraftServer.java
 +++ b/net/minecraft/server/MinecraftServer.java
-@@ -1776,3 +1776,5 @@
+@@ -228,7 +228,7 @@
+       thread.setUncaughtExceptionHandler((threadx, throwable) -> {
+          LOGGER.error(throwable);
+       });
+-      S minecraftServer = (MinecraftServer)serverFactory.apply(thread);
++      S minecraftServer = serverFactory.apply(thread);
+       atomicReference.set(minecraftServer);
+       thread.start();
+       return minecraftServer;
+@@ -424,7 +424,6 @@
+          int j = 0;
+          int k = 0;
+          int l = -1;
+-         int m = true;
+ 
+          for(int n = 0; n < 1024; ++n) {
+             if (i > -16 && i <= 16 && j > -16 && j <= 16) {
+@@ -1339,10 +1338,10 @@
+     */
+    public CompletableFuture<Void> reloadResources(Collection<String> datapacks) {
+       CompletableFuture<Void> completableFuture = CompletableFuture.supplyAsync(() -> {
+-         Stream var10000 = datapacks.stream();
++         Stream<String> var10000 = datapacks.stream();
+          ResourcePackManager var10001 = this.dataPackManager;
+          var10001.getClass();
+-         return (ImmutableList)var10000.map(var10001::getProfile).filter(Objects::nonNull).map(ResourcePackProfile::createResourcePack).collect(ImmutableList.toImmutableList());
++         return var10000.map(var10001::getProfile).filter(Objects::nonNull).map(ResourcePackProfile::createResourcePack).collect(ImmutableList.toImmutableList());
+       }, this).thenCompose((immutableList) -> {
+          return ServerResourceManager.reload(immutableList, this.isDedicated() ? CommandManager.RegistrationEnvironment.DEDICATED : CommandManager.RegistrationEnvironment.INTEGRATED, this.getFunctionPermissionLevel(), this.workerExecutor, this);
+       }).thenAcceptAsync((serverResourceManager) -> {
+@@ -1776,3 +1775,5 @@
        DEMO_LEVEL_INFO = new LevelInfo("Demo World", GameMode.SURVIVAL, false, Difficulty.NORMAL, false, new GameRules(), DataPackSettings.SAFE_MODE);
     }
  }

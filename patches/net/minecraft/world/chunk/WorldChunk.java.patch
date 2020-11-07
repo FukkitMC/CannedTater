@@ -1,5 +1,91 @@
 --- a/net/minecraft/world/chunk/WorldChunk.java
 +++ b/net/minecraft/world/chunk/WorldChunk.java
+@@ -90,7 +90,7 @@
+    private volatile boolean lightOn;
+ 
+    public WorldChunk(World world, ChunkPos pos, BiomeArray biomes) {
+-      this(world, pos, biomes, UpgradeData.NO_UPGRADE_DATA, DummyClientTickScheduler.get(), DummyClientTickScheduler.get(), 0L, (ChunkSection[])null, (Consumer)null);
++      this(world, pos, biomes, UpgradeData.NO_UPGRADE_DATA, DummyClientTickScheduler.get(), DummyClientTickScheduler.get(), 0L, (ChunkSection[])null, null);
+    }
+ 
+    public WorldChunk(World world, ChunkPos pos, BiomeArray biomes, UpgradeData upgradeData, TickScheduler<Block> blockTickScheduler, TickScheduler<Fluid> fluidTickScheduler, long inhabitedTime, @Nullable ChunkSection[] sections, @Nullable Consumer<WorldChunk> loadToWorldConsumer) {
+@@ -135,7 +135,7 @@
+    }
+ 
+    public WorldChunk(World world, ProtoChunk protoChunk) {
+-      this(world, protoChunk.getPos(), protoChunk.getBiomeArray(), protoChunk.getUpgradeData(), protoChunk.getBlockTickScheduler(), protoChunk.getFluidTickScheduler(), protoChunk.getInhabitedTime(), protoChunk.getSectionArray(), (Consumer)null);
++      this(world, protoChunk.getPos(), protoChunk.getBiomeArray(), protoChunk.getUpgradeData(), protoChunk.getBlockTickScheduler(), protoChunk.getFluidTickScheduler(), protoChunk.getInhabitedTime(), protoChunk.getSectionArray(), null);
+       Iterator var3 = protoChunk.getEntities().iterator();
+ 
+       while(var3.hasNext()) {
+@@ -542,8 +542,8 @@
+                entity = (Entity)var8.next();
+             } while(type != null && entity.getType() != type);
+ 
+-            if (entity.getBoundingBox().intersects(box) && predicate.test(entity)) {
+-               result.add(entity);
++            if (entity.getBoundingBox().intersects(box) && predicate.test((T) entity)) {
++               result.add((T) entity);
+             }
+          }
+       }
+@@ -579,9 +579,9 @@
+ 
+                   entity = (Entity)var8.next();
+                } while(!entity.getBoundingBox().intersects(box));
+-            } while(predicate != null && !predicate.test(entity));
++            } while(predicate != null && !predicate.test((T) entity));
+ 
+-            result.add(entity);
++            result.add((T) entity);
+          }
+       }
+ 
+@@ -603,7 +603,7 @@
+       } : (pos) -> {
+          return (verticalStripBitmask & 1 << (pos.getY() >> 4)) != 0;
+       };
+-      Stream var10000 = Sets.newHashSet(this.blockEntities.keySet()).stream().filter(predicate);
++      Stream<BlockPos> var10000 = Sets.newHashSet(this.blockEntities.keySet()).stream().filter(predicate);
+       World var10001 = this.world;
+       var10000.forEach(var10001::removeBlockEntity);
+ 
+@@ -819,7 +819,7 @@
+ 
+    public void disableTickSchedulers() {
+       if (this.blockTickScheduler instanceof ChunkTickScheduler) {
+-         ((ChunkTickScheduler)this.blockTickScheduler).tick(this.world.getBlockTickScheduler(), (blockPos) -> {
++         ((ChunkTickScheduler<Block>)this.blockTickScheduler).tick(this.world.getBlockTickScheduler(), (blockPos) -> {
+             return this.getBlockState(blockPos).getBlock();
+          });
+          this.blockTickScheduler = DummyClientTickScheduler.get();
+@@ -829,7 +829,7 @@
+       }
+ 
+       if (this.fluidTickScheduler instanceof ChunkTickScheduler) {
+-         ((ChunkTickScheduler)this.fluidTickScheduler).tick(this.world.getFluidTickScheduler(), (blockPos) -> {
++         ((ChunkTickScheduler<Fluid>)this.fluidTickScheduler).tick(this.world.getFluidTickScheduler(), (blockPos) -> {
+             return this.getFluidState(blockPos).getFluid();
+          });
+          this.fluidTickScheduler = DummyClientTickScheduler.get();
+@@ -841,13 +841,13 @@
+    }
+ 
+    public void enableTickSchedulers(ServerWorld world) {
+-      if (this.blockTickScheduler == DummyClientTickScheduler.get()) {
+-         this.blockTickScheduler = new SimpleTickScheduler(Registry.BLOCK::getId, world.getBlockTickScheduler().getScheduledTicksInChunk(this.pos, true, false), world.getTime());
++      if (this.blockTickScheduler == (Object) DummyClientTickScheduler.get()) {
++         this.blockTickScheduler = new SimpleTickScheduler<>(Registry.BLOCK::getId, world.getBlockTickScheduler().getScheduledTicksInChunk(this.pos, true, false), world.getTime());
+          this.setShouldSave(true);
+       }
+ 
+-      if (this.fluidTickScheduler == DummyClientTickScheduler.get()) {
+-         this.fluidTickScheduler = new SimpleTickScheduler(Registry.FLUID::getId, world.getFluidTickScheduler().getScheduledTicksInChunk(this.pos, true, false), world.getTime());
++      if (this.fluidTickScheduler == (Object) DummyClientTickScheduler.get()) {
++         this.fluidTickScheduler = new SimpleTickScheduler<>(Registry.FLUID::getId, world.getFluidTickScheduler().getScheduledTicksInChunk(this.pos, true, false), world.getTime());
+          this.setShouldSave(true);
+       }
+ 
 @@ -880,3 +880,5 @@
        CHECK;
     }

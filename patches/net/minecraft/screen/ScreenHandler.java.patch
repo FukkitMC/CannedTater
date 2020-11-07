@@ -1,5 +1,20 @@
 --- a/net/minecraft/screen/ScreenHandler.java
 +++ b/net/minecraft/screen/ScreenHandler.java
+@@ -193,10 +193,10 @@
+          crashReportSection.add("Menu Class", () -> {
+             return this.getClass().getCanonicalName();
+          });
+-         crashReportSection.add("Slot Count", (Object)this.slots.size());
+-         crashReportSection.add("Slot", (Object)i);
+-         crashReportSection.add("Button", (Object)j);
+-         crashReportSection.add("Type", (Object)actionType);
++         crashReportSection.add("Slot Count", this.slots.size());
++         crashReportSection.add("Slot", i);
++         crashReportSection.add("Button", j);
++         crashReportSection.add("Type", actionType);
+          throw new CrashException(crashReport);
+       }
+    }
 @@ -698,3 +698,5 @@
        }
     }

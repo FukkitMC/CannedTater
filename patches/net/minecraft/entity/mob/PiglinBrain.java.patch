@@ -1,5 +1,37 @@
 --- a/net/minecraft/entity/mob/PiglinBrain.java
 +++ b/net/minecraft/entity/mob/PiglinBrain.java
+@@ -159,9 +159,9 @@
+ 
+    protected static void tickActivities(PiglinEntity piglin) {
+       Brain<PiglinEntity> brain = piglin.getBrain();
+-      Activity activity = (Activity)brain.getFirstPossibleNonCoreActivity().orElse((Object)null);
++      Activity activity = (Activity)brain.getFirstPossibleNonCoreActivity().orElse(null);
+       brain.resetPossibleActivities((List)ImmutableList.of(Activity.ADMIRE_ITEM, Activity.FIGHT, Activity.AVOID, Activity.CELEBRATE, Activity.RIDE, Activity.IDLE));
+-      Activity activity2 = (Activity)brain.getFirstPossibleNonCoreActivity().orElse((Object)null);
++      Activity activity2 = (Activity)brain.getFirstPossibleNonCoreActivity().orElse(null);
+       if (activity != activity2) {
+          method_30091(piglin).ifPresent(piglin::playSound);
+       }
+@@ -600,7 +600,7 @@
+ 
+    private static void angerAtIfCloser(AbstractPiglinEntity piglin, LivingEntity target) {
+       Optional<LivingEntity> optional = getAngryAt(piglin);
+-      LivingEntity livingEntity = LookTargetUtil.getCloserEntity(piglin, (Optional)optional, target);
++      LivingEntity livingEntity = LookTargetUtil.getCloserEntity(piglin, optional, target);
+       if (!optional.isPresent() || optional.get() != livingEntity) {
+          becomeAngryWith(piglin, livingEntity);
+       }
+@@ -628,8 +628,8 @@
+ 
+    private static void runAwayFromClosestTarget(PiglinEntity piglin, LivingEntity target) {
+       Brain<PiglinEntity> brain = piglin.getBrain();
+-      LivingEntity livingEntity = LookTargetUtil.getCloserEntity(piglin, (Optional)brain.getOptionalMemory(MemoryModuleType.AVOID_TARGET), target);
+-      livingEntity = LookTargetUtil.getCloserEntity(piglin, (Optional)brain.getOptionalMemory(MemoryModuleType.ATTACK_TARGET), livingEntity);
++      LivingEntity livingEntity = LookTargetUtil.getCloserEntity(piglin, brain.getOptionalMemory(MemoryModuleType.AVOID_TARGET), target);
++      livingEntity = LookTargetUtil.getCloserEntity(piglin, brain.getOptionalMemory(MemoryModuleType.ATTACK_TARGET), livingEntity);
+       runAwayFrom(piglin, livingEntity);
+    }
+ 
 @@ -760,3 +760,5 @@
        FOOD = ImmutableSet.of(Items.PORKCHOP, Items.COOKED_PORKCHOP);
     }

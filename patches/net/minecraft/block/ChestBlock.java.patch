@@ -1,5 +1,23 @@
 --- a/net/minecraft/block/ChestBlock.java
 +++ b/net/minecraft/block/ChestBlock.java
+@@ -201,7 +201,7 @@
+ 
+    @Nullable
+    public static Inventory getInventory(ChestBlock block, BlockState state, World world, BlockPos pos, boolean ignoreBlocked) {
+-      return (Inventory)((Optional)block.getBlockEntitySource(state, world, pos, ignoreBlocked).apply(INVENTORY_RETRIEVER)).orElse((Object)null);
++      return (Inventory)(block.getBlockEntitySource(state, world, pos, ignoreBlocked).apply(INVENTORY_RETRIEVER)).orElse(null);
+    }
+ 
+    public DoubleBlockProperties.PropertySource<? extends ChestBlockEntity> getBlockEntitySource(BlockState state, World world, BlockPos pos, boolean ignoreBlocked) {
+@@ -219,7 +219,7 @@
+ 
+    @Nullable
+    public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
+-      return (NamedScreenHandlerFactory)((Optional)this.getBlockEntitySource(state, world, pos, false).apply(NAME_RETRIEVER)).orElse((Object)null);
++      return (NamedScreenHandlerFactory)(this.getBlockEntitySource(state, world, pos, false).apply(NAME_RETRIEVER)).orElse(null);
+    }
+ 
+    @Environment(EnvType.CLIENT)
 @@ -352,3 +352,5 @@
        };
     }
