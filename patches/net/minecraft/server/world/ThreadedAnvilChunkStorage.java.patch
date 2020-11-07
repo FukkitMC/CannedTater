@@ -9,6 +9,15 @@
              if (chunk instanceof ReadOnlyChunk || chunk instanceof WorldChunk) {
                 this.save(chunk);
                 chunkHolder.updateAccessibleStatus();
+@@ -405,7 +405,7 @@
+ 
+    private void tryUnloadChunk(long pos, ChunkHolder chunkHolder) {
+       CompletableFuture<Chunk> completableFuture = chunkHolder.getSavingFuture();
+-      Consumer var10001 = (chunk) -> {
++      Consumer<Chunk> var10001 = (chunk) -> {
+          CompletableFuture<Chunk> completableFuture2 = chunkHolder.getSavingFuture();
+          if (completableFuture2 != completableFuture) {
+             this.tryUnloadChunk(pos, chunkHolder);
 @@ -544,9 +544,9 @@
              } catch (Exception var8) {
                 CrashReport crashReport = CrashReport.create(var8, "Exception generating new chunk");

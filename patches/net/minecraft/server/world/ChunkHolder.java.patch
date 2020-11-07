@@ -29,6 +29,24 @@
           if (either == null || either.left().isPresent()) {
              return completableFuture;
           }
+@@ -308,7 +308,7 @@
+       boolean bl2 = this.level <= ThreadedAnvilChunkStorage.MAX_LEVEL;
+       ChunkHolder.LevelType levelType = getLevelType(this.lastTickLevel);
+       ChunkHolder.LevelType levelType2 = getLevelType(this.level);
+-      CompletableFuture completableFuture;
++      CompletableFuture<Either<WorldChunk, ChunkHolder.Unloaded>> completableFuture;
+       if (bl) {
+          Either<Chunk, ChunkHolder.Unloaded> either = Either.right(new ChunkHolder.Unloaded() {
+             public String toString() {
+@@ -319,7 +319,7 @@
+          for(int i = bl2 ? chunkStatus2.getIndex() + 1 : 0; i <= chunkStatus.getIndex(); ++i) {
+             completableFuture = (CompletableFuture)this.futuresByStatus.get(i);
+             if (completableFuture != null) {
+-               completableFuture.complete(either);
++               completableFuture.complete((Either<WorldChunk, ChunkHolder.Unloaded>) (Object) either);
+             } else {
+                this.futuresByStatus.set(i, CompletableFuture.completedFuture(either));
+             }
 @@ -444,3 +444,5 @@
        }
     }

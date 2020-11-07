@@ -1,6 +1,14 @@
 --- a/net/minecraft/world/gen/chunk/ChunkGenerator.java
 +++ b/net/minecraft/world/gen/chunk/ChunkGenerator.java
-@@ -219,7 +219,7 @@
+@@ -138,7 +138,6 @@
+    public void carve(long seed, BiomeAccess access, Chunk chunk, GenerationStep.Carver carver) {
+       BiomeAccess biomeAccess = access.withSource(this.populationSource);
+       ChunkRandom chunkRandom = new ChunkRandom();
+-      int i = true;
+       ChunkPos chunkPos = chunk.getPos();
+       int j = chunkPos.x;
+       int k = chunkPos.z;
+@@ -219,7 +218,7 @@
           biome.generateFeatureStep(accessor, this, region, m, chunkRandom, blockPos);
        } catch (Exception var14) {
           CrashReport crashReport = CrashReport.create(var14, "Biome decoration");
@@ -9,7 +17,15 @@
           throw new CrashException(crashReport);
        }
     }
-@@ -354,3 +354,5 @@
+@@ -281,7 +280,6 @@
+     * A radius of 8 chunks around the given chunk will be searched for structure starts.
+     */
+    public void addStructureReferences(StructureWorldAccess world, StructureAccessor accessor, Chunk chunk) {
+-      int i = true;
+       int j = chunk.getPos().x;
+       int k = chunk.getPos().z;
+       int l = j << 4;
+@@ -354,3 +352,5 @@
        CODEC = Registry.CHUNK_GENERATOR.dispatchStable(ChunkGenerator::getCodec, Function.identity());
     }
  }

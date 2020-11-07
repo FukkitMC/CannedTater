@@ -1,6 +1,14 @@
 --- a/net/minecraft/world/storage/VersionedChunkStorage.java
 +++ b/net/minecraft/world/storage/VersionedChunkStorage.java
-@@ -73,3 +73,5 @@
+@@ -28,7 +28,6 @@
+ 
+    public CompoundTag updateChunkTag(RegistryKey<World> registryKey, Supplier<PersistentStateManager> persistentStateManagerFactory, CompoundTag tag) {
+       int i = getDataVersion(tag);
+-      int j = true;
+       if (i < 1493) {
+          tag = NbtHelper.update(this.dataFixer, DataFixTypes.CHUNK, tag, i, 1493);
+          if (tag.getCompound("Level").getBoolean("hasLegacyStructureData")) {
+@@ -73,3 +72,5 @@
        this.worker.close();
     }
  }

@@ -1,6 +1,22 @@
 --- a/net/minecraft/world/gen/chunk/NoiseChunkGenerator.java
 +++ b/net/minecraft/world/gen/chunk/NoiseChunkGenerator.java
-@@ -657,3 +657,5 @@
+@@ -204,7 +204,6 @@
+          float g = 0.0F;
+          float h = 0.0F;
+          float i = 0.0F;
+-         int j = true;
+          int k = this.getSeaLevel();
+          float l = this.populationSource.getBiomeForNoiseGen(x, k, z).getDepth();
+ 
+@@ -385,7 +384,6 @@
+       ChunkGeneratorSettings chunkGeneratorSettings = (ChunkGeneratorSettings)this.settings.get();
+       int k = chunkGeneratorSettings.getBedrockFloorY();
+       int l = this.worldHeight - 1 - chunkGeneratorSettings.getBedrockCeilingY();
+-      int m = true;
+       boolean bl = l + 4 >= 0 && l < this.worldHeight;
+       boolean bl2 = k + 4 >= 0 && k < this.worldHeight;
+       if (bl || bl2) {
+@@ -657,3 +655,5 @@
        AIR = Blocks.AIR.getDefaultState();
     }
  }

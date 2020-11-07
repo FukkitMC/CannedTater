@@ -1,5 +1,16 @@
 --- a/net/minecraft/entity/mob/ZombifiedPiglinEntity.java
 +++ b/net/minecraft/entity/mob/ZombifiedPiglinEntity.java
+@@ -64,8 +64,8 @@
+       this.goalSelector.add(2, new ZombieAttackGoal(this, 1.0D, false));
+       this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D));
+       this.targetSelector.add(1, (new RevengeGoal(this, new Class[0])).setGroupRevenge());
+-      this.targetSelector.add(2, new FollowTargetGoal(this, PlayerEntity.class, 10, true, false, this::shouldAngerAt));
+-      this.targetSelector.add(3, new UniversalAngerGoal(this, true));
++      this.targetSelector.add(2, new FollowTargetGoal<>(this, PlayerEntity.class, 10, true, false, this::shouldAngerAt));
++      this.targetSelector.add(3, new UniversalAngerGoal<>(this, true));
+    }
+ 
+    public static DefaultAttributeContainer.Builder createZombifiedPiglinAttributes() {
 @@ -226,3 +226,5 @@
        field_25609 = Durations.betweenSeconds(4, 6);
     }

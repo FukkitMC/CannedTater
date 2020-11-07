@@ -1,5 +1,23 @@
 --- a/net/minecraft/command/argument/BlockArgumentParser.java
 +++ b/net/minecraft/command/argument/BlockArgumentParser.java
+@@ -224,7 +224,7 @@
+       Iterator var2 = property.getValues().iterator();
+ 
+       while(var2.hasNext()) {
+-         T comparable = (Comparable)var2.next();
++         T comparable = (T)var2.next();
+          if (comparable instanceof Integer) {
+             suggestionsBuilder.suggest((Integer)comparable);
+          } else {
+@@ -516,7 +516,7 @@
+    private static <T extends Comparable<T>> void stringifyProperty(StringBuilder stringBuilder, Property<T> property, Comparable<?> comparable) {
+       stringBuilder.append(property.getName());
+       stringBuilder.append('=');
+-      stringBuilder.append(property.name(comparable));
++      stringBuilder.append(property.name((T) comparable));
+    }
+ 
+    public CompletableFuture<Suggestions> getSuggestions(SuggestionsBuilder suggestionsBuilder, TagGroup<Block> tagGroup) {
 @@ -527,3 +527,5 @@
        return this.tagProperties;
     }

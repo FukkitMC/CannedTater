@@ -15,7 +15,7 @@
           CommandNode<ServerCommandSource> commandNode = (CommandNode)var5.next();
           if (commandNode.canUse(source)) {
 -            ArgumentBuilder<CommandSource, ?> argumentBuilder = commandNode.createBuilder();
-+            ArgumentBuilder<CommandSource, ?> argumentBuilder = (ArgumentBuilder<CommandSource, ?>)  commandNode.createBuilder();
++            ArgumentBuilder<CommandSource, ?> argumentBuilder = (ArgumentBuilder<CommandSource, ?>) (Object) commandNode.createBuilder();
              argumentBuilder.requires((commandSource) -> {
                 return true;
              });

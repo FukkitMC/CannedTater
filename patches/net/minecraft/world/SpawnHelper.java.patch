@@ -1,6 +1,14 @@
 --- a/net/minecraft/world/SpawnHelper.java
 +++ b/net/minecraft/world/SpawnHelper.java
-@@ -485,3 +485,5 @@
+@@ -135,7 +135,6 @@
+          for(int k = 0; k < 3; ++k) {
+             int l = pos.getX();
+             int m = pos.getZ();
+-            int n = true;
+             SpawnSettings.SpawnEntry spawnEntry = null;
+             EntityData entityData = null;
+             int o = MathHelper.ceil(world.random.nextFloat() * 4.0F);
+@@ -485,3 +484,5 @@
        }
     }
  }

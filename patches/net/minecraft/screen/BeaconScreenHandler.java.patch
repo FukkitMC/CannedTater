@@ -1,6 +1,15 @@
 --- a/net/minecraft/screen/BeaconScreenHandler.java
 +++ b/net/minecraft/screen/BeaconScreenHandler.java
-@@ -165,3 +165,5 @@
+@@ -40,8 +40,6 @@
+       this.paymentSlot = new BeaconScreenHandler.PaymentSlot(this.payment, 0, 136, 110);
+       this.addSlot(this.paymentSlot);
+       this.addProperties(propertyDelegate);
+-      int i = true;
+-      int j = true;
+ 
+       int m;
+       for(m = 0; m < 3; ++m) {
+@@ -165,3 +163,5 @@
        }
     }
  }

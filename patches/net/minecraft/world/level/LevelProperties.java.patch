@@ -9,6 +9,15 @@
           return Util.stream(dynamicx.asString().result());
        }).collect(Collectors.toCollection(Sets::newLinkedHashSet)), new Timer(TimerCallbackSerializer.INSTANCE, dynamic.get("ScheduledEvents").asStream()), (CompoundTag)dynamic.get("CustomBossEvents").orElseEmptyMap().getValue(), compoundTag, levelInfo, generatorOptions, lifecycle);
     }
+@@ -147,7 +147,7 @@
+       compoundTag.put("Version", compoundTag3);
+       compoundTag.putInt("DataVersion", SharedConstants.getGameVersion().getWorldVersion());
+       RegistryReadingOps<Tag> registryReadingOps = RegistryReadingOps.of(NbtOps.INSTANCE, dynamicRegistryManager);
+-      DataResult var10000 = GeneratorOptions.CODEC.encodeStart(registryReadingOps, this.generatorOptions);
++      DataResult<Tag> var10000 = GeneratorOptions.CODEC.encodeStart(registryReadingOps, this.generatorOptions);
+       Logger var10002 = LOGGER;
+       var10002.getClass();
+       var10000.resultOrPartial(Util.method_29188("WorldGenSettings: ", var10002::error)).ifPresent((tag) -> {
 @@ -455,3 +455,5 @@
        return this.levelInfo.withCopiedGameRules();
     }

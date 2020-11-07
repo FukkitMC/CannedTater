@@ -1,5 +1,14 @@
 --- a/net/minecraft/world/PortalForcer.java
 +++ b/net/minecraft/world/PortalForcer.java
+@@ -33,7 +33,7 @@
+       pointOfInterestStorage.preloadChunks(this.world, blockPos, i);
+       Optional<PointOfInterest> optional = pointOfInterestStorage.getInSquare((pointOfInterestType) -> {
+          return pointOfInterestType == PointOfInterestType.NETHER_PORTAL;
+-      }, blockPos, i, PointOfInterestStorage.OccupationStatus.ANY).sorted(Comparator.comparingDouble((pointOfInterest) -> {
++      }, blockPos, i, PointOfInterestStorage.OccupationStatus.ANY).sorted(Comparator.comparingDouble((PointOfInterest pointOfInterest) -> {
+          return pointOfInterest.getPos().getSquaredDistance(blockPos);
+       }).thenComparingInt((pointOfInterest) -> {
+          return pointOfInterest.getPos().getY();
 @@ -169,3 +169,5 @@
        return true;
     }

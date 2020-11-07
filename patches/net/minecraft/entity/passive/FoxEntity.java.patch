@@ -17,7 +17,15 @@
           this.dataTracker.set(OTHER_TRUSTED, Optional.ofNullable(uuid));
        } else {
           this.dataTracker.set(OWNER, Optional.ofNullable(uuid));
-@@ -1394,3 +1394,5 @@
+@@ -629,7 +629,6 @@
+       double d = chasedEntity.getZ() - fox.getZ();
+       double e = chasedEntity.getX() - fox.getX();
+       double f = d / e;
+-      int i = true;
+ 
+       for(int j = 0; j < 6; ++j) {
+          double g = f == 0.0D ? 0.0D : d * (double)((float)j / 6.0F);
+@@ -1394,3 +1393,5 @@
        }
     }
  }

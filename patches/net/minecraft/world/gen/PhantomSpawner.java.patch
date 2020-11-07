@@ -1,6 +1,14 @@
 --- a/net/minecraft/world/gen/PhantomSpawner.java
 +++ b/net/minecraft/world/gen/PhantomSpawner.java
-@@ -94,3 +94,5 @@
+@@ -69,7 +69,6 @@
+ 
+                         ServerStatHandler serverStatHandler = ((ServerPlayerEntity)playerEntity).getStatHandler();
+                         j = MathHelper.clamp(serverStatHandler.getStat(Stats.CUSTOM.getOrCreateStat(Stats.TIME_SINCE_REST)), 1, Integer.MAX_VALUE);
+-                        int k = true;
+                      } while(random.nextInt(j) < 72000);
+ 
+                      blockPos2 = blockPos.up(20 + random.nextInt(15)).east(-10 + random.nextInt(21)).south(-10 + random.nextInt(21));
+@@ -94,3 +93,5 @@
        }
     }
  }

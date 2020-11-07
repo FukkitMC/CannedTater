@@ -1,5 +1,14 @@
 --- a/net/minecraft/network/ClientConnection.java
 +++ b/net/minecraft/network/ClientConnection.java
+@@ -139,7 +139,7 @@
+    }
+ 
+    private static <T extends PacketListener> void handlePacket(Packet<T> packet, PacketListener listener) {
+-      packet.apply(listener);
++      packet.apply((T) listener);
+    }
+ 
+    public void setPacketListener(PacketListener listener) {
 @@ -397,3 +397,5 @@
        }
     }

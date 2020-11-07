@@ -1,6 +1,35 @@
 --- a/net/minecraft/server/Main.java
 +++ b/net/minecraft/server/Main.java
-@@ -212,3 +212,5 @@
+@@ -156,18 +156,19 @@
+          }
+ 
+          session.backupLevelDataFile(impl, (SaveProperties)saveProperties);
++         SaveProperties $ = saveProperties;
+          final MinecraftDedicatedServer minecraftDedicatedServer = (MinecraftDedicatedServer)MinecraftServer.startServer((serverThread) -> {
+-            MinecraftDedicatedServer minecraftDedicatedServer = new MinecraftDedicatedServer(serverThread, impl, session, resourcePackManager, serverResourceManager2, saveProperties, serverPropertiesLoader, Schemas.getFixer(), minecraftSessionService, gameProfileRepository, userCache, WorldGenerationProgressLogger::new);
+-            minecraftDedicatedServer.setServerName((String)optionSet.valueOf(optionSpec9));
+-            minecraftDedicatedServer.setServerPort((Integer)optionSet.valueOf(optionSpec12));
+-            minecraftDedicatedServer.setDemo(optionSet.has(optionSpec3));
+-            minecraftDedicatedServer.setServerId((String)optionSet.valueOf(optionSpec13));
+-            boolean bl = !optionSet.has(optionSpec) && !optionSet.valuesOf(optionSpec14).contains("nogui");
+-            if (bl && !GraphicsEnvironment.isHeadless()) {
+-               minecraftDedicatedServer.createGui();
++            MinecraftDedicatedServer minecraftDedicatedServer_ = new MinecraftDedicatedServer(serverThread, impl, session, resourcePackManager, serverResourceManager2, $, serverPropertiesLoader, Schemas.getFixer(), minecraftSessionService, gameProfileRepository, userCache, WorldGenerationProgressLogger::new);
++            minecraftDedicatedServer_.setServerName((String)optionSet.valueOf(optionSpec9));
++            minecraftDedicatedServer_.setServerPort((Integer)optionSet.valueOf(optionSpec12));
++            minecraftDedicatedServer_.setDemo(optionSet.has(optionSpec3));
++            minecraftDedicatedServer_.setServerId((String)optionSet.valueOf(optionSpec13));
++            boolean bl_ = !optionSet.has(optionSpec) && !optionSet.valuesOf(optionSpec14).contains("nogui");
++            if (bl_ && !GraphicsEnvironment.isHeadless()) {
++               minecraftDedicatedServer_.createGui();
+             }
+ 
+-            return minecraftDedicatedServer;
++            return minecraftDedicatedServer_;
+          });
+          Thread thread = new Thread("Server Shutdown Thread") {
+             public void run() {
+@@ -212,3 +213,5 @@
  
     }
  }
