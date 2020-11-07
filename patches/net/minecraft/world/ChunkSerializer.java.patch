@@ -18,7 +18,48 @@
        ChunkSection[] chunkSections = new ChunkSection[16];
        boolean bl2 = world.getDimension().hasSkyLight();
        ChunkManager chunkManager = world.getChunkManager();
-@@ -512,3 +511,5 @@
+@@ -114,27 +113,16 @@
+       ChunkStatus.ChunkType chunkType = getChunkType(tag);
+       Object chunk2;
+       if (chunkType == ChunkStatus.ChunkType.field_12807) {
+-         ListTag var10000;
+-         Function var10001;
+-         DefaultedRegistry var10002;
+          Object tickScheduler2;
+          if (compoundTag.contains("TileTicks", 9)) {
+-            var10000 = compoundTag.getList("TileTicks", 10);
+-            var10001 = Registry.BLOCK::getId;
+-            var10002 = Registry.BLOCK;
+-            var10002.getClass();
+-            tickScheduler2 = SimpleTickScheduler.fromNbt(var10000, var10001, var10002::get);
++            tickScheduler2 = SimpleTickScheduler.fromNbt(compoundTag.getList("TileTicks", 10), Registry.BLOCK::getId, Registry.BLOCK::get);
+          } else {
+             tickScheduler2 = chunkTickScheduler;
+          }
+ 
+          Object tickScheduler4;
+          if (compoundTag.contains("LiquidTicks", 9)) {
+-            var10000 = compoundTag.getList("LiquidTicks", 10);
+-            var10001 = Registry.FLUID::getId;
+-            var10002 = Registry.FLUID;
+-            var10002.getClass();
+-            tickScheduler4 = SimpleTickScheduler.fromNbt(var10000, var10001, var10002::get);
++            tickScheduler4 = SimpleTickScheduler.fromNbt(compoundTag.getList("LiquidTicks", 10), Registry.FLUID::getId, Registry.FLUID::get);
+          } else {
+             tickScheduler4 = chunkTickScheduler2;
+          }
+@@ -263,8 +251,9 @@
+ 
+       CompoundTag compoundTag7;
+       for(int i = -1; i < 17; ++i) {
++         int finalI = i;
+          ChunkSection chunkSection = (ChunkSection)Arrays.stream(chunkSections).filter((chunkSectionx) -> {
+-            return chunkSectionx != null && chunkSectionx.getYOffset() >> 4 == i;
++            return chunkSectionx != null && chunkSectionx.getYOffset() >> 4 == finalI;
+          }).findFirst().orElse(WorldChunk.EMPTY_SECTION);
+          ChunkNibbleArray chunkNibbleArray = lightingProvider.get(LightType.BLOCK).getLightSection(ChunkSectionPos.from(chunkPos, i));
+          ChunkNibbleArray chunkNibbleArray2 = lightingProvider.get(LightType.SKY).getLightSection(ChunkSectionPos.from(chunkPos, i));
+@@ -512,3 +501,5 @@
        return listTag;
     }
  }

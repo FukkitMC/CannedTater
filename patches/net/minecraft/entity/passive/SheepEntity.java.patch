@@ -1,6 +1,18 @@
 --- a/net/minecraft/entity/passive/SheepEntity.java
 +++ b/net/minecraft/entity/passive/SheepEntity.java
-@@ -202,7 +202,7 @@
+@@ -37,10 +37,7 @@
+ import net.minecraft.entity.mob.MobEntity;
+ import net.minecraft.entity.player.PlayerEntity;
+ import net.minecraft.inventory.CraftingInventory;
+-import net.minecraft.item.DyeItem;
+-import net.minecraft.item.ItemConvertible;
+-import net.minecraft.item.ItemStack;
+-import net.minecraft.item.Items;
++import net.minecraft.item.*;
+ import net.minecraft.loot.LootTables;
+ import net.minecraft.nbt.CompoundTag;
+ import net.minecraft.recipe.Ingredient;
+@@ -202,7 +199,7 @@
        if (itemStack.getItem() == Items.SHEARS) {
           if (!this.world.isClient && this.isShearable()) {
              this.sheared(SoundCategory.PLAYERS);
@@ -9,7 +21,16 @@
                 playerEntity.sendToolBreakStatus(hand);
              }));
              return ActionResult.SUCCESS;
-@@ -374,3 +374,5 @@
+@@ -323,7 +320,7 @@
+       DyeColor dyeColor = ((SheepEntity)firstParent).getColor();
+       DyeColor dyeColor2 = ((SheepEntity)secondParent).getColor();
+       CraftingInventory craftingInventory = createDyeMixingCraftingInventory(dyeColor, dyeColor2);
+-      Optional var10000 = this.world.getRecipeManager().getFirstMatch(RecipeType.CRAFTING, craftingInventory, this.world).map((craftingRecipe) -> {
++      Optional<Item> var10000 = this.world.getRecipeManager().getFirstMatch(RecipeType.CRAFTING, craftingInventory, this.world).map((craftingRecipe) -> {
+          return craftingRecipe.craft(craftingInventory);
+       }).map(ItemStack::getItem);
+       DyeItem.class.getClass();
+@@ -374,3 +371,5 @@
        }, SheepEntity::getDyedColor)));
     }
  }
