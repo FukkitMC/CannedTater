@@ -1,14 +1,5 @@
 --- a/net/minecraft/item/DyeItem.java
 +++ b/net/minecraft/item/DyeItem.java
-@@ -35,7 +35,7 @@
-       return ActionResult.PASS;
-    }
- 
--   public DyeColor getColor() {
-+   public static DyeColor getColor() {
-       return this.color;
-    }
- 
 @@ -43,3 +43,5 @@
        return (DyeItem)DYES.get(color);
     }

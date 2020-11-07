@@ -1,33 +1,36 @@
 --- a/net/minecraft/world/level/storage/LevelStorage.java
 +++ b/net/minecraft/world/level/storage/LevelStorage.java
-@@ -107,20 +107,20 @@
-       var10002.getClass();
-       return Pair.of(dataResult.resultOrPartial(Util.method_29188("WorldGenSettings: ", var10002::error)).orElseGet(() -> {
+@@ -103,25 +103,17 @@
+ 
+       Dynamic<T> dynamic3 = dataFixer.update(TypeReferences.CHUNK_GENERATOR_SETTINGS, dynamic2, i, SharedConstants.getGameVersion().getWorldVersion());
+       DataResult<GeneratorOptions> dataResult = GeneratorOptions.CODEC.parse(dynamic3);
+-      Logger var10002 = LOGGER;
+-      var10002.getClass();
+-      return Pair.of(dataResult.resultOrPartial(Util.method_29188("WorldGenSettings: ", var10002::error)).orElseGet(() -> {
++      return Pair.of(dataResult.resultOrPartial(Util.method_29188("WorldGenSettings: ", LOGGER::error)).orElseGet(() -> {
           DataResult var10000 = RegistryLookupCodec.of(Registry.DIMENSION_TYPE_KEY).codec().parse(dynamic3);
 -         Logger var10002 = LOGGER;
 -         var10002.getClass();
-+         Logger logger = LOGGER;
-+         logger.getClass();
-          Registry<DimensionType> registry = (Registry)var10000.resultOrPartial(Util.method_29188("Dimension type registry: ", var10002::error)).orElseThrow(() -> {
+-         Registry<DimensionType> registry = (Registry)var10000.resultOrPartial(Util.method_29188("Dimension type registry: ", var10002::error)).orElseThrow(() -> {
++         Registry<DimensionType> registry = (Registry)var10000.resultOrPartial(Util.method_29188("Dimension type registry: ", LOGGER::error)).orElseThrow(() -> {
              return new IllegalStateException("Failed to get dimension registry");
           });
           var10000 = RegistryLookupCodec.of(Registry.BIOME_KEY).codec().parse(dynamic3);
 -         var10002 = LOGGER;
 -         var10002.getClass();
-+         logger = LOGGER;
-+         logger.getClass();
-          Registry<Biome> registry2 = (Registry)var10000.resultOrPartial(Util.method_29188("Biome registry: ", var10002::error)).orElseThrow(() -> {
+-         Registry<Biome> registry2 = (Registry)var10000.resultOrPartial(Util.method_29188("Biome registry: ", var10002::error)).orElseThrow(() -> {
++         Registry<Biome> registry2 = (Registry)var10000.resultOrPartial(Util.method_29188("Biome registry: ", LOGGER::error)).orElseThrow(() -> {
              return new IllegalStateException("Failed to get biome registry");
           });
           var10000 = RegistryLookupCodec.of(Registry.NOISE_SETTINGS_WORLDGEN).codec().parse(dynamic3);
 -         var10002 = LOGGER;
 -         var10002.getClass();
-+         logger = LOGGER;
-+         logger.getClass();
-          Registry<ChunkGeneratorSettings> registry3 = (Registry)var10000.resultOrPartial(Util.method_29188("Noise settings registry: ", var10002::error)).orElseThrow(() -> {
+-         Registry<ChunkGeneratorSettings> registry3 = (Registry)var10000.resultOrPartial(Util.method_29188("Noise settings registry: ", var10002::error)).orElseThrow(() -> {
++         Registry<ChunkGeneratorSettings> registry3 = (Registry)var10000.resultOrPartial(Util.method_29188("Noise settings registry: ", LOGGER::error)).orElseThrow(() -> {
              return new IllegalStateException("Failed to get noise settings registry");
           });
-@@ -507,3 +507,5 @@
+          return GeneratorOptions.getDefaultOptions(registry, registry2, registry3);
+@@ -507,3 +499,5 @@
        }
     }
  }
