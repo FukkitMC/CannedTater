@@ -1,6 +1,32 @@
 --- a/net/minecraft/entity/passive/VillagerEntity.java
 +++ b/net/minecraft/entity/passive/VillagerEntity.java
-@@ -915,14 +915,14 @@
+@@ -126,7 +126,7 @@
+    }
+ 
+    public Brain<VillagerEntity> getBrain() {
+-      return super.getBrain();
++      return (Brain<VillagerEntity>) super.getBrain();
+    }
+ 
+    protected Brain.Profile<VillagerEntity> createBrainProfile() {
+@@ -424,7 +424,7 @@
+       Logger var10001 = LOGGER;
+       var10001.getClass();
+       var10000.resultOrPartial(var10001::error).ifPresent((tagx) -> {
+-         tag.put("VillagerData", tagx);
++         tag.put("VillagerData", (Tag) tagx);
+       });
+       tag.putByte("FoodLevel", this.foodLevel);
+       tag.put("Gossips", (Tag)this.gossip.serialize(NbtOps.INSTANCE).getValue());
+@@ -856,7 +856,6 @@
+ 
+    @Nullable
+    private BlockPos method_30023(BlockPos blockPos, double d, double e) {
+-      int i = true;
+       BlockPos blockPos2 = blockPos.add(d, 6.0D, e);
+       BlockState blockState = this.world.getBlockState(blockPos2);
+ 
+@@ -915,14 +914,14 @@
  
     public void sleep(BlockPos pos) {
        super.sleep(pos);
@@ -17,7 +43,7 @@
     }
  
     private boolean hasRecentlyWorkedAndSlept(long worldTime) {
-@@ -951,3 +951,5 @@
+@@ -951,3 +950,5 @@
        });
     }
  }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/ChestBlock.java
 +++ b/net/minecraft/block/ChestBlock.java
-@@ -201,7 +201,7 @@
+@@ -201,11 +201,11 @@
  
     @Nullable
     public static Inventory getInventory(ChestBlock block, BlockState state, World world, BlockPos pos, boolean ignoreBlocked) {
@@ -9,6 +9,11 @@
     }
  
     public DoubleBlockProperties.PropertySource<? extends ChestBlockEntity> getBlockEntitySource(BlockState state, World world, BlockPos pos, boolean ignoreBlocked) {
+-      BiPredicate biPredicate2;
++      BiPredicate<WorldAccess, BlockPos> biPredicate2;
+       if (ignoreBlocked) {
+          biPredicate2 = (worldAccess, blockPos) -> {
+             return false;
 @@ -219,7 +219,7 @@
  
     @Nullable

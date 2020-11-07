@@ -1,6 +1,25 @@
 --- a/net/minecraft/server/world/ThreadedAnvilChunkStorage.java
 +++ b/net/minecraft/server/world/ThreadedAnvilChunkStorage.java
-@@ -359,7 +359,7 @@
+@@ -257,15 +257,16 @@
+       CompletableFuture<List<Either<Chunk, ChunkHolder.Unloaded>>> completableFuture2 = Util.combine(list);
+       return completableFuture2.thenApply((listx) -> {
+          List<Chunk> list2 = Lists.newArrayList();
+-         final int l = 0;
++         int l = 0;
+ 
+          for(Iterator var7 = listx.iterator(); var7.hasNext(); ++l) {
+             final Either<Chunk, ChunkHolder.Unloaded> either = (Either)var7.next();
+             Optional<Chunk> optional = either.left();
+             if (!optional.isPresent()) {
++               int finalL = l;
+                return Either.right(new ChunkHolder.Unloaded() {
+                   public String toString() {
+-                     return "Unloaded " + new ChunkPos(i + l % (j * 2 + 1), k + l / (j * 2 + 1)) + " " + ((ChunkHolder.Unloaded)either.right().get()).toString();
++                     return "Unloaded " + new ChunkPos(i + finalL % (j * 2 + 1), k + finalL / (j * 2 + 1)) + " " + ((ChunkHolder.Unloaded)either.right().get()).toString();
+                   }
+                });
+             }
+@@ -359,7 +360,7 @@
           LOGGER.info("ThreadedAnvilChunkStorage ({}): All chunks are saved", this.saveDir.getName());
        } else {
           this.chunkHolders.values().stream().filter(ChunkHolder::isAccessible).forEach((chunkHolder) -> {
@@ -9,7 +28,7 @@
              if (chunk instanceof ReadOnlyChunk || chunk instanceof WorldChunk) {
                 this.save(chunk);
                 chunkHolder.updateAccessibleStatus();
-@@ -405,7 +405,7 @@
+@@ -405,7 +406,7 @@
  
     private void tryUnloadChunk(long pos, ChunkHolder chunkHolder) {
        CompletableFuture<Chunk> completableFuture = chunkHolder.getSavingFuture();
@@ -18,7 +37,17 @@
           CompletableFuture<Chunk> completableFuture2 = chunkHolder.getSavingFuture();
           if (completableFuture2 != completableFuture) {
              this.tryUnloadChunk(pos, chunkHolder);
-@@ -544,9 +544,9 @@
+@@ -536,17 +537,17 @@
+       return completableFuture.thenComposeAsync((either) -> {
+          return (CompletableFuture)either.map((list) -> {
+             try {
+-               CompletableFuture<Either<Chunk, ChunkHolder.Unloaded>> completableFuture = requiredStatus.runGenerationTask(this.world, this.chunkGenerator, this.structureManager, this.serverLightingProvider, (chunk) -> {
++               CompletableFuture<Either<Chunk, ChunkHolder.Unloaded>> completableFuture2 = requiredStatus.runGenerationTask(this.world, this.chunkGenerator, this.structureManager, this.serverLightingProvider, (chunk) -> {
+                   return this.convertToFullChunk(holder);
+                }, list);
+                this.worldGenerationProgressListener.setChunkStatus(chunkPos, requiredStatus);
+-               return completableFuture;
++               return completableFuture2;
              } catch (Exception var8) {
                 CrashReport crashReport = CrashReport.create(var8, "Exception generating new chunk");
                 CrashReportSection crashReportSection = crashReport.addElement("Chunk to be generated");
@@ -31,7 +60,7 @@
                 throw new CrashException(crashReport);
              }
           }, (unloaded) -> {
-@@ -802,7 +802,7 @@
+@@ -802,7 +803,7 @@
           Optional<WorldChunk> optional2 = optional.flatMap((chunk) -> {
              return chunk instanceof WorldChunk ? Optional.of((WorldChunk)chunk) : Optional.empty();
           });
@@ -40,7 +69,7 @@
              return Stream.of(worldChunk.getEntitySectionArray()).mapToInt(TypeFilterableList::size).sum();
           }).orElse(0), optional2.map((worldChunk) -> {
              return worldChunk.getBlockEntities().size();
-@@ -813,7 +813,7 @@
+@@ -813,7 +814,7 @@
  
     private static String getFutureStatus(CompletableFuture<Either<WorldChunk, ChunkHolder.Unloaded>> completableFuture) {
        try {
@@ -49,7 +78,7 @@
           return either != null ? (String)either.map((worldChunk) -> {
              return "done";
           }, (unloaded) -> {
-@@ -1267,3 +1267,5 @@
+@@ -1267,3 +1268,5 @@
        }
     }
  }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/ai/brain/task/LookTargetUtil.java
 +++ b/net/minecraft/entity/ai/brain/task/LookTargetUtil.java
-@@ -55,7 +55,7 @@
+@@ -55,25 +55,24 @@
     }
  
     public static void lookAt(LivingEntity entity, LivingEntity target) {
@@ -9,7 +9,10 @@
     }
  
     private static void walkTowardsEachOther(LivingEntity first, LivingEntity second, float speed) {
-@@ -66,14 +66,14 @@
+-      int i = true;
+       walkTowards(first, (Entity)second, speed, 2);
+       walkTowards(second, (Entity)first, speed, 2);
+    }
  
     public static void walkTowards(LivingEntity entity, Entity target, float speed, int completionRange) {
        WalkTarget walkTarget = new WalkTarget(new EntityLookTarget(target, false), speed, completionRange);
@@ -28,7 +31,7 @@
     }
  
     public static void give(LivingEntity entity, ItemStack stack, Vec3d targetLocation) {
-@@ -162,3 +162,5 @@
+@@ -162,3 +161,5 @@
        }).orElseGet(Stream::empty);
     }
  }

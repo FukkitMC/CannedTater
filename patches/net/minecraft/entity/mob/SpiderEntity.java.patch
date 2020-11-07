@@ -1,5 +1,16 @@
 --- a/net/minecraft/entity/mob/SpiderEntity.java
 +++ b/net/minecraft/entity/mob/SpiderEntity.java
+@@ -136,8 +136,8 @@
+    }
+ 
+    @Nullable
+-   public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable CompoundTag entityTag) {
+-      EntityData entityData = super.initialize(world, difficulty, spawnReason, entityData, entityTag);
++   public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData edata, @Nullable CompoundTag entityTag) {
++      EntityData entityData = super.initialize(world, difficulty, spawnReason, edata, entityTag);
+       if (world.getRandom().nextInt(100) == 0) {
+          SkeletonEntity skeletonEntity = (SkeletonEntity)EntityType.SKELETON.create(this.world);
+          skeletonEntity.refreshPositionAndAngles(this.getX(), this.getY(), this.getZ(), this.yaw, 0.0F);
 @@ -223,3 +223,5 @@
        }
     }

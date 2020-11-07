@@ -1,15 +1,33 @@
 --- a/net/minecraft/world/PortalForcer.java
 +++ b/net/minecraft/world/PortalForcer.java
-@@ -33,7 +33,7 @@
-       pointOfInterestStorage.preloadChunks(this.world, blockPos, i);
+@@ -27,14 +27,14 @@
+       this.world = world;
+    }
+ 
+-   public Optional<class_5459.class_5460> method_30483(BlockPos blockPos, boolean bl) {
++   public Optional<class_5459.class_5460> method_30483(BlockPos blockPos1, boolean bl) {
+       PointOfInterestStorage pointOfInterestStorage = this.world.getPointOfInterestStorage();
+       int i = bl ? 16 : 128;
+-      pointOfInterestStorage.preloadChunks(this.world, blockPos, i);
++      pointOfInterestStorage.preloadChunks(this.world, blockPos1, i);
        Optional<PointOfInterest> optional = pointOfInterestStorage.getInSquare((pointOfInterestType) -> {
           return pointOfInterestType == PointOfInterestType.NETHER_PORTAL;
 -      }, blockPos, i, PointOfInterestStorage.OccupationStatus.ANY).sorted(Comparator.comparingDouble((pointOfInterest) -> {
-+      }, blockPos, i, PointOfInterestStorage.OccupationStatus.ANY).sorted(Comparator.comparingDouble((PointOfInterest pointOfInterest) -> {
-          return pointOfInterest.getPos().getSquaredDistance(blockPos);
+-         return pointOfInterest.getPos().getSquaredDistance(blockPos);
++      }, blockPos1, i, PointOfInterestStorage.OccupationStatus.ANY).sorted(Comparator.comparingDouble((PointOfInterest pointOfInterest) -> {
++         return pointOfInterest.getPos().getSquaredDistance(blockPos1);
        }).thenComparingInt((pointOfInterest) -> {
           return pointOfInterest.getPos().getY();
-@@ -169,3 +169,5 @@
+       })).filter((pointOfInterest) -> {
+@@ -114,7 +114,6 @@
+ 
+                mutable2 = (BlockPos.Mutable)var13.next();
+                p = Math.min(i, this.world.getTopY(Heightmap.Type.MOTION_BLOCKING, mutable2.getX(), mutable2.getZ()));
+-               int k = true;
+             } while(!worldBorder.contains((BlockPos)mutable2));
+          } while(!worldBorder.contains((BlockPos)mutable2.move(direction, 1)));
+ 
+@@ -169,3 +168,5 @@
        return true;
     }
  }

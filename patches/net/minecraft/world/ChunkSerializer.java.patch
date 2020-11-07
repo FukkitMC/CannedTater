@@ -1,6 +1,6 @@
 --- a/net/minecraft/world/ChunkSerializer.java
 +++ b/net/minecraft/world/ChunkSerializer.java
-@@ -68,10 +68,10 @@
+@@ -68,15 +68,14 @@
  
        BiomeArray biomeArray = new BiomeArray(world.getRegistryManager().get(Registry.BIOME_KEY), pos, biomeSource, compoundTag.contains("Biomes", 11) ? compoundTag.getIntArray("Biomes") : null);
        UpgradeData upgradeData = compoundTag.contains("UpgradeData", 10) ? new UpgradeData(compoundTag.getCompound("UpgradeData")) : UpgradeData.NO_UPGRADE_DATA;
@@ -13,7 +13,12 @@
           return fluid == null || fluid == Fluids.EMPTY;
        }, pos, compoundTag.getList("LiquidsToBeTicked", 9));
        boolean bl = compoundTag.getBoolean("isLightOn");
-@@ -512,3 +512,5 @@
+       ListTag listTag = compoundTag.getList("Sections", 10);
+-      int i = true;
+       ChunkSection[] chunkSections = new ChunkSection[16];
+       boolean bl2 = world.getDimension().hasSkyLight();
+       ChunkManager chunkManager = world.getChunkManager();
+@@ -512,3 +511,5 @@
        return listTag;
     }
  }
