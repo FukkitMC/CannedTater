@@ -1,6 +1,16 @@
 --- a/net/minecraft/entity/passive/OcelotEntity.java
 +++ b/net/minecraft/entity/passive/OcelotEntity.java
-@@ -298,3 +298,5 @@
+@@ -284,8 +284,7 @@
+       private final OcelotEntity ocelot;
+ 
+       public FleeGoal(OcelotEntity ocelot, Class<T> fleeFromType, float distance, double slowSpeed, double fastSpeed) {
+-         Predicate var10006 = EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR;
+-         super(ocelot, fleeFromType, distance, slowSpeed, fastSpeed, var10006::test);
++         super(ocelot, fleeFromType, distance, slowSpeed, fastSpeed, EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR::test);
+          this.ocelot = ocelot;
+       }
+ 
+@@ -298,3 +297,5 @@
        }
     }
  }

@@ -9,7 +9,17 @@
                 playerEntity.sendToolBreakStatus(hand);
              }));
              if (this.activeItemStack.isEmpty()) {
-@@ -2001,7 +2001,7 @@
+@@ -1045,8 +1045,7 @@
+             if (f > 0.0F || h > 0.0F) {
+                boolean bl = i > 0.9F;
+                boolean bl2 = false;
+-               int j = 0;
+-               int j = j + EnchantmentHelper.getKnockback(this);
++               int j = EnchantmentHelper.getKnockback(this);
+                if (this.isSprinting() && bl) {
+                   this.world.playSound((PlayerEntity)null, this.getX(), this.getY(), this.getZ(), SoundEvents.ENTITY_PLAYER_ATTACK_KNOCKBACK, this.getSoundCategory(), 1.0F, 1.0F);
+                   ++j;
+@@ -2001,7 +2000,7 @@
     }
  
     static {
@@ -18,7 +28,7 @@
        ABSORPTION_AMOUNT = DataTracker.registerData(PlayerEntity.class, TrackedDataHandlerRegistry.FLOAT);
        SCORE = DataTracker.registerData(PlayerEntity.class, TrackedDataHandlerRegistry.INTEGER);
        PLAYER_MODEL_PARTS = DataTracker.registerData(PlayerEntity.class, TrackedDataHandlerRegistry.BYTE);
-@@ -2035,3 +2035,5 @@
+@@ -2035,3 +2034,5 @@
        }
     }
  }

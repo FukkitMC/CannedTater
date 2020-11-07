@@ -1,6 +1,14 @@
 --- a/net/minecraft/block/VineBlock.java
 +++ b/net/minecraft/block/VineBlock.java
-@@ -362,3 +362,5 @@
+@@ -265,7 +265,6 @@
+    }
+ 
+    private boolean canGrowAt(BlockView world, BlockPos pos) {
+-      int i = true;
+       Iterable<BlockPos> iterable = BlockPos.iterate(pos.getX() - 4, pos.getY() - 1, pos.getZ() - 4, pos.getX() + 4, pos.getY() + 1, pos.getZ() + 4);
+       int j = 5;
+       Iterator var6 = iterable.iterator();
+@@ -362,3 +361,5 @@
        NORTH_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 15.0D, 16.0D, 16.0D, 16.0D);
     }
  }

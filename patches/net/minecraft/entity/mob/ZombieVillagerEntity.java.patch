@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/mob/ZombieVillagerEntity.java
 +++ b/net/minecraft/entity/mob/ZombieVillagerEntity.java
+@@ -73,7 +73,7 @@
+       Logger var10001 = LOGGER;
+       var10001.getClass();
+       var10000.resultOrPartial(var10001::error).ifPresent((tagx) -> {
+-         tag.put("VillagerData", tagx);
++         tag.put("VillagerData", (Tag) tagx);
+       });
+       if (this.offerData != null) {
+          tag.put("Offers", this.offerData);
 @@ -315,3 +315,5 @@
        VILLAGER_DATA = DataTracker.registerData(ZombieVillagerEntity.class, TrackedDataHandlerRegistry.VILLAGER_DATA);
     }
