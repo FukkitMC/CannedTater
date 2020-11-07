@@ -1,6 +1,6 @@
 --- a/net/minecraft/fluid/FlowableFluid.java
 +++ b/net/minecraft/fluid/FlowableFluid.java
-@@ -273,16 +273,16 @@
+@@ -277,16 +277,16 @@
              BlockPos blockPos3 = blockPos.offset(direction2);
              short s = method_15747(blockPos2, blockPos3);
              Pair<BlockState, FluidState> pair = (Pair)short2ObjectMap.computeIfAbsent(s, (ix) -> {
@@ -22,7 +22,7 @@
                 });
                 if (bl) {
                    return i;
-@@ -460,3 +460,5 @@
+@@ -464,3 +464,5 @@
        });
     }
  }

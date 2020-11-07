@@ -26,7 +26,21 @@
        ServerRecipeBook var10001 = this.player.getRecipeBook();
        var10000.ifPresent(var10001::onRecipeDisplayed);
     }
-@@ -1439,3 +1440,5 @@
+@@ -699,10 +700,11 @@
+ 
+             j = packet.getSlot();
+             if (PlayerInventory.isValidHotbarIndex(j) || j == 40) {
++               int finalJ = j;
+                this.filterTexts(list, bl ? (listx) -> {
+-                  this.method_31276((String)listx.get(0), listx.subList(1, listx.size()), j);
++                  this.method_31276((String)listx.get(0), listx.subList(1, listx.size()), finalJ);
+                } : (listx) -> {
+-                  this.method_31278(listx, j);
++                  this.method_31278(listx, finalJ);
+                });
+             }
+          }
+@@ -1439,3 +1441,5 @@
        }
     }
  }

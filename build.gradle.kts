@@ -54,6 +54,10 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
+minecraft {
+    accessWidener = file("src/main/resources/canned-tater.aw")
+}
+
 patches {
     root = file(".gradle/extracted-1.16.4+build.6")
     target = file("src/main/minecraft")

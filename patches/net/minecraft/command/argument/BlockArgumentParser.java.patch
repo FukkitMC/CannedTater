@@ -9,6 +9,15 @@
           if (comparable instanceof Integer) {
              suggestionsBuilder.suggest((Integer)comparable);
           } else {
+@@ -484,7 +484,7 @@
+    private <T extends Comparable<T>> void parsePropertyValue(Property<T> property, String string, int i) throws CommandSyntaxException {
+       Optional<T> optional = property.parse(string);
+       if (optional.isPresent()) {
+-         this.blockState = (BlockState)this.blockState.with(property, (Comparable)optional.get());
++         this.blockState = this.blockState.with(property, optional.get());
+          this.blockProperties.put(property, optional.get());
+       } else {
+          this.reader.setCursor(i);
 @@ -516,7 +516,7 @@
     private static <T extends Comparable<T>> void stringifyProperty(StringBuilder stringBuilder, Property<T> property, Comparable<?> comparable) {
        stringBuilder.append(property.getName());

@@ -1,6 +1,14 @@
 --- a/net/minecraft/server/world/ServerWorld.java
 +++ b/net/minecraft/server/world/ServerWorld.java
-@@ -172,14 +172,14 @@
+@@ -11,6 +11,7 @@
+ import it.unimi.dsi.fastutil.ints.Int2ObjectMap.Entry;
+ import it.unimi.dsi.fastutil.longs.LongSet;
+ import it.unimi.dsi.fastutil.longs.LongSets;
++import it.unimi.dsi.fastutil.objects.Object2IntMap;
+ import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
+ import it.unimi.dsi.fastutil.objects.ObjectIterator;
+ import it.unimi.dsi.fastutil.objects.ObjectLinkedOpenHashSet;
+@@ -172,14 +173,14 @@
  
     public ServerWorld(MinecraftServer server, Executor workerExecutor, LevelStorage.Session session, ServerWorldProperties properties, RegistryKey<World> registryKey, DimensionType dimensionType, WorldGenerationProgressListener worldGenerationProgressListener, ChunkGenerator chunkGenerator, boolean debugWorld, long l, List<Spawner> list, boolean bl) {
        super(properties, registryKey, dimensionType, server::getProfiler, false, debugWorld, l);
@@ -18,7 +26,7 @@
        this.shouldTickTime = bl;
        this.server = server;
        this.spawners = list;
-@@ -445,7 +445,7 @@
+@@ -445,7 +446,7 @@
     }
  
     private void wakeSleepingPlayers() {
@@ -27,7 +35,7 @@
           player.wakeUp(false, false);
        });
     }
-@@ -1552,7 +1552,7 @@
+@@ -1552,7 +1553,7 @@
     private static <T> String method_31270(Collection<T> collection, Function<T, Identifier> function) {
        try {
           Object2IntOpenHashMap<Identifier> object2IntOpenHashMap = new Object2IntOpenHashMap();
@@ -36,7 +44,16 @@
  
           while(var3.hasNext()) {
              T object = var3.next();
-@@ -1581,3 +1581,5 @@
+@@ -1560,7 +1561,7 @@
+             object2IntOpenHashMap.addTo(identifier, 1);
+          }
+ 
+-         return (String)object2IntOpenHashMap.object2IntEntrySet().stream().sorted(Comparator.comparing(it.unimi.dsi.fastutil.objects.Object2IntMap.Entry::getIntValue).reversed()).limit(5L).map((entry) -> {
++         return (String)object2IntOpenHashMap.object2IntEntrySet().stream().sorted(Comparator.comparing((Object2IntMap.Entry entry) -> entry.getIntValue()).reversed()).limit(5L).map((entry) -> {
+             return entry.getKey() + ":" + entry.getIntValue();
+          }).collect(Collectors.joining(","));
+       } catch (Exception var6) {
+@@ -1581,3 +1582,5 @@
        });
     }
  }
