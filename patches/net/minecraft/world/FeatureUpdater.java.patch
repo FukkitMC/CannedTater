@@ -1,14 +1,6 @@
 --- a/net/minecraft/world/FeatureUpdater.java
 +++ b/net/minecraft/world/FeatureUpdater.java
-@@ -101,7 +101,6 @@
-             } while(compoundTag4.contains(string, 12));
-          } while(structureFeature == null);
- 
--         int i = true;
-          LongList longList = new LongArrayList();
- 
-          for(int j = chunkPos.x - 8; j <= chunkPos.x + 8; ++j) {
-@@ -248,3 +247,5 @@
+@@ -248,3 +248,5 @@
        }
     }
  }

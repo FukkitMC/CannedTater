@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/Block.java
 +++ b/net/minecraft/block/Block.java
-@@ -483,3 +483,5 @@
+@@ -430,3 +430,5 @@
        }
     }
  }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/projectile/ArrowEntity.java
 +++ b/net/minecraft/entity/projectile/ArrowEntity.java
-@@ -245,3 +245,5 @@
+@@ -224,3 +224,5 @@
        COLOR = DataTracker.registerData(ArrowEntity.class, TrackedDataHandlerRegistry.INTEGER);
     }
  }

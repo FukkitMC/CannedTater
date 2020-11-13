@@ -1,40 +1,6 @@
 --- a/net/minecraft/entity/player/PlayerInventory.java
 +++ b/net/minecraft/entity/player/PlayerInventory.java
-@@ -172,9 +172,8 @@
-    }
- 
-    public int remove(Predicate<ItemStack> shouldRemove, int maxCount, Inventory craftingInventory) {
--      int i = 0;
-       boolean bl = maxCount == 0;
--      int i = i + Inventories.remove((Inventory)this, shouldRemove, maxCount - i, bl);
-+      int i = Inventories.remove((Inventory)this, shouldRemove, maxCount, bl);
-       i += Inventories.remove(craftingInventory, shouldRemove, maxCount - i, bl);
-       i += Inventories.remove(this.cursorStack, shouldRemove, maxCount - i, bl);
-       if (this.cursorStack.isEmpty()) {
-@@ -302,8 +301,8 @@
-          } catch (Throwable var6) {
-             CrashReport crashReport = CrashReport.create(var6, "Adding item to inventory");
-             CrashReportSection crashReportSection = crashReport.addElement("Item being added");
--            crashReportSection.add("Item ID", (Object)Item.getRawId(stack.getItem()));
--            crashReportSection.add("Item data", (Object)stack.getDamage());
-+            crashReportSection.add("Item ID", Item.getRawId(stack.getItem()));
-+            crashReportSection.add("Item data", stack.getDamage());
-             crashReportSection.add("Item name", () -> {
-                return stack.getName().getString();
-             });
-@@ -539,8 +538,9 @@
-          for(int i = 0; i < this.armor.size(); ++i) {
-             ItemStack itemStack = (ItemStack)this.armor.get(i);
-             if ((!damageSource.isFire() || !itemStack.getItem().isFireproof()) && itemStack.getItem() instanceof ArmorItem) {
--               itemStack.damage((int)f, (LivingEntity)this.player, (Consumer)((playerEntity) -> {
--                  playerEntity.sendEquipmentBreakStatus(EquipmentSlot.fromTypeIndex(EquipmentSlot.Type.ARMOR, i));
-+               int finalI = i;
-+               itemStack.damage((int)f, (LivingEntity)this.player, ((playerEntity) -> {
-+                  playerEntity.sendEquipmentBreakStatus(EquipmentSlot.fromTypeIndex(EquipmentSlot.Type.ARMOR, finalI));
-                }));
-             }
-          }
-@@ -655,3 +655,5 @@
+@@ -570,3 +570,5 @@
  
     }
  }

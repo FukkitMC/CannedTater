@@ -1,7 +1,7 @@
 --- a/net/minecraft/screen/GenericContainerScreenHandler.java
 +++ b/net/minecraft/screen/GenericContainerScreenHandler.java
-@@ -119,3 +119,5 @@
-       return this.rows;
+@@ -112,3 +112,5 @@
+       return this.inventory;
     }
  }
 +

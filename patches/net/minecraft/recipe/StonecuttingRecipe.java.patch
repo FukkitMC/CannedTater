@@ -1,7 +1,7 @@
 --- a/net/minecraft/recipe/StonecuttingRecipe.java
 +++ b/net/minecraft/recipe/StonecuttingRecipe.java
-@@ -22,3 +22,5 @@
-       return new ItemStack(Blocks.STONECUTTER);
+@@ -14,3 +14,5 @@
+       return this.input.test(inv.getStack(0));
     }
  }
 +

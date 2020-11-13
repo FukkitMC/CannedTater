@@ -1,23 +1,5 @@
 --- a/net/minecraft/entity/mob/SlimeEntity.java
 +++ b/net/minecraft/entity/mob/SlimeEntity.java
-@@ -61,7 +61,7 @@
-       this.goalSelector.add(2, new SlimeEntity.FaceTowardTargetGoal(this));
-       this.goalSelector.add(3, new SlimeEntity.RandomLookGoal(this));
-       this.goalSelector.add(5, new SlimeEntity.MoveGoal(this));
--      this.targetSelector.add(1, new FollowTargetGoal(this, PlayerEntity.class, 10, true, false, (livingEntity) -> {
-+      this.targetSelector.add(1, new FollowTargetGoal<>(this, PlayerEntity.class, 10, true, false, (livingEntity) -> {
-          return Math.abs(livingEntity.getY() - this.getY()) <= 4.0D;
-       }));
-       this.targetSelector.add(3, new FollowTargetGoal(this, IronGolemEntity.class, true));
-@@ -174,7 +174,7 @@
-    }
- 
-    public EntityType<? extends SlimeEntity> getType() {
--      return super.getType();
-+      return (EntityType<? extends SlimeEntity>) super.getType();
-    }
- 
-    public void remove() {
 @@ -489,3 +489,5 @@
        }
     }

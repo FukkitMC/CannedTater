@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/projectile/FireballEntity.java
 +++ b/net/minecraft/entity/projectile/FireballEntity.java
-@@ -65,3 +65,5 @@
+@@ -58,3 +58,5 @@
  
     }
  }

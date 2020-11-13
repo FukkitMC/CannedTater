@@ -1,6 +1,6 @@
 --- a/net/minecraft/recipe/SmeltingRecipe.java
 +++ b/net/minecraft/recipe/SmeltingRecipe.java
-@@ -20,3 +20,5 @@
+@@ -12,3 +12,5 @@
        return RecipeSerializer.SMELTING;
     }
  }

@@ -1,14 +1,5 @@
 --- a/net/minecraft/server/world/ServerTickScheduler.java
 +++ b/net/minecraft/server/world/ServerTickScheduler.java
-@@ -58,7 +58,7 @@
-          Iterator<ScheduledTick<T>> iterator = this.scheduledTickActionsInOrder.iterator();
-          this.world.getProfiler().push("cleaning");
- 
--         ScheduledTick scheduledTick2;
-+         ScheduledTick<T> scheduledTick2;
-          while(i > 0 && iterator.hasNext()) {
-             scheduledTick2 = (ScheduledTick)iterator.next();
-             if (scheduledTick2.time > this.world.getTime()) {
 @@ -208,3 +208,5 @@
        return this.scheduledTickActions.size();
     }

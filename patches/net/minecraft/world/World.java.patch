@@ -1,16 +1,6 @@
 --- a/net/minecraft/world/World.java
 +++ b/net/minecraft/world/World.java
-@@ -762,8 +762,7 @@
-    }
- 
-    public int getReceivedStrongRedstonePower(BlockPos pos) {
--      int i = 0;
--      int i = Math.max(i, this.getStrongRedstonePower(pos.down(), Direction.DOWN));
-+      int i = Math.max(0, this.getStrongRedstonePower(pos.down(), Direction.DOWN));
-       if (i >= 15) {
-          return i;
-       } else {
-@@ -1065,3 +1064,5 @@
+@@ -1038,3 +1038,5 @@
        DIRECTIONS = Direction.values();
     }
  }

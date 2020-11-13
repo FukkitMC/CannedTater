@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/LeverBlock.java
 +++ b/net/minecraft/block/LeverBlock.java
-@@ -155,3 +155,5 @@
+@@ -144,3 +144,5 @@
        CEILING_X_AXIS_SHAPE = Block.createCuboidShape(4.0D, 10.0D, 5.0D, 12.0D, 16.0D, 11.0D);
     }
  }

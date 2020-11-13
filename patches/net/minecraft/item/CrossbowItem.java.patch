@@ -1,6 +1,6 @@
 --- a/net/minecraft/item/CrossbowItem.java
 +++ b/net/minecraft/item/CrossbowItem.java
-@@ -367,3 +367,5 @@
+@@ -338,3 +338,5 @@
        return 8;
     }
  }

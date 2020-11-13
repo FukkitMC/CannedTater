@@ -1,6 +1,6 @@
 --- a/net/minecraft/recipe/ShapedRecipe.java
 +++ b/net/minecraft/recipe/ShapedRecipe.java
-@@ -294,3 +294,5 @@
+@@ -282,3 +282,5 @@
        }
     }
  }

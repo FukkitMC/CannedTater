@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/vehicle/CommandBlockMinecartEntity.java
 +++ b/net/minecraft/entity/vehicle/CommandBlockMinecartEntity.java
-@@ -123,3 +123,5 @@
+@@ -110,3 +110,5 @@
        }
     }
  }

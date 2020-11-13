@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/WitherRoseBlock.java
 +++ b/net/minecraft/block/WitherRoseBlock.java
-@@ -53,3 +53,5 @@
+@@ -32,3 +32,5 @@
        }
     }
  }

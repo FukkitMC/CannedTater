@@ -1,6 +1,6 @@
 --- a/net/minecraft/recipe/SmithingRecipe.java
 +++ b/net/minecraft/recipe/SmithingRecipe.java
-@@ -91,3 +91,5 @@
+@@ -78,3 +78,5 @@
        }
     }
  }

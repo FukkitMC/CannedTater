@@ -1,16 +1,7 @@
 --- a/net/minecraft/screen/ScreenHandlerType.java
 +++ b/net/minecraft/screen/ScreenHandlerType.java
-@@ -35,7 +35,7 @@
-    private final ScreenHandlerType.Factory<T> factory;
- 
-    private static <T extends ScreenHandler> ScreenHandlerType<T> register(String id, ScreenHandlerType.Factory<T> factory) {
--      return (ScreenHandlerType)Registry.register(Registry.SCREEN_HANDLER, (String)id, new ScreenHandlerType(factory));
-+      return Registry.register(Registry.SCREEN_HANDLER, id, new ScreenHandlerType<T>(factory));
-    }
- 
-    private ScreenHandlerType(ScreenHandlerType.Factory<T> factory) {
-@@ -52,3 +52,5 @@
-       T create(int syncId, PlayerInventory playerInventory);
+@@ -42,3 +42,5 @@
+    interface Factory<T extends ScreenHandler> {
     }
  }
 +

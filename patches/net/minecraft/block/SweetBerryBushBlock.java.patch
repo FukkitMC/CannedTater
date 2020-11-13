@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/SweetBerryBushBlock.java
 +++ b/net/minecraft/block/SweetBerryBushBlock.java
-@@ -113,3 +113,5 @@
+@@ -106,3 +106,5 @@
        LARGE_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
     }
  }

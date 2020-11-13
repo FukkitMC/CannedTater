@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/entity/BlockEntity.java
 +++ b/net/minecraft/block/entity/BlockEntity.java
-@@ -186,3 +186,5 @@
+@@ -179,3 +179,5 @@
        }
     }
  }

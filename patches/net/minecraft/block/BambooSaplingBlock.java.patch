@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/BambooSaplingBlock.java
 +++ b/net/minecraft/block/BambooSaplingBlock.java
-@@ -83,3 +83,5 @@
+@@ -74,3 +74,5 @@
        world.setBlockState(pos.up(), (BlockState)Blocks.BAMBOO.getDefaultState().with(BambooBlock.LEAVES, BambooLeaves.SMALL), 3);
     }
  }

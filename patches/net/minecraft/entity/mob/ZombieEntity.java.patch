@@ -1,16 +1,5 @@
 --- a/net/minecraft/entity/mob/ZombieEntity.java
 +++ b/net/minecraft/entity/mob/ZombieEntity.java
-@@ -399,8 +399,8 @@
-    }
- 
-    @Nullable
--   public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable CompoundTag entityTag) {
--      EntityData entityData = super.initialize(world, difficulty, spawnReason, entityData, entityTag);
-+   public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData edata, @Nullable CompoundTag entityTag) {
-+      EntityData entityData = super.initialize(world, difficulty, spawnReason, edata, entityTag);
-       float f = difficulty.getClampedLocalDifficulty();
-       this.setCanPickUpLoot(this.random.nextFloat() < 0.55F * f);
-       if (entityData == null) {
 @@ -538,3 +538,5 @@
        }
     }

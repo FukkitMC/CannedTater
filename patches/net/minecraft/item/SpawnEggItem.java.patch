@@ -1,15 +1,6 @@
 --- a/net/minecraft/item/SpawnEggItem.java
 +++ b/net/minecraft/item/SpawnEggItem.java
-@@ -150,7 +150,7 @@
-       if (!this.isOfSameEntityType(itemStack.getTag(), entityType)) {
-          return Optional.empty();
-       } else {
--         Object mobEntity3;
-+         MobEntity mobEntity3;
-          if (mobEntity instanceof PassiveEntity) {
-             mobEntity3 = ((PassiveEntity)mobEntity).createChild(serverWorld, (PassiveEntity)mobEntity);
-          } else {
-@@ -180,3 +180,5 @@
+@@ -167,3 +167,5 @@
        }
     }
  }

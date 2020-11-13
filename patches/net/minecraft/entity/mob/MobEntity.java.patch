@@ -1,24 +1,6 @@
 --- a/net/minecraft/entity/mob/MobEntity.java
 +++ b/net/minecraft/entity/mob/MobEntity.java
-@@ -1096,7 +1096,7 @@
-          if (itemStack.getItem() instanceof SpawnEggItem) {
-             if (this.world instanceof ServerWorld) {
-                SpawnEggItem spawnEggItem = (SpawnEggItem)itemStack.getItem();
--               Optional<MobEntity> optional = spawnEggItem.spawnBaby(playerEntity, this, this.getType(), (ServerWorld)this.world, this.getPos(), itemStack);
-+               Optional<MobEntity> optional = spawnEggItem.spawnBaby(playerEntity, this, (EntityType<? extends MobEntity>) this.getType(), (ServerWorld)this.world, this.getPos(), itemStack);
-                optional.ifPresent((mobEntity) -> {
-                   this.onPlayerSpawnedChild(playerEntity, mobEntity);
-                });
-@@ -1151,7 +1151,7 @@
-       if (this.removed) {
-          return null;
-       } else {
--         T mobEntity = (MobEntity)entityType.create(this.world);
-+         T mobEntity = entityType.create(this.world);
-          mobEntity.copyPositionAndRotation(this);
-          mobEntity.setBaby(this.isBaby());
-          mobEntity.setAiDisabled(this.isAiDisabled());
-@@ -1451,3 +1451,5 @@
+@@ -1433,3 +1433,5 @@
        MOB_FLAGS = DataTracker.registerData(MobEntity.class, TrackedDataHandlerRegistry.BYTE);
     }
  }

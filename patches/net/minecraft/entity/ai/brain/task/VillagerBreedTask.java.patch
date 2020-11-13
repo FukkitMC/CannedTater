@@ -1,11 +1,7 @@
 --- a/net/minecraft/entity/ai/brain/task/VillagerBreedTask.java
 +++ b/net/minecraft/entity/ai/brain/task/VillagerBreedTask.java
-@@ -116,6 +116,8 @@
- 
-    private void setChildHome(ServerWorld world, VillagerEntity child, BlockPos pos) {
-       GlobalPos globalPos = GlobalPos.create(world.getRegistryKey(), pos);
--      child.getBrain().remember(MemoryModuleType.HOME, (Object)globalPos);
-+      child.getBrain().remember(MemoryModuleType.HOME, globalPos);
+@@ -119,3 +119,5 @@
+       child.getBrain().remember(MemoryModuleType.HOME, (Object)globalPos);
     }
  }
 +

@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/entity/BannerBlockEntity.java
 +++ b/net/minecraft/block/entity/BannerBlockEntity.java
-@@ -183,3 +183,5 @@
+@@ -115,3 +115,5 @@
        return this.baseColor;
     }
  }

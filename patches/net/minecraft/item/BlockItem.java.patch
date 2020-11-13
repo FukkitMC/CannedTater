@@ -1,6 +1,6 @@
 --- a/net/minecraft/item/BlockItem.java
 +++ b/net/minecraft/item/BlockItem.java
-@@ -202,3 +202,5 @@
+@@ -191,3 +191,5 @@
        map.put(this.getBlock(), item);
     }
  }

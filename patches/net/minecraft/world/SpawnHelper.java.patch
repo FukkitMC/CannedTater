@@ -1,28 +1,6 @@
 --- a/net/minecraft/world/SpawnHelper.java
 +++ b/net/minecraft/world/SpawnHelper.java
-@@ -81,10 +81,11 @@
-          if (spawnGroup != SpawnGroup.MISC) {
-             BlockPos blockPos = entity.getBlockPos();
-             long l = ChunkPos.toLong(blockPos.getX() >> 4, blockPos.getZ() >> 4);
-+            Entity finalEntity = entity;
-             chunkSource.query(l, (worldChunk) -> {
--               SpawnSettings.SpawnDensity spawnDensity = getBiomeDirectly(blockPos, worldChunk).getSpawnSettings().getSpawnDensity(entity.getType());
-+               SpawnSettings.SpawnDensity spawnDensity = getBiomeDirectly(blockPos, worldChunk).getSpawnSettings().getSpawnDensity(finalEntity.getType());
-                if (spawnDensity != null) {
--                  gravityField.addPoint(entity.getBlockPos(), spawnDensity.getMass());
-+                  gravityField.addPoint(finalEntity.getBlockPos(), spawnDensity.getMass());
-                }
- 
-                object2IntOpenHashMap.addTo(spawnGroup, 1);
-@@ -135,7 +136,6 @@
-          for(int k = 0; k < 3; ++k) {
-             int l = pos.getX();
-             int m = pos.getZ();
--            int n = true;
-             SpawnSettings.SpawnEntry spawnEntry = null;
-             EntityData entityData = null;
-             int o = MathHelper.ceil(world.random.nextFloat() * 4.0F);
-@@ -485,3 +485,5 @@
+@@ -478,3 +478,5 @@
        }
     }
  }

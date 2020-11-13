@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/entity/CommandBlockBlockEntity.java
 +++ b/net/minecraft/block/entity/CommandBlockBlockEntity.java
-@@ -180,3 +180,5 @@
+@@ -173,3 +173,5 @@
        REDSTONE;
     }
  }

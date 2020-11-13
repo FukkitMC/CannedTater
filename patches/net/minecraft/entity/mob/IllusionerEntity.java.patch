@@ -1,14 +1,6 @@
 --- a/net/minecraft/entity/mob/IllusionerEntity.java
 +++ b/net/minecraft/entity/mob/IllusionerEntity.java
-@@ -112,7 +112,6 @@
-          } else {
-             this.field_7296 = 3;
-             float f = -6.0F;
--            int i = true;
- 
-             int k;
-             for(k = 0; k < 4; ++k) {
-@@ -281,3 +280,5 @@
+@@ -247,3 +247,5 @@
        }
     }
  }

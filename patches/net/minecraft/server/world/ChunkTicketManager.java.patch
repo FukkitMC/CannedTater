@@ -1,14 +1,5 @@
 --- a/net/minecraft/server/world/ChunkTicketManager.java
 +++ b/net/minecraft/server/world/ChunkTicketManager.java
-@@ -64,7 +64,7 @@
- 
-       while(objectIterator.hasNext()) {
-          Entry<SortedArraySet<ChunkTicket<?>>> entry = (Entry)objectIterator.next();
--         if (((SortedArraySet)entry.getValue()).removeIf((chunkTicket) -> {
-+         if ((entry.getValue()).removeIf((chunkTicket) -> {
-             return chunkTicket.isExpired(this.age);
-          })) {
-             this.distanceFromTicketTracker.updateLevel(entry.getLongKey(), getLevel((SortedArraySet)entry.getValue()), false);
 @@ -420,3 +420,5 @@
        }
     }

@@ -1,33 +1,6 @@
 --- a/net/minecraft/entity/mob/ShulkerEntity.java
 +++ b/net/minecraft/entity/mob/ShulkerEntity.java
-@@ -150,7 +150,7 @@
- 
-    public void tick() {
-       super.tick();
--      BlockPos blockPos = (BlockPos)((Optional)this.dataTracker.get(ATTACHED_BLOCK)).orElse((Object)null);
-+      BlockPos blockPos = (BlockPos)(this.dataTracker.get(ATTACHED_BLOCK)).orElse(null);
-       if (blockPos == null && !this.world.isClient) {
-          blockPos = this.getBlockPos();
-          this.dataTracker.set(ATTACHED_BLOCK, Optional.of(blockPos));
-@@ -252,7 +252,7 @@
-    public void updatePosition(double x, double y, double z) {
-       super.updatePosition(x, y, z);
-       if (this.dataTracker != null && this.age != 0) {
--         Optional<BlockPos> optional = (Optional)this.dataTracker.get(ATTACHED_BLOCK);
-+         Optional<BlockPos> optional = this.dataTracker.get(ATTACHED_BLOCK);
-          Optional<BlockPos> optional2 = Optional.of(new BlockPos(x, y, z));
-          if (!optional2.equals(optional)) {
-             this.dataTracker.set(ATTACHED_BLOCK, optional2);
-@@ -372,7 +372,7 @@
- 
-    @Nullable
-    public BlockPos getAttachedBlock() {
--      return (BlockPos)((Optional)this.dataTracker.get(ATTACHED_BLOCK)).orElse((Object)null);
-+      return (BlockPos)(this.dataTracker.get(ATTACHED_BLOCK)).orElse(null);
-    }
- 
-    public void setAttachedBlock(@Nullable BlockPos pos) {
-@@ -577,3 +577,5 @@
+@@ -542,3 +542,5 @@
        }
     }
  }

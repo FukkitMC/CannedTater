@@ -1,6 +1,6 @@
 --- a/net/minecraft/screen/BrewingStandScreenHandler.java
 +++ b/net/minecraft/screen/BrewingStandScreenHandler.java
-@@ -180,3 +180,5 @@
+@@ -168,3 +168,5 @@
        }
     }
  }

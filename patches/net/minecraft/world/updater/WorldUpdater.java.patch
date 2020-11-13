@@ -1,6 +1,6 @@
 --- a/net/minecraft/world/updater/WorldUpdater.java
 +++ b/net/minecraft/world/updater/WorldUpdater.java
-@@ -292,3 +292,5 @@
+@@ -275,3 +275,5 @@
        return this.status;
     }
  }

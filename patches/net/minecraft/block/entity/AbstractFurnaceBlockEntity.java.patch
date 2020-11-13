@@ -1,14 +1,5 @@
 --- a/net/minecraft/block/entity/AbstractFurnaceBlockEntity.java
 +++ b/net/minecraft/block/entity/AbstractFurnaceBlockEntity.java
-@@ -240,7 +240,7 @@
-                this.cookTime = MathHelper.clamp(this.cookTime - 2, 0, this.cookTimeTotal);
-             }
-          } else {
--            Recipe<?> recipe = (Recipe)this.world.getRecipeManager().getFirstMatch(this.recipeType, this, this.world).orElse((Object)null);
-+            Recipe<?> recipe = (Recipe)this.world.getRecipeManager().getFirstMatch(this.recipeType, this, this.world).orElse(null);
-             if (!this.isBurning() && this.canAcceptRecipeOutput(recipe)) {
-                this.burnTime = this.getFuelTime(itemStack);
-                this.fuelTime = this.burnTime;
 @@ -499,3 +499,5 @@
  
     }

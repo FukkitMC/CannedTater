@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/decoration/ItemFrameEntity.java
 +++ b/net/minecraft/entity/decoration/ItemFrameEntity.java
-@@ -363,3 +363,5 @@
+@@ -354,3 +354,5 @@
        ROTATION = DataTracker.registerData(ItemFrameEntity.class, TrackedDataHandlerRegistry.INTEGER);
     }
  }

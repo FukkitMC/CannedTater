@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/FluidBlock.java
 +++ b/net/minecraft/block/FluidBlock.java
-@@ -161,3 +161,5 @@
+@@ -154,3 +154,5 @@
        COLLISION_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D);
     }
  }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/LeavesBlock.java
 +++ b/net/minecraft/block/LeavesBlock.java
-@@ -116,3 +116,5 @@
+@@ -96,3 +96,5 @@
        PERSISTENT = Properties.PERSISTENT;
     }
  }

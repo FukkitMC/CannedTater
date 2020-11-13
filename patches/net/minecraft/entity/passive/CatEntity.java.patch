@@ -1,16 +1,6 @@
 --- a/net/minecraft/entity/passive/CatEntity.java
 +++ b/net/minecraft/entity/passive/CatEntity.java
-@@ -618,8 +618,7 @@
-       private final CatEntity cat;
- 
-       public CatFleeGoal(CatEntity cat, Class<T> fleeFromType, float distance, double slowSpeed, double fastSpeed) {
--         Predicate var10006 = EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR;
--         super(cat, fleeFromType, distance, slowSpeed, fastSpeed, var10006::test);
-+         super(cat, fleeFromType, distance, slowSpeed, fastSpeed, EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR::test);
-          this.cat = cat;
-       }
- 
-@@ -632,3 +631,5 @@
+@@ -615,3 +615,5 @@
        }
     }
  }

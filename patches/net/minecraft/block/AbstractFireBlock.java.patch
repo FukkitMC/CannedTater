@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/AbstractFireBlock.java
 +++ b/net/minecraft/block/AbstractFireBlock.java
-@@ -182,3 +182,5 @@
+@@ -108,3 +108,5 @@
        }
     }
  }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/ItemEntity.java
 +++ b/net/minecraft/entity/ItemEntity.java
-@@ -422,3 +422,5 @@
+@@ -395,3 +395,5 @@
        STACK = DataTracker.registerData(ItemEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
     }
  }

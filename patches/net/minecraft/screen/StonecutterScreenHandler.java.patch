@@ -1,6 +1,6 @@
 --- a/net/minecraft/screen/StonecutterScreenHandler.java
 +++ b/net/minecraft/screen/StonecutterScreenHandler.java
-@@ -228,3 +228,5 @@
+@@ -201,3 +201,5 @@
        });
     }
  }

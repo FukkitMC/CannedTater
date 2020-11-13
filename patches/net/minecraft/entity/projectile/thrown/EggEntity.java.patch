@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/projectile/thrown/EggEntity.java
 +++ b/net/minecraft/entity/projectile/thrown/EggEntity.java
-@@ -71,3 +71,5 @@
+@@ -55,3 +55,5 @@
        return Items.EGG;
     }
  }

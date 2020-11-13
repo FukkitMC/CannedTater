@@ -1,14 +1,6 @@
 --- a/net/minecraft/world/WanderingTraderManager.java
 +++ b/net/minecraft/world/WanderingTraderManager.java
-@@ -82,7 +82,6 @@
-          return false;
-       } else {
-          BlockPos blockPos = playerEntity.getBlockPos();
--         int i = true;
-          PointOfInterestStorage pointOfInterestStorage = serverWorld.getPointOfInterestStorage();
-          Optional<BlockPos> optional = pointOfInterestStorage.getPosition(PointOfInterestType.MEETING.getCompletionCondition(), (blockPosx) -> {
-             return true;
-@@ -155,3 +154,5 @@
+@@ -155,3 +155,5 @@
        return false;
     }
  }

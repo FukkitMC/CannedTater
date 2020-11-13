@@ -1,15 +1,6 @@
 --- a/net/minecraft/util/crash/CrashReport.java
 +++ b/net/minecraft/util/crash/CrashReport.java
-@@ -64,7 +64,7 @@
-          long q = n / 1024L / 1024L;
-          return n + " bytes (" + q + " MB) / " + m + " bytes (" + p + " MB) up to " + l + " bytes (" + o + " MB)";
-       });
--      this.systemDetailsSection.add("CPUs", (Object)Runtime.getRuntime().availableProcessors());
-+      this.systemDetailsSection.add("CPUs", Runtime.getRuntime().availableProcessors());
-       this.systemDetailsSection.add("JVM Flags", () -> {
-          List<String> list = (List)Util.getJVMFlags().collect(Collectors.toList());
-          return String.format("%d total; %s", list.size(), list.stream().collect(Collectors.joining(" ")));
-@@ -270,3 +270,5 @@
+@@ -263,3 +263,5 @@
        (new CrashReport("Don't panic!", new Throwable())).asString();
     }
  }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/passive/ParrotEntity.java
 +++ b/net/minecraft/entity/passive/ParrotEntity.java
-@@ -407,3 +407,5 @@
+@@ -389,3 +389,5 @@
        });
     }
  }

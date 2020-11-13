@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/entity/ConduitBlockEntity.java
 +++ b/net/minecraft/block/entity/ConduitBlockEntity.java
-@@ -298,3 +298,5 @@
+@@ -286,3 +286,5 @@
        ACTIVATING_BLOCKS = new Block[]{Blocks.PRISMARINE, Blocks.PRISMARINE_BRICKS, Blocks.SEA_LANTERN, Blocks.DARK_PRISMARINE};
     }
  }

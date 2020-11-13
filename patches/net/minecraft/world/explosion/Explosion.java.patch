@@ -1,14 +1,6 @@
 --- a/net/minecraft/world/explosion/Explosion.java
 +++ b/net/minecraft/world/explosion/Explosion.java
-@@ -133,7 +133,6 @@
- 
-    public void collectBlocksAndDamageEntities() {
-       Set<BlockPos> set = Sets.newHashSet();
--      int i = true;
- 
-       int k;
-       int l;
-@@ -346,3 +345,5 @@
+@@ -325,3 +325,5 @@
        DESTROY;
     }
  }

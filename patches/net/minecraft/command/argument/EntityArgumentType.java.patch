@@ -1,14 +1,6 @@
 --- a/net/minecraft/command/argument/EntityArgumentType.java
 +++ b/net/minecraft/command/argument/EntityArgumentType.java
-@@ -90,7 +90,6 @@
-    }
- 
-    public EntitySelector parse(StringReader stringReader) throws CommandSyntaxException {
--      int i = false;
-       EntitySelectorReader entitySelectorReader = new EntitySelectorReader(stringReader);
-       EntitySelector entitySelector = entitySelectorReader.read();
-       if (entitySelector.getLimit() > 1 && this.singleTarget) {
-@@ -160,3 +159,5 @@
+@@ -160,3 +160,5 @@
        }
     }
  }

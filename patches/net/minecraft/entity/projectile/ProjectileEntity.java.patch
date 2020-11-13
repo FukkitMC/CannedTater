@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/projectile/ProjectileEntity.java
 +++ b/net/minecraft/entity/projectile/ProjectileEntity.java
-@@ -167,3 +167,5 @@
+@@ -151,3 +151,5 @@
        return MathHelper.lerp(0.2F, f, g);
     }
  }

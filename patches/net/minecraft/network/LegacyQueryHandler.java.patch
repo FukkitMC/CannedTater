@@ -1,6 +1,6 @@
 --- a/net/minecraft/network/LegacyQueryHandler.java
 +++ b/net/minecraft/network/LegacyQueryHandler.java
-@@ -107,3 +107,5 @@
+@@ -109,3 +109,5 @@
        return byteBuf;
     }
  }

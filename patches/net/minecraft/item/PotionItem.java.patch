@@ -1,6 +1,6 @@
 --- a/net/minecraft/item/PotionItem.java
 +++ b/net/minecraft/item/PotionItem.java
-@@ -111,3 +111,5 @@
+@@ -101,3 +101,5 @@
  
     }
  }

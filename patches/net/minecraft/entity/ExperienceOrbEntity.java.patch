@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/ExperienceOrbEntity.java
 +++ b/net/minecraft/entity/ExperienceOrbEntity.java
-@@ -239,3 +239,5 @@
+@@ -212,3 +212,5 @@
        return new ExperienceOrbSpawnS2CPacket(this);
     }
  }

@@ -1,41 +1,5 @@
 --- a/net/minecraft/server/ServerConfigList.java
 +++ b/net/minecraft/server/ServerConfigList.java
-@@ -51,7 +51,7 @@
-    @Nullable
-    public V get(K key) {
-       this.removeInvalidEntries();
--      return (ServerConfigEntry)this.map.get(this.toString(key));
-+      return this.map.get(this.toString(key));
-    }
- 
-    public void remove(K key) {
-@@ -90,7 +90,7 @@
-       Iterator var2 = this.map.values().iterator();
- 
-       while(var2.hasNext()) {
--         V serverConfigEntry = (ServerConfigEntry)var2.next();
-+         V serverConfigEntry = (V)var2.next();
-          if (serverConfigEntry.isInvalid()) {
-             list.add(serverConfigEntry.getKey());
-          }
-@@ -99,7 +99,7 @@
-       var2 = list.iterator();
- 
-       while(var2.hasNext()) {
--         K object = var2.next();
-+         K object = (K) var2.next();
-          this.map.remove(this.toString(object));
-       }
- 
-@@ -158,7 +158,7 @@
-                JsonObject jsonObject = JsonHelper.asObject(jsonElement, "entry");
-                ServerConfigEntry<K> serverConfigEntry = this.fromJson(jsonObject);
-                if (serverConfigEntry.getKey() != null) {
--                  this.map.put(this.toString(serverConfigEntry.getKey()), serverConfigEntry);
-+                  this.map.put(this.toString(serverConfigEntry.getKey()), (V) serverConfigEntry);
-                }
-             }
-          } catch (Throwable var15) {
 @@ -182,3 +182,5 @@
        }
     }

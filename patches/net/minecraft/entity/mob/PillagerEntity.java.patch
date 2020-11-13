@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/mob/PillagerEntity.java
 +++ b/net/minecraft/entity/mob/PillagerEntity.java
-@@ -269,3 +269,5 @@
+@@ -251,3 +251,5 @@
        CHARGING = DataTracker.registerData(PillagerEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     }
  }

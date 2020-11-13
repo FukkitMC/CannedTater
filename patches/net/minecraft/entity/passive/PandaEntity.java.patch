@@ -1,16 +1,6 @@
 --- a/net/minecraft/entity/passive/PandaEntity.java
 +++ b/net/minecraft/entity/passive/PandaEntity.java
-@@ -810,8 +810,7 @@
-       private final PandaEntity panda;
- 
-       public PandaFleeGoal(PandaEntity panda, Class<T> fleeFromType, float distance, double slowSpeed, double fastSpeed) {
--         Predicate var10006 = EntityPredicates.EXCEPT_SPECTATOR;
--         super(panda, fleeFromType, distance, slowSpeed, fastSpeed, var10006::test);
-+         super(panda, fleeFromType, distance, slowSpeed, fastSpeed, EntityPredicates.EXCEPT_SPECTATOR::test);
-          this.panda = panda;
-       }
- 
-@@ -1101,3 +1100,5 @@
+@@ -1084,3 +1084,5 @@
        }
     }
  }

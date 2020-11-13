@@ -1,7 +1,7 @@
 --- a/net/minecraft/screen/MerchantScreenHandler.java
 +++ b/net/minecraft/screen/MerchantScreenHandler.java
-@@ -250,3 +250,5 @@
-       return this.leveled;
+@@ -200,3 +200,5 @@
+       return this.merchant.getOffers();
     }
  }
 +

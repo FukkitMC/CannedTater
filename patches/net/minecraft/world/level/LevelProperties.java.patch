@@ -1,25 +1,7 @@
 --- a/net/minecraft/world/level/LevelProperties.java
 +++ b/net/minecraft/world/level/LevelProperties.java
-@@ -119,7 +119,7 @@
-       CompoundTag compoundTag = (CompoundTag)dynamic.get("DragonFight").result().map(Dynamic::getValue).orElseGet(() -> {
-          return (Tag)dynamic.get("DimensionData").get("1").get("DragonFight").orElseEmptyMap().getValue();
-       });
--      return new LevelProperties(dataFixer, dataVersion, playerData, dynamic.get("WasModded").asBoolean(false), dynamic.get("SpawnX").asInt(0), dynamic.get("SpawnY").asInt(0), dynamic.get("SpawnZ").asInt(0), dynamic.get("SpawnAngle").asFloat(0.0F), l, dynamic.get("DayTime").asLong(l), saveVersionInfo.getLevelFormatVersion(), dynamic.get("clearWeatherTime").asInt(0), dynamic.get("rainTime").asInt(0), dynamic.get("raining").asBoolean(false), dynamic.get("thunderTime").asInt(0), dynamic.get("thundering").asBoolean(false), dynamic.get("initialized").asBoolean(true), dynamic.get("DifficultyLocked").asBoolean(false), WorldBorder.Properties.fromDynamic(dynamic, WorldBorder.DEFAULT_BORDER), dynamic.get("WanderingTraderSpawnDelay").asInt(0), dynamic.get("WanderingTraderSpawnChance").asInt(0), (UUID)dynamic.get("WanderingTraderId").read(DynamicSerializableUuid.CODEC).result().orElse((Object)null), (LinkedHashSet)dynamic.get("ServerBrands").asStream().flatMap((dynamicx) -> {
-+      return new LevelProperties(dataFixer, dataVersion, playerData, dynamic.get("WasModded").asBoolean(false), dynamic.get("SpawnX").asInt(0), dynamic.get("SpawnY").asInt(0), dynamic.get("SpawnZ").asInt(0), dynamic.get("SpawnAngle").asFloat(0.0F), l, dynamic.get("DayTime").asLong(l), saveVersionInfo.getLevelFormatVersion(), dynamic.get("clearWeatherTime").asInt(0), dynamic.get("rainTime").asInt(0), dynamic.get("raining").asBoolean(false), dynamic.get("thunderTime").asInt(0), dynamic.get("thundering").asBoolean(false), dynamic.get("initialized").asBoolean(true), dynamic.get("DifficultyLocked").asBoolean(false), WorldBorder.Properties.fromDynamic(dynamic, WorldBorder.DEFAULT_BORDER), dynamic.get("WanderingTraderSpawnDelay").asInt(0), dynamic.get("WanderingTraderSpawnChance").asInt(0), (UUID)dynamic.get("WanderingTraderId").read(DynamicSerializableUuid.CODEC).result().orElse(null), (LinkedHashSet)dynamic.get("ServerBrands").asStream().flatMap((dynamicx) -> {
-          return Util.stream(dynamicx.asString().result());
-       }).collect(Collectors.toCollection(Sets::newLinkedHashSet)), new Timer(TimerCallbackSerializer.INSTANCE, dynamic.get("ScheduledEvents").asStream()), (CompoundTag)dynamic.get("CustomBossEvents").orElseEmptyMap().getValue(), compoundTag, levelInfo, generatorOptions, lifecycle);
-    }
-@@ -147,7 +147,7 @@
-       compoundTag.put("Version", compoundTag3);
-       compoundTag.putInt("DataVersion", SharedConstants.getGameVersion().getWorldVersion());
-       RegistryReadingOps<Tag> registryReadingOps = RegistryReadingOps.of(NbtOps.INSTANCE, dynamicRegistryManager);
--      DataResult var10000 = GeneratorOptions.CODEC.encodeStart(registryReadingOps, this.generatorOptions);
-+      DataResult<Tag> var10000 = GeneratorOptions.CODEC.encodeStart(registryReadingOps, this.generatorOptions);
-       Logger var10002 = LOGGER;
-       var10002.getClass();
-       var10000.resultOrPartial(Util.method_29188("WorldGenSettings: ", var10002::error)).ifPresent((tag) -> {
-@@ -455,3 +455,5 @@
-       return this.levelInfo.withCopiedGameRules();
+@@ -443,3 +443,5 @@
+       return this;
     }
  }
 +

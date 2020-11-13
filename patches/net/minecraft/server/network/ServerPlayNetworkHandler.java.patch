@@ -1,46 +1,6 @@
 --- a/net/minecraft/server/network/ServerPlayNetworkHandler.java
 +++ b/net/minecraft/server/network/ServerPlayNetworkHandler.java
-@@ -112,6 +112,7 @@
- import net.minecraft.network.packet.s2c.play.ScreenHandlerSlotUpdateS2CPacket;
- import net.minecraft.network.packet.s2c.play.TagQueryResponseS2CPacket;
- import net.minecraft.network.packet.s2c.play.VehicleMoveS2CPacket;
-+import net.minecraft.recipe.Recipe;
- import net.minecraft.screen.AbstractRecipeScreenHandler;
- import net.minecraft.screen.AnvilScreenHandler;
- import net.minecraft.screen.BeaconScreenHandler;
-@@ -312,7 +313,7 @@
-       };
-       TextStream textStream = this.player.getTextStream();
-       if (textStream != null) {
--         ((CompletableFuture)backingFilterer.apply(textStream, text)).thenAcceptAsync((optional) -> {
-+         (backingFilterer.apply(textStream, text)).thenAcceptAsync((optional) -> {
-             optional.ifPresent(consumer2);
-          }, threadExecutor);
-       } else {
-@@ -436,7 +437,7 @@
- 
-    public void onRecipeBookData(RecipeBookDataC2SPacket packet) {
-       NetworkThreadUtils.forceMainThread(packet, this, (ServerWorld)this.player.getServerWorld());
--      Optional var10000 = this.server.getRecipeManager().get(packet.getRecipeId());
-+      Optional<? extends Recipe<?>> var10000 = this.server.getRecipeManager().get(packet.getRecipeId());
-       ServerRecipeBook var10001 = this.player.getRecipeBook();
-       var10000.ifPresent(var10001::onRecipeDisplayed);
-    }
-@@ -699,10 +700,11 @@
- 
-             j = packet.getSlot();
-             if (PlayerInventory.isValidHotbarIndex(j) || j == 40) {
-+               int finalJ = j;
-                this.filterTexts(list, bl ? (listx) -> {
--                  this.method_31276((String)listx.get(0), listx.subList(1, listx.size()), j);
-+                  this.method_31276((String)listx.get(0), listx.subList(1, listx.size()), finalJ);
-                } : (listx) -> {
--                  this.method_31278(listx, j);
-+                  this.method_31278(listx, finalJ);
-                });
-             }
-          }
-@@ -1439,3 +1441,5 @@
+@@ -1439,3 +1439,5 @@
        }
     }
  }

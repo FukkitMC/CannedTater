@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/TallPlantBlock.java
 +++ b/net/minecraft/block/TallPlantBlock.java
-@@ -112,3 +112,5 @@
+@@ -104,3 +104,5 @@
        HALF = Properties.DOUBLE_BLOCK_HALF;
     }
  }

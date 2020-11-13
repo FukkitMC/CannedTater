@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/DoorBlock.java
 +++ b/net/minecraft/block/DoorBlock.java
-@@ -237,3 +237,5 @@
+@@ -229,3 +229,5 @@
        WEST_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 3.0D, 16.0D, 16.0D);
     }
  }

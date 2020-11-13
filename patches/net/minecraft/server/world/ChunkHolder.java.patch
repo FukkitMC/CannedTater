@@ -1,53 +1,6 @@
 --- a/net/minecraft/server/world/ChunkHolder.java
 +++ b/net/minecraft/server/world/ChunkHolder.java
-@@ -76,7 +76,7 @@
-       this.accessibleFuture = UNLOADED_WORLD_CHUNK_FUTURE;
-       this.tickingFuture = UNLOADED_WORLD_CHUNK_FUTURE;
-       this.entityTickingFuture = UNLOADED_WORLD_CHUNK_FUTURE;
--      this.savingFuture = CompletableFuture.completedFuture((Object)null);
-+      this.savingFuture = CompletableFuture.completedFuture(null);
-       this.blockUpdatesBySection = new ShortSet[16];
-       this.pos = pos;
-       this.lightingProvider = lightingProvider;
-@@ -112,8 +112,8 @@
-    @Nullable
-    public WorldChunk getWorldChunk() {
-       CompletableFuture<Either<WorldChunk, ChunkHolder.Unloaded>> completableFuture = this.getTickingFuture();
--      Either<WorldChunk, ChunkHolder.Unloaded> either = (Either)completableFuture.getNow((Object)null);
--      return either == null ? null : (WorldChunk)either.left().orElse((Object)null);
-+      Either<WorldChunk, ChunkHolder.Unloaded> either = (Either)completableFuture.getNow(null);
-+      return either == null ? null : (WorldChunk)either.left().orElse(null);
-    }
- 
-    @Nullable
-@@ -250,7 +250,7 @@
-       int i = targetStatus.getIndex();
-       CompletableFuture<Either<Chunk, ChunkHolder.Unloaded>> completableFuture = (CompletableFuture)this.futuresByStatus.get(i);
-       if (completableFuture != null) {
--         Either<Chunk, ChunkHolder.Unloaded> either = (Either)completableFuture.getNow((Object)null);
-+         Either<Chunk, ChunkHolder.Unloaded> either = (Either)completableFuture.getNow(null);
-          if (either == null || either.left().isPresent()) {
-             return completableFuture;
-          }
-@@ -308,7 +308,7 @@
-       boolean bl2 = this.level <= ThreadedAnvilChunkStorage.MAX_LEVEL;
-       ChunkHolder.LevelType levelType = getLevelType(this.lastTickLevel);
-       ChunkHolder.LevelType levelType2 = getLevelType(this.level);
--      CompletableFuture completableFuture;
-+      CompletableFuture<Either<WorldChunk, ChunkHolder.Unloaded>> completableFuture;
-       if (bl) {
-          Either<Chunk, ChunkHolder.Unloaded> either = Either.right(new ChunkHolder.Unloaded() {
-             public String toString() {
-@@ -319,7 +319,7 @@
-          for(int i = bl2 ? chunkStatus2.getIndex() + 1 : 0; i <= chunkStatus.getIndex(); ++i) {
-             completableFuture = (CompletableFuture)this.futuresByStatus.get(i);
-             if (completableFuture != null) {
--               completableFuture.complete(either);
-+               completableFuture.complete((Either<WorldChunk, ChunkHolder.Unloaded>) (Object) either);
-             } else {
-                this.futuresByStatus.set(i, CompletableFuture.completedFuture(either));
-             }
-@@ -444,3 +444,5 @@
+@@ -423,3 +423,5 @@
        }
     }
  }

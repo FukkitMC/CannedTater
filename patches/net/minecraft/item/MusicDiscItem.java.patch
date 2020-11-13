@@ -1,7 +1,7 @@
 --- a/net/minecraft/item/MusicDiscItem.java
 +++ b/net/minecraft/item/MusicDiscItem.java
-@@ -80,3 +80,5 @@
-       return this.sound;
+@@ -50,3 +50,5 @@
+       return this.comparatorOutput;
     }
  }
 +

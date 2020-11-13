@@ -1,7 +1,7 @@
 --- a/net/minecraft/screen/CraftingScreenHandler.java
 +++ b/net/minecraft/screen/CraftingScreenHandler.java
-@@ -180,3 +180,5 @@
-       return RecipeBookCategory.CRAFTING;
+@@ -167,3 +167,5 @@
+       return this.input.getHeight();
     }
  }
 +

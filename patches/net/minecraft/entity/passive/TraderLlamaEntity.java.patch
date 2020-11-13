@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/passive/TraderLlamaEntity.java
 +++ b/net/minecraft/entity/passive/TraderLlamaEntity.java
-@@ -143,3 +143,5 @@
+@@ -136,3 +136,5 @@
        }
     }
  }

@@ -1,15 +1,6 @@
 --- a/net/minecraft/entity/decoration/EndCrystalEntity.java
 +++ b/net/minecraft/entity/decoration/EndCrystalEntity.java
-@@ -121,7 +121,7 @@
- 
-    @Nullable
-    public BlockPos getBeamTarget() {
--      return (BlockPos)((Optional)this.getDataTracker().get(BEAM_TARGET)).orElse((Object)null);
-+      return (BlockPos)(this.getDataTracker().get(BEAM_TARGET)).orElse(null);
-    }
- 
-    public void setShowBottom(boolean showBottom) {
-@@ -146,3 +146,5 @@
+@@ -139,3 +139,5 @@
        SHOW_BOTTOM = DataTracker.registerData(EndCrystalEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     }
  }

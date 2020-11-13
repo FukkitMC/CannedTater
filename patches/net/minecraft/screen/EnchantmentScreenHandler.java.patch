@@ -1,6 +1,6 @@
 --- a/net/minecraft/screen/EnchantmentScreenHandler.java
 +++ b/net/minecraft/screen/EnchantmentScreenHandler.java
-@@ -297,3 +297,5 @@
+@@ -284,3 +284,5 @@
        return itemStack;
     }
  }

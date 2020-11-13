@@ -1,14 +1,6 @@
 --- a/net/minecraft/village/raid/Raid.java
 +++ b/net/minecraft/village/raid/Raid.java
-@@ -464,7 +464,6 @@
- 
-    private void playRaidHorn(BlockPos pos) {
-       float f = 13.0F;
--      int i = true;
-       Collection<ServerPlayerEntity> collection = this.bar.getPlayers();
-       Iterator var5 = this.world.getPlayers().iterator();
- 
-@@ -846,3 +845,5 @@
+@@ -846,3 +846,5 @@
        }
     }
  }

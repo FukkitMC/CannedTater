@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/player/HungerManager.java
 +++ b/net/minecraft/entity/player/HungerManager.java
-@@ -115,3 +115,5 @@
-       this.foodSaturationLevel = saturationLevel;
+@@ -108,3 +108,5 @@
+       this.foodLevel = foodLevel;
     }
  }
 +

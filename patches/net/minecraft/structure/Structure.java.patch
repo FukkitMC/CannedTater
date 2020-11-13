@@ -1,14 +1,5 @@
 --- a/net/minecraft/structure/Structure.java
 +++ b/net/minecraft/structure/Structure.java
-@@ -135,7 +135,7 @@
-    }
- 
-    private static List<Structure.StructureBlockInfo> method_28055(List<Structure.StructureBlockInfo> list, List<Structure.StructureBlockInfo> list2, List<Structure.StructureBlockInfo> list3) {
--      Comparator<Structure.StructureBlockInfo> comparator = Comparator.comparingInt((structureBlockInfo) -> {
-+      Comparator<Structure.StructureBlockInfo> comparator = Comparator.comparingInt((Structure.StructureBlockInfo structureBlockInfo) -> {
-          return structureBlockInfo.pos.getY();
-       }).thenComparingInt((structureBlockInfo) -> {
-          return structureBlockInfo.pos.getX();
 @@ -882,3 +882,5 @@
        }
     }

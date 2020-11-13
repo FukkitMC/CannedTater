@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/entity/BeaconBlockEntity.java
 +++ b/net/minecraft/block/entity/BeaconBlockEntity.java
-@@ -340,3 +340,5 @@
+@@ -317,3 +317,5 @@
        }
     }
  }

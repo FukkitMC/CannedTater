@@ -1,19 +1,6 @@
 --- a/net/minecraft/world/ChunkRegion.java
 +++ b/net/minecraft/world/ChunkRegion.java
-@@ -56,10 +56,10 @@
-    private final WorldProperties levelProperties;
-    private final Random random;
-    private final DimensionType dimension;
--   private final TickScheduler<Block> blockTickScheduler = new MultiTickScheduler((pos) -> {
-+   private final TickScheduler<Block> blockTickScheduler = new MultiTickScheduler<>((pos) -> {
-       return this.getChunk(pos).getBlockTickScheduler();
-    });
--   private final TickScheduler<Fluid> fluidTickScheduler = new MultiTickScheduler((pos) -> {
-+   private final TickScheduler<Fluid> fluidTickScheduler = new MultiTickScheduler<>((pos) -> {
-       return this.getChunk(pos).getFluidTickScheduler();
-    });
-    private final BiomeAccess biomeAccess;
-@@ -350,3 +350,5 @@
+@@ -342,3 +342,5 @@
        return this.field_26822.getStructuresWithChildren(pos, feature);
     }
  }

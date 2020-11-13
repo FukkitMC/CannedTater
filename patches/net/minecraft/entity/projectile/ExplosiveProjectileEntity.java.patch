@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/projectile/ExplosiveProjectileEntity.java
 +++ b/net/minecraft/entity/projectile/ExplosiveProjectileEntity.java
-@@ -168,3 +168,5 @@
+@@ -155,3 +155,5 @@
        return new EntitySpawnS2CPacket(this.getEntityId(), this.getUuid(), this.getX(), this.getY(), this.getZ(), this.pitch, this.yaw, this.getType(), i, new Vec3d(this.posX, this.posY, this.posZ));
     }
  }

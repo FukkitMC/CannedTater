@@ -1,6 +1,6 @@
 --- a/net/minecraft/item/ItemStack.java
 +++ b/net/minecraft/item/ItemStack.java
-@@ -993,3 +993,5 @@
+@@ -777,3 +777,5 @@
        }
     }
  }

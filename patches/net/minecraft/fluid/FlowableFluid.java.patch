@@ -1,28 +1,6 @@
 --- a/net/minecraft/fluid/FlowableFluid.java
 +++ b/net/minecraft/fluid/FlowableFluid.java
-@@ -277,16 +277,16 @@
-             BlockPos blockPos3 = blockPos.offset(direction2);
-             short s = method_15747(blockPos2, blockPos3);
-             Pair<BlockState, FluidState> pair = (Pair)short2ObjectMap.computeIfAbsent(s, (ix) -> {
--               BlockState blockState = world.getBlockState(blockPos3);
--               return Pair.of(blockState, blockState.getFluidState());
-+               BlockState blockState_ = world.getBlockState(blockPos3);
-+               return Pair.of(blockState_, blockState_.getFluidState());
-             });
-             BlockState blockState2 = (BlockState)pair.getFirst();
-             FluidState fluidState = (FluidState)pair.getSecond();
-             if (this.canFlowThrough(world, this.getFlowing(), blockPos, blockState, direction2, blockPos3, blockState2, fluidState)) {
-                boolean bl = short2BooleanMap.computeIfAbsent(s, (ix) -> {
--                  BlockPos blockPos2 = blockPos3.down();
--                  BlockState blockState2x = world.getBlockState(blockPos2);
--                  return this.method_15736(world, this.getFlowing(), blockPos3, blockState2, blockPos2, blockState2x);
-+                  BlockPos blockPos2_ = blockPos3.down();
-+                  BlockState blockState2x = world.getBlockState(blockPos2_);
-+                  return this.method_15736(world, this.getFlowing(), blockPos3, blockState2, blockPos2_, blockState2x);
-                });
-                if (bl) {
-                   return i;
-@@ -464,3 +464,5 @@
+@@ -460,3 +460,5 @@
        });
     }
  }

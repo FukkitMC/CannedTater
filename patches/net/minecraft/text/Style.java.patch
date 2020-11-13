@@ -1,6 +1,6 @@
 --- a/net/minecraft/text/Style.java
 +++ b/net/minecraft/text/Style.java
-@@ -563,3 +563,5 @@
+@@ -493,3 +493,5 @@
        }
     }
  }

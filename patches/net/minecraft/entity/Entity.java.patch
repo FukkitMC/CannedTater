@@ -1,48 +1,6 @@
 --- a/net/minecraft/entity/Entity.java
 +++ b/net/minecraft/entity/Entity.java
-@@ -2235,7 +2235,7 @@
-                }
- 
-                return AreaHelper.method_30484(destination, arg, axis2, vec3d2, this.getDimensions(this.getPose()), this.getVelocity(), this.yaw, this.pitch);
--            }).orElse((Object)null);
-+            }).orElse(null);
-          }
-       } else {
-          BlockPos blockPos2;
-@@ -2281,14 +2281,14 @@
-       section.add("Entity Type", () -> {
-          return EntityType.getId(this.getType()) + " (" + this.getClass().getCanonicalName() + ")";
-       });
--      section.add("Entity ID", (Object)this.entityId);
-+      section.add("Entity ID", this.entityId);
-       section.add("Entity Name", () -> {
-          return this.getName().getString();
-       });
--      section.add("Entity's Exact location", (Object)String.format(Locale.ROOT, "%.2f, %.2f, %.2f", this.getX(), this.getY(), this.getZ()));
--      section.add("Entity's Block location", (Object)CrashReportSection.createPositionString(MathHelper.floor(this.getX()), MathHelper.floor(this.getY()), MathHelper.floor(this.getZ())));
-+      section.add("Entity's Exact location", String.format(Locale.ROOT, "%.2f, %.2f, %.2f", this.getX(), this.getY(), this.getZ()));
-+      section.add("Entity's Block location", CrashReportSection.createPositionString(MathHelper.floor(this.getX()), MathHelper.floor(this.getY()), MathHelper.floor(this.getZ())));
-       Vec3d vec3d = this.getVelocity();
--      section.add("Entity's Momentum", (Object)String.format(Locale.ROOT, "%.2f, %.2f, %.2f", vec3d.x, vec3d.y, vec3d.z));
-+      section.add("Entity's Momentum", String.format(Locale.ROOT, "%.2f, %.2f, %.2f", vec3d.x, vec3d.y, vec3d.z));
-       section.add("Entity's Passengers", () -> {
-          return this.getPassengerList().toString();
-       });
-@@ -2345,11 +2345,11 @@
- 
-    @Nullable
-    public Text getCustomName() {
--      return (Text)((Optional)this.dataTracker.get(CUSTOM_NAME)).orElse((Object)null);
-+      return (Text)(this.dataTracker.get(CUSTOM_NAME)).orElse(null);
-    }
- 
-    public boolean hasCustomName() {
--      return ((Optional)this.dataTracker.get(CUSTOM_NAME)).isPresent();
-+      return (this.dataTracker.get(CUSTOM_NAME)).isPresent();
-    }
- 
-    public void setCustomNameVisible(boolean visible) {
-@@ -2928,3 +2928,5 @@
+@@ -2726,3 +2726,5 @@
        void accept(Entity entity, double x, double y, double z);
     }
  }

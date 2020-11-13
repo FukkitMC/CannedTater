@@ -1,24 +1,6 @@
 --- a/net/minecraft/entity/data/DataTracker.java
 +++ b/net/minecraft/entity/data/DataTracker.java
-@@ -104,7 +104,7 @@
-       } catch (Throwable var9) {
-          CrashReport crashReport = CrashReport.create(var9, "Getting synched entity data");
-          CrashReportSection crashReportSection = crashReport.addElement("Synched entity data");
--         crashReportSection.add("Data ID", (Object)trackedData);
-+         crashReportSection.add("Data ID", trackedData);
-          throw new CrashException(crashReport);
-       } finally {
-          this.lock.readLock().unlock();
-@@ -248,7 +248,7 @@
-       if (!Objects.equals(entry2.data.getType(), entry.data.getType())) {
-          throw new IllegalStateException(String.format("Invalid entity data item type for field %d on entity %s: old=%s(%s), new=%s(%s)", entry.data.getId(), this.trackedEntity, entry.value, entry.value.getClass(), entry2.value, entry2.value.getClass()));
-       } else {
--         entry.set(entry2.get());
-+         entry.set((T) entry2.get());
-       }
-    }
- 
-@@ -305,3 +305,5 @@
+@@ -275,3 +275,5 @@
        }
     }
  }
