@@ -1,6 +1,40 @@
 --- a/net/minecraft/server/network/ServerPlayNetworkHandler.java
 +++ b/net/minecraft/server/network/ServerPlayNetworkHandler.java
-@@ -1439,3 +1439,5 @@
+@@ -312,7 +312,7 @@
+       };
+       TextStream textStream = this.player.getTextStream();
+       if (textStream != null) {
+-         ((CompletableFuture)backingFilterer.apply(textStream, text)).thenAcceptAsync((optional) -> {
++         (backingFilterer.apply(textStream, text)).thenAcceptAsync((optional) -> {
+             optional.ifPresent(consumer2);
+          }, threadExecutor);
+       } else {
+@@ -436,9 +436,7 @@
+ 
+    public void onRecipeBookData(RecipeBookDataC2SPacket packet) {
+       NetworkThreadUtils.forceMainThread(packet, this, (ServerWorld)this.player.getServerWorld());
+-      Optional var10000 = this.server.getRecipeManager().get(packet.getRecipeId());
+-      ServerRecipeBook var10001 = this.player.getRecipeBook();
+-      var10000.ifPresent(var10001::onRecipeDisplayed);
++      this.server.getRecipeManager().get(packet.getRecipeId()).ifPresent(this.player.getRecipeBook()::onRecipeDisplayed);
+    }
+ 
+    public void onRecipeCategoryOptions(RecipeCategoryOptionsC2SPacket packet) {
+@@ -699,10 +697,11 @@
+ 
+             j = packet.getSlot();
+             if (PlayerInventory.isValidHotbarIndex(j) || j == 40) {
++               int finalJ = j;
+                this.filterTexts(list, bl ? (listx) -> {
+-                  this.method_31276((String)listx.get(0), listx.subList(1, listx.size()), j);
++                  this.method_31276((String)listx.get(0), listx.subList(1, listx.size()), finalJ);
+                } : (listx) -> {
+-                  this.method_31278(listx, j);
++                  this.method_31278(listx, finalJ);
+                });
+             }
+          }
+@@ -1439,3 +1438,5 @@
        }
     }
  }

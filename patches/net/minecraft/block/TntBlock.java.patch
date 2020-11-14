@@ -1,5 +1,14 @@
 --- a/net/minecraft/block/TntBlock.java
 +++ b/net/minecraft/block/TntBlock.java
+@@ -86,7 +86,7 @@
+          world.setBlockState(pos, Blocks.AIR.getDefaultState(), 11);
+          if (!player.isCreative()) {
+             if (item == Items.FLINT_AND_STEEL) {
+-               itemStack.damage(1, (LivingEntity)player, (Consumer)((playerEntity) -> {
++               itemStack.damage(1, (LivingEntity)player, ((playerEntity) -> {
+                   playerEntity.sendToolBreakStatus(hand);
+                }));
+             } else {
 @@ -122,3 +122,5 @@
        UNSTABLE = Properties.UNSTABLE;
     }

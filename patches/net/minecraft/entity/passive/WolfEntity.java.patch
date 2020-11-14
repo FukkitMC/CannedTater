@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/passive/WolfEntity.java
 +++ b/net/minecraft/entity/passive/WolfEntity.java
+@@ -92,7 +92,7 @@
+       this.targetSelector.add(1, new TrackOwnerAttackerGoal(this));
+       this.targetSelector.add(2, new AttackWithOwnerGoal(this));
+       this.targetSelector.add(3, (new RevengeGoal(this, new Class[0])).setGroupRevenge());
+-      this.targetSelector.add(4, new FollowTargetGoal(this, PlayerEntity.class, 10, true, false, this::shouldAngerAt));
++      this.targetSelector.add(4, new FollowTargetGoal<>(this, PlayerEntity.class, 10, true, false, this::shouldAngerAt));
+       this.targetSelector.add(5, new FollowTargetIfTamedGoal(this, AnimalEntity.class, false, FOLLOW_TAMED_PREDICATE));
+       this.targetSelector.add(6, new FollowTargetIfTamedGoal(this, TurtleEntity.class, false, TurtleEntity.BABY_TURTLE_ON_LAND_FILTER));
+       this.targetSelector.add(7, new FollowTargetGoal(this, AbstractSkeletonEntity.class, false));
 @@ -469,3 +469,5 @@
        }
     }

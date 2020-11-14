@@ -1,6 +1,21 @@
 --- a/net/minecraft/entity/ai/brain/task/OpenDoorsTask.java
 +++ b/net/minecraft/entity/ai/brain/task/OpenDoorsTask.java
-@@ -162,3 +162,5 @@
+@@ -119,7 +119,7 @@
+ 
+    private static boolean method_30761(ServerWorld serverWorld, LivingEntity livingEntity, BlockPos blockPos) {
+       Brain<?> brain = livingEntity.getBrain();
+-      return !brain.hasMemoryModule(MemoryModuleType.MOBS) ? false : ((List)brain.getOptionalMemory(MemoryModuleType.MOBS).get()).stream().filter((livingEntity2) -> {
++      return !brain.hasMemoryModule(MemoryModuleType.MOBS) ? false : (brain.getOptionalMemory(MemoryModuleType.MOBS).get()).stream().filter((livingEntity2) -> {
+          return livingEntity2.getType() == livingEntity.getType();
+       }).filter((livingEntityx) -> {
+          return blockPos.isWithinDistance(livingEntityx.getPos(), 2.0D);
+@@ -157,8 +157,10 @@
+       if (brain.getOptionalMemory(MemoryModuleType.DOORS_TO_CLOSE).isPresent()) {
+          ((Set)brain.getOptionalMemory(MemoryModuleType.DOORS_TO_CLOSE).get()).add(globalPos);
+       } else {
+-         brain.remember(MemoryModuleType.DOORS_TO_CLOSE, (Object)Sets.newHashSet(new GlobalPos[]{globalPos}));
++         brain.remember(MemoryModuleType.DOORS_TO_CLOSE, Sets.newHashSet(new GlobalPos[]{globalPos}));
+       }
  
     }
  }

@@ -1,6 +1,23 @@
 --- a/net/minecraft/screen/AnvilScreenHandler.java
 +++ b/net/minecraft/screen/AnvilScreenHandler.java
-@@ -276,3 +276,5 @@
+@@ -83,7 +83,6 @@
+       ItemStack itemStack = this.input.getStack(0);
+       this.levelCost.set(1);
+       int i = 0;
+-      int j = 0;
+       int k = 0;
+       if (itemStack.isEmpty()) {
+          this.output.setStack(0, ItemStack.EMPTY);
+@@ -92,7 +91,7 @@
+          ItemStack itemStack2 = itemStack.copy();
+          ItemStack itemStack3 = this.input.getStack(1);
+          Map<Enchantment, Integer> map = EnchantmentHelper.get(itemStack2);
+-         int j = j + itemStack.getRepairCost() + (itemStack3.isEmpty() ? 0 : itemStack3.getRepairCost());
++         int j = itemStack.getRepairCost() + (itemStack3.isEmpty() ? 0 : itemStack3.getRepairCost());
+          this.repairItemUsage = 0;
+          if (!itemStack3.isEmpty()) {
+             boolean bl = itemStack3.getItem() == Items.ENCHANTED_BOOK && !EnchantedBookItem.getEnchantmentTag(itemStack3).isEmpty();
+@@ -276,3 +275,5 @@
        this.updateResult();
     }
  }

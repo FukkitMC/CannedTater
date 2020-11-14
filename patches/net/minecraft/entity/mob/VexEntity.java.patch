@@ -1,6 +1,16 @@
 --- a/net/minecraft/entity/mob/VexEntity.java
 +++ b/net/minecraft/entity/mob/VexEntity.java
-@@ -318,3 +318,5 @@
+@@ -133,8 +133,7 @@
+    }
+ 
+    private void setVexFlag(int mask, boolean value) {
+-      int i = (Byte)this.dataTracker.get(VEX_FLAGS);
+-      int i;
++      int i = this.dataTracker.get(VEX_FLAGS);
+       if (value) {
+          i = i | mask;
+       } else {
+@@ -318,3 +317,5 @@
        }
     }
  }

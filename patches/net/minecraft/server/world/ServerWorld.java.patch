@@ -1,6 +1,56 @@
 --- a/net/minecraft/server/world/ServerWorld.java
 +++ b/net/minecraft/server/world/ServerWorld.java
-@@ -1573,3 +1573,5 @@
+@@ -11,6 +11,7 @@
+ import it.unimi.dsi.fastutil.ints.Int2ObjectMap.Entry;
+ import it.unimi.dsi.fastutil.longs.LongSet;
+ import it.unimi.dsi.fastutil.longs.LongSets;
++import it.unimi.dsi.fastutil.objects.Object2IntMap;
+ import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
+ import it.unimi.dsi.fastutil.objects.ObjectIterator;
+ import it.unimi.dsi.fastutil.objects.ObjectLinkedOpenHashSet;
+@@ -169,14 +170,14 @@
+ 
+    public ServerWorld(MinecraftServer server, Executor workerExecutor, LevelStorage.Session session, ServerWorldProperties properties, RegistryKey<World> registryKey, DimensionType dimensionType, WorldGenerationProgressListener worldGenerationProgressListener, ChunkGenerator chunkGenerator, boolean debugWorld, long l, List<Spawner> list, boolean bl) {
+       super(properties, registryKey, dimensionType, server::getProfiler, false, debugWorld, l);
+-      this.blockTickScheduler = new ServerTickScheduler(this, (block) -> {
++      this.blockTickScheduler = new ServerTickScheduler<>(this, (block) -> {
+          return block == null || block.getDefaultState().isAir();
+       }, Registry.BLOCK::getId, this::tickBlock);
+-      this.fluidTickScheduler = new ServerTickScheduler(this, (fluid) -> {
++      this.fluidTickScheduler = new ServerTickScheduler<>(this, (fluid) -> {
+          return fluid == null || fluid == Fluids.EMPTY;
+       }, Registry.FLUID::getId, this::tickFluid);
+       this.entityNavigations = Sets.newHashSet();
+-      this.syncedBlockEventQueue = new ObjectLinkedOpenHashSet();
++      this.syncedBlockEventQueue = new ObjectLinkedOpenHashSet<>();
+       this.shouldTickTime = bl;
+       this.server = server;
+       this.spawners = list;
+@@ -442,7 +443,7 @@
+    }
+ 
+    private void wakeSleepingPlayers() {
+-      ((List)this.players.stream().filter(LivingEntity::isSleeping).collect(Collectors.toList())).forEach((player) -> {
++      (this.players.stream().filter(LivingEntity::isSleeping).collect(Collectors.toList())).forEach((player) -> {
+          player.wakeUp(false, false);
+       });
+    }
+@@ -1547,12 +1548,12 @@
+          Iterator var3 = collection.iterator();
+ 
+          while(var3.hasNext()) {
+-            T object = var3.next();
++            T object = (T) var3.next();
+             Identifier identifier = (Identifier)function.apply(object);
+             object2IntOpenHashMap.addTo(identifier, 1);
+          }
+ 
+-         return (String)object2IntOpenHashMap.object2IntEntrySet().stream().sorted(Comparator.comparing(it.unimi.dsi.fastutil.objects.Object2IntMap.Entry::getIntValue).reversed()).limit(5L).map((entry) -> {
++         return (String)object2IntOpenHashMap.object2IntEntrySet().stream().sorted(Comparator.comparing((Object2IntMap.Entry<Identifier> entry) -> entry.getIntValue()).reversed()).limit(5L).map((entry) -> {
+             return entry.getKey() + ":" + entry.getIntValue();
+          }).collect(Collectors.joining(","));
+       } catch (Exception var6) {
+@@ -1573,3 +1574,5 @@
        });
     }
  }

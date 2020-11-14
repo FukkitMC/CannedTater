@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/Entity.java
 +++ b/net/minecraft/entity/Entity.java
+@@ -2092,7 +2092,7 @@
+                }
+ 
+                return AreaHelper.method_30484(destination, arg, axis2, vec3d2, this.getDimensions(this.getPose()), this.getVelocity(), this.yaw, this.pitch);
+-            }).orElse((Object)null);
++            }).orElse(null);
+          }
+       } else {
+          BlockPos blockPos2;
 @@ -2726,3 +2726,5 @@
        void accept(Entity entity, double x, double y, double z);
     }

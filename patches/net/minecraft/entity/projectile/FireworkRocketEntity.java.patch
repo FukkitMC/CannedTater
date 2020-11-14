@@ -1,6 +1,30 @@
 --- a/net/minecraft/entity/projectile/FireworkRocketEntity.java
 +++ b/net/minecraft/entity/projectile/FireworkRocketEntity.java
-@@ -278,3 +278,5 @@
+@@ -3,12 +3,8 @@
+ import java.util.Iterator;
+ import java.util.List;
+ import java.util.OptionalInt;
+-import net.fabricmc.api.EnvType;
+-import net.fabricmc.api.EnvironmentInterface;
+-import net.fabricmc.api.EnvironmentInterfaces;
+ import net.minecraft.entity.Entity;
+ import net.minecraft.entity.EntityType;
+-import net.minecraft.entity.FlyingItemEntity;
+ import net.minecraft.entity.LivingEntity;
+ import net.minecraft.entity.MovementType;
+ import net.minecraft.entity.damage.DamageSource;
+@@ -33,10 +29,6 @@
+ import net.minecraft.world.World;
+ import org.jetbrains.annotations.Nullable;
+ 
+-@EnvironmentInterfaces({@EnvironmentInterface(
+-   value = EnvType.CLIENT,
+-   itf = FlyingItemEntity.class
+-)})
+ public class FireworkRocketEntity extends ProjectileEntity {
+    private static final TrackedData<ItemStack> ITEM;
+    private static final TrackedData<OptionalInt> SHOOTER_ENTITY_ID;
+@@ -278,3 +270,5 @@
        SHOT_AT_ANGLE = DataTracker.registerData(FireworkRocketEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     }
  }

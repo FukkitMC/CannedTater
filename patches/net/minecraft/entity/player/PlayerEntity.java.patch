@@ -1,6 +1,34 @@
 --- a/net/minecraft/entity/player/PlayerEntity.java
 +++ b/net/minecraft/entity/player/PlayerEntity.java
-@@ -1942,3 +1942,5 @@
+@@ -799,7 +799,7 @@
+          if (amount >= 3.0F) {
+             int i = 1 + MathHelper.floor(amount);
+             Hand hand = this.getActiveHand();
+-            this.activeItemStack.damage(i, (LivingEntity)this, (Consumer)((playerEntity) -> {
++            this.activeItemStack.damage(i, (LivingEntity)this, ((playerEntity) -> {
+                playerEntity.sendToolBreakStatus(hand);
+             }));
+             if (this.activeItemStack.isEmpty()) {
+@@ -1008,8 +1008,7 @@
+             if (f > 0.0F || h > 0.0F) {
+                boolean bl = i > 0.9F;
+                boolean bl2 = false;
+-               int j = 0;
+-               int j = j + EnchantmentHelper.getKnockback(this);
++               int j = EnchantmentHelper.getKnockback(this);
+                if (this.isSprinting() && bl) {
+                   this.world.playSound((PlayerEntity)null, this.getX(), this.getY(), this.getZ(), SoundEvents.ENTITY_PLAYER_ATTACK_KNOCKBACK, this.getSoundCategory(), 1.0F, 1.0F);
+                   ++j;
+@@ -1908,7 +1907,7 @@
+    }
+ 
+    static {
+-      POSE_DIMENSIONS = ImmutableMap.builder().put(EntityPose.STANDING, STANDING_DIMENSIONS).put(EntityPose.SLEEPING, SLEEPING_DIMENSIONS).put(EntityPose.FALL_FLYING, EntityDimensions.changing(0.6F, 0.6F)).put(EntityPose.SWIMMING, EntityDimensions.changing(0.6F, 0.6F)).put(EntityPose.SPIN_ATTACK, EntityDimensions.changing(0.6F, 0.6F)).put(EntityPose.CROUCHING, EntityDimensions.changing(0.6F, 1.5F)).put(EntityPose.DYING, EntityDimensions.fixed(0.2F, 0.2F)).build();
++      POSE_DIMENSIONS = ImmutableMap.<EntityPose, EntityDimensions>builder().put(EntityPose.STANDING, STANDING_DIMENSIONS).put(EntityPose.SLEEPING, SLEEPING_DIMENSIONS).put(EntityPose.FALL_FLYING, EntityDimensions.changing(0.6F, 0.6F)).put(EntityPose.SWIMMING, EntityDimensions.changing(0.6F, 0.6F)).put(EntityPose.SPIN_ATTACK, EntityDimensions.changing(0.6F, 0.6F)).put(EntityPose.CROUCHING, EntityDimensions.changing(0.6F, 1.5F)).put(EntityPose.DYING, EntityDimensions.fixed(0.2F, 0.2F)).build();
+       ABSORPTION_AMOUNT = DataTracker.registerData(PlayerEntity.class, TrackedDataHandlerRegistry.FLOAT);
+       SCORE = DataTracker.registerData(PlayerEntity.class, TrackedDataHandlerRegistry.INTEGER);
+       PLAYER_MODEL_PARTS = DataTracker.registerData(PlayerEntity.class, TrackedDataHandlerRegistry.BYTE);
+@@ -1942,3 +1941,5 @@
        }
     }
  }

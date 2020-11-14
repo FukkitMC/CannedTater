@@ -1,6 +1,54 @@
 --- a/net/minecraft/item/map/MapState.java
 +++ b/net/minecraft/item/map/MapState.java
-@@ -402,3 +402,5 @@
+@@ -68,10 +68,7 @@
+    }
+ 
+    public void fromTag(CompoundTag tag) {
+-      DataResult var10001 = DimensionType.method_28521(new Dynamic(NbtOps.INSTANCE, tag.get("dimension")));
+-      Logger var10002 = field_25019;
+-      var10002.getClass();
+-      this.dimension = (RegistryKey)var10001.resultOrPartial(var10002::error).orElseThrow(() -> {
++      this.dimension = DimensionType.method_28521(new Dynamic<>(NbtOps.INSTANCE, tag.get("dimension"))).resultOrPartial(field_25019::error).orElseThrow(() -> {
+          return new IllegalArgumentException("Invalid map dimension: " + tag.get("dimension"));
+       });
+       this.xCenter = tag.getInt("xCenter");
+@@ -104,10 +101,7 @@
+    }
+ 
+    public CompoundTag toTag(CompoundTag tag) {
+-      DataResult var10000 = Identifier.CODEC.encodeStart(NbtOps.INSTANCE, this.dimension.getValue());
+-      Logger var10001 = field_25019;
+-      var10001.getClass();
+-      var10000.resultOrPartial(var10001::error).ifPresent((tagx) -> {
++      Identifier.CODEC.encodeStart(NbtOps.INSTANCE, this.dimension.getValue()).resultOrPartial(field_25019::error).ifPresent((tagx) -> {
+          tag.put("dimension", tagx);
+       });
+       tag.putInt("xCenter", this.xCenter);
+@@ -229,7 +223,6 @@
+       float g = (float)(z - (double)this.zCenter) / (float)i;
+       byte b = (byte)((int)((double)(f * 2.0F) + 0.5D));
+       byte c = (byte)((int)((double)(g * 2.0F) + 0.5D));
+-      int j = true;
+       byte e;
+       if (f >= -63.0F && g >= -63.0F && f <= 63.0F && g <= 63.0F) {
+          rotation += rotation < 0.0D ? -8.0D : 8.0D;
+@@ -244,7 +237,6 @@
+             return;
+          }
+ 
+-         int l = true;
+          if (Math.abs(f) < 320.0F && Math.abs(g) < 320.0F) {
+             type = MapIcon.Type.PLAYER_OFF_MAP;
+          } else {
+@@ -311,7 +303,6 @@
+       int i = 1 << this.scale;
+       double f = (d - (double)this.xCenter) / (double)i;
+       double g = (e - (double)this.zCenter) / (double)i;
+-      int j = true;
+       boolean bl = false;
+       if (f >= -63.0D && g >= -63.0D && f <= 63.0D && g <= 63.0D) {
+          MapBannerMarker mapBannerMarker = MapBannerMarker.fromWorldBlock(world, pos);
+@@ -402,3 +393,5 @@
        }
     }
  }

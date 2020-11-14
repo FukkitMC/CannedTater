@@ -1,6 +1,23 @@
 --- a/net/minecraft/entity/passive/TurtleEntity.java
 +++ b/net/minecraft/entity/passive/TurtleEntity.java
-@@ -719,3 +719,5 @@
+@@ -644,8 +644,6 @@
+       }
+ 
+       public void start() {
+-         int i = true;
+-         int j = true;
+          Random random = this.turtle.random;
+          int k = random.nextInt(1025) - 512;
+          int l = random.nextInt(9) - 4;
+@@ -671,7 +669,6 @@
+             if (vec3d2 != null) {
+                int i = MathHelper.floor(vec3d2.x);
+                int j = MathHelper.floor(vec3d2.z);
+-               int k = true;
+                if (!this.turtle.world.isRegionLoaded(i - 34, 0, j - 34, i + 34, 0, j + 34)) {
+                   vec3d2 = null;
+                }
+@@ -719,3 +716,5 @@
        }
     }
  }

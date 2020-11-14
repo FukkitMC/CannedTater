@@ -1,6 +1,68 @@
 --- a/net/minecraft/entity/passive/BeeEntity.java
 +++ b/net/minecraft/entity/passive/BeeEntity.java
-@@ -1176,3 +1176,5 @@
+@@ -575,7 +575,7 @@
+ 
+    class EnterHiveGoal extends BeeEntity.NotAngryGoal {
+       private EnterHiveGoal() {
+-         super(null);
++         super();
+       }
+ 
+       public boolean canBeeStart() {
+@@ -624,7 +624,7 @@
+ 
+    class GrowCropsGoal extends BeeEntity.NotAngryGoal {
+       private GrowCropsGoal() {
+-         super(null);
++         super();
+       }
+ 
+       public boolean canBeeStart() {
+@@ -687,7 +687,7 @@
+ 
+    class FindHiveGoal extends BeeEntity.NotAngryGoal {
+       private FindHiveGoal() {
+-         super(null);
++         super();
+       }
+ 
+       public boolean canBeeStart() {
+@@ -752,7 +752,7 @@
+       private int ticks = 0;
+ 
+       PollinateGoal() {
+-         super(null);
++         super();
+          this.setControls(EnumSet.of(Goal.Control.MOVE));
+       }
+ 
+@@ -923,7 +923,7 @@
+       private int ticks;
+ 
+       MoveToFlowerGoal() {
+-         super(null);
++         super();
+          this.ticks = BeeEntity.this.world.random.nextInt(10);
+          this.setControls(EnumSet.of(Goal.Control.MOVE));
+       }
+@@ -975,7 +975,7 @@
+       private int ticksUntilLost;
+ 
+       MoveToHiveGoal() {
+-         super(null);
++         super();
+          this.ticks = BeeEntity.this.world.random.nextInt(10);
+          this.possibleHives = Lists.newArrayList();
+          this.path = null;
+@@ -1111,7 +1111,6 @@
+             vec3d3 = BeeEntity.this.getRotationVec(0.0F);
+          }
+ 
+-         int i = true;
+          Vec3d vec3d4 = TargetFinder.findAirTarget(BeeEntity.this, 8, 7, vec3d3, 1.5707964F, 2, 1);
+          return vec3d4 != null ? vec3d4 : TargetFinder.findGroundTarget(BeeEntity.this, 8, 4, -2, vec3d3, 1.5707963705062866D);
+       }
+@@ -1176,3 +1175,5 @@
        }
     }
  }

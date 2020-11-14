@@ -1,7 +1,20 @@
 --- a/net/minecraft/screen/ScreenHandlerType.java
 +++ b/net/minecraft/screen/ScreenHandlerType.java
-@@ -42,3 +42,5 @@
+@@ -1,5 +1,8 @@
+ package net.minecraft.screen;
+ 
++import net.fabricmc.api.EnvType;
++import net.fabricmc.api.Environment;
++import net.minecraft.entity.player.PlayerInventory;
+ import net.minecraft.util.registry.Registry;
+ 
+ public class ScreenHandlerType<T extends ScreenHandler> {
+@@ -40,5 +43,9 @@
+    }
+ 
     interface Factory<T extends ScreenHandler> {
++      @Environment(EnvType.CLIENT)
++      T create(int syncId, PlayerInventory playerInventory);
     }
  }
 +

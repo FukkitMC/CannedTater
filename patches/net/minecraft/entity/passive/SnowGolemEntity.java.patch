@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/passive/SnowGolemEntity.java
 +++ b/net/minecraft/entity/passive/SnowGolemEntity.java
+@@ -131,7 +131,7 @@
+       if (itemStack.getItem() == Items.SHEARS && this.isShearable()) {
+          this.sheared(SoundCategory.PLAYERS);
+          if (!this.world.isClient) {
+-            itemStack.damage(1, (LivingEntity)player, (Consumer)((playerEntity) -> {
++            itemStack.damage(1, (LivingEntity)player, ((playerEntity) -> {
+                playerEntity.sendToolBreakStatus(hand);
+             }));
+          }
 @@ -188,3 +188,5 @@
        SNOW_GOLEM_FLAGS = DataTracker.registerData(SnowGolemEntity.class, TrackedDataHandlerRegistry.BYTE);
     }

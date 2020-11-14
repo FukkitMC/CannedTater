@@ -1,6 +1,52 @@
 --- a/net/minecraft/entity/passive/VillagerEntity.java
 +++ b/net/minecraft/entity/passive/VillagerEntity.java
-@@ -932,3 +932,5 @@
+@@ -123,7 +123,7 @@
+    }
+ 
+    public Brain<VillagerEntity> getBrain() {
+-      return super.getBrain();
++      return (Brain<VillagerEntity>) super.getBrain();
+    }
+ 
+    protected Brain.Profile<VillagerEntity> createBrainProfile() {
+@@ -417,10 +417,7 @@
+ 
+    public void writeCustomDataToTag(CompoundTag tag) {
+       super.writeCustomDataToTag(tag);
+-      DataResult var10000 = VillagerData.CODEC.encodeStart(NbtOps.INSTANCE, this.getVillagerData());
+-      Logger var10001 = LOGGER;
+-      var10001.getClass();
+-      var10000.resultOrPartial(var10001::error).ifPresent((tagx) -> {
++      VillagerData.CODEC.encodeStart(NbtOps.INSTANCE, this.getVillagerData()).resultOrPartial(LOGGER::error).ifPresent((tagx) -> {
+          tag.put("VillagerData", tagx);
+       });
+       tag.putByte("FoodLevel", this.foodLevel);
+@@ -837,7 +834,6 @@
+ 
+    @Nullable
+    private BlockPos method_30023(BlockPos blockPos, double d, double e) {
+-      int i = true;
+       BlockPos blockPos2 = blockPos.add(d, 6.0D, e);
+       BlockState blockState = this.world.getBlockState(blockPos2);
+ 
+@@ -896,14 +892,14 @@
+ 
+    public void sleep(BlockPos pos) {
+       super.sleep(pos);
+-      this.brain.remember(MemoryModuleType.LAST_SLEPT, (Object)this.world.getTime());
++      this.brain.remember(MemoryModuleType.LAST_SLEPT, this.world.getTime());
+       this.brain.forget(MemoryModuleType.WALK_TARGET);
+       this.brain.forget(MemoryModuleType.CANT_REACH_WALK_TARGET_SINCE);
+    }
+ 
+    public void wakeUp() {
+       super.wakeUp();
+-      this.brain.remember(MemoryModuleType.LAST_WOKEN, (Object)this.world.getTime());
++      this.brain.remember(MemoryModuleType.LAST_WOKEN, this.world.getTime());
+    }
+ 
+    private boolean hasRecentlyWorkedAndSlept(long worldTime) {
+@@ -932,3 +928,5 @@
        });
     }
  }

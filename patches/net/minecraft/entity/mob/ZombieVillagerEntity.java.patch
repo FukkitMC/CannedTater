@@ -1,6 +1,18 @@
 --- a/net/minecraft/entity/mob/ZombieVillagerEntity.java
 +++ b/net/minecraft/entity/mob/ZombieVillagerEntity.java
-@@ -301,3 +301,5 @@
+@@ -67,10 +67,7 @@
+ 
+    public void writeCustomDataToTag(CompoundTag tag) {
+       super.writeCustomDataToTag(tag);
+-      DataResult var10000 = VillagerData.CODEC.encodeStart(NbtOps.INSTANCE, this.getVillagerData());
+-      Logger var10001 = LOGGER;
+-      var10001.getClass();
+-      var10000.resultOrPartial(var10001::error).ifPresent((tagx) -> {
++      VillagerData.CODEC.encodeStart(NbtOps.INSTANCE, this.getVillagerData()).resultOrPartial(LOGGER::error).ifPresent((tagx) -> {
+          tag.put("VillagerData", tagx);
+       });
+       if (this.offerData != null) {
+@@ -301,3 +298,5 @@
        VILLAGER_DATA = DataTracker.registerData(ZombieVillagerEntity.class, TrackedDataHandlerRegistry.VILLAGER_DATA);
     }
  }

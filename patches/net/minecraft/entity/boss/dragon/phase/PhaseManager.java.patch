@@ -1,7 +1,11 @@
 --- a/net/minecraft/entity/boss/dragon/phase/PhaseManager.java
 +++ b/net/minecraft/entity/boss/dragon/phase/PhaseManager.java
-@@ -44,3 +44,5 @@
-       return this.phases[i];
+@@ -41,6 +41,8 @@
+          this.phases[i] = type.create(this.dragon);
+       }
+ 
+-      return this.phases[i];
++      return (T) this.phases[i];
     }
  }
 +

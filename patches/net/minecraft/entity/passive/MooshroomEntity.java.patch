@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/passive/MooshroomEntity.java
 +++ b/net/minecraft/entity/passive/MooshroomEntity.java
+@@ -103,7 +103,7 @@
+       } else if (itemStack.getItem() == Items.SHEARS && this.isShearable()) {
+          this.sheared(SoundCategory.PLAYERS);
+          if (!this.world.isClient) {
+-            itemStack.damage(1, (LivingEntity)player, (Consumer)((playerEntity) -> {
++            itemStack.damage(1, (LivingEntity)player, ((playerEntity) -> {
+                playerEntity.sendToolBreakStatus(hand);
+             }));
+          }
 @@ -266,3 +266,5 @@
        }
     }

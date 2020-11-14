@@ -1,6 +1,15 @@
 --- a/net/minecraft/screen/ShulkerBoxScreenHandler.java
 +++ b/net/minecraft/screen/ShulkerBoxScreenHandler.java
-@@ -76,3 +76,5 @@
+@@ -20,8 +20,6 @@
+       checkSize(inventory, 27);
+       this.inventory = inventory;
+       inventory.onOpen(playerInventory.player);
+-      int i = true;
+-      int j = true;
+ 
+       int o;
+       int n;
+@@ -76,3 +74,5 @@
        this.inventory.onClose(player);
     }
  }

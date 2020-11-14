@@ -1,6 +1,25 @@
 --- a/net/minecraft/server/command/CommandManager.java
 +++ b/net/minecraft/server/command/CommandManager.java
-@@ -327,3 +327,5 @@
+@@ -179,8 +179,7 @@
+                commandSource.sendError(mutableText);
+             }
+          } catch (Exception var15) {
+-            LiteralText var10000 = new LiteralText;
+-            var10000.<init>(var15.getMessage() == null ? var15.getClass().getName() : var15.getMessage());
++            LiteralText var10000 = new LiteralText(var15.getMessage() == null ? var15.getClass().getName() : var15.getMessage());
+             MutableText mutableText2 = var10000;
+             if (LOGGER.isDebugEnabled()) {
+                LOGGER.error("Command exception: {}", command, var15);
+@@ -225,7 +224,7 @@
+       while(var5.hasNext()) {
+          CommandNode<ServerCommandSource> commandNode = (CommandNode)var5.next();
+          if (commandNode.canUse(source)) {
+-            ArgumentBuilder<CommandSource, ?> argumentBuilder = commandNode.createBuilder();
++            ArgumentBuilder<CommandSource, ?> argumentBuilder = (ArgumentBuilder<CommandSource, ?>) (Object) commandNode.createBuilder();
+             argumentBuilder.requires((commandSource) -> {
+                return true;
+             });
+@@ -327,3 +326,5 @@
        void parse(StringReader stringReader) throws CommandSyntaxException;
     }
  }

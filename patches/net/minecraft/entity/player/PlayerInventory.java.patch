@@ -1,5 +1,28 @@
 --- a/net/minecraft/entity/player/PlayerInventory.java
 +++ b/net/minecraft/entity/player/PlayerInventory.java
+@@ -116,9 +116,8 @@
+    }
+ 
+    public int remove(Predicate<ItemStack> shouldRemove, int maxCount, Inventory craftingInventory) {
+-      int i = 0;
+       boolean bl = maxCount == 0;
+-      int i = i + Inventories.remove((Inventory)this, shouldRemove, maxCount - i, bl);
++      int i = Inventories.remove((Inventory)this, shouldRemove, maxCount, bl);
+       i += Inventories.remove(craftingInventory, shouldRemove, maxCount - i, bl);
+       i += Inventories.remove(this.cursorStack, shouldRemove, maxCount - i, bl);
+       if (this.cursorStack.isEmpty()) {
+@@ -478,8 +477,9 @@
+          for(int i = 0; i < this.armor.size(); ++i) {
+             ItemStack itemStack = (ItemStack)this.armor.get(i);
+             if ((!damageSource.isFire() || !itemStack.getItem().isFireproof()) && itemStack.getItem() instanceof ArmorItem) {
+-               itemStack.damage((int)f, (LivingEntity)this.player, (Consumer)((playerEntity) -> {
+-                  playerEntity.sendEquipmentBreakStatus(EquipmentSlot.fromTypeIndex(EquipmentSlot.Type.ARMOR, i));
++               int finalI = i;
++               itemStack.damage((int)f, (LivingEntity)this.player, ((playerEntity) -> {
++                  playerEntity.sendEquipmentBreakStatus(EquipmentSlot.fromTypeIndex(EquipmentSlot.Type.ARMOR, finalI));
+                }));
+             }
+          }
 @@ -570,3 +570,5 @@
  
     }

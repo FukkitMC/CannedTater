@@ -1,5 +1,27 @@
 --- a/net/minecraft/entity/ai/brain/task/FarmerVillagerTask.java
 +++ b/net/minecraft/entity/ai/brain/task/FarmerVillagerTask.java
+@@ -75,8 +75,8 @@
+ 
+    protected void run(ServerWorld serverWorld, VillagerEntity villagerEntity, long l) {
+       if (l > this.nextResponseTime && this.currentTarget != null) {
+-         villagerEntity.getBrain().remember(MemoryModuleType.LOOK_TARGET, (Object)(new BlockPosLookTarget(this.currentTarget)));
+-         villagerEntity.getBrain().remember(MemoryModuleType.WALK_TARGET, (Object)(new WalkTarget(new BlockPosLookTarget(this.currentTarget), 0.5F, 1)));
++         villagerEntity.getBrain().remember(MemoryModuleType.LOOK_TARGET, (new BlockPosLookTarget(this.currentTarget)));
++         villagerEntity.getBrain().remember(MemoryModuleType.WALK_TARGET, (new WalkTarget(new BlockPosLookTarget(this.currentTarget), 0.5F, 1)));
+       }
+ 
+    }
+@@ -136,8 +136,8 @@
+                this.currentTarget = this.chooseRandomTarget(serverWorld);
+                if (this.currentTarget != null) {
+                   this.nextResponseTime = l + 20L;
+-                  villagerEntity.getBrain().remember(MemoryModuleType.WALK_TARGET, (Object)(new WalkTarget(new BlockPosLookTarget(this.currentTarget), 0.5F, 1)));
+-                  villagerEntity.getBrain().remember(MemoryModuleType.LOOK_TARGET, (Object)(new BlockPosLookTarget(this.currentTarget)));
++                  villagerEntity.getBrain().remember(MemoryModuleType.WALK_TARGET, (new WalkTarget(new BlockPosLookTarget(this.currentTarget), 0.5F, 1)));
++                  villagerEntity.getBrain().remember(MemoryModuleType.LOOK_TARGET, (new BlockPosLookTarget(this.currentTarget)));
+                }
+             }
+          }
 @@ -150,3 +150,5 @@
        return this.ticksRan < 200;
     }

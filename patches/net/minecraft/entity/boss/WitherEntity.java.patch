@@ -1,6 +1,25 @@
 --- a/net/minecraft/entity/boss/WitherEntity.java
 +++ b/net/minecraft/entity/boss/WitherEntity.java
-@@ -539,3 +539,5 @@
+@@ -8,7 +8,6 @@
+ import net.fabricmc.api.EnvironmentInterface;
+ import net.fabricmc.api.EnvironmentInterfaces;
+ import net.minecraft.block.BlockState;
+-import net.minecraft.client.render.entity.feature.SkinOverlayOwner;
+ import net.minecraft.entity.Entity;
+ import net.minecraft.entity.EntityGroup;
+ import net.minecraft.entity.EntityType;
+@@ -53,10 +52,6 @@
+ import net.minecraft.world.explosion.Explosion;
+ import org.jetbrains.annotations.Nullable;
+ 
+-@EnvironmentInterfaces({@EnvironmentInterface(
+-   value = EnvType.CLIENT,
+-   itf = SkinOverlayOwner.class
+-)})
+ public class WitherEntity extends HostileEntity implements RangedAttackMob {
+    private static final TrackedData<Integer> TRACKED_ENTITY_ID_1;
+    private static final TrackedData<Integer> TRACKED_ENTITY_ID_2;
+@@ -539,3 +534,5 @@
        }
     }
  }
