@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/mob/PhantomEntity.java
 +++ b/net/minecraft/entity/mob/PhantomEntity.java
-@@ -486,3 +486,5 @@
-       SWOOP;
+@@ -470,3 +470,5 @@
+       }
     }
  }
 +

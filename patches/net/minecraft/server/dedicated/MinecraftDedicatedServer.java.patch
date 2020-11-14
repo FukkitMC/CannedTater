@@ -1,6 +1,6 @@
 --- a/net/minecraft/server/dedicated/MinecraftDedicatedServer.java
 +++ b/net/minecraft/server/dedicated/MinecraftDedicatedServer.java
-@@ -531,3 +531,5 @@
+@@ -521,3 +521,5 @@
        return this.filterer != null ? this.filterer.createFilterer(player.getGameProfile()) : null;
     }
  }

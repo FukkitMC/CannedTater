@@ -1,6 +1,6 @@
 --- a/net/minecraft/world/level/storage/LevelStorage.java
 +++ b/net/minecraft/world/level/storage/LevelStorage.java
-@@ -312,3 +312,5 @@
+@@ -283,3 +283,5 @@
        }
     }
  }

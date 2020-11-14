@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/passive/PassiveEntity.java
 +++ b/net/minecraft/entity/passive/PassiveEntity.java
-@@ -189,3 +189,5 @@
+@@ -184,3 +184,5 @@
        }
     }
  }

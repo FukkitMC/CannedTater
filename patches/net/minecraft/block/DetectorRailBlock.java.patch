@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/DetectorRailBlock.java
 +++ b/net/minecraft/block/DetectorRailBlock.java
-@@ -278,3 +278,5 @@
-       POWERED = Properties.POWERED;
+@@ -268,3 +268,5 @@
+       builder.add(SHAPE, POWERED);
     }
  }
 +

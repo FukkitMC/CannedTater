@@ -22,6 +22,7 @@ buildscript {
 
 plugins {
     id("fabric-loom") version "0.5.34"
+    id("com.github.fudge.forgedflowerloom") version "2.0.0"
     id("uk.jamierocks.propatcher") version "1.3.2"
 }
 
@@ -263,7 +264,7 @@ tasks.named<ResetSourcesTask>("resetSources") {
             val sourceJar = LoomGradlePlugin.getMappedByproduct(project, "-sources.jar")
 
             if (!sourceJar.exists()) {
-                throw GradleException("You must run genSources")
+                throw GradleException("You must run genSourcesWithForgedFlower")
             }
 
             copy {

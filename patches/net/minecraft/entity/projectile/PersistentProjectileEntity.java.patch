@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/projectile/PersistentProjectileEntity.java
 +++ b/net/minecraft/entity/projectile/PersistentProjectileEntity.java
-@@ -593,3 +593,5 @@
+@@ -581,3 +581,5 @@
        }
     }
  }

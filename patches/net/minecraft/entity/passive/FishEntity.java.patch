@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/passive/FishEntity.java
 +++ b/net/minecraft/entity/passive/FishEntity.java
-@@ -234,3 +234,5 @@
+@@ -225,3 +225,5 @@
        }
     }
  }

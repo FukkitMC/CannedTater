@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/mob/ZombieEntity.java
 +++ b/net/minecraft/entity/mob/ZombieEntity.java
-@@ -538,3 +538,5 @@
+@@ -527,3 +527,5 @@
        }
     }
  }

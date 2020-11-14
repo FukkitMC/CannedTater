@@ -1,7 +1,7 @@
 --- a/net/minecraft/screen/CartographyTableScreenHandler.java
 +++ b/net/minecraft/screen/CartographyTableScreenHandler.java
-@@ -202,3 +202,5 @@
-       });
+@@ -200,3 +200,5 @@
+       this.context.run((BiConsumer<World, BlockPos>)((world, blockPos) -> this.dropInventory(player, player.world, this.inventory)));
     }
  }
 +

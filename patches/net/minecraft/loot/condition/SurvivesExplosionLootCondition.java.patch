@@ -1,6 +1,6 @@
 --- a/net/minecraft/loot/condition/SurvivesExplosionLootCondition.java
 +++ b/net/minecraft/loot/condition/SurvivesExplosionLootCondition.java
-@@ -51,3 +51,5 @@
+@@ -49,3 +49,5 @@
        }
     }
  }

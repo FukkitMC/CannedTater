@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/SaplingBlock.java
 +++ b/net/minecraft/block/SaplingBlock.java
-@@ -63,3 +63,5 @@
-       SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
+@@ -58,3 +58,5 @@
+       builder.add(STAGE);
     }
  }
 +

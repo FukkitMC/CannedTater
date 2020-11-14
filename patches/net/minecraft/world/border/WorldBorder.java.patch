@@ -1,7 +1,7 @@
 --- a/net/minecraft/world/border/WorldBorder.java
 +++ b/net/minecraft/world/border/WorldBorder.java
-@@ -473,3 +473,5 @@
-       VoxelShape asVoxelShape();
+@@ -458,3 +458,5 @@
+       }
     }
  }
 +

@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/WitherSkullBlock.java
 +++ b/net/minecraft/block/WitherSkullBlock.java
-@@ -110,3 +110,5 @@
+@@ -103,3 +103,5 @@
        return witherDispenserPattern;
     }
  }

@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/CarvedPumpkinBlock.java
 +++ b/net/minecraft/block/CarvedPumpkinBlock.java
-@@ -158,3 +158,5 @@
-       };
+@@ -142,3 +142,5 @@
+       return this.ironGolemPattern;
     }
  }
 +

@@ -1,7 +1,7 @@
 --- a/net/minecraft/Bootstrap.java
 +++ b/net/minecraft/Bootstrap.java
-@@ -127,3 +127,5 @@
-       LOGGER = LogManager.getLogger();
+@@ -118,3 +118,5 @@
+       SYSOUT.println(str);
     }
  }
 +

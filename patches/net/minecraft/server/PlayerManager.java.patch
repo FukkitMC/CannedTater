@@ -1,6 +1,6 @@
 --- a/net/minecraft/server/PlayerManager.java
 +++ b/net/minecraft/server/PlayerManager.java
-@@ -875,3 +875,5 @@
+@@ -814,3 +814,5 @@
        return this.cheatsAllowed;
     }
  }

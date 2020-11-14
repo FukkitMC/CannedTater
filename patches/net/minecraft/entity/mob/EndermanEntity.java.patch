@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/mob/EndermanEntity.java
 +++ b/net/minecraft/entity/mob/EndermanEntity.java
-@@ -536,3 +536,5 @@
+@@ -523,3 +523,5 @@
        }
     }
  }

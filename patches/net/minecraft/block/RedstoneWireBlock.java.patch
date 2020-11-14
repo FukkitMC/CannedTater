@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/RedstoneWireBlock.java
 +++ b/net/minecraft/block/RedstoneWireBlock.java
-@@ -473,3 +473,5 @@
+@@ -423,3 +423,5 @@
  
     }
  }

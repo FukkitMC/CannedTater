@@ -1,6 +1,6 @@
 --- a/net/minecraft/inventory/CraftingResultInventory.java
 +++ b/net/minecraft/inventory/CraftingResultInventory.java
-@@ -72,3 +72,5 @@
+@@ -62,3 +62,5 @@
        return this.lastRecipe;
     }
  }

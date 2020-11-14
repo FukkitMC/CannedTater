@@ -1,32 +1,6 @@
 --- a/net/minecraft/block/entity/ChestBlockEntity.java
 +++ b/net/minecraft/block/entity/ChestBlockEntity.java
-@@ -2,14 +2,10 @@
- 
- import java.util.Iterator;
- import java.util.List;
--import net.fabricmc.api.EnvType;
--import net.fabricmc.api.EnvironmentInterface;
--import net.fabricmc.api.EnvironmentInterfaces;
- import net.minecraft.block.Block;
- import net.minecraft.block.BlockState;
- import net.minecraft.block.ChestBlock;
- import net.minecraft.block.enums.ChestType;
--import net.minecraft.client.block.ChestAnimationProgress;
- import net.minecraft.entity.player.PlayerEntity;
- import net.minecraft.entity.player.PlayerInventory;
- import net.minecraft.inventory.DoubleInventory;
-@@ -32,10 +28,6 @@
- import net.minecraft.world.BlockView;
- import net.minecraft.world.World;
- 
--@EnvironmentInterfaces({@EnvironmentInterface(
--   value = EnvType.CLIENT,
--   itf = ChestAnimationProgress.class
--)})
- public class ChestBlockEntity extends LootableContainerBlockEntity implements Tickable {
-    private DefaultedList<ItemStack> inventory;
-    protected float animationAngle;
-@@ -231,3 +223,5 @@
+@@ -219,3 +219,5 @@
        return GenericContainerScreenHandler.createGeneric9x3(syncId, playerInventory, this);
     }
  }

@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/projectile/TridentEntity.java
 +++ b/net/minecraft/entity/projectile/TridentEntity.java
-@@ -191,3 +191,5 @@
-       ENCHANTED = DataTracker.registerData(TridentEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+@@ -184,3 +184,5 @@
+       return 0.99F;
     }
  }
 +

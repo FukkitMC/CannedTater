@@ -1,6 +1,6 @@
 --- a/net/minecraft/world/PortalForcer.java
 +++ b/net/minecraft/world/PortalForcer.java
-@@ -169,3 +169,5 @@
+@@ -147,3 +147,5 @@
        return true;
     }
  }

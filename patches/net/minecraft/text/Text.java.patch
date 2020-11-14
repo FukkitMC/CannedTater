@@ -1,6 +1,6 @@
 --- a/net/minecraft/text/Text.java
 +++ b/net/minecraft/text/Text.java
-@@ -391,3 +391,5 @@
+@@ -373,3 +373,5 @@
        }
     }
  }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/screen/ForgingScreenHandler.java
 +++ b/net/minecraft/screen/ForgingScreenHandler.java
-@@ -126,3 +126,5 @@
+@@ -124,3 +124,5 @@
        return itemStack;
     }
  }

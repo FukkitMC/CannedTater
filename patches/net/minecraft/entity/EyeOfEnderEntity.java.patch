@@ -1,27 +1,7 @@
 --- a/net/minecraft/entity/EyeOfEnderEntity.java
 +++ b/net/minecraft/entity/EyeOfEnderEntity.java
-@@ -1,8 +1,5 @@
- package net.minecraft.entity;
- 
--import net.fabricmc.api.EnvType;
--import net.fabricmc.api.EnvironmentInterface;
--import net.fabricmc.api.EnvironmentInterfaces;
- import net.minecraft.entity.data.DataTracker;
- import net.minecraft.entity.data.TrackedData;
- import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-@@ -20,10 +17,6 @@
- import net.minecraft.util.math.Vec3d;
- import net.minecraft.world.World;
- 
--@EnvironmentInterfaces({@EnvironmentInterface(
--   value = EnvType.CLIENT,
--   itf = FlyingItemEntity.class
--)})
- public class EyeOfEnderEntity extends Entity {
-    private static final TrackedData<ItemStack> ITEM;
-    private double targetX;
-@@ -173,3 +166,5 @@
-       ITEM = DataTracker.registerData(EyeOfEnderEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
+@@ -167,3 +167,5 @@
+       return new EntitySpawnS2CPacket(this);
     }
  }
 +

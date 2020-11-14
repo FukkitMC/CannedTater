@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/passive/PufferfishEntity.java
 +++ b/net/minecraft/entity/passive/PufferfishEntity.java
-@@ -212,3 +212,5 @@
+@@ -202,3 +202,5 @@
        }
     }
  }

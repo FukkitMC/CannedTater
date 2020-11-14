@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/mob/RavagerEntity.java
 +++ b/net/minecraft/entity/mob/RavagerEntity.java
-@@ -314,3 +314,5 @@
+@@ -299,3 +299,5 @@
        }
     }
  }

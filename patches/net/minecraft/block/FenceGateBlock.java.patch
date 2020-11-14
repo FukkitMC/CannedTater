@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/FenceGateBlock.java
 +++ b/net/minecraft/block/FenceGateBlock.java
-@@ -154,3 +154,5 @@
-       IN_WALL_X_AXIS_CULL_SHAPE = VoxelShapes.union(Block.createCuboidShape(7.0D, 2.0D, 0.0D, 9.0D, 13.0D, 2.0D), Block.createCuboidShape(7.0D, 2.0D, 14.0D, 9.0D, 13.0D, 16.0D));
+@@ -138,3 +138,5 @@
+       return ((Direction)state.get(FACING)).getAxis() == side.rotateYClockwise().getAxis();
     }
  }
 +

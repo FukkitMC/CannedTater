@@ -1,7 +1,7 @@
 --- a/net/minecraft/datafixer/Schemas.java
 +++ b/net/minecraft/datafixer/Schemas.java
-@@ -544,3 +544,5 @@
-       };
+@@ -534,3 +534,5 @@
+       return (string3) -> Objects.equals(string3, string) ? string2 : string3;
     }
  }
 +

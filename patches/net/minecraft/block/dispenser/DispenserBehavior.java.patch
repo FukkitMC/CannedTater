@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/dispenser/DispenserBehavior.java
 +++ b/net/minecraft/block/dispenser/DispenserBehavior.java
-@@ -550,3 +550,5 @@
+@@ -514,3 +514,5 @@
        entity.updatePosition(blockPointer.getX() + (double)direction.getOffsetX() * (0.5000099999997474D - (double)entity.getWidth() / 2.0D), blockPointer.getY() + (double)direction.getOffsetY() * (0.5000099999997474D - (double)entity.getHeight() / 2.0D) - (double)entity.getHeight() / 2.0D, blockPointer.getZ() + (double)direction.getOffsetZ() * (0.5000099999997474D - (double)entity.getWidth() / 2.0D));
     }
  }

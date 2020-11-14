@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/PistonBlock.java
 +++ b/net/minecraft/block/PistonBlock.java
-@@ -382,3 +382,5 @@
-       EXTENDED_DOWN_SHAPE = Block.createCuboidShape(0.0D, 4.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+@@ -353,3 +353,5 @@
+       return false;
     }
  }
 +

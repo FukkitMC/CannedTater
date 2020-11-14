@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/ComposterBlock.java
 +++ b/net/minecraft/block/ComposterBlock.java
-@@ -364,3 +364,5 @@
+@@ -357,3 +357,5 @@
        }
     }
  }

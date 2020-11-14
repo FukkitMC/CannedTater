@@ -1,50 +1,6 @@
 --- a/net/minecraft/entity/passive/FoxEntity.java
 +++ b/net/minecraft/entity/passive/FoxEntity.java
-@@ -124,7 +124,7 @@
-       this.goalSelector.add(1, new FoxEntity.StopWanderingGoal());
-       this.goalSelector.add(2, new FoxEntity.EscapeWhenNotAggressiveGoal(2.2D));
-       this.goalSelector.add(3, new FoxEntity.MateGoal(1.0D));
--      this.goalSelector.add(4, new FleeEntityGoal(this, PlayerEntity.class, 16.0F, 1.6D, 1.4D, (livingEntity) -> {
-+      this.goalSelector.add(4, new FleeEntityGoal<>(this, PlayerEntity.class, 16.0F, 1.6D, 1.4D, (livingEntity) -> {
-          return NOTICEABLE_PLAYER_FILTER.test(livingEntity) && !this.canTrust(livingEntity.getUuid()) && !this.isAggressive();
-       }));
-       this.goalSelector.add(4, new FleeEntityGoal(this, WolfEntity.class, 8.0F, 1.6D, 1.4D, (livingEntity) -> {
-@@ -296,8 +296,8 @@
- 
-    private List<UUID> getTrustedUuids() {
-       List<UUID> list = Lists.newArrayList();
--      list.add(((Optional)this.dataTracker.get(OWNER)).orElse((Object)null));
--      list.add(((Optional)this.dataTracker.get(OTHER_TRUSTED)).orElse((Object)null));
-+      list.add((this.dataTracker.get(OWNER)).orElse(null));
-+      list.add((this.dataTracker.get(OTHER_TRUSTED)).orElse(null));
-       return list;
-    }
- 
-@@ -599,7 +599,6 @@
-       double d = chasedEntity.getZ() - fox.getZ();
-       double e = chasedEntity.getX() - fox.getX();
-       double f = d / e;
--      int i = true;
- 
-       for(int j = 0; j < 6; ++j) {
-          double g = f == 0.0D ? 0.0D : d * (double)((float)j / 6.0F);
-@@ -938,7 +937,6 @@
-       private int counter;
- 
-       public SitDownAndLookAroundGoal() {
--         super(null);
-          this.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK));
-       }
- 
-@@ -983,7 +981,6 @@
-       private int timer;
- 
-       public DelayedCalmDownGoal() {
--         super(null);
-          this.timer = FoxEntity.this.random.nextInt(140);
-          this.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK, Goal.Control.JUMP));
-       }
-@@ -1359,3 +1356,5 @@
+@@ -1318,3 +1318,5 @@
        }
     }
  }

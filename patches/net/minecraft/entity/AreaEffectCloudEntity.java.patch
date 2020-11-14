@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/AreaEffectCloudEntity.java
 +++ b/net/minecraft/entity/AreaEffectCloudEntity.java
-@@ -444,3 +444,5 @@
-       PARTICLE_ID = DataTracker.registerData(AreaEffectCloudEntity.class, TrackedDataHandlerRegistry.PARTICLE);
+@@ -405,3 +405,5 @@
+       return EntityDimensions.changing(this.getRadius() * 2.0F, 0.5F);
     }
  }
 +

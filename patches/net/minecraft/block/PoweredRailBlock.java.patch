@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/PoweredRailBlock.java
 +++ b/net/minecraft/block/PoweredRailBlock.java
-@@ -257,3 +257,5 @@
-       POWERED = Properties.POWERED;
+@@ -256,3 +256,5 @@
+       builder.add(SHAPE, POWERED);
     }
  }
 +

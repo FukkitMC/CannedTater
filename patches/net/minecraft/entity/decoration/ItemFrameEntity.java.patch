@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/decoration/ItemFrameEntity.java
 +++ b/net/minecraft/entity/decoration/ItemFrameEntity.java
-@@ -354,3 +354,5 @@
-       ROTATION = DataTracker.registerData(ItemFrameEntity.class, TrackedDataHandlerRegistry.INTEGER);
+@@ -349,3 +349,5 @@
+       return new EntitySpawnS2CPacket(this, this.getType(), this.facing.getId(), this.getDecorationBlockPos());
     }
  }
 +

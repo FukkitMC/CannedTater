@@ -1,7 +1,7 @@
 --- a/net/minecraft/world/biome/source/BiomeArray.java
 +++ b/net/minecraft/world/biome/source/BiomeArray.java
-@@ -93,3 +93,5 @@
-       VERTICAL_BIT_MASK = (1 << VERTICAL_SECTION_COUNT) - 1;
+@@ -83,3 +83,5 @@
+       return this.data[j << HORIZONTAL_SECTION_COUNT + HORIZONTAL_SECTION_COUNT | k << HORIZONTAL_SECTION_COUNT | i];
     }
  }
 +

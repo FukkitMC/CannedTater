@@ -1,6 +1,6 @@
 --- a/net/minecraft/server/dedicated/gui/DedicatedServerGui.java
 +++ b/net/minecraft/server/dedicated/gui/DedicatedServerGui.java
-@@ -177,3 +177,5 @@
+@@ -175,3 +175,5 @@
        }
     }
  }

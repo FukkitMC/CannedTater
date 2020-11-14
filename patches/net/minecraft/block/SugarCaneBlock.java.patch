@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/SugarCaneBlock.java
 +++ b/net/minecraft/block/SugarCaneBlock.java
-@@ -94,3 +94,5 @@
-       SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
+@@ -86,3 +86,5 @@
+       builder.add(AGE);
     }
  }
 +

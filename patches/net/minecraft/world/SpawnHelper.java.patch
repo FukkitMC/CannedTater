@@ -1,7 +1,7 @@
 --- a/net/minecraft/world/SpawnHelper.java
 +++ b/net/minecraft/world/SpawnHelper.java
-@@ -478,3 +478,5 @@
-       }
+@@ -476,3 +476,5 @@
+       void run(MobEntity entity, Chunk chunk);
     }
  }
 +

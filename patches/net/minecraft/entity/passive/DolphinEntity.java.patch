@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/passive/DolphinEntity.java
 +++ b/net/minecraft/entity/passive/DolphinEntity.java
-@@ -591,3 +591,5 @@
+@@ -580,3 +580,5 @@
        }
     }
  }

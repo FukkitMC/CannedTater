@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/passive/ChickenEntity.java
 +++ b/net/minecraft/entity/passive/ChickenEntity.java
-@@ -168,3 +168,5 @@
-       BREEDING_INGREDIENT = Ingredient.ofItems(Items.WHEAT_SEEDS, Items.MELON_SEEDS, Items.PUMPKIN_SEEDS, Items.BEETROOT_SEEDS);
+@@ -163,3 +163,5 @@
+       this.jockey = hasJockey;
     }
  }
 +

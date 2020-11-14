@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/entity/ShulkerBoxBlockEntity.java
 +++ b/net/minecraft/block/entity/ShulkerBoxBlockEntity.java
-@@ -281,3 +281,5 @@
+@@ -279,3 +279,5 @@
        CLOSING;
     }
  }

@@ -1,14 +1,6 @@
 --- a/net/minecraft/entity/raid/RaiderEntity.java
 +++ b/net/minecraft/entity/raid/RaiderEntity.java
-@@ -140,7 +140,6 @@
-             if (!itemStack.isEmpty() && ItemStack.areEqual(itemStack, Raid.getOminousBanner()) && playerEntity != null) {
-                StatusEffectInstance statusEffectInstance = playerEntity.getStatusEffect(StatusEffects.BAD_OMEN);
-                int i = 1;
--               int i;
-                if (statusEffectInstance != null) {
-                   i = i + statusEffectInstance.getAmplifier();
-                   playerEntity.removeStatusEffectInternal(StatusEffects.BAD_OMEN);
-@@ -517,3 +516,5 @@
+@@ -494,3 +494,5 @@
        }
     }
  }

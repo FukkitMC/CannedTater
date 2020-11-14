@@ -1,14 +1,5 @@
 --- a/net/minecraft/network/PacketByteBuf.java
 +++ b/net/minecraft/network/PacketByteBuf.java
-@@ -157,7 +157,7 @@
-    }
- 
-    public <T extends Enum<T>> T readEnumConstant(Class<T> class_) {
--      return ((Enum[])class_.getEnumConstants())[this.readVarInt()];
-+      return ((T[])class_.getEnumConstants())[this.readVarInt()];
-    }
- 
-    public PacketByteBuf writeEnumConstant(Enum<?> enum_) {
 @@ -1101,3 +1101,5 @@
        return this.parent.release(i);
     }

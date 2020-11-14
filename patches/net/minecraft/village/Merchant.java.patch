@@ -1,6 +1,6 @@
 --- a/net/minecraft/village/Merchant.java
 +++ b/net/minecraft/village/Merchant.java
-@@ -49,3 +49,5 @@
+@@ -47,3 +47,5 @@
  
     }
  }

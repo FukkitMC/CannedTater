@@ -1,14 +1,6 @@
 --- a/net/minecraft/screen/HopperScreenHandler.java
 +++ b/net/minecraft/screen/HopperScreenHandler.java
-@@ -19,7 +19,6 @@
-       this.inventory = inventory;
-       checkSize(inventory, 5);
-       inventory.onOpen(playerInventory.player);
--      int i = true;
- 
-       int m;
-       for(m = 0; m < 5; ++m) {
-@@ -71,3 +70,5 @@
+@@ -70,3 +70,5 @@
        this.inventory.onClose(player);
     }
  }

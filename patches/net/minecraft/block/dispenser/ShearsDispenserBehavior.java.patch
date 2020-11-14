@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/dispenser/ShearsDispenserBehavior.java
 +++ b/net/minecraft/block/dispenser/ShearsDispenserBehavior.java
-@@ -70,3 +70,5 @@
+@@ -62,3 +62,5 @@
        return false;
     }
  }

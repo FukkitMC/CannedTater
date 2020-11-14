@@ -1,6 +1,6 @@
 --- a/net/minecraft/screen/MerchantScreenHandler.java
 +++ b/net/minecraft/screen/MerchantScreenHandler.java
-@@ -200,3 +200,5 @@
+@@ -199,3 +199,5 @@
        return this.merchant.getOffers();
     }
  }

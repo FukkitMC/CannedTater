@@ -1,23 +1,7 @@
 --- a/net/minecraft/entity/mob/ElderGuardianEntity.java
 +++ b/net/minecraft/entity/mob/ElderGuardianEntity.java
-@@ -54,15 +54,11 @@
+@@ -75,3 +75,5 @@
  
-    protected void mobTick() {
-       super.mobTick();
--      int i = true;
-       if ((this.age + this.getEntityId()) % 1200 == 0) {
-          StatusEffect statusEffect = StatusEffects.MINING_FATIGUE;
-          List<ServerPlayerEntity> list = ((ServerWorld)this.world).getPlayers((serverPlayerEntityx) -> {
-             return this.squaredDistanceTo(serverPlayerEntityx) < 2500.0D && serverPlayerEntityx.interactionManager.isSurvivalLike();
-          });
--         int j = true;
--         int k = true;
--         int l = true;
-          Iterator var7 = list.iterator();
- 
-          label33:
-@@ -91,3 +87,5 @@
-       SCALE = EntityType.ELDER_GUARDIAN.getWidth() / EntityType.GUARDIAN.getWidth();
     }
  }
 +

@@ -1,6 +1,6 @@
 --- a/net/minecraft/item/ArmorStandItem.java
 +++ b/net/minecraft/item/ArmorStandItem.java
-@@ -73,3 +73,5 @@
+@@ -71,3 +71,5 @@
        stand.setBodyRotation(eulerAngle2);
     }
  }

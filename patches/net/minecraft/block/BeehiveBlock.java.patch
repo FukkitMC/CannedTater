@@ -1,16 +1,7 @@
 --- a/net/minecraft/block/BeehiveBlock.java
 +++ b/net/minecraft/block/BeehiveBlock.java
-@@ -107,7 +107,7 @@
-          if (itemStack.getItem() == Items.SHEARS) {
-             world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_BEEHIVE_SHEAR, SoundCategory.NEUTRAL, 1.0F, 1.0F);
-             dropHoneycomb(world, pos);
--            itemStack.damage(1, (LivingEntity)player, (Consumer)((playerx) -> {
-+            itemStack.damage(1, (LivingEntity)player, ((playerx) -> {
-                playerx.sendToolBreakStatus(hand);
-             }));
-             bl = true;
-@@ -248,3 +248,5 @@
-       HONEY_LEVEL = Properties.HONEY_LEVEL;
+@@ -235,3 +235,5 @@
+       return Util.getRandom(GENERATE_DIRECTIONS, random);
     }
  }
 +

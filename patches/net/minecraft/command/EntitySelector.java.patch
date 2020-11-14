@@ -1,6 +1,6 @@
 --- a/net/minecraft/command/EntitySelector.java
 +++ b/net/minecraft/command/EntitySelector.java
-@@ -228,3 +228,5 @@
+@@ -210,3 +210,5 @@
        return Texts.join(list, Entity::getDisplayName);
     }
  }

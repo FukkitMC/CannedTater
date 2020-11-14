@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/vehicle/AbstractMinecartEntity.java
 +++ b/net/minecraft/entity/vehicle/AbstractMinecartEntity.java
-@@ -779,3 +779,5 @@
+@@ -752,3 +752,5 @@
        COMMAND_BLOCK;
     }
  }

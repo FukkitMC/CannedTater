@@ -1,7 +1,7 @@
 --- a/net/minecraft/world/gen/chunk/NoiseChunkGenerator.java
 +++ b/net/minecraft/world/gen/chunk/NoiseChunkGenerator.java
-@@ -650,3 +650,5 @@
-       AIR = Blocks.AIR.getDefaultState();
+@@ -610,3 +610,5 @@
+       }
     }
  }
 +

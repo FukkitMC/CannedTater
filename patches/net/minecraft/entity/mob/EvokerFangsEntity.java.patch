@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/mob/EvokerFangsEntity.java
 +++ b/net/minecraft/entity/mob/EvokerFangsEntity.java
-@@ -132,3 +132,5 @@
+@@ -125,3 +125,5 @@
        return new EntitySpawnS2CPacket(this);
     }
  }

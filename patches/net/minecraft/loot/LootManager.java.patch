@@ -1,18 +1,6 @@
 --- a/net/minecraft/loot/LootManager.java
 +++ b/net/minecraft/loot/LootManager.java
-@@ -50,10 +50,7 @@
-       });
-       builder.put(LootTables.EMPTY, LootTable.EMPTY);
-       ImmutableMap<Identifier, LootTable> immutableMap = builder.build();
--      LootContextType var10002 = LootContextTypes.GENERIC;
--      Function var10003 = this.conditionManager::get;
--      immutableMap.getClass();
--      LootTableReporter lootTableReporter = new LootTableReporter(var10002, var10003, immutableMap::get);
-+      LootTableReporter lootTableReporter = new LootTableReporter(LootContextTypes.GENERIC, this.conditionManager::get, immutableMap::get);
-       immutableMap.forEach((identifier, lootTable) -> {
-          validate(lootTableReporter, identifier, lootTable);
-       });
-@@ -75,3 +72,5 @@
+@@ -66,3 +66,5 @@
        return this.tables.keySet();
     }
  }

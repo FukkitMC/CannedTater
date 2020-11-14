@@ -1,7 +1,7 @@
 --- a/net/minecraft/screen/ScreenHandlerContext.java
 +++ b/net/minecraft/screen/ScreenHandlerContext.java
 @@ -44,3 +44,5 @@
-       });
+       }));
     }
  }
 +

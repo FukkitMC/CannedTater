@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/boss/dragon/EnderDragonEntity.java
 +++ b/net/minecraft/entity/boss/dragon/EnderDragonEntity.java
-@@ -854,3 +854,5 @@
-       CLOSE_PLAYER_PREDICATE = (new TargetPredicate()).setBaseMaxDistance(64.0D);
+@@ -835,3 +835,5 @@
+       return false;
     }
  }
 +

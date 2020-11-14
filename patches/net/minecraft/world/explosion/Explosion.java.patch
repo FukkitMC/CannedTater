@@ -1,6 +1,6 @@
 --- a/net/minecraft/world/explosion/Explosion.java
 +++ b/net/minecraft/world/explosion/Explosion.java
-@@ -325,3 +325,5 @@
+@@ -315,3 +315,5 @@
        DESTROY;
     }
  }

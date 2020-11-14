@@ -1,6 +1,6 @@
 --- a/net/minecraft/advancement/AdvancementManager.java
 +++ b/net/minecraft/advancement/AdvancementManager.java
-@@ -89,3 +89,5 @@
+@@ -81,3 +81,5 @@
        void onDependentAdded(Advancement dependent);
     }
  }

@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/TurtleEggBlock.java
 +++ b/net/minecraft/block/TurtleEggBlock.java
-@@ -160,3 +160,5 @@
-       EGGS = Properties.EGGS;
+@@ -155,3 +155,5 @@
+       }
     }
  }
 +

@@ -1,6 +1,6 @@
 --- a/net/minecraft/world/MobSpawnerLogic.java
 +++ b/net/minecraft/world/MobSpawnerLogic.java
-@@ -269,3 +269,5 @@
+@@ -257,3 +257,5 @@
  
     public abstract BlockPos getPos();
  }

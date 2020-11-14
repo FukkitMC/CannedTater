@@ -1,6 +1,6 @@
 --- a/net/minecraft/screen/Generic3x3ContainerScreenHandler.java
 +++ b/net/minecraft/screen/Generic3x3ContainerScreenHandler.java
-@@ -79,3 +79,5 @@
+@@ -77,3 +77,5 @@
        this.inventory.onClose(player);
     }
  }

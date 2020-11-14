@@ -1,7 +1,7 @@
 --- a/net/minecraft/recipe/Ingredient.java
 +++ b/net/minecraft/recipe/Ingredient.java
-@@ -247,3 +247,5 @@
-       JsonObject toJson();
+@@ -215,3 +215,5 @@
+       }
     }
  }
 +

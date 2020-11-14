@@ -1,15 +1,6 @@
 --- a/net/minecraft/entity/passive/IronGolemEntity.java
 +++ b/net/minecraft/entity/passive/IronGolemEntity.java
-@@ -76,7 +76,7 @@
-       this.goalSelector.add(8, new LookAroundGoal(this));
-       this.targetSelector.add(1, new TrackIronGolemTargetGoal(this));
-       this.targetSelector.add(2, new RevengeGoal(this, new Class[0]));
--      this.targetSelector.add(3, new FollowTargetGoal(this, PlayerEntity.class, 10, true, false, this::shouldAngerAt));
-+      this.targetSelector.add(3, new FollowTargetGoal<>(this, PlayerEntity.class, 10, true, false, this::shouldAngerAt));
-       this.targetSelector.add(3, new FollowTargetGoal(this, MobEntity.class, 5, false, false, (livingEntity) -> {
-          return livingEntity instanceof Monster && !(livingEntity instanceof CreeperEntity);
-       }));
-@@ -321,3 +321,5 @@
+@@ -306,3 +306,5 @@
        }
     }
  }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/decoration/painting/PaintingEntity.java
 +++ b/net/minecraft/entity/decoration/painting/PaintingEntity.java
-@@ -110,3 +110,5 @@
+@@ -107,3 +107,5 @@
        return new PaintingSpawnS2CPacket(this);
     }
  }

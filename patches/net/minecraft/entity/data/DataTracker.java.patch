@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/data/DataTracker.java
 +++ b/net/minecraft/entity/data/DataTracker.java
-@@ -275,3 +275,5 @@
+@@ -269,3 +269,5 @@
        }
     }
  }

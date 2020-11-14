@@ -1,7 +1,7 @@
 --- a/net/minecraft/world/WanderingTraderManager.java
 +++ b/net/minecraft/world/WanderingTraderManager.java
-@@ -155,3 +155,5 @@
-       return false;
+@@ -147,3 +147,5 @@
+       return true;
     }
  }
 +

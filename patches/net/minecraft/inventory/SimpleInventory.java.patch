@@ -1,6 +1,6 @@
 --- a/net/minecraft/inventory/SimpleInventory.java
 +++ b/net/minecraft/inventory/SimpleInventory.java
-@@ -255,3 +255,5 @@
+@@ -237,3 +237,5 @@
        return listTag;
     }
  }

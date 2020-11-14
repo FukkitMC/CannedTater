@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/DispenserBlock.java
 +++ b/net/minecraft/block/DispenserBlock.java
-@@ -176,3 +176,5 @@
-       });
+@@ -167,3 +167,5 @@
+       builder.add(FACING, TRIGGERED);
     }
  }
 +

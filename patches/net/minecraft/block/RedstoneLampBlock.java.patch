@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/RedstoneLampBlock.java
 +++ b/net/minecraft/block/RedstoneLampBlock.java
-@@ -51,3 +51,5 @@
-       LIT = RedstoneTorchBlock.LIT;
+@@ -47,3 +47,5 @@
+       builder.add(LIT);
     }
  }
 +

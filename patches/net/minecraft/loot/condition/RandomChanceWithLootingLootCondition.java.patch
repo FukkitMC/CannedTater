@@ -1,6 +1,6 @@
 --- a/net/minecraft/loot/condition/RandomChanceWithLootingLootCondition.java
 +++ b/net/minecraft/loot/condition/RandomChanceWithLootingLootCondition.java
-@@ -58,3 +58,5 @@
+@@ -56,3 +56,5 @@
        }
     }
  }

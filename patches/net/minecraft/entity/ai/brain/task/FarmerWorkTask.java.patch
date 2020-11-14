@@ -1,24 +1,7 @@
 --- a/net/minecraft/entity/ai/brain/task/FarmerWorkTask.java
 +++ b/net/minecraft/entity/ai/brain/task/FarmerWorkTask.java
-@@ -39,7 +39,6 @@
+@@ -93,3 +93,5 @@
        }
- 
-       int i = 20;
--      int j = true;
-       int[] is = new int[COMPOSTABLES.size()];
-       SimpleInventory simpleInventory = entity.getInventory();
-       int k = simpleInventory.size();
-@@ -78,8 +77,6 @@
-       SimpleInventory simpleInventory = entity.getInventory();
-       if (simpleInventory.count(Items.BREAD) <= 36) {
-          int i = simpleInventory.count(Items.WHEAT);
--         int j = true;
--         int k = true;
-          int l = Math.min(3, i / 3);
-          if (l != 0) {
-             int m = l * 3;
-@@ -97,3 +94,5 @@
-       COMPOSTABLES = ImmutableList.of(Items.WHEAT_SEEDS, Items.BEETROOT_SEEDS);
     }
  }
 +

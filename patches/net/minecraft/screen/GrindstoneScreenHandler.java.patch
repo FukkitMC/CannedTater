@@ -1,6 +1,6 @@
 --- a/net/minecraft/screen/GrindstoneScreenHandler.java
 +++ b/net/minecraft/screen/GrindstoneScreenHandler.java
-@@ -281,3 +281,5 @@
+@@ -266,3 +266,5 @@
        return itemStack;
     }
  }

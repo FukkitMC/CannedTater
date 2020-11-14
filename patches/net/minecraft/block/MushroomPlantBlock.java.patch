@@ -1,14 +1,6 @@
 --- a/net/minecraft/block/MushroomPlantBlock.java
 +++ b/net/minecraft/block/MushroomPlantBlock.java
-@@ -26,7 +26,6 @@
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-       if (random.nextInt(25) == 0) {
-          int i = 5;
--         int j = true;
-          Iterator var7 = BlockPos.iterate(pos.add(-4, -1, -4), pos.add(4, 1, 4)).iterator();
- 
-          while(var7.hasNext()) {
-@@ -104,3 +103,5 @@
+@@ -101,3 +101,5 @@
        this.trySpawningBigMushroom(world, pos, state, random);
     }
  }

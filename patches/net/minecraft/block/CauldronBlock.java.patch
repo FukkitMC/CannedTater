@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/CauldronBlock.java
 +++ b/net/minecraft/block/CauldronBlock.java
-@@ -227,3 +227,5 @@
-       OUTLINE_SHAPE = VoxelShapes.combineAndSimplify(VoxelShapes.fullCube(), VoxelShapes.union(createCuboidShape(0.0D, 0.0D, 4.0D, 16.0D, 3.0D, 12.0D), createCuboidShape(4.0D, 0.0D, 0.0D, 12.0D, 3.0D, 16.0D), createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 3.0D, 14.0D), RAY_TRACE_SHAPE), BooleanBiFunction.ONLY_FIRST);
+@@ -218,3 +218,5 @@
+       return false;
     }
  }
 +

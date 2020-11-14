@@ -1,15 +1,6 @@
 --- a/net/minecraft/item/FishingRodItem.java
 +++ b/net/minecraft/item/FishingRodItem.java
-@@ -23,7 +23,7 @@
-       if (user.fishHook != null) {
-          if (!world.isClient) {
-             i = user.fishHook.use(itemStack);
--            itemStack.damage(i, (LivingEntity)user, (Consumer)((p) -> {
-+            itemStack.damage(i, (LivingEntity)user, ((p) -> {
-                p.sendToolBreakStatus(hand);
-             }));
-          }
-@@ -47,3 +47,5 @@
+@@ -42,3 +42,5 @@
        return 1;
     }
  }

@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/ObserverBlock.java
 +++ b/net/minecraft/block/ObserverBlock.java
-@@ -107,3 +107,5 @@
-       POWERED = Properties.POWERED;
+@@ -103,3 +103,5 @@
+       return this.getDefaultState().with(FACING, ctx.getPlayerLookDirection().getOpposite().getOpposite());
     }
  }
 +

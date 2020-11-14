@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/entity/SignBlockEntity.java
 +++ b/net/minecraft/block/entity/SignBlockEntity.java
-@@ -140,3 +140,5 @@
+@@ -132,3 +132,5 @@
        }
     }
  }

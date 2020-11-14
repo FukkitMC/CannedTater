@@ -1,45 +1,7 @@
 --- a/net/minecraft/entity/LivingEntity.java
 +++ b/net/minecraft/entity/LivingEntity.java
-@@ -434,7 +434,7 @@
-             entityAttributeInstance.addTemporaryModifier(new EntityAttributeModifier(SOUL_SPEED_BOOST_ID, "Soul speed boost", (double)(0.03F * (1.0F + (float)i * 0.35F)), EntityAttributeModifier.Operation.ADDITION));
-             if (this.getRandom().nextFloat() < 0.04F) {
-                ItemStack itemStack = this.getEquippedStack(EquipmentSlot.FEET);
--               itemStack.damage(1, (LivingEntity)this, (Consumer)((livingEntity) -> {
-+               itemStack.damage(1, (LivingEntity)this, ((livingEntity) -> {
-                   livingEntity.sendEquipmentBreakStatus(EquipmentSlot.FEET);
-                }));
-             }
-@@ -2304,7 +2304,7 @@
-          if (itemStack.getItem() == Items.ELYTRA && ElytraItem.isUsable(itemStack)) {
-             bl = true;
-             if (!this.world.isClient && (this.roll + 1) % 20 == 0) {
--               itemStack.damage(1, (LivingEntity)this, (Consumer)((livingEntity) -> {
-+               itemStack.damage(1, (LivingEntity)this, ((livingEntity) -> {
-                   livingEntity.sendEquipmentBreakStatus(EquipmentSlot.CHEST);
-                }));
-             }
-@@ -2545,7 +2545,6 @@
- 
-    protected void setLivingFlag(int mask, boolean value) {
-       int i = (Byte)this.dataTracker.get(LIVING_FLAGS);
--      int i;
-       if (value) {
-          i = i | mask;
-       } else {
-@@ -2822,10 +2821,7 @@
-    }
- 
-    public void wakeUp() {
--      Optional var10000 = this.getSleepingPosition();
--      World var10001 = this.world;
--      var10001.getClass();
--      var10000.filter(var10001::isChunkLoaded).ifPresent((blockPos) -> {
-+      this.getSleepingPosition().filter(this.world::isChunkLoaded).ifPresent((blockPos) -> {
-          BlockState blockState = this.world.getBlockState(blockPos);
-          if (blockState.getBlock() instanceof BedBlock) {
-             this.world.setBlockState(blockPos, (BlockState)blockState.with(BedBlock.OCCUPIED, false), 3);
-@@ -2930,3 +2926,5 @@
-       SLEEPING_DIMENSIONS = EntityDimensions.fixed(0.2F, 0.2F);
+@@ -2866,3 +2866,5 @@
+       this.sendEquipmentBreakStatus(hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND);
     }
  }
 +

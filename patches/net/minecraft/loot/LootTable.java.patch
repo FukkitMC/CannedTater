@@ -1,6 +1,6 @@
 --- a/net/minecraft/loot/LootTable.java
 +++ b/net/minecraft/loot/LootTable.java
-@@ -258,3 +258,5 @@
+@@ -243,3 +243,5 @@
        }
     }
  }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/effect/StatusEffect.java
 +++ b/net/minecraft/entity/effect/StatusEffect.java
-@@ -177,3 +177,5 @@
+@@ -168,3 +168,5 @@
        return modifier.getValue() * (double)(amplifier + 1);
     }
  }

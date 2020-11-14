@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/attribute/ClampedEntityAttribute.java
 +++ b/net/minecraft/entity/attribute/ClampedEntityAttribute.java
-@@ -27,3 +27,5 @@
-       return value;
+@@ -26,3 +26,5 @@
+       return MathHelper.clamp(value, this.minValue, this.maxValue);
     }
  }
 +

@@ -1,6 +1,6 @@
 --- a/net/minecraft/village/ZombieSiegeManager.java
 +++ b/net/minecraft/village/ZombieSiegeManager.java
-@@ -139,3 +139,5 @@
+@@ -131,3 +131,5 @@
        SIEGE_DONE;
     }
  }

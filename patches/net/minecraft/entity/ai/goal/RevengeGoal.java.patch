@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/ai/goal/RevengeGoal.java
 +++ b/net/minecraft/entity/ai/goal/RevengeGoal.java
-@@ -116,3 +116,5 @@
+@@ -105,3 +105,5 @@
        mob.setTarget(target);
     }
  }

@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/SweetBerryBushBlock.java
 +++ b/net/minecraft/block/SweetBerryBushBlock.java
-@@ -106,3 +106,5 @@
-       LARGE_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
+@@ -100,3 +100,5 @@
+       world.setBlockState(pos, state.with(AGE, Integer.valueOf(i)), 2);
     }
  }
 +

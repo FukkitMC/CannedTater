@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/LeavesBlock.java
 +++ b/net/minecraft/block/LeavesBlock.java
-@@ -96,3 +96,5 @@
-       PERSISTENT = Properties.PERSISTENT;
+@@ -88,3 +88,5 @@
+       return updateDistanceFromLogs(this.getDefaultState().with(PERSISTENT, Boolean.valueOf(true)), ctx.getWorld(), ctx.getBlockPos());
     }
  }
 +

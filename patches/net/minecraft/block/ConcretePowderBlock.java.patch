@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/ConcretePowderBlock.java
 +++ b/net/minecraft/block/ConcretePowderBlock.java
-@@ -65,3 +65,5 @@
+@@ -62,3 +62,5 @@
        return hardensOnAnySide(world, pos) ? this.hardenedState : super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
     }
  }

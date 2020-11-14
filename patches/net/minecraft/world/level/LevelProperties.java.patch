@@ -1,6 +1,6 @@
 --- a/net/minecraft/world/level/LevelProperties.java
 +++ b/net/minecraft/world/level/LevelProperties.java
-@@ -443,3 +443,5 @@
+@@ -431,3 +431,5 @@
        return this;
     }
  }

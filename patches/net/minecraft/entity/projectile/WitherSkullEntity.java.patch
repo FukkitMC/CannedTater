@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/projectile/WitherSkullEntity.java
 +++ b/net/minecraft/entity/projectile/WitherSkullEntity.java
-@@ -118,3 +118,5 @@
-       CHARGED = DataTracker.registerData(WitherSkullEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+@@ -114,3 +114,5 @@
+       return false;
     }
  }
 +

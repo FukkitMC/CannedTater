@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/WeightedPressurePlateBlock.java
 +++ b/net/minecraft/block/WeightedPressurePlateBlock.java
-@@ -60,3 +60,5 @@
-       POWER = Properties.POWER;
+@@ -56,3 +56,5 @@
+       builder.add(POWER);
     }
  }
 +

@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/ai/goal/BreakDoorGoal.java
 +++ b/net/minecraft/entity/ai/goal/BreakDoorGoal.java
-@@ -80,3 +80,5 @@
+@@ -78,3 +78,5 @@
        return this.difficultySufficientPredicate.test(difficulty);
     }
  }

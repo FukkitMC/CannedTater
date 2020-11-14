@@ -1,35 +1,7 @@
 --- a/net/minecraft/entity/mob/CreeperEntity.java
 +++ b/net/minecraft/entity/mob/CreeperEntity.java
-@@ -6,7 +6,6 @@
- import net.fabricmc.api.EnvType;
- import net.fabricmc.api.EnvironmentInterface;
- import net.fabricmc.api.EnvironmentInterfaces;
--import net.minecraft.client.render.entity.feature.SkinOverlayOwner;
- import net.minecraft.entity.AreaEffectCloudEntity;
- import net.minecraft.entity.Entity;
- import net.minecraft.entity.EntityType;
-@@ -43,10 +42,6 @@
- import net.minecraft.world.World;
- import net.minecraft.world.explosion.Explosion;
- 
--@EnvironmentInterfaces({@EnvironmentInterface(
--   value = EnvType.CLIENT,
--   itf = SkinOverlayOwner.class
--)})
- public class CreeperEntity extends HostileEntity {
-    private static final TrackedData<Integer> FUSE_SPEED;
-    private static final TrackedData<Boolean> CHARGED;
-@@ -201,7 +196,7 @@
-          this.world.playSound(player, this.getX(), this.getY(), this.getZ(), SoundEvents.ITEM_FLINTANDSTEEL_USE, this.getSoundCategory(), 1.0F, this.random.nextFloat() * 0.4F + 0.8F);
-          if (!this.world.isClient) {
-             this.ignite();
--            itemStack.damage(1, (LivingEntity)player, (Consumer)((playerEntity) -> {
-+            itemStack.damage(1, (LivingEntity)player, ((playerEntity) -> {
-                playerEntity.sendToolBreakStatus(hand);
-             }));
-          }
-@@ -267,3 +262,5 @@
-       IGNITED = DataTracker.registerData(CreeperEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+@@ -254,3 +254,5 @@
+       ++this.headsDropped;
     }
  }
 +

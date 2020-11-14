@@ -1,7 +1,7 @@
 --- a/net/minecraft/world/chunk/ChunkStatus.java
 +++ b/net/minecraft/world/chunk/ChunkStatus.java
-@@ -297,3 +297,5 @@
-       CompletableFuture<Either<Chunk, ChunkHolder.Unloaded>> doWork(ChunkStatus targetStatus, ServerWorld world, ChunkGenerator generator, StructureManager structureManager, ServerLightingProvider lightingProvider, Function<Chunk, CompletableFuture<Either<Chunk, ChunkHolder.Unloaded>>> function, List<Chunk> surroundingChunks, Chunk chunk);
+@@ -258,3 +258,5 @@
+       void doWork(ServerWorld world, ChunkGenerator generator, List<Chunk> surroundingChunks, Chunk chunk);
     }
  }
 +

@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/BambooBlock.java
 +++ b/net/minecraft/block/BambooBlock.java
-@@ -205,3 +205,5 @@
-       STAGE = Properties.STAGE;
+@@ -199,3 +199,5 @@
+       return i;
     }
  }
 +

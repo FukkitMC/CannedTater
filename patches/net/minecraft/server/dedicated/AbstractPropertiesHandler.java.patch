@@ -1,14 +1,5 @@
 --- a/net/minecraft/server/dedicated/AbstractPropertiesHandler.java
 +++ b/net/minecraft/server/dedicated/AbstractPropertiesHandler.java
-@@ -97,7 +97,7 @@
-    private static <V extends Number> Function<String, V> wrapNumberParser(Function<String, V> parser) {
-       return (string) -> {
-          try {
--            return (Number)parser.apply(string);
-+            return parser.apply(string);
-          } catch (NumberFormatException var3) {
-             return null;
-          }
 @@ -238,3 +238,5 @@
        }
     }

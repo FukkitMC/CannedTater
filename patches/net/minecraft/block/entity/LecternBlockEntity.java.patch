@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/entity/LecternBlockEntity.java
 +++ b/net/minecraft/block/entity/LecternBlockEntity.java
-@@ -221,3 +221,5 @@
+@@ -220,3 +220,5 @@
        return new TranslatableText("container.lectern");
     }
  }

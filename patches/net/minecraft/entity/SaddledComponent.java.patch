@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/SaddledComponent.java
 +++ b/net/minecraft/entity/SaddledComponent.java
 @@ -53,3 +53,5 @@
-       return (Boolean)this.dataTracker.get(this.saddled);
+       return this.dataTracker.get(this.saddled);
     }
  }
 +

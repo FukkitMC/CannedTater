@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/vehicle/BoatEntity.java
 +++ b/net/minecraft/entity/vehicle/BoatEntity.java
-@@ -850,3 +850,5 @@
-       IN_AIR;
+@@ -842,3 +842,5 @@
+       }
     }
  }
 +

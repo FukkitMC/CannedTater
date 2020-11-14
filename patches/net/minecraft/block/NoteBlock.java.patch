@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/NoteBlock.java
 +++ b/net/minecraft/block/NoteBlock.java
-@@ -93,3 +93,5 @@
-       NOTE = Properties.NOTE;
+@@ -87,3 +87,5 @@
+       builder.add(INSTRUMENT, POWERED, NOTE);
     }
  }
 +

@@ -1,8 +1,8 @@
 --- a/net/minecraft/block/AbstractRedstoneGateBlock.java
 +++ b/net/minecraft/block/AbstractRedstoneGateBlock.java
-@@ -193,3 +193,5 @@
-       POWERED = Properties.POWERED;
-    }
+@@ -186,3 +186,5 @@
+ 
+    protected abstract int getUpdateDelayInternal(BlockState state);
  }
 +
 +// Fukkit Marker

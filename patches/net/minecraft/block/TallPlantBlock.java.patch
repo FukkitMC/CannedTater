@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/TallPlantBlock.java
 +++ b/net/minecraft/block/TallPlantBlock.java
-@@ -104,3 +104,5 @@
-       HALF = Properties.DOUBLE_BLOCK_HALF;
+@@ -100,3 +100,5 @@
+       return AbstractBlock.OffsetType.XZ;
     }
  }
 +

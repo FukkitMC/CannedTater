@@ -1,6 +1,6 @@
 --- a/net/minecraft/fluid/LavaFluid.java
 +++ b/net/minecraft/fluid/LavaFluid.java
-@@ -180,3 +180,5 @@
+@@ -176,3 +176,5 @@
        }
     }
  }

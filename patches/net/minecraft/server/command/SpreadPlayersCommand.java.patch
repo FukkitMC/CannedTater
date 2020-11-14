@@ -1,15 +1,6 @@
 --- a/net/minecraft/server/command/SpreadPlayersCommand.java
 +++ b/net/minecraft/server/command/SpreadPlayersCommand.java
-@@ -71,7 +71,7 @@
-          if (entity instanceof PlayerEntity) {
-             set.add(entity.getScoreboardTeam());
-          } else {
--            set.add((Object)null);
-+            set.add(null);
-          }
-       }
- 
-@@ -285,3 +285,5 @@
+@@ -258,3 +258,5 @@
        }
     }
  }

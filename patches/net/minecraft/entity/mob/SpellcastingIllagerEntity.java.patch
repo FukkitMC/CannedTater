@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/mob/SpellcastingIllagerEntity.java
 +++ b/net/minecraft/entity/mob/SpellcastingIllagerEntity.java
-@@ -210,3 +210,5 @@
+@@ -201,3 +201,5 @@
        }
     }
  }

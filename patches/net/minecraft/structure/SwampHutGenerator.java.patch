@@ -1,6 +1,6 @@
 --- a/net/minecraft/structure/SwampHutGenerator.java
 +++ b/net/minecraft/structure/SwampHutGenerator.java
-@@ -122,3 +122,5 @@
+@@ -120,3 +120,5 @@
  
     }
  }

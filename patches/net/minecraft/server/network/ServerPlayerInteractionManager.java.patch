@@ -1,6 +1,6 @@
 --- a/net/minecraft/server/network/ServerPlayerInteractionManager.java
 +++ b/net/minecraft/server/network/ServerPlayerInteractionManager.java
-@@ -343,3 +343,5 @@
+@@ -336,3 +336,5 @@
        this.world = world;
     }
  }

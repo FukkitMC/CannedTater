@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/passive/ParrotEntity.java
 +++ b/net/minecraft/entity/passive/ParrotEntity.java
-@@ -389,3 +389,5 @@
-       });
+@@ -381,3 +381,5 @@
+       return !this.onGround;
     }
  }
 +

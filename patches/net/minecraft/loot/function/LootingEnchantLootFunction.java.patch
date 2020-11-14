@@ -1,14 +1,5 @@
 --- a/net/minecraft/loot/function/LootingEnchantLootFunction.java
 +++ b/net/minecraft/loot/function/LootingEnchantLootFunction.java
-@@ -62,7 +62,7 @@
- 
-    public static class Serializer extends ConditionalLootFunction.Serializer<LootingEnchantLootFunction> {
-       public void toJson(JsonObject jsonObject, LootingEnchantLootFunction lootingEnchantLootFunction, JsonSerializationContext jsonSerializationContext) {
--         super.toJson(jsonObject, (ConditionalLootFunction)lootingEnchantLootFunction, jsonSerializationContext);
-+         super.toJson(jsonObject, lootingEnchantLootFunction, jsonSerializationContext);
-          jsonObject.add("count", jsonSerializationContext.serialize(lootingEnchantLootFunction.countRange));
-          if (lootingEnchantLootFunction.hasLimit()) {
-             jsonObject.add("limit", jsonSerializationContext.serialize(lootingEnchantLootFunction.limit));
 @@ -98,3 +98,5 @@
        }
     }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/projectile/FishingBobberEntity.java
 +++ b/net/minecraft/entity/projectile/FishingBobberEntity.java
-@@ -500,3 +500,5 @@
+@@ -476,3 +476,5 @@
        BOBBING;
     }
  }

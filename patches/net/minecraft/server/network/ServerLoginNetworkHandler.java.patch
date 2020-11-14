@@ -1,6 +1,6 @@
 --- a/net/minecraft/server/network/ServerLoginNetworkHandler.java
 +++ b/net/minecraft/server/network/ServerLoginNetworkHandler.java
-@@ -216,3 +216,5 @@
+@@ -213,3 +213,5 @@
        ACCEPTED;
     }
  }

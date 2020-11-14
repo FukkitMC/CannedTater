@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/TripwireBlock.java
 +++ b/net/minecraft/block/TripwireBlock.java
-@@ -193,3 +193,5 @@
-       DETACHED_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D);
+@@ -171,3 +171,5 @@
+       builder.add(POWERED, ATTACHED, DISARMED, NORTH, EAST, WEST, SOUTH);
     }
  }
 +

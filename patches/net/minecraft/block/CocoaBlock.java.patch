@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/CocoaBlock.java
 +++ b/net/minecraft/block/CocoaBlock.java
-@@ -116,3 +116,5 @@
-       AGE_TO_SOUTH_SHAPE = new VoxelShape[]{Block.createCuboidShape(6.0D, 7.0D, 11.0D, 10.0D, 12.0D, 15.0D), Block.createCuboidShape(5.0D, 5.0D, 9.0D, 11.0D, 12.0D, 15.0D), Block.createCuboidShape(4.0D, 3.0D, 7.0D, 12.0D, 12.0D, 15.0D)};
+@@ -105,3 +105,5 @@
+       return false;
     }
  }
 +

@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/entity/ConduitBlockEntity.java
 +++ b/net/minecraft/block/entity/ConduitBlockEntity.java
-@@ -286,3 +286,5 @@
-       ACTIVATING_BLOCKS = new Block[]{Blocks.PRISMARINE, Blocks.PRISMARINE_BRICKS, Blocks.SEA_LANTERN, Blocks.DARK_PRISMARINE};
+@@ -263,3 +263,5 @@
+       this.world.playSound((PlayerEntity)null, this.pos, soundEvent, SoundCategory.BLOCKS, 1.0F, 1.0F);
     }
  }
 +

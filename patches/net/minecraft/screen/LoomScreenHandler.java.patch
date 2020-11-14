@@ -1,6 +1,6 @@
 --- a/net/minecraft/screen/LoomScreenHandler.java
 +++ b/net/minecraft/screen/LoomScreenHandler.java
-@@ -234,3 +234,5 @@
+@@ -230,3 +230,5 @@
  
     }
  }

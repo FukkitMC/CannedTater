@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/mob/ShulkerEntity.java
 +++ b/net/minecraft/entity/mob/ShulkerEntity.java
-@@ -542,3 +542,5 @@
+@@ -522,3 +522,5 @@
        }
     }
  }

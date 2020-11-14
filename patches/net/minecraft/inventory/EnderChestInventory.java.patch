@@ -1,6 +1,6 @@
 --- a/net/minecraft/inventory/EnderChestInventory.java
 +++ b/net/minecraft/inventory/EnderChestInventory.java
-@@ -70,3 +70,5 @@
+@@ -69,3 +69,5 @@
        this.activeBlockEntity = null;
     }
  }

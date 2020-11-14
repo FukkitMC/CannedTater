@@ -1,6 +1,6 @@
 --- a/net/minecraft/recipe/ShapelessRecipe.java
 +++ b/net/minecraft/recipe/ShapelessRecipe.java
-@@ -115,3 +115,5 @@
+@@ -112,3 +112,5 @@
        }
     }
  }

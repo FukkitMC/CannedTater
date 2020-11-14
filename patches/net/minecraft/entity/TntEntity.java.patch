@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/TntEntity.java
 +++ b/net/minecraft/entity/TntEntity.java
-@@ -123,3 +123,5 @@
-       FUSE = DataTracker.registerData(TntEntity.class, TrackedDataHandlerRegistry.INTEGER);
+@@ -118,3 +118,5 @@
+       return new EntitySpawnS2CPacket(this);
     }
  }
 +

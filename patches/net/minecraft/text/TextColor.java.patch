@@ -1,7 +1,7 @@
 --- a/net/minecraft/text/TextColor.java
 +++ b/net/minecraft/text/TextColor.java
-@@ -108,3 +108,5 @@
-       }, Function.identity()));
+@@ -100,3 +100,5 @@
+       }
     }
  }
 +

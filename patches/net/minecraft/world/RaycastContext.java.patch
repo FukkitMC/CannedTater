@@ -1,6 +1,6 @@
 --- a/net/minecraft/world/RaycastContext.java
 +++ b/net/minecraft/world/RaycastContext.java
-@@ -82,3 +82,5 @@
+@@ -78,3 +78,5 @@
        }
     }
  }

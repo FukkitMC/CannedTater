@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/vehicle/StorageMinecartEntity.java
 +++ b/net/minecraft/entity/vehicle/StorageMinecartEntity.java
-@@ -226,3 +226,5 @@
+@@ -216,3 +216,5 @@
  
     protected abstract ScreenHandler getScreenHandler(int syncId, PlayerInventory playerInventory);
  }

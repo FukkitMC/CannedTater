@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/passive/MerchantEntity.java
 +++ b/net/minecraft/entity/passive/MerchantEntity.java
-@@ -228,3 +228,5 @@
-       HEAD_ROLLING_TIME_LEFT = DataTracker.registerData(MerchantEntity.class, TrackedDataHandlerRegistry.INTEGER);
+@@ -220,3 +220,5 @@
+ 
     }
  }
 +

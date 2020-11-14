@@ -1,7 +1,7 @@
 --- a/net/minecraft/item/BoatItem.java
 +++ b/net/minecraft/item/BoatItem.java
-@@ -74,3 +74,5 @@
-       RIDERS = EntityPredicates.EXCEPT_SPECTATOR.and(Entity::collides);
+@@ -67,3 +67,5 @@
+       }
     }
  }
 +

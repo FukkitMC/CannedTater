@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/passive/PigEntity.java
 +++ b/net/minecraft/entity/passive/PigEntity.java
-@@ -257,3 +257,5 @@
-       BREEDING_INGREDIENT = Ingredient.ofItems(Items.CARROT, Items.POTATO, Items.BEETROOT);
+@@ -247,3 +247,5 @@
+       return BREEDING_INGREDIENT.test(stack);
     }
  }
 +

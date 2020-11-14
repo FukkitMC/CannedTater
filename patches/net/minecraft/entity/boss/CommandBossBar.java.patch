@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/boss/CommandBossBar.java
 +++ b/net/minecraft/entity/boss/CommandBossBar.java
-@@ -198,3 +198,5 @@
+@@ -175,3 +175,5 @@
        super.removePlayer(player);
     }
  }

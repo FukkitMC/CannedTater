@@ -1,16 +1,7 @@
 --- a/net/minecraft/block/ChestBlock.java
 +++ b/net/minecraft/block/ChestBlock.java
-@@ -201,7 +201,7 @@
-    }
- 
-    public DoubleBlockProperties.PropertySource<? extends ChestBlockEntity> getBlockEntitySource(BlockState state, World world, BlockPos pos, boolean ignoreBlocked) {
--      BiPredicate biPredicate2;
-+      BiPredicate<WorldAccess, BlockPos> biPredicate2;
-       if (ignoreBlocked) {
-          biPredicate2 = (worldAccess, blockPos) -> {
-             return false;
-@@ -328,3 +328,5 @@
-       };
+@@ -309,3 +309,5 @@
+       return false;
     }
  }
 +

@@ -1,6 +1,6 @@
 --- a/net/minecraft/world/CommandBlockExecutor.java
 +++ b/net/minecraft/world/CommandBlockExecutor.java
-@@ -207,3 +207,5 @@
+@@ -202,3 +202,5 @@
        return this.getWorld().getGameRules().getBoolean(GameRules.COMMAND_BLOCK_OUTPUT);
     }
  }

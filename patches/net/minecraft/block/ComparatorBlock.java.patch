@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/ComparatorBlock.java
 +++ b/net/minecraft/block/ComparatorBlock.java
-@@ -159,3 +159,5 @@
-       MODE = Properties.COMPARATOR_MODE;
+@@ -153,3 +153,5 @@
+       builder.add(FACING, MODE, POWERED);
     }
  }
 +

@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/damage/ProjectileDamageSource.java
 +++ b/net/minecraft/entity/damage/ProjectileDamageSource.java
 @@ -33,3 +33,5 @@
-       return !itemStack.isEmpty() && itemStack.hasCustomName() ? new TranslatableText(string2, new Object[]{entity.getDisplayName(), text, itemStack.toHoverableText()}) : new TranslatableText(string, new Object[]{entity.getDisplayName(), text});
+       return !itemStack.isEmpty() && itemStack.hasCustomName() ? new TranslatableText(string2, entity.getDisplayName(), text, itemStack.toHoverableText()) : new TranslatableText(string, entity.getDisplayName(), text);
     }
  }
 +

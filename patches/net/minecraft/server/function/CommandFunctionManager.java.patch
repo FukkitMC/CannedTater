@@ -1,6 +1,6 @@
 --- a/net/minecraft/server/function/CommandFunctionManager.java
 +++ b/net/minecraft/server/function/CommandFunctionManager.java
-@@ -167,3 +167,5 @@
+@@ -158,3 +158,5 @@
        }
     }
  }

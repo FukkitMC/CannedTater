@@ -1,6 +1,6 @@
 --- a/net/minecraft/world/chunk/WorldChunk.java
 +++ b/net/minecraft/world/chunk/WorldChunk.java
-@@ -825,3 +825,5 @@
+@@ -760,3 +760,5 @@
        CHECK;
     }
  }

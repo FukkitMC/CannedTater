@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/passive/RabbitEntity.java
 +++ b/net/minecraft/entity/passive/RabbitEntity.java
-@@ -540,3 +540,5 @@
+@@ -535,3 +535,5 @@
        }
     }
  }

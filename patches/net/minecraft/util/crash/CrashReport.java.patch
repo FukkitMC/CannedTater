@@ -1,6 +1,6 @@
 --- a/net/minecraft/util/crash/CrashReport.java
 +++ b/net/minecraft/util/crash/CrashReport.java
-@@ -263,3 +263,5 @@
+@@ -246,3 +246,5 @@
        (new CrashReport("Don't panic!", new Throwable())).asString();
     }
  }

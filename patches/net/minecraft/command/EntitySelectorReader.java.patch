@@ -1,15 +1,6 @@
 --- a/net/minecraft/command/EntitySelectorReader.java
 +++ b/net/minecraft/command/EntitySelectorReader.java
-@@ -132,7 +132,7 @@
-          box3 = this.createBox(this.dx == null ? 0.0D : this.dx, this.dy == null ? 0.0D : this.dy, this.dz == null ? 0.0D : this.dz);
-       }
- 
--      Function function2;
-+      Function<Vec3d, Vec3d> function2;
-       if (this.x == null && this.y == null && this.z == null) {
-          function2 = (vec3d) -> {
-             return vec3d;
-@@ -617,3 +617,5 @@
+@@ -584,3 +584,5 @@
        this.selectsAdvancements = selectsAdvancements;
     }
  }

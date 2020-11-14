@@ -1,19 +1,6 @@
 --- a/net/minecraft/entity/passive/WanderingTraderEntity.java
 +++ b/net/minecraft/entity/passive/WanderingTraderEntity.java
-@@ -57,10 +57,10 @@
- 
-    protected void initGoals() {
-       this.goalSelector.add(0, new SwimGoal(this));
--      this.goalSelector.add(0, new HoldInHandsGoal(this, PotionUtil.setPotion(new ItemStack(Items.POTION), Potions.INVISIBILITY), SoundEvents.ENTITY_WANDERING_TRADER_DISAPPEARED, (wanderingTraderEntity) -> {
-+      this.goalSelector.add(0, new HoldInHandsGoal<>(this, PotionUtil.setPotion(new ItemStack(Items.POTION), Potions.INVISIBILITY), SoundEvents.ENTITY_WANDERING_TRADER_DISAPPEARED, (wanderingTraderEntity) -> {
-          return this.world.isNight() && !wanderingTraderEntity.isInvisible();
-       }));
--      this.goalSelector.add(0, new HoldInHandsGoal(this, new ItemStack(Items.MILK_BUCKET), SoundEvents.ENTITY_WANDERING_TRADER_REAPPEARED, (wanderingTraderEntity) -> {
-+      this.goalSelector.add(0, new HoldInHandsGoal<>(this, new ItemStack(Items.MILK_BUCKET), SoundEvents.ENTITY_WANDERING_TRADER_REAPPEARED, (wanderingTraderEntity) -> {
-          return this.world.isDay() && wanderingTraderEntity.isInvisible();
-       }));
-       this.goalSelector.add(1, new StopFollowingCustomerGoal(this));
-@@ -259,3 +259,5 @@
+@@ -255,3 +255,5 @@
        }
     }
  }

@@ -1,35 +1,7 @@
 --- a/net/minecraft/entity/passive/SheepEntity.java
 +++ b/net/minecraft/entity/passive/SheepEntity.java
-@@ -163,7 +163,7 @@
-       if (itemStack.getItem() == Items.SHEARS) {
-          if (!this.world.isClient && this.isShearable()) {
-             this.sheared(SoundCategory.PLAYERS);
--            itemStack.damage(1, (LivingEntity)player, (Consumer)((playerEntity) -> {
-+            itemStack.damage(1, (LivingEntity)player, ((playerEntity) -> {
-                playerEntity.sendToolBreakStatus(hand);
-             }));
-             return ActionResult.SUCCESS;
-@@ -284,13 +284,12 @@
-       DyeColor dyeColor = ((SheepEntity)firstParent).getColor();
-       DyeColor dyeColor2 = ((SheepEntity)secondParent).getColor();
-       CraftingInventory craftingInventory = createDyeMixingCraftingInventory(dyeColor, dyeColor2);
--      Optional var10000 = this.world.getRecipeManager().getFirstMatch(RecipeType.CRAFTING, craftingInventory, this.world).map((craftingRecipe) -> {
-+      return this.world.getRecipeManager().getFirstMatch(RecipeType.CRAFTING, craftingInventory, this.world).map((craftingRecipe) -> {
-          return craftingRecipe.craft(craftingInventory);
--      }).map(ItemStack::getItem);
--      DyeItem.class.getClass();
--      var10000 = var10000.filter(DyeItem.class::isInstance);
--      DyeItem.class.getClass();
--      return (DyeColor)var10000.map(DyeItem.class::cast).map(DyeItem::getColor).orElseGet(() -> {
-+      }).map(ItemStack::getItem)
-+           .filter(DyeItem.class::isInstance)
-+           .map(DyeItem.class::cast)
-+           .map(DyeItem::getColor).orElseGet(() -> {
-          return this.world.random.nextBoolean() ? dyeColor : dyeColor2;
-       });
-    }
-@@ -335,3 +334,5 @@
-       }, SheepEntity::getDyedColor)));
+@@ -314,3 +314,5 @@
+       return 0.95F * dimensions.height;
     }
  }
 +

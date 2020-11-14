@@ -1,6 +1,6 @@
 --- a/net/minecraft/server/network/ServerRecipeBook.java
 +++ b/net/minecraft/server/network/ServerRecipeBook.java
-@@ -123,3 +123,5 @@
+@@ -114,3 +114,5 @@
        player.networkHandler.sendPacket(new UnlockRecipesS2CPacket(UnlockRecipesS2CPacket.Action.INIT, this.recipes, this.toBeDisplayed, this.getOptions()));
     }
  }

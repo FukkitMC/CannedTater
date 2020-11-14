@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/effect/StatusEffects.java
 +++ b/net/minecraft/entity/effect/StatusEffects.java
-@@ -100,3 +100,5 @@
-       HERO_OF_THE_VILLAGE = register(32, "hero_of_the_village", new StatusEffect(StatusEffectType.BENEFICIAL, 4521796));
+@@ -65,3 +65,5 @@
+       return Registry.register(Registry.STATUS_EFFECT, rawId, id, entry);
     }
  }
 +

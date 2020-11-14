@@ -1,7 +1,7 @@
 --- a/net/minecraft/loot/context/LootContextParameters.java
 +++ b/net/minecraft/loot/context/LootContextParameters.java
 @@ -25,3 +25,5 @@
-       return new LootContextParameter(new Identifier(name));
+       return new LootContextParameter<>(new Identifier(name));
     }
  }
 +

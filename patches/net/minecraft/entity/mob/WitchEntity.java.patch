@@ -1,16 +1,7 @@
 --- a/net/minecraft/entity/mob/WitchEntity.java
 +++ b/net/minecraft/entity/mob/WitchEntity.java
-@@ -57,7 +57,7 @@
- 
-    protected void initGoals() {
-       super.initGoals();
--      this.raidGoal = new RaidGoal(this, RaiderEntity.class, true, (livingEntity) -> {
-+      this.raidGoal = new RaidGoal<>(this, RaiderEntity.class, true, (livingEntity) -> {
-          return livingEntity != null && this.hasActiveRaid() && livingEntity.getType() != EntityType.WITCH;
-       });
-       this.attackPlayerGoal = new DisableableFollowTargetGoal(this, PlayerEntity.class, 10, true, false, (Predicate)null);
-@@ -231,3 +231,5 @@
-       DRINKING = DataTracker.registerData(WitchEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+@@ -220,3 +220,5 @@
+       return false;
     }
  }
 +

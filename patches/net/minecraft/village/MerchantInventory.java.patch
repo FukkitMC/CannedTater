@@ -1,6 +1,6 @@
 --- a/net/minecraft/village/MerchantInventory.java
 +++ b/net/minecraft/village/MerchantInventory.java
-@@ -138,3 +138,5 @@
+@@ -131,3 +131,5 @@
        this.inventory.clear();
     }
  }

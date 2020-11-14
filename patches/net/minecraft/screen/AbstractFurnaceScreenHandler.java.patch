@@ -1,6 +1,6 @@
 --- a/net/minecraft/screen/AbstractFurnaceScreenHandler.java
 +++ b/net/minecraft/screen/AbstractFurnaceScreenHandler.java
-@@ -148,3 +148,5 @@
+@@ -147,3 +147,5 @@
        return AbstractFurnaceBlockEntity.canUseAsFuel(itemStack);
     }
  }

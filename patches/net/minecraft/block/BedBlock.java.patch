@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/BedBlock.java
 +++ b/net/minecraft/block/BedBlock.java
-@@ -309,3 +309,5 @@
-       EAST_SHAPE = VoxelShapes.union(TOP_SHAPE, LEG_3_SHAPE, LEG_4_SHAPE);
+@@ -292,3 +292,5 @@
+       return new int[][]{{0, 0}, {-direction.getOffsetX(), -direction.getOffsetZ()}};
     }
  }
 +

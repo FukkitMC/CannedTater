@@ -1,6 +1,6 @@
 --- a/net/minecraft/item/BoneMealItem.java
 +++ b/net/minecraft/item/BoneMealItem.java
-@@ -118,3 +118,5 @@
+@@ -117,3 +117,5 @@
        }
     }
  }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/inventory/CraftingInventory.java
 +++ b/net/minecraft/inventory/CraftingInventory.java
-@@ -91,3 +91,5 @@
+@@ -82,3 +82,5 @@
  
     }
  }

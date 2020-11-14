@@ -1,6 +1,6 @@
 --- a/net/minecraft/entity/decoration/AbstractDecorationEntity.java
 +++ b/net/minecraft/entity/decoration/AbstractDecorationEntity.java
-@@ -256,3 +256,5 @@
+@@ -253,3 +253,5 @@
     public void calculateDimensions() {
     }
  }

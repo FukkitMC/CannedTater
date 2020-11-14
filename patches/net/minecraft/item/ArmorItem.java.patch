@@ -1,6 +1,6 @@
 --- a/net/minecraft/item/ArmorItem.java
 +++ b/net/minecraft/item/ArmorItem.java
-@@ -117,3 +117,5 @@
+@@ -116,3 +116,5 @@
        return this.toughness;
     }
  }

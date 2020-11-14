@@ -1,6 +1,6 @@
 --- a/net/minecraft/item/FilledMapItem.java
 +++ b/net/minecraft/item/FilledMapItem.java
-@@ -368,3 +368,5 @@
+@@ -371,3 +371,5 @@
        }
     }
  }

@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/RedstoneOreBlock.java
 +++ b/net/minecraft/block/RedstoneOreBlock.java
-@@ -104,3 +104,5 @@
-       LIT = RedstoneTorchBlock.LIT;
+@@ -97,3 +97,5 @@
+       builder.add(LIT);
     }
  }
 +

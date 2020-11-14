@@ -1,7 +1,7 @@
 --- a/net/minecraft/block/CommandBlock.java
 +++ b/net/minecraft/block/CommandBlock.java
-@@ -217,3 +217,5 @@
-       CONDITIONAL = Properties.CONDITIONAL;
+@@ -212,3 +212,5 @@
+ 
     }
  }
 +

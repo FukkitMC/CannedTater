@@ -1,7 +1,7 @@
 --- a/net/minecraft/entity/ItemEntity.java
 +++ b/net/minecraft/entity/ItemEntity.java
-@@ -395,3 +395,5 @@
-       STACK = DataTracker.registerData(ItemEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
+@@ -381,3 +381,5 @@
+       return new EntitySpawnS2CPacket(this);
     }
  }
 +

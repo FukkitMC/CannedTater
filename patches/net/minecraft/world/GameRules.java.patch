@@ -1,6 +1,6 @@
 --- a/net/minecraft/world/GameRules.java
 +++ b/net/minecraft/world/GameRules.java
-@@ -494,3 +494,5 @@
+@@ -436,3 +436,5 @@
        }
     }
  }

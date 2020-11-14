@@ -1,6 +1,6 @@
 --- a/net/minecraft/server/command/GameRuleCommand.java
 +++ b/net/minecraft/server/command/GameRuleCommand.java
-@@ -37,3 +37,5 @@
+@@ -31,3 +31,5 @@
        return rule.getCommandResult();
     }
  }

@@ -1,6 +1,6 @@
 --- a/net/minecraft/block/entity/BeehiveBlockEntity.java
 +++ b/net/minecraft/block/entity/BeehiveBlockEntity.java
-@@ -318,3 +318,5 @@
+@@ -304,3 +304,5 @@
        EMERGENCY;
     }
  }
