@@ -1,5 +1,14 @@
 --- a/net/minecraft/server/network/ServerPlayerEntity.java
 +++ b/net/minecraft/server/network/ServerPlayerEntity.java
+@@ -1221,7 +1221,7 @@
+    }
+ 
+    public void onStartedTracking(Entity entity) {
+-      this.removedEntities.remove(entity.getEntityId());
++      this.removedEntities.remove((Integer) entity.getEntityId());
+    }
+ 
+    protected void updatePotionVisibility() {
 @@ -1404,3 +1404,5 @@
        return this.textStream;
     }
