@@ -1,5 +1,53 @@
 --- a/net/minecraft/world/chunk/WorldChunk.java
 +++ b/net/minecraft/world/chunk/WorldChunk.java
+@@ -498,8 +498,8 @@
+ 
+       for(int k = i; k <= j; ++k) {
+          for(Entity entity : this.entitySections[k].getAllOfType(Entity.class)) {
+-            if ((type == null || entity.getType() == type) && entity.getBoundingBox().intersects(box) && predicate.test(entity)) {
+-               result.add(entity);
++            if ((type == null || entity.getType() == type) && entity.getBoundingBox().intersects(box) && predicate.test((T) entity)) {
++               result.add((T) entity);
+             }
+          }
+       }
+@@ -703,30 +703,30 @@
+ 
+    public void disableTickSchedulers() {
+       if (this.blockTickScheduler instanceof ChunkTickScheduler) {
+-         ((ChunkTickScheduler)this.blockTickScheduler).tick(this.world.getBlockTickScheduler(), (blockPos) -> this.getBlockState(blockPos).getBlock());
++         ((ChunkTickScheduler<Block>)this.blockTickScheduler).tick(this.world.getBlockTickScheduler(), (blockPos) -> this.getBlockState(blockPos).getBlock());
+          this.blockTickScheduler = DummyClientTickScheduler.get();
+       } else if (this.blockTickScheduler instanceof SimpleTickScheduler) {
+-         ((SimpleTickScheduler)this.blockTickScheduler).scheduleTo(this.world.getBlockTickScheduler());
++         ((SimpleTickScheduler<Block>)this.blockTickScheduler).scheduleTo(this.world.getBlockTickScheduler());
+          this.blockTickScheduler = DummyClientTickScheduler.get();
+       }
+ 
+       if (this.fluidTickScheduler instanceof ChunkTickScheduler) {
+-         ((ChunkTickScheduler)this.fluidTickScheduler).tick(this.world.getFluidTickScheduler(), (blockPos) -> this.getFluidState(blockPos).getFluid());
++         ((ChunkTickScheduler<Fluid>)this.fluidTickScheduler).tick(this.world.getFluidTickScheduler(), (blockPos) -> this.getFluidState(blockPos).getFluid());
+          this.fluidTickScheduler = DummyClientTickScheduler.get();
+       } else if (this.fluidTickScheduler instanceof SimpleTickScheduler) {
+-         ((SimpleTickScheduler)this.fluidTickScheduler).scheduleTo(this.world.getFluidTickScheduler());
++         ((SimpleTickScheduler<Fluid>)this.fluidTickScheduler).scheduleTo(this.world.getFluidTickScheduler());
+          this.fluidTickScheduler = DummyClientTickScheduler.get();
+       }
+ 
+    }
+ 
+    public void enableTickSchedulers(ServerWorld world) {
+-      if (this.blockTickScheduler == DummyClientTickScheduler.get()) {
++      if (this.blockTickScheduler == (Object) DummyClientTickScheduler.get()) {
+          this.blockTickScheduler = new SimpleTickScheduler<>(Registry.BLOCK::getId, world.getBlockTickScheduler().getScheduledTicksInChunk(this.pos, true, false), world.getTime());
+          this.setShouldSave(true);
+       }
+ 
+-      if (this.fluidTickScheduler == DummyClientTickScheduler.get()) {
++      if (this.fluidTickScheduler == (Object) DummyClientTickScheduler.get()) {
+          this.fluidTickScheduler = new SimpleTickScheduler<>(Registry.FLUID::getId, world.getFluidTickScheduler().getScheduledTicksInChunk(this.pos, true, false), world.getTime());
+          this.setShouldSave(true);
+       }
 @@ -760,3 +760,5 @@
        CHECK;
     }

@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/EntityType.java
 +++ b/net/minecraft/entity/EntityType.java
+@@ -472,7 +472,7 @@
+          }
+ 
+          return entity;
+-      }).orElse((Object)null);
++      }).orElse(null);
+    }
+ 
+    private static Optional<Entity> loadEntityFromTag(CompoundTag compoundTag, World world) {
 @@ -594,3 +594,5 @@
        T create(EntityType<T> type, World world);
     }

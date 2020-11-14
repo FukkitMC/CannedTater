@@ -1,6 +1,13 @@
 --- a/net/minecraft/screen/ScreenHandlerContext.java
 +++ b/net/minecraft/screen/ScreenHandlerContext.java
-@@ -44,3 +44,5 @@
+@@ -38,9 +38,11 @@
+    }
+ 
+    default void run(BiConsumer<World, BlockPos> function) {
+-      this.run((BiFunction)((world, blockPos) -> {
++      this.run(((world, blockPos) -> {
+          function.accept(world, blockPos);
+          return Optional.empty();
        }));
     }
  }

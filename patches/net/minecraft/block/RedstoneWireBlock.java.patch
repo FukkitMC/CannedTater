@@ -1,5 +1,23 @@
 --- a/net/minecraft/block/RedstoneWireBlock.java
 +++ b/net/minecraft/block/RedstoneWireBlock.java
+@@ -65,7 +65,7 @@
+       VoxelShape voxelShape = DOT_SHAPE;
+ 
+       for(Direction direction : Direction.Type.HORIZONTAL) {
+-         WireConnection wireConnection = state.get((Property)DIRECTION_TO_WIRE_CONNECTION_PROPERTY.get(direction));
++         WireConnection wireConnection = state.get(DIRECTION_TO_WIRE_CONNECTION_PROPERTY.get(direction));
+          if (wireConnection == WireConnection.SIDE) {
+             voxelShape = VoxelShapes.union(voxelShape, (VoxelShape)field_24414.get(direction));
+          } else if (wireConnection == WireConnection.UP) {
+@@ -152,7 +152,7 @@
+       BlockPos.Mutable mutable = new BlockPos.Mutable();
+ 
+       for(Direction direction : Direction.Type.HORIZONTAL) {
+-         WireConnection wireConnection = state.get((Property)DIRECTION_TO_WIRE_CONNECTION_PROPERTY.get(direction));
++         WireConnection wireConnection = state.get(DIRECTION_TO_WIRE_CONNECTION_PROPERTY.get(direction));
+          if (wireConnection != WireConnection.NONE && !world.getBlockState(mutable.set(pos, direction)).isOf(this)) {
+             mutable.move(Direction.DOWN);
+             BlockState blockState = world.getBlockState(mutable);
 @@ -423,3 +423,5 @@
  
     }

@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/ai/brain/task/OpenDoorsTask.java
 +++ b/net/minecraft/entity/ai/brain/task/OpenDoorsTask.java
+@@ -111,7 +111,7 @@
+ 
+    private static boolean method_30761(ServerWorld serverWorld, LivingEntity livingEntity, BlockPos blockPos) {
+       Brain<?> brain = livingEntity.getBrain();
+-      return !brain.hasMemoryModule(MemoryModuleType.MOBS) ? false : ((List)brain.getOptionalMemory(MemoryModuleType.MOBS).get()).stream().filter((livingEntity2) -> livingEntity2.getType() == livingEntity.getType()).filter((livingEntityx) -> blockPos.isWithinDistance(livingEntityx.getPos(), 2.0D)).anyMatch((livingEntityx) -> method_30766(serverWorld, livingEntityx, blockPos));
++      return !brain.hasMemoryModule(MemoryModuleType.MOBS) ? false : (brain.getOptionalMemory(MemoryModuleType.MOBS).get()).stream().filter((livingEntity2) -> livingEntity2.getType() == livingEntity.getType()).filter((livingEntityx) -> blockPos.isWithinDistance(livingEntityx.getPos(), 2.0D)).anyMatch((livingEntityx) -> method_30766(serverWorld, livingEntityx, blockPos));
+    }
+ 
+    private static boolean method_30766(ServerWorld serverWorld, LivingEntity livingEntity, BlockPos blockPos) {
 @@ -148,3 +148,5 @@
  
     }

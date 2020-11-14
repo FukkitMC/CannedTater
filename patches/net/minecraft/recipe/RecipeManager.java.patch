@@ -1,5 +1,14 @@
 --- a/net/minecraft/recipe/RecipeManager.java
 +++ b/net/minecraft/recipe/RecipeManager.java
+@@ -98,7 +98,7 @@
+    }
+ 
+    public Optional<? extends Recipe<?>> get(Identifier id) {
+-      return this.recipes.values().stream().map((map) -> (Recipe)map.get(id)).filter(Objects::nonNull).findFirst();
++      return this.recipes.values().stream().map((map) -> map.get(id)).filter(Objects::nonNull).findFirst();
+    }
+ 
+    public Collection<Recipe<?>> values() {
 @@ -114,3 +114,5 @@
        return ((RecipeSerializer)Registry.RECIPE_SERIALIZER.getOrEmpty(new Identifier(string)).orElseThrow(() -> new JsonSyntaxException("Invalid or unsupported recipe type '" + string + "'"))).read(id, json);
     }

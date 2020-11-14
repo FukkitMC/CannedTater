@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/passive/FishEntity.java
 +++ b/net/minecraft/entity/passive/FishEntity.java
+@@ -97,7 +97,7 @@
+    protected void initGoals() {
+       super.initGoals();
+       this.goalSelector.add(0, new EscapeDangerGoal(this, 1.25D));
+-      this.goalSelector.add(2, new FleeEntityGoal(this, PlayerEntity.class, 8.0F, 1.6D, 1.4D, EntityPredicates.EXCEPT_SPECTATOR::test));
++      this.goalSelector.add(2, new FleeEntityGoal<>(this, PlayerEntity.class, 8.0F, 1.6D, 1.4D, EntityPredicates.EXCEPT_SPECTATOR::test));
+       this.goalSelector.add(4, new FishEntity.SwimToRandomPlaceGoal(this));
+    }
+ 
 @@ -225,3 +225,5 @@
        }
     }

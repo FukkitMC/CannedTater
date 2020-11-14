@@ -1,5 +1,14 @@
 --- a/net/minecraft/advancement/AdvancementManager.java
 +++ b/net/minecraft/advancement/AdvancementManager.java
+@@ -22,7 +22,7 @@
+    private AdvancementManager.Listener listener;
+ 
+    public void load(Map<Identifier, Advancement.Task> map) {
+-      Function<Identifier, Advancement> function = Functions.forMap(this.advancements, (Object)null);
++      Function<Identifier, Advancement> function = Functions.forMap(this.advancements, null);
+ 
+       while(!map.isEmpty()) {
+          boolean bl = false;
 @@ -81,3 +81,5 @@
        void onDependentAdded(Advancement dependent);
     }

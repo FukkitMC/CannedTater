@@ -1,5 +1,14 @@
 --- a/net/minecraft/entity/mob/GhastEntity.java
 +++ b/net/minecraft/entity/mob/GhastEntity.java
+@@ -44,7 +44,7 @@
+       this.goalSelector.add(5, new GhastEntity.FlyRandomlyGoal(this));
+       this.goalSelector.add(7, new GhastEntity.LookAtTargetGoal(this));
+       this.goalSelector.add(7, new GhastEntity.ShootFireballGoal(this));
+-      this.targetSelector.add(1, new FollowTargetGoal(this, PlayerEntity.class, 10, true, false, (livingEntity) -> Math.abs(livingEntity.getY() - this.getY()) <= 4.0D));
++      this.targetSelector.add(1, new FollowTargetGoal<>(this, PlayerEntity.class, 10, true, false, (livingEntity) -> Math.abs(livingEntity.getY() - this.getY()) <= 4.0D));
+    }
+ 
+    public void setShooting(boolean shooting) {
 @@ -283,3 +283,5 @@
        }
     }
