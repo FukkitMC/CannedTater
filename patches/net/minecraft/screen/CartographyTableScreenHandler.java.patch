@@ -1,5 +1,27 @@
 --- a/net/minecraft/screen/CartographyTableScreenHandler.java
 +++ b/net/minecraft/screen/CartographyTableScreenHandler.java
+@@ -103,9 +103,9 @@
+ 
+    }
+ 
+-   private void updateResult(ItemStack map, ItemStack item, ItemStack oldResult) {
+-      this.context.run((BiConsumer<World, BlockPos>)((world, blockPos) -> {
+-         Item item = item.getItem();
++   private void updateResult(ItemStack map, ItemStack itemStack, ItemStack oldResult) {
++      this.context.run((world, blockPos) -> {
++         Item item = itemStack.getItem();
+          MapState mapState = FilledMapItem.getMapState(map, world);
+          if (mapState != null) {
+             ItemStack itemStack4;
+@@ -137,7 +137,7 @@
+             }
+ 
+          }
+-      }));
++      });
+    }
+ 
+    public boolean canInsertIntoSlot(ItemStack stack, Slot slot) {
 @@ -200,3 +200,5 @@
        this.context.run((BiConsumer<World, BlockPos>)((world, blockPos) -> this.dropInventory(player, player.world, this.inventory)));
     }
