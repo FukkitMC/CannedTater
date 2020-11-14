@@ -1,5 +1,18 @@
 --- a/net/minecraft/world/gen/chunk/NoiseChunkGenerator.java
 +++ b/net/minecraft/world/gen/chunk/NoiseChunkGenerator.java
+@@ -412,9 +412,9 @@
+                      }
+ 
+                      for(JigsawJunction jigsawJunction : poolStructurePiece.getJunctions()) {
+-                        int k = jigsawJunction.getSourceX();
+-                        int l = jigsawJunction.getSourceZ();
+-                        if (k > k - 12 && l > l - 12 && k < k + 15 + 12 && l < l + 15 + 12) {
++                        int kx = jigsawJunction.getSourceX();
++                        int lx = jigsawJunction.getSourceZ();
++                        if (kx > k - 12 && lx > l - 12 && kx < k + 15 + 12 && lx < l + 15 + 12) {
+                            objectList2.add(jigsawJunction);
+                         }
+                      }
 @@ -610,3 +610,5 @@
        }
     }
