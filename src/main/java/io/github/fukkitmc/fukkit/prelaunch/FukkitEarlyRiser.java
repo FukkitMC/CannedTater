@@ -32,9 +32,13 @@ public class FukkitEarlyRiser {
 
                 if (name.endsWith(".class") && name.startsWith("net")) {
                     ClassNode node = new ClassNode();
-                    new ClassReader(Files.readAllBytes(f)).accept(node, 0);
+                    byte[] bytes = Files.readAllBytes(f);
+                    new ClassReader(bytes).accept(node, 0);
 
-                    ClassTinkerers.addReplacement(name.substring(0, name.length() - 6).replace(File.separatorChar, '.'), n -> {
+                    String actualName = name.substring(0, name.length() - 6).replace(File.separatorChar, '.');
+
+                    ClassTinkerers.define(actualName, bytes);
+                    ClassTinkerers.addReplacement(actualName, n -> {
                         try {
                             reset(n);
                         } catch (IllegalAccessException exception) {
