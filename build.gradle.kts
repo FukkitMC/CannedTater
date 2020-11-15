@@ -34,6 +34,9 @@ dependencies {
     // Class replacement
     modImplementation("com.github.Chocohead", "Fabric-ASM", "v2.1")
     include("com.github.Chocohead", "Fabric-ASM", "v2.1")
+
+    // Nullable fixes
+    implementation("com.google.code.findbugs", "jsr305", "3.0.2");
 }
 
 sourceSets {
