@@ -6,11 +6,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Tells the merger to remove the field or method with the given description
+ * Tells the merger to remove the field or method
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Remove {
-
-    String[] value();
 }
