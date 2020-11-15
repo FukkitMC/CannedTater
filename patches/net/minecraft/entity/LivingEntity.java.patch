@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/LivingEntity.java
-+++ b/net/minecraft/entity/LivingEntity.java
-@@ -2866,3 +2866,5 @@
-       this.sendEquipmentBreakStatus(hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND);
-    }
- }
-+
-+// Fukkit Marker

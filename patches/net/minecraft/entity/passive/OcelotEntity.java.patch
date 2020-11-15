@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/OcelotEntity.java
-+++ b/net/minecraft/entity/passive/OcelotEntity.java
-@@ -271,3 +271,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

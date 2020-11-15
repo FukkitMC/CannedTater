@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/ai/goal/EatGrassGoal.java
-+++ b/net/minecraft/entity/ai/goal/EatGrassGoal.java
-@@ -79,3 +79,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

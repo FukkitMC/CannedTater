@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/CatEntity.java
-+++ b/net/minecraft/entity/passive/CatEntity.java
-@@ -587,3 +587,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/stat/StatHandler.java
-+++ b/net/minecraft/stat/StatHandler.java
-@@ -25,3 +25,5 @@
-       return this.statMap.getInt(stat);
-    }
- }
-+
-+// Fukkit Marker

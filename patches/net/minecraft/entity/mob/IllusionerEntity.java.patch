@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/mob/IllusionerEntity.java
-+++ b/net/minecraft/entity/mob/IllusionerEntity.java
-@@ -244,3 +244,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

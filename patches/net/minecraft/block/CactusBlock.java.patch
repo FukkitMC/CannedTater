@@ -1,8 +1,0 @@
---- a/net/minecraft/block/CactusBlock.java
-+++ b/net/minecraft/block/CactusBlock.java
-@@ -97,3 +97,5 @@
-       return false;
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/server/ServerNetworkIo.java
-+++ b/net/minecraft/server/ServerNetworkIo.java
-@@ -133,3 +133,5 @@
-       return this.server;
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/inventory/EnderChestInventory.java
-+++ b/net/minecraft/inventory/EnderChestInventory.java
-@@ -69,3 +69,5 @@
-       this.activeBlockEntity = null;
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/enchantment/Enchantments.java
-+++ b/net/minecraft/enchantment/Enchantments.java
-@@ -48,3 +48,5 @@
-       return Registry.register(Registry.ENCHANTMENT, name, enchantment);
-    }
- }
-+
-+// Fukkit Marker

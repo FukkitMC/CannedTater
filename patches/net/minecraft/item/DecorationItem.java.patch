@@ -1,8 +1,0 @@
---- a/net/minecraft/item/DecorationItem.java
-+++ b/net/minecraft/item/DecorationItem.java
-@@ -63,3 +63,5 @@
-       return !side.getAxis().isVertical() && player.canPlaceOn(pos, side, stack);
-    }
- }
-+
-+// Fukkit Marker

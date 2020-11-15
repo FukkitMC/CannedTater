@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/SheepEntity.java
-+++ b/net/minecraft/entity/passive/SheepEntity.java
-@@ -314,3 +314,5 @@
-       return 0.95F * dimensions.height;
-    }
- }
-+
-+// Fukkit Marker

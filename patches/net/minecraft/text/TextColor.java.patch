@@ -1,8 +1,0 @@
---- a/net/minecraft/text/TextColor.java
-+++ b/net/minecraft/text/TextColor.java
-@@ -100,3 +100,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

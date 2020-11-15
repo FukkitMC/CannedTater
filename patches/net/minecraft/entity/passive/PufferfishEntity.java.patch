@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/PufferfishEntity.java
-+++ b/net/minecraft/entity/passive/PufferfishEntity.java
-@@ -202,3 +202,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/ParrotEntity.java
-+++ b/net/minecraft/entity/passive/ParrotEntity.java
-@@ -381,3 +381,5 @@
-       return !this.onGround;
-    }
- }
-+
-+// Fukkit Marker

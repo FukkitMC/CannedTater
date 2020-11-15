@@ -1,8 +1,0 @@
---- a/net/minecraft/block/entity/HopperBlockEntity.java
-+++ b/net/minecraft/block/entity/HopperBlockEntity.java
-@@ -396,3 +396,5 @@
-       return new HopperScreenHandler(syncId, playerInventory, this);
-    }
- }
-+
-+// Fukkit Marker

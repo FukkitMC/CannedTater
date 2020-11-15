@@ -1,8 +1,0 @@
---- a/net/minecraft/world/biome/source/BiomeArray.java
-+++ b/net/minecraft/world/biome/source/BiomeArray.java
-@@ -83,3 +83,5 @@
-       return this.data[j << HORIZONTAL_SECTION_COUNT + HORIZONTAL_SECTION_COUNT | k << HORIZONTAL_SECTION_COUNT | i];
-    }
- }
-+
-+// Fukkit Marker

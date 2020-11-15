@@ -1,8 +1,0 @@
---- a/net/minecraft/block/BedBlock.java
-+++ b/net/minecraft/block/BedBlock.java
-@@ -292,3 +292,5 @@
-       return new int[][]{{0, 0}, {-direction.getOffsetX(), -direction.getOffsetZ()}};
-    }
- }
-+
-+// Fukkit Marker

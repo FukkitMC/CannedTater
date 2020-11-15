@@ -1,8 +1,0 @@
---- a/net/minecraft/state/property/IntProperty.java
-+++ b/net/minecraft/state/property/IntProperty.java
-@@ -73,3 +73,5 @@
-       return integer.toString();
-    }
- }
-+
-+// Fukkit Marker

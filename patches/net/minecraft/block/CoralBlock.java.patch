@@ -1,8 +1,0 @@
---- a/net/minecraft/block/CoralBlock.java
-+++ b/net/minecraft/block/CoralBlock.java
-@@ -47,3 +47,5 @@
-       return SHAPE;
-    }
- }
-+
-+// Fukkit Marker

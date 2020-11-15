@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/mob/ElderGuardianEntity.java
-+++ b/net/minecraft/entity/mob/ElderGuardianEntity.java
-@@ -75,3 +75,5 @@
- 
-    }
- }
-+
-+// Fukkit Marker

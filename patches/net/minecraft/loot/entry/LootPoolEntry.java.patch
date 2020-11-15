@@ -1,8 +1,0 @@
---- a/net/minecraft/loot/entry/LootPoolEntry.java
-+++ b/net/minecraft/loot/entry/LootPoolEntry.java
-@@ -81,3 +81,5 @@
-       public abstract T fromJson(JsonObject json, JsonDeserializationContext context, LootCondition[] conditions);
-    }
- }
-+
-+// Fukkit Marker

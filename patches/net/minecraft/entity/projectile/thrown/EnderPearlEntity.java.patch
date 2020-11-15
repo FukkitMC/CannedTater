@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/projectile/thrown/EnderPearlEntity.java
-+++ b/net/minecraft/entity/projectile/thrown/EnderPearlEntity.java
-@@ -92,3 +92,5 @@
-       return super.moveToWorld(destination);
-    }
- }
-+
-+// Fukkit Marker

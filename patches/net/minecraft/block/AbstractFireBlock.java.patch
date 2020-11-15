@@ -1,8 +1,0 @@
---- a/net/minecraft/block/AbstractFireBlock.java
-+++ b/net/minecraft/block/AbstractFireBlock.java
-@@ -105,3 +105,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

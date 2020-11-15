@@ -1,8 +1,0 @@
---- a/net/minecraft/recipe/SmeltingRecipe.java
-+++ b/net/minecraft/recipe/SmeltingRecipe.java
-@@ -12,3 +12,5 @@
-       return RecipeSerializer.SMELTING;
-    }
- }
-+
-+// Fukkit Marker

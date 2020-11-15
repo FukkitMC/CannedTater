@@ -1,8 +1,0 @@
---- a/net/minecraft/inventory/CraftingResultInventory.java
-+++ b/net/minecraft/inventory/CraftingResultInventory.java
-@@ -62,3 +62,5 @@
-       return this.lastRecipe;
-    }
- }
-+
-+// Fukkit Marker

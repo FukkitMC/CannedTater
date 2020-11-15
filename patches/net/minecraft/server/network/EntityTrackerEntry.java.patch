@@ -1,8 +1,0 @@
---- a/net/minecraft/server/network/EntityTrackerEntry.java
-+++ b/net/minecraft/server/network/EntityTrackerEntry.java
-@@ -310,3 +310,5 @@
- 
-    }
- }
-+
-+// Fukkit Marker

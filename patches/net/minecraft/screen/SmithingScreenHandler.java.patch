@@ -1,8 +1,0 @@
---- a/net/minecraft/screen/SmithingScreenHandler.java
-+++ b/net/minecraft/screen/SmithingScreenHandler.java
-@@ -74,3 +74,5 @@
-       return slot.inventory != this.output && super.canInsertIntoSlot(stack, slot);
-    }
- }
-+
-+// Fukkit Marker

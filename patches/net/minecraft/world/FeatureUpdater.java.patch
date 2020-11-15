@@ -1,8 +1,0 @@
---- a/net/minecraft/world/FeatureUpdater.java
-+++ b/net/minecraft/world/FeatureUpdater.java
-@@ -211,3 +211,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

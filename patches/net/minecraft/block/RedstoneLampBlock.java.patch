@@ -1,8 +1,0 @@
---- a/net/minecraft/block/RedstoneLampBlock.java
-+++ b/net/minecraft/block/RedstoneLampBlock.java
-@@ -47,3 +47,5 @@
-       builder.add(LIT);
-    }
- }
-+
-+// Fukkit Marker

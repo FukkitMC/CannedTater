@@ -1,8 +1,0 @@
---- a/net/minecraft/item/EnderEyeItem.java
-+++ b/net/minecraft/item/EnderEyeItem.java
-@@ -96,3 +96,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

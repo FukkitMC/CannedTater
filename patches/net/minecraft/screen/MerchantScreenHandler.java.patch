@@ -1,8 +1,0 @@
---- a/net/minecraft/screen/MerchantScreenHandler.java
-+++ b/net/minecraft/screen/MerchantScreenHandler.java
-@@ -199,3 +199,5 @@
-       return this.merchant.getOffers();
-    }
- }
-+
-+// Fukkit Marker

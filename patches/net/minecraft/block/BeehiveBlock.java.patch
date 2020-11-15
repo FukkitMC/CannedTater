@@ -1,8 +1,0 @@
---- a/net/minecraft/block/BeehiveBlock.java
-+++ b/net/minecraft/block/BeehiveBlock.java
-@@ -235,3 +235,5 @@
-       return Util.getRandom(GENERATE_DIRECTIONS, random);
-    }
- }
-+
-+// Fukkit Marker

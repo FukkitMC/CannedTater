@@ -1,8 +1,0 @@
---- a/net/minecraft/screen/HorseScreenHandler.java
-+++ b/net/minecraft/screen/HorseScreenHandler.java
-@@ -110,3 +110,5 @@
-       this.inventory.onClose(player);
-    }
- }
-+
-+// Fukkit Marker

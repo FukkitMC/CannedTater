@@ -1,8 +1,0 @@
---- a/net/minecraft/block/PistonBlock.java
-+++ b/net/minecraft/block/PistonBlock.java
-@@ -353,3 +353,5 @@
-       return false;
-    }
- }
-+
-+// Fukkit Marker

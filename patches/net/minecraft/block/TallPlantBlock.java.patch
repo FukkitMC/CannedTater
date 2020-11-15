@@ -1,8 +1,0 @@
---- a/net/minecraft/block/TallPlantBlock.java
-+++ b/net/minecraft/block/TallPlantBlock.java
-@@ -100,3 +100,5 @@
-       return AbstractBlock.OffsetType.XZ;
-    }
- }
-+
-+// Fukkit Marker

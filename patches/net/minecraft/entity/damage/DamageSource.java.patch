@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/damage/DamageSource.java
-+++ b/net/minecraft/entity/damage/DamageSource.java
-@@ -223,3 +223,5 @@
-       return null;
-    }
- }
-+
-+// Fukkit Marker

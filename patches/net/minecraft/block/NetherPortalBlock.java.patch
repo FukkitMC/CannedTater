@@ -1,8 +1,0 @@
---- a/net/minecraft/block/NetherPortalBlock.java
-+++ b/net/minecraft/block/NetherPortalBlock.java
-@@ -92,3 +92,5 @@
-       builder.add(AXIS);
-    }
- }
-+
-+// Fukkit Marker

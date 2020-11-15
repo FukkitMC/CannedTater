@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/projectile/PersistentProjectileEntity.java
-+++ b/net/minecraft/entity/projectile/PersistentProjectileEntity.java
-@@ -581,3 +581,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

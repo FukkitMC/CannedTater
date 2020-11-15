@@ -1,8 +1,0 @@
---- a/net/minecraft/block/entity/BeaconBlockEntity.java
-+++ b/net/minecraft/block/entity/BeaconBlockEntity.java
-@@ -300,3 +300,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

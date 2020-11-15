@@ -1,8 +1,0 @@
---- a/net/minecraft/block/entity/LockableContainerBlockEntity.java
-+++ b/net/minecraft/block/entity/LockableContainerBlockEntity.java
-@@ -82,3 +82,5 @@
- 
-    protected abstract ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory);
- }
-+
-+// Fukkit Marker

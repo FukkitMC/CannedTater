@@ -1,8 +1,0 @@
---- a/net/minecraft/world/chunk/ChunkStatus.java
-+++ b/net/minecraft/world/chunk/ChunkStatus.java
-@@ -258,3 +258,5 @@
-       void doWork(ServerWorld world, ChunkGenerator generator, List<Chunk> surroundingChunks, Chunk chunk);
-    }
- }
-+
-+// Fukkit Marker

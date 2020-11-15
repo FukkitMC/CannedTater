@@ -1,8 +1,0 @@
---- a/net/minecraft/screen/GrindstoneScreenHandler.java
-+++ b/net/minecraft/screen/GrindstoneScreenHandler.java
-@@ -266,3 +266,5 @@
-       return itemStack;
-    }
- }
-+
-+// Fukkit Marker

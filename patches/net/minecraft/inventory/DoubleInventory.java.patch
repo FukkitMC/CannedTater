@@ -1,8 +1,0 @@
---- a/net/minecraft/inventory/DoubleInventory.java
-+++ b/net/minecraft/inventory/DoubleInventory.java
-@@ -85,3 +85,5 @@
-       this.second.clear();
-    }
- }
-+
-+// Fukkit Marker

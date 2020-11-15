@@ -1,8 +1,0 @@
---- a/net/minecraft/structure/SwampHutGenerator.java
-+++ b/net/minecraft/structure/SwampHutGenerator.java
-@@ -120,3 +120,5 @@
- 
-    }
- }
-+
-+// Fukkit Marker

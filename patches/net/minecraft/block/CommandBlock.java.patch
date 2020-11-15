@@ -1,8 +1,0 @@
---- a/net/minecraft/block/CommandBlock.java
-+++ b/net/minecraft/block/CommandBlock.java
-@@ -212,3 +212,5 @@
- 
-    }
- }
-+
-+// Fukkit Marker

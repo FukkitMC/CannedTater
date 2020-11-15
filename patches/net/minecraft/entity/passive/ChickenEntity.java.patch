@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/ChickenEntity.java
-+++ b/net/minecraft/entity/passive/ChickenEntity.java
-@@ -163,3 +163,5 @@
-       this.jockey = hasJockey;
-    }
- }
-+
-+// Fukkit Marker

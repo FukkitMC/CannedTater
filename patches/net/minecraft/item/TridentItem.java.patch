@@ -1,8 +1,0 @@
---- a/net/minecraft/item/TridentItem.java
-+++ b/net/minecraft/item/TridentItem.java
-@@ -142,3 +142,5 @@
-       return 1;
-    }
- }
-+
-+// Fukkit Marker

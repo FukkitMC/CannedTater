@@ -1,8 +1,0 @@
---- a/net/minecraft/block/NetherWartBlock.java
-+++ b/net/minecraft/block/NetherWartBlock.java
-@@ -43,3 +43,5 @@
-       builder.add(AGE);
-    }
- }
-+
-+// Fukkit Marker

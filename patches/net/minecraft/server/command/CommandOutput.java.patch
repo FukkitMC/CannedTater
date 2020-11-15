@@ -1,8 +1,0 @@
---- a/net/minecraft/server/command/CommandOutput.java
-+++ b/net/minecraft/server/command/CommandOutput.java
-@@ -32,3 +32,5 @@
- 
-    boolean shouldBroadcastConsoleToOps();
- }
-+
-+// Fukkit Marker

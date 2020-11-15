@@ -1,8 +1,0 @@
---- a/net/minecraft/network/ClientConnection.java
-+++ b/net/minecraft/network/ClientConnection.java
-@@ -322,3 +322,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

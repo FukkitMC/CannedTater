@@ -1,8 +1,0 @@
---- a/net/minecraft/item/FishingRodItem.java
-+++ b/net/minecraft/item/FishingRodItem.java
-@@ -42,3 +42,5 @@
-       return 1;
-    }
- }
-+
-+// Fukkit Marker

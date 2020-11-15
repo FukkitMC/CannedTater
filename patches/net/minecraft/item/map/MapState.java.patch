@@ -1,8 +1,0 @@
---- a/net/minecraft/item/map/MapState.java
-+++ b/net/minecraft/item/map/MapState.java
-@@ -385,3 +385,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/Bootstrap.java
-+++ b/net/minecraft/Bootstrap.java
-@@ -118,3 +118,5 @@
-       SYSOUT.println(str);
-    }
- }
-+
-+// Fukkit Marker

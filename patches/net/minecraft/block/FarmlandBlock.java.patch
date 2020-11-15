@@ -1,8 +1,0 @@
---- a/net/minecraft/block/FarmlandBlock.java
-+++ b/net/minecraft/block/FarmlandBlock.java
-@@ -110,3 +110,5 @@
-       return false;
-    }
- }
-+
-+// Fukkit Marker

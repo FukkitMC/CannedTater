@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/mob/RavagerEntity.java
-+++ b/net/minecraft/entity/mob/RavagerEntity.java
-@@ -299,3 +299,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

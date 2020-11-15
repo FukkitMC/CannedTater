@@ -1,8 +1,0 @@
---- a/net/minecraft/world/WorldAccess.java
-+++ b/net/minecraft/world/WorldAccess.java
-@@ -54,3 +54,5 @@
-       this.syncWorldEvent((PlayerEntity)null, eventId, pos, data);
-    }
- }
-+
-+// Fukkit Marker

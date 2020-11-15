@@ -1,8 +1,0 @@
---- a/net/minecraft/block/PressurePlateBlock.java
-+++ b/net/minecraft/block/PressurePlateBlock.java
-@@ -84,3 +84,5 @@
-       MOBS;
-    }
- }
-+
-+// Fukkit Marker

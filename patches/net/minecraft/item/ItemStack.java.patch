@@ -1,8 +1,0 @@
---- a/net/minecraft/item/ItemStack.java
-+++ b/net/minecraft/item/ItemStack.java
-@@ -760,3 +760,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

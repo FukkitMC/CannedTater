@@ -1,8 +1,0 @@
---- a/net/minecraft/server/command/ReloadCommand.java
-+++ b/net/minecraft/server/command/ReloadCommand.java
-@@ -50,3 +50,5 @@
-       }));
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/server/dedicated/gui/DedicatedServerGui.java
-+++ b/net/minecraft/server/dedicated/gui/DedicatedServerGui.java
-@@ -175,3 +175,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

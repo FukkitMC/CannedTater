@@ -1,8 +1,0 @@
---- a/net/minecraft/world/WanderingTraderManager.java
-+++ b/net/minecraft/world/WanderingTraderManager.java
-@@ -147,3 +147,5 @@
-       return true;
-    }
- }
-+
-+// Fukkit Marker

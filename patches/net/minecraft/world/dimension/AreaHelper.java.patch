@@ -1,8 +1,0 @@
---- a/net/minecraft/world/dimension/AreaHelper.java
-+++ b/net/minecraft/world/dimension/AreaHelper.java
-@@ -202,3 +202,5 @@
-       return new TeleportTarget(vec3d4, vec3d3, f + (float)i, g);
-    }
- }
-+
-+// Fukkit Marker

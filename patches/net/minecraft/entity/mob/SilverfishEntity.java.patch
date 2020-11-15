@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/mob/SilverfishEntity.java
-+++ b/net/minecraft/entity/mob/SilverfishEntity.java
-@@ -221,3 +221,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/block/dispenser/BoatDispenserBehavior.java
-+++ b/net/minecraft/block/dispenser/BoatDispenserBehavior.java
-@@ -47,3 +47,5 @@
-       pointer.getWorld().syncWorldEvent(1000, pointer.getBlockPos(), 0);
-    }
- }
-+
-+// Fukkit Marker

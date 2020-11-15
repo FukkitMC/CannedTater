@@ -1,8 +1,0 @@
---- a/net/minecraft/recipe/Ingredient.java
-+++ b/net/minecraft/recipe/Ingredient.java
-@@ -215,3 +215,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

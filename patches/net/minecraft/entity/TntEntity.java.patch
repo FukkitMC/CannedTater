@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/TntEntity.java
-+++ b/net/minecraft/entity/TntEntity.java
-@@ -118,3 +118,5 @@
-       return new EntitySpawnS2CPacket(this);
-    }
- }
-+
-+// Fukkit Marker

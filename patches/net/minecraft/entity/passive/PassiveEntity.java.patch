@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/PassiveEntity.java
-+++ b/net/minecraft/entity/passive/PassiveEntity.java
-@@ -184,3 +184,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

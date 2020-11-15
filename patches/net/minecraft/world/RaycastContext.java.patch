@@ -1,8 +1,0 @@
---- a/net/minecraft/world/RaycastContext.java
-+++ b/net/minecraft/world/RaycastContext.java
-@@ -78,3 +78,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

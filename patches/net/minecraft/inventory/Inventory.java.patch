@@ -1,8 +1,0 @@
---- a/net/minecraft/inventory/Inventory.java
-+++ b/net/minecraft/inventory/Inventory.java
-@@ -91,3 +91,5 @@
-       return false;
-    }
- }
-+
-+// Fukkit Marker

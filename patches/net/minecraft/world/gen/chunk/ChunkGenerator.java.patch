@@ -1,8 +1,0 @@
---- a/net/minecraft/world/gen/chunk/ChunkGenerator.java
-+++ b/net/minecraft/world/gen/chunk/ChunkGenerator.java
-@@ -332,3 +332,5 @@
-       Registry.register(Registry.CHUNK_GENERATOR, "debug", DebugChunkGenerator.CODEC);
-    }
- }
-+
-+// Fukkit Marker

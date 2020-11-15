@@ -1,8 +1,0 @@
---- a/net/minecraft/block/ComparatorBlock.java
-+++ b/net/minecraft/block/ComparatorBlock.java
-@@ -153,3 +153,5 @@
-       builder.add(FACING, MODE, POWERED);
-    }
- }
-+
-+// Fukkit Marker

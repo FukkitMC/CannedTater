@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/DolphinEntity.java
-+++ b/net/minecraft/entity/passive/DolphinEntity.java
-@@ -580,3 +580,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

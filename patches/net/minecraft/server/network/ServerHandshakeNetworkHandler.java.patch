@@ -1,8 +1,0 @@
---- a/net/minecraft/server/network/ServerHandshakeNetworkHandler.java
-+++ b/net/minecraft/server/network/ServerHandshakeNetworkHandler.java
-@@ -60,3 +60,5 @@
-       return this.connection;
-    }
- }
-+
-+// Fukkit Marker

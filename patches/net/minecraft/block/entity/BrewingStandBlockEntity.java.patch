@@ -1,8 +1,0 @@
---- a/net/minecraft/block/entity/BrewingStandBlockEntity.java
-+++ b/net/minecraft/block/entity/BrewingStandBlockEntity.java
-@@ -269,3 +269,5 @@
-       return new BrewingStandScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/block/WeightedPressurePlateBlock.java
-+++ b/net/minecraft/block/WeightedPressurePlateBlock.java
-@@ -56,3 +56,5 @@
-       builder.add(POWER);
-    }
- }
-+
-+// Fukkit Marker

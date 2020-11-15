@@ -1,8 +1,0 @@
---- a/net/minecraft/screen/ForgingScreenHandler.java
-+++ b/net/minecraft/screen/ForgingScreenHandler.java
-@@ -124,3 +124,5 @@
-       return itemStack;
-    }
- }
-+
-+// Fukkit Marker

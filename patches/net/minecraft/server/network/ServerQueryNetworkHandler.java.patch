@@ -1,8 +1,0 @@
---- a/net/minecraft/server/network/ServerQueryNetworkHandler.java
-+++ b/net/minecraft/server/network/ServerQueryNetworkHandler.java
-@@ -42,3 +42,5 @@
-       this.connection.disconnect(REQUEST_HANDLED);
-    }
- }
-+
-+// Fukkit Marker

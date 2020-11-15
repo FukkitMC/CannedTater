@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/mob/EndermanEntity.java
-+++ b/net/minecraft/entity/mob/EndermanEntity.java
-@@ -523,3 +523,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

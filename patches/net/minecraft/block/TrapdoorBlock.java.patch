@@ -1,8 +1,0 @@
---- a/net/minecraft/block/TrapdoorBlock.java
-+++ b/net/minecraft/block/TrapdoorBlock.java
-@@ -146,3 +146,5 @@
-       return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
-    }
- }
-+
-+// Fukkit Marker

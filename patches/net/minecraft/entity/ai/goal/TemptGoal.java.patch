@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/ai/goal/TemptGoal.java
-+++ b/net/minecraft/entity/ai/goal/TemptGoal.java
-@@ -112,3 +112,5 @@
-       return this.active;
-    }
- }
-+
-+// Fukkit Marker

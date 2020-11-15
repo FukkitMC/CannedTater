@@ -1,8 +1,0 @@
---- a/net/minecraft/block/SweetBerryBushBlock.java
-+++ b/net/minecraft/block/SweetBerryBushBlock.java
-@@ -100,3 +100,5 @@
-       world.setBlockState(pos, state.with(AGE, Integer.valueOf(i)), 2);
-    }
- }
-+
-+// Fukkit Marker

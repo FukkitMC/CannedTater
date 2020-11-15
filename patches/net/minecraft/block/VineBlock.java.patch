@@ -1,8 +1,0 @@
---- a/net/minecraft/block/VineBlock.java
-+++ b/net/minecraft/block/VineBlock.java
-@@ -320,3 +320,5 @@
-       return (BooleanProperty)FACING_PROPERTIES.get(direction);
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/mob/HuskEntity.java
-+++ b/net/minecraft/entity/mob/HuskEntity.java
-@@ -71,3 +71,5 @@
-       return ItemStack.EMPTY;
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/world/ChunkRegion.java
-+++ b/net/minecraft/world/ChunkRegion.java
-@@ -338,3 +338,5 @@
-       return this.field_26822.getStructuresWithChildren(pos, feature);
-    }
- }
-+
-+// Fukkit Marker

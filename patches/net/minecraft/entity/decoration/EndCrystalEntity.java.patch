@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/decoration/EndCrystalEntity.java
-+++ b/net/minecraft/entity/decoration/EndCrystalEntity.java
-@@ -134,3 +134,5 @@
-       return new EntitySpawnS2CPacket(this);
-    }
- }
-+
-+// Fukkit Marker

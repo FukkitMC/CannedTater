@@ -1,8 +1,0 @@
---- a/net/minecraft/screen/StonecutterScreenHandler.java
-+++ b/net/minecraft/screen/StonecutterScreenHandler.java
-@@ -194,3 +194,5 @@
-       this.context.run((BiConsumer<World, BlockPos>)((world, blockPos) -> this.dropInventory(player, player.world, this.input)));
-    }
- }
-+
-+// Fukkit Marker

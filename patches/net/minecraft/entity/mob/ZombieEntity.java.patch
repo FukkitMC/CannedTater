@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/mob/ZombieEntity.java
-+++ b/net/minecraft/entity/mob/ZombieEntity.java
-@@ -527,3 +527,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

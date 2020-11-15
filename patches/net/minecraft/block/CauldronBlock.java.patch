@@ -1,8 +1,0 @@
---- a/net/minecraft/block/CauldronBlock.java
-+++ b/net/minecraft/block/CauldronBlock.java
-@@ -218,3 +218,5 @@
-       return false;
-    }
- }
-+
-+// Fukkit Marker

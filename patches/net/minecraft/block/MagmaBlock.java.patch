@@ -1,8 +1,0 @@
---- a/net/minecraft/block/MagmaBlock.java
-+++ b/net/minecraft/block/MagmaBlock.java
-@@ -54,3 +54,5 @@
-       world.getBlockTickScheduler().schedule(pos, this, 20);
-    }
- }
-+
-+// Fukkit Marker

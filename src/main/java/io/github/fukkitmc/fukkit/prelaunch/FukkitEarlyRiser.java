@@ -7,14 +7,11 @@ import org.objectweb.asm.tree.ClassNode;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.Collection;
 
 public class FukkitEarlyRiser {
 
@@ -31,46 +28,20 @@ public class FukkitEarlyRiser {
                 String name = file.toString();
 
                 if (name.endsWith(".class") && name.startsWith("net")) {
-                    ClassNode node = new ClassNode();
-                    byte[] bytes = Files.readAllBytes(f);
-                    new ClassReader(bytes).accept(node, 0);
+                    ClassNode patch = new ClassNode();
+                    byte[] patchBytes = Files.readAllBytes(f);
+                    new ClassReader(patchBytes).accept(patch, 0);
 
                     String actualName = name.substring(0, name.length() - 6).replace(File.separatorChar, '.');
 
-                    ClassTinkerers.define(actualName, bytes);
-                    ClassTinkerers.addReplacement(actualName, n -> {
-                        try {
-                            reset(n);
-                        } catch (IllegalAccessException exception) {
-                            throw new RuntimeException(exception);
-                        }
-
-                        node.accept(n);
+                    ClassTinkerers.define(actualName, patchBytes);
+                    ClassTinkerers.addReplacement(actualName, original -> {
+                        FukkitPatcher.merge(original, patch);
                     });
                 }
 
                 return FileVisitResult.CONTINUE;
             }
         });
-    }
-
-    private static void reset(ClassNode node) throws IllegalAccessException {
-        for (Field field : ClassNode.class.getFields()) {
-            if (Modifier.isStatic(field.getModifiers())) {
-                continue;
-            }
-
-            if (field.getType().isPrimitive()) {
-                field.set(node, 0);
-            } else if (Collection.class.isAssignableFrom(field.getType())) {
-                Collection<?> collection = (Collection<?>) field.get(node);
-
-                if (collection != null) {
-                    collection.clear();
-                }
-            } else {
-                field.set(node, null);
-            }
-        }
     }
 }

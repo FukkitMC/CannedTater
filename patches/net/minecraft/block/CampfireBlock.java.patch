@@ -1,8 +1,0 @@
---- a/net/minecraft/block/CampfireBlock.java
-+++ b/net/minecraft/block/CampfireBlock.java
-@@ -234,3 +234,5 @@
-       return blockState.method_27851(BlockTags.CAMPFIRES, (abstractBlockState) -> abstractBlockState.contains(Properties.WATERLOGGED) && abstractBlockState.contains(Properties.LIT)) && !blockState.get(Properties.WATERLOGGED) && !blockState.get(Properties.LIT);
-    }
- }
-+
-+// Fukkit Marker

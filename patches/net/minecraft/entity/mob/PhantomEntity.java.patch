@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/mob/PhantomEntity.java
-+++ b/net/minecraft/entity/mob/PhantomEntity.java
-@@ -470,3 +470,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

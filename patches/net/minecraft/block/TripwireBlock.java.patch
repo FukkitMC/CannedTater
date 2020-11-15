@@ -1,8 +1,0 @@
---- a/net/minecraft/block/TripwireBlock.java
-+++ b/net/minecraft/block/TripwireBlock.java
-@@ -171,3 +171,5 @@
-       builder.add(POWERED, ATTACHED, DISARMED, NORTH, EAST, WEST, SOUTH);
-    }
- }
-+
-+// Fukkit Marker

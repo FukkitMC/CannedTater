@@ -1,8 +1,0 @@
---- a/net/minecraft/block/AbstractPlantStemBlock.java
-+++ b/net/minecraft/block/AbstractPlantStemBlock.java
-@@ -90,3 +90,5 @@
-       return this;
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/block/FenceGateBlock.java
-+++ b/net/minecraft/block/FenceGateBlock.java
-@@ -138,3 +138,5 @@
-       return ((Direction)state.get(FACING)).getAxis() == side.rotateYClockwise().getAxis();
-    }
- }
-+
-+// Fukkit Marker

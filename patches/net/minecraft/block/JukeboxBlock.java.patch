@@ -1,8 +1,0 @@
---- a/net/minecraft/block/JukeboxBlock.java
-+++ b/net/minecraft/block/JukeboxBlock.java
-@@ -117,3 +117,5 @@
-       builder.add(HAS_RECORD);
-    }
- }
-+
-+// Fukkit Marker

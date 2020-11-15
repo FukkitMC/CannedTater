@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/projectile/thrown/ExperienceBottleEntity.java
-+++ b/net/minecraft/entity/projectile/thrown/ExperienceBottleEntity.java
-@@ -48,3 +48,5 @@
- 
-    }
- }
-+
-+// Fukkit Marker

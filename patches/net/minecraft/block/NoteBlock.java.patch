@@ -1,8 +1,0 @@
---- a/net/minecraft/block/NoteBlock.java
-+++ b/net/minecraft/block/NoteBlock.java
-@@ -87,3 +87,5 @@
-       builder.add(INSTRUMENT, POWERED, NOTE);
-    }
- }
-+
-+// Fukkit Marker
