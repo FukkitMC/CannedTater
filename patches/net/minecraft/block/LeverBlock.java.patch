@@ -1,8 +1,0 @@
---- a/net/minecraft/block/LeverBlock.java
-+++ b/net/minecraft/block/LeverBlock.java
-@@ -131,3 +131,5 @@
-       builder.add(FACE, FACING, POWERED);
-    }
- }
-+
-+// Fukkit Marker

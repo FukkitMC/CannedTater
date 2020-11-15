@@ -1,8 +1,0 @@
---- a/net/minecraft/datafixer/fix/ItemInstanceTheFlatteningFix.java
-+++ b/net/minecraft/datafixer/fix/ItemInstanceTheFlatteningFix.java
-@@ -389,3 +389,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

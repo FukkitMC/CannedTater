@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/mob/ZombieVillagerEntity.java
-+++ b/net/minecraft/entity/mob/ZombieVillagerEntity.java
-@@ -285,3 +285,5 @@
-       this.xp = xp;
-    }
- }
-+
-+// Fukkit Marker

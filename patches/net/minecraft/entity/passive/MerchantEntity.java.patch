@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/MerchantEntity.java
-+++ b/net/minecraft/entity/passive/MerchantEntity.java
-@@ -220,3 +220,5 @@
- 
-    }
- }
-+
-+// Fukkit Marker

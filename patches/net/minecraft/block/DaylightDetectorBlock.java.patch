@@ -1,8 +1,0 @@
---- a/net/minecraft/block/DaylightDetectorBlock.java
-+++ b/net/minecraft/block/DaylightDetectorBlock.java
-@@ -92,3 +92,5 @@
-       builder.add(POWER, INVERTED);
-    }
- }
-+
-+// Fukkit Marker

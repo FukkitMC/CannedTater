@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/effect/StatusEffects.java
-+++ b/net/minecraft/entity/effect/StatusEffects.java
-@@ -65,3 +65,5 @@
-       return Registry.register(Registry.STATUS_EFFECT, rawId, id, entry);
-    }
- }
-+
-+// Fukkit Marker

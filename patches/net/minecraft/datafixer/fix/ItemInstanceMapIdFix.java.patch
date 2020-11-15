@@ -1,8 +1,0 @@
---- a/net/minecraft/datafixer/fix/ItemInstanceMapIdFix.java
-+++ b/net/minecraft/datafixer/fix/ItemInstanceMapIdFix.java
-@@ -37,3 +37,5 @@
-       });
-    }
- }
-+
-+// Fukkit Marker

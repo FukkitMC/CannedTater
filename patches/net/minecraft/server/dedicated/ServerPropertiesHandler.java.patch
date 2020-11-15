@@ -1,8 +1,0 @@
---- a/net/minecraft/server/dedicated/ServerPropertiesHandler.java
-+++ b/net/minecraft/server/dedicated/ServerPropertiesHandler.java
-@@ -97,3 +97,5 @@
-       return new ServerPropertiesHandler(properties, dynamicRegistryManager);
-    }
- }
-+
-+// Fukkit Marker

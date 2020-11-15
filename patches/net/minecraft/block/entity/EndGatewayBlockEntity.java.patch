@@ -1,8 +1,0 @@
---- a/net/minecraft/block/entity/EndGatewayBlockEntity.java
-+++ b/net/minecraft/block/entity/EndGatewayBlockEntity.java
-@@ -256,3 +256,5 @@
-       this.exitPortalPos = pos;
-    }
- }
-+
-+// Fukkit Marker

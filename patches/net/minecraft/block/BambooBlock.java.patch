@@ -1,8 +1,0 @@
---- a/net/minecraft/block/BambooBlock.java
-+++ b/net/minecraft/block/BambooBlock.java
-@@ -199,3 +199,5 @@
-       return i;
-    }
- }
-+
-+// Fukkit Marker

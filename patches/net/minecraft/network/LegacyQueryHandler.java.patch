@@ -1,8 +1,0 @@
---- a/net/minecraft/network/LegacyQueryHandler.java
-+++ b/net/minecraft/network/LegacyQueryHandler.java
-@@ -103,3 +103,5 @@
-       return byteBuf;
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/block/entity/DispenserBlockEntity.java
-+++ b/net/minecraft/block/entity/DispenserBlockEntity.java
-@@ -88,3 +88,5 @@
-       return new Generic3x3ContainerScreenHandler(syncId, playerInventory, this);
-    }
- }
-+
-+// Fukkit Marker

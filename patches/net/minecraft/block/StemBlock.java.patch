@@ -1,8 +1,0 @@
---- a/net/minecraft/block/StemBlock.java
-+++ b/net/minecraft/block/StemBlock.java
-@@ -79,3 +79,5 @@
-       return this.gourdBlock;
-    }
- }
-+
-+// Fukkit Marker

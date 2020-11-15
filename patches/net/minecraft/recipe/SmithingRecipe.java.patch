@@ -1,8 +1,0 @@
---- a/net/minecraft/recipe/SmithingRecipe.java
-+++ b/net/minecraft/recipe/SmithingRecipe.java
-@@ -78,3 +78,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

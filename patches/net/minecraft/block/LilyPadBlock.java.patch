@@ -1,8 +1,0 @@
---- a/net/minecraft/block/LilyPadBlock.java
-+++ b/net/minecraft/block/LilyPadBlock.java
-@@ -35,3 +35,5 @@
-       return (fluidState.getFluid() == Fluids.WATER || floor.getMaterial() == Material.ICE) && fluidState2.getFluid() == Fluids.EMPTY;
-    }
- }
-+
-+// Fukkit Marker

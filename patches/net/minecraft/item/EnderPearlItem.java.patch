@@ -1,8 +1,0 @@
---- a/net/minecraft/item/EnderPearlItem.java
-+++ b/net/minecraft/item/EnderPearlItem.java
-@@ -33,3 +33,5 @@
-       return TypedActionResult.success(itemStack, world.isClient());
-    }
- }
-+
-+// Fukkit Marker

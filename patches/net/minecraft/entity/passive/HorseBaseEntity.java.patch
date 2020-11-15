@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/HorseBaseEntity.java
-+++ b/net/minecraft/entity/passive/HorseBaseEntity.java
-@@ -969,3 +969,5 @@
-       return super.initialize(world, difficulty, spawnReason, entityData, entityTag);
-    }
- }
-+
-+// Fukkit Marker

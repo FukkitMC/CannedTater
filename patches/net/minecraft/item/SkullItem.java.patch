@@ -1,8 +1,0 @@
---- a/net/minecraft/item/SkullItem.java
-+++ b/net/minecraft/item/SkullItem.java
-@@ -48,3 +48,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

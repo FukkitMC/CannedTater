@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/player/HungerManager.java
-+++ b/net/minecraft/entity/player/HungerManager.java
-@@ -112,3 +112,5 @@
-       this.foodLevel = foodLevel;
-    }
- }
-+
-+// Fukkit Marker

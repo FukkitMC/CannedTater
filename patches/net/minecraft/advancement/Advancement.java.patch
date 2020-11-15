@@ -1,8 +1,0 @@
---- a/net/minecraft/advancement/Advancement.java
-+++ b/net/minecraft/advancement/Advancement.java
-@@ -380,3 +380,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

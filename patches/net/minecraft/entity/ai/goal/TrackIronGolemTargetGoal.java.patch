@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/ai/goal/TrackIronGolemTargetGoal.java
-+++ b/net/minecraft/entity/ai/goal/TrackIronGolemTargetGoal.java
-@@ -48,3 +48,5 @@
-       super.start();
-    }
- }
-+
-+// Fukkit Marker

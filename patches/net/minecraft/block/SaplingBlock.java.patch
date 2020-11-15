@@ -1,8 +1,0 @@
---- a/net/minecraft/block/SaplingBlock.java
-+++ b/net/minecraft/block/SaplingBlock.java
-@@ -58,3 +58,5 @@
-       builder.add(STAGE);
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/world/border/WorldBorder.java
-+++ b/net/minecraft/world/border/WorldBorder.java
-@@ -458,3 +458,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

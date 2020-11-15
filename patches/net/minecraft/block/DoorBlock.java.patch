@@ -1,8 +1,0 @@
---- a/net/minecraft/block/DoorBlock.java
-+++ b/net/minecraft/block/DoorBlock.java
-@@ -217,3 +217,5 @@
-       return state.getBlock() instanceof DoorBlock && (state.getMaterial() == Material.WOOD || state.getMaterial() == Material.NETHER_WOOD);
-    }
- }
-+
-+// Fukkit Marker

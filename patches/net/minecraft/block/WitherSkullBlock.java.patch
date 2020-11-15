@@ -1,8 +1,0 @@
---- a/net/minecraft/block/WitherSkullBlock.java
-+++ b/net/minecraft/block/WitherSkullBlock.java
-@@ -103,3 +103,5 @@
-       return witherDispenserPattern;
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/block/entity/BarrelBlockEntity.java
-+++ b/net/minecraft/block/entity/BarrelBlockEntity.java
-@@ -134,3 +134,5 @@
-       this.world.playSound((PlayerEntity)null, d, e, f, soundEvent, SoundCategory.BLOCKS, 0.5F, this.world.random.nextFloat() * 0.1F + 0.9F);
-    }
- }
-+
-+// Fukkit Marker

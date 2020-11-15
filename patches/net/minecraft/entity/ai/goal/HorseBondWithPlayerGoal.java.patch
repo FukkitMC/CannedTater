@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/ai/goal/HorseBondWithPlayerGoal.java
-+++ b/net/minecraft/entity/ai/goal/HorseBondWithPlayerGoal.java
-@@ -69,3 +69,5 @@
- 
-    }
- }
-+
-+// Fukkit Marker

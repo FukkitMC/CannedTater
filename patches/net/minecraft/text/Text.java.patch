@@ -1,8 +1,0 @@
---- a/net/minecraft/text/Text.java
-+++ b/net/minecraft/text/Text.java
-@@ -373,3 +373,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

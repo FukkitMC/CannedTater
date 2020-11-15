@@ -1,8 +1,0 @@
---- a/net/minecraft/datafixer/Schemas.java
-+++ b/net/minecraft/datafixer/Schemas.java
-@@ -534,3 +534,5 @@
-       return (string3) -> Objects.equals(string3, string) ? string2 : string3;
-    }
- }
-+
-+// Fukkit Marker

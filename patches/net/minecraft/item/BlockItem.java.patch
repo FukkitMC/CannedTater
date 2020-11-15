@@ -1,8 +1,0 @@
---- a/net/minecraft/item/BlockItem.java
-+++ b/net/minecraft/item/BlockItem.java
-@@ -186,3 +186,5 @@
-       map.put(this.getBlock(), item);
-    }
- }
-+
-+// Fukkit Marker

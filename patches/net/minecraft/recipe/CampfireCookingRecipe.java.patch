@@ -1,8 +1,0 @@
---- a/net/minecraft/recipe/CampfireCookingRecipe.java
-+++ b/net/minecraft/recipe/CampfireCookingRecipe.java
-@@ -12,3 +12,5 @@
-       return RecipeSerializer.CAMPFIRE_COOKING;
-    }
- }
-+
-+// Fukkit Marker

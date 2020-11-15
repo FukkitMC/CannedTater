@@ -1,8 +1,0 @@
---- a/net/minecraft/block/TripwireHookBlock.java
-+++ b/net/minecraft/block/TripwireHookBlock.java
-@@ -225,3 +225,5 @@
-       builder.add(FACING, POWERED, ATTACHED);
-    }
- }
-+
-+// Fukkit Marker

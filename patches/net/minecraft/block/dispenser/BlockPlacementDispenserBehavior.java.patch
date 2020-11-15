@@ -1,8 +1,0 @@
---- a/net/minecraft/block/dispenser/BlockPlacementDispenserBehavior.java
-+++ b/net/minecraft/block/dispenser/BlockPlacementDispenserBehavior.java
-@@ -23,3 +23,5 @@
-       return stack;
-    }
- }
-+
-+// Fukkit Marker

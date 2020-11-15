@@ -1,8 +1,0 @@
---- a/net/minecraft/recipe/Recipe.java
-+++ b/net/minecraft/recipe/Recipe.java
-@@ -41,3 +41,5 @@
- 
-    RecipeType<?> getType();
- }
-+
-+// Fukkit Marker

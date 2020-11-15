@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/mob/WitchEntity.java
-+++ b/net/minecraft/entity/mob/WitchEntity.java
-@@ -220,3 +220,5 @@
-       return false;
-    }
- }
-+
-+// Fukkit Marker

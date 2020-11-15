@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/projectile/FireballEntity.java
-+++ b/net/minecraft/entity/projectile/FireballEntity.java
-@@ -58,3 +58,5 @@
- 
-    }
- }
-+
-+// Fukkit Marker

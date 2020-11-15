@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/boss/dragon/EnderDragonEntity.java
-+++ b/net/minecraft/entity/boss/dragon/EnderDragonEntity.java
-@@ -835,3 +835,5 @@
-       return false;
-    }
- }
-+
-+// Fukkit Marker

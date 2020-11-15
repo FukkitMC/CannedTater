@@ -1,8 +1,0 @@
---- a/net/minecraft/block/LeavesBlock.java
-+++ b/net/minecraft/block/LeavesBlock.java
-@@ -88,3 +88,5 @@
-       return updateDistanceFromLogs(this.getDefaultState().with(PERSISTENT, Boolean.valueOf(true)), ctx.getWorld(), ctx.getBlockPos());
-    }
- }
-+
-+// Fukkit Marker

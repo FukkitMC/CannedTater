@@ -1,8 +1,0 @@
---- a/net/minecraft/item/MilkBucketItem.java
-+++ b/net/minecraft/item/MilkBucketItem.java
-@@ -45,3 +45,5 @@
-       return ItemUsage.consumeHeldItem(world, user, hand);
-    }
- }
-+
-+// Fukkit Marker

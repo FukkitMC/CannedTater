@@ -1,8 +1,0 @@
---- a/net/minecraft/server/network/ServerPlayerInteractionManager.java
-+++ b/net/minecraft/server/network/ServerPlayerInteractionManager.java
-@@ -336,3 +336,5 @@
-       this.world = world;
-    }
- }
-+
-+// Fukkit Marker

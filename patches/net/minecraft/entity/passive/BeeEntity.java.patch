@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/BeeEntity.java
-+++ b/net/minecraft/entity/passive/BeeEntity.java
-@@ -1144,3 +1144,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

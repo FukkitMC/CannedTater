@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/AreaEffectCloudEntity.java
-+++ b/net/minecraft/entity/AreaEffectCloudEntity.java
-@@ -405,3 +405,5 @@
-       return EntityDimensions.changing(this.getRadius() * 2.0F, 0.5F);
-    }
- }
-+
-+// Fukkit Marker

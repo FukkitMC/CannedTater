@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/ai/goal/FollowTargetGoal.java
-+++ b/net/minecraft/entity/ai/goal/FollowTargetGoal.java
-@@ -63,3 +63,5 @@
-       this.targetEntity = targetEntity;
-    }
- }
-+
-+// Fukkit Marker

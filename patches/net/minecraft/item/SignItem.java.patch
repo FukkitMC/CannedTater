@@ -1,8 +1,0 @@
---- a/net/minecraft/item/SignItem.java
-+++ b/net/minecraft/item/SignItem.java
-@@ -22,3 +22,5 @@
-       return bl;
-    }
- }
-+
-+// Fukkit Marker

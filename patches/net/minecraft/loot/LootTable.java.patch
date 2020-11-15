@@ -1,8 +1,0 @@
---- a/net/minecraft/loot/LootTable.java
-+++ b/net/minecraft/loot/LootTable.java
-@@ -243,3 +243,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

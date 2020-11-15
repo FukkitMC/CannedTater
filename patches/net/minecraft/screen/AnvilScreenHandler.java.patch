@@ -1,8 +1,0 @@
---- a/net/minecraft/screen/AnvilScreenHandler.java
-+++ b/net/minecraft/screen/AnvilScreenHandler.java
-@@ -264,3 +264,5 @@
-       this.updateResult();
-    }
- }
-+
-+// Fukkit Marker

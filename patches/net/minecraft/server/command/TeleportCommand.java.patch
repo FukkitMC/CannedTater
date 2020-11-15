@@ -1,8 +1,0 @@
---- a/net/minecraft/server/command/TeleportCommand.java
-+++ b/net/minecraft/server/command/TeleportCommand.java
-@@ -190,3 +190,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

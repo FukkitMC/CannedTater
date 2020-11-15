@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/ai/goal/FollowOwnerGoal.java
-+++ b/net/minecraft/entity/ai/goal/FollowOwnerGoal.java
-@@ -138,3 +138,5 @@
-       return this.tameable.getRandom().nextInt(max - min + 1) + min;
-    }
- }
-+
-+// Fukkit Marker

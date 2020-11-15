@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/vehicle/BoatEntity.java
-+++ b/net/minecraft/entity/vehicle/BoatEntity.java
-@@ -842,3 +842,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

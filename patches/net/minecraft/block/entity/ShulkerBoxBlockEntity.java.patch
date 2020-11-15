@@ -1,8 +1,0 @@
---- a/net/minecraft/block/entity/ShulkerBoxBlockEntity.java
-+++ b/net/minecraft/block/entity/ShulkerBoxBlockEntity.java
-@@ -279,3 +279,5 @@
-       CLOSING;
-    }
- }
-+
-+// Fukkit Marker

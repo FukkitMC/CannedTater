@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/mob/SpellcastingIllagerEntity.java
-+++ b/net/minecraft/entity/mob/SpellcastingIllagerEntity.java
-@@ -201,3 +201,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

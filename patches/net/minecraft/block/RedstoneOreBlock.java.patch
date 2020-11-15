@@ -1,8 +1,0 @@
---- a/net/minecraft/block/RedstoneOreBlock.java
-+++ b/net/minecraft/block/RedstoneOreBlock.java
-@@ -97,3 +97,5 @@
-       builder.add(LIT);
-    }
- }
-+
-+// Fukkit Marker

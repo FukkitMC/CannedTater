@@ -1,8 +1,0 @@
---- a/net/minecraft/block/LecternBlock.java
-+++ b/net/minecraft/block/LecternBlock.java
-@@ -250,3 +250,5 @@
-       return false;
-    }
- }
-+
-+// Fukkit Marker

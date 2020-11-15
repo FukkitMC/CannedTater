@@ -1,8 +1,0 @@
---- a/net/minecraft/world/World.java
-+++ b/net/minecraft/world/World.java
-@@ -1013,3 +1013,5 @@
-       return this.debugWorld;
-    }
- }
-+
-+// Fukkit Marker

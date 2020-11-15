@@ -1,8 +1,0 @@
---- a/net/minecraft/enchantment/FrostWalkerEnchantment.java
-+++ b/net/minecraft/enchantment/FrostWalkerEnchantment.java
-@@ -59,3 +59,5 @@
-       return super.canAccept(other) && other != Enchantments.DEPTH_STRIDER;
-    }
- }
-+
-+// Fukkit Marker

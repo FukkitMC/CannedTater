@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/projectile/ProjectileEntity.java
-+++ b/net/minecraft/entity/projectile/ProjectileEntity.java
-@@ -145,3 +145,5 @@
-       return MathHelper.lerp(0.2F, f, g);
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/block/FireBlock.java
-+++ b/net/minecraft/block/FireBlock.java
-@@ -400,3 +400,5 @@
-       fireBlock.registerFlammableBlock(Blocks.BEE_NEST, 30, 20);
-    }
- }
-+
-+// Fukkit Marker

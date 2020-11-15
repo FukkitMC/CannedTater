@@ -1,8 +1,0 @@
---- a/net/minecraft/item/BoatItem.java
-+++ b/net/minecraft/item/BoatItem.java
-@@ -67,3 +67,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

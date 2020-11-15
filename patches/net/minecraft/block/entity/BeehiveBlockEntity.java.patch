@@ -1,8 +1,0 @@
---- a/net/minecraft/block/entity/BeehiveBlockEntity.java
-+++ b/net/minecraft/block/entity/BeehiveBlockEntity.java
-@@ -304,3 +304,5 @@
-       EMERGENCY;
-    }
- }
-+
-+// Fukkit Marker

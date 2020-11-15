@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/ai/brain/task/LookTargetUtil.java
-+++ b/net/minecraft/entity/ai/brain/task/LookTargetUtil.java
-@@ -144,3 +144,5 @@
-       return (Stream)villager.getBrain().getOptionalMemory(MemoryModuleType.MOBS).map((list) -> list.stream().filter((livingEntity) -> livingEntity instanceof VillagerEntity && livingEntity != villager).map((livingEntity) -> (VillagerEntity)livingEntity).filter(LivingEntity::isAlive).filter(filter)).orElseGet(Stream::empty);
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/block/CakeBlock.java
-+++ b/net/minecraft/block/CakeBlock.java
-@@ -87,3 +87,5 @@
-       return false;
-    }
- }
-+
-+// Fukkit Marker

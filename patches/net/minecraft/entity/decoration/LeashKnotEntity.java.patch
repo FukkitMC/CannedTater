@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/decoration/LeashKnotEntity.java
-+++ b/net/minecraft/entity/decoration/LeashKnotEntity.java
-@@ -128,3 +128,5 @@
-       return new EntitySpawnS2CPacket(this, this.getType(), 0, this.getDecorationBlockPos());
-    }
- }
-+
-+// Fukkit Marker

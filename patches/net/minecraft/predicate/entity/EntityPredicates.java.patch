@@ -1,8 +1,0 @@
---- a/net/minecraft/predicate/entity/EntityPredicates.java
-+++ b/net/minecraft/predicate/entity/EntityPredicates.java
-@@ -121,3 +121,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

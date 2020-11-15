@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/projectile/TridentEntity.java
-+++ b/net/minecraft/entity/projectile/TridentEntity.java
-@@ -184,3 +184,5 @@
-       return 0.99F;
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/ItemEntity.java
-+++ b/net/minecraft/entity/ItemEntity.java
-@@ -381,3 +381,5 @@
-       return new EntitySpawnS2CPacket(this);
-    }
- }
-+
-+// Fukkit Marker

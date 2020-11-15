@@ -1,8 +1,0 @@
---- a/net/minecraft/block/WitherRoseBlock.java
-+++ b/net/minecraft/block/WitherRoseBlock.java
-@@ -32,3 +32,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

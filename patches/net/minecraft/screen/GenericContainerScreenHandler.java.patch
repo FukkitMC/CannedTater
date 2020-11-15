@@ -1,8 +1,0 @@
---- a/net/minecraft/screen/GenericContainerScreenHandler.java
-+++ b/net/minecraft/screen/GenericContainerScreenHandler.java
-@@ -110,3 +110,5 @@
-       return this.inventory;
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/block/TntBlock.java
-+++ b/net/minecraft/block/TntBlock.java
-@@ -115,3 +115,5 @@
-       builder.add(UNSTABLE);
-    }
- }
-+
-+// Fukkit Marker

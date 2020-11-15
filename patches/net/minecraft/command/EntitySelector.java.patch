@@ -1,8 +1,0 @@
---- a/net/minecraft/command/EntitySelector.java
-+++ b/net/minecraft/command/EntitySelector.java
-@@ -210,3 +210,5 @@
-       return Texts.join(list, Entity::getDisplayName);
-    }
- }
-+
-+// Fukkit Marker

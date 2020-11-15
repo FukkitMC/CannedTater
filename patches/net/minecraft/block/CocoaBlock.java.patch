@@ -1,8 +1,0 @@
---- a/net/minecraft/block/CocoaBlock.java
-+++ b/net/minecraft/block/CocoaBlock.java
-@@ -105,3 +105,5 @@
-       return false;
-    }
- }
-+
-+// Fukkit Marker

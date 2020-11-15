@@ -1,8 +1,0 @@
---- a/net/minecraft/block/SpawnerBlock.java
-+++ b/net/minecraft/block/SpawnerBlock.java
-@@ -26,3 +26,5 @@
-       return BlockRenderType.MODEL;
-    }
- }
-+
-+// Fukkit Marker

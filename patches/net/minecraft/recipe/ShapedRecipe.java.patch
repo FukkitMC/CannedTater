@@ -1,8 +1,0 @@
---- a/net/minecraft/recipe/ShapedRecipe.java
-+++ b/net/minecraft/recipe/ShapedRecipe.java
-@@ -275,3 +275,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/projectile/ShulkerBulletEntity.java
-+++ b/net/minecraft/entity/projectile/ShulkerBulletEntity.java
-@@ -295,3 +295,5 @@
-       return new EntitySpawnS2CPacket(this);
-    }
- }
-+
-+// Fukkit Marker

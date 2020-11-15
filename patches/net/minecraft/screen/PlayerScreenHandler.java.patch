@@ -1,8 +1,0 @@
---- a/net/minecraft/screen/PlayerScreenHandler.java
-+++ b/net/minecraft/screen/PlayerScreenHandler.java
-@@ -183,3 +183,5 @@
-       return this.craftingInput;
-    }
- }
-+
-+// Fukkit Marker

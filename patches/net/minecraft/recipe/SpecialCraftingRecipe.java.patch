@@ -1,8 +1,0 @@
---- a/net/minecraft/recipe/SpecialCraftingRecipe.java
-+++ b/net/minecraft/recipe/SpecialCraftingRecipe.java
-@@ -22,3 +22,5 @@
-       return ItemStack.EMPTY;
-    }
- }
-+
-+// Fukkit Marker

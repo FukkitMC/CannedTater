@@ -1,8 +1,0 @@
---- a/net/minecraft/item/SnowballItem.java
-+++ b/net/minecraft/item/SnowballItem.java
-@@ -32,3 +32,5 @@
-       return TypedActionResult.success(itemStack, world.isClient());
-    }
- }
-+
-+// Fukkit Marker

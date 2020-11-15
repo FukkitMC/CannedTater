@@ -1,8 +1,0 @@
---- a/net/minecraft/recipe/BlastingRecipe.java
-+++ b/net/minecraft/recipe/BlastingRecipe.java
-@@ -12,3 +12,5 @@
-       return RecipeSerializer.BLASTING;
-    }
- }
-+
-+// Fukkit Marker

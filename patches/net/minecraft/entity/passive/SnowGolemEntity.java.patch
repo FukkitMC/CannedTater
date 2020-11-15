@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/passive/SnowGolemEntity.java
-+++ b/net/minecraft/entity/passive/SnowGolemEntity.java
-@@ -179,3 +179,5 @@
-       return SoundEvents.ENTITY_SNOW_GOLEM_DEATH;
-    }
- }
-+
-+// Fukkit Marker

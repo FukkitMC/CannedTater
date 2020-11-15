@@ -1,8 +1,0 @@
---- a/net/minecraft/screen/LecternScreenHandler.java
-+++ b/net/minecraft/screen/LecternScreenHandler.java
-@@ -71,3 +71,5 @@
-       return this.inventory.canPlayerUse(player);
-    }
- }
-+
-+// Fukkit Marker

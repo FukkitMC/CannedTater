@@ -1,8 +1,0 @@
---- a/net/minecraft/block/TurtleEggBlock.java
-+++ b/net/minecraft/block/TurtleEggBlock.java
-@@ -155,3 +155,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

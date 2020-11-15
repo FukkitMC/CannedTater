@@ -1,8 +1,0 @@
---- a/net/minecraft/entity/raid/RaiderEntity.java
-+++ b/net/minecraft/entity/raid/RaiderEntity.java
-@@ -494,3 +494,5 @@
-       }
-    }
- }
-+
-+// Fukkit Marker

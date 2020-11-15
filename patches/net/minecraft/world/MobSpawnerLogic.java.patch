@@ -1,8 +1,0 @@
---- a/net/minecraft/world/MobSpawnerLogic.java
-+++ b/net/minecraft/world/MobSpawnerLogic.java
-@@ -257,3 +257,5 @@
- 
-    public abstract BlockPos getPos();
- }
-+
-+// Fukkit Marker

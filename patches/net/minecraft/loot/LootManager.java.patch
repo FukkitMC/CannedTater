@@ -1,8 +1,0 @@
---- a/net/minecraft/loot/LootManager.java
-+++ b/net/minecraft/loot/LootManager.java
-@@ -66,3 +66,5 @@
-       return this.tables.keySet();
-    }
- }
-+
-+// Fukkit Marker

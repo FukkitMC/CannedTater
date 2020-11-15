@@ -1,8 +1,0 @@
---- a/net/minecraft/item/EndCrystalItem.java
-+++ b/net/minecraft/item/EndCrystalItem.java
-@@ -56,3 +56,5 @@
-       return true;
-    }
- }
-+
-+// Fukkit Marker
