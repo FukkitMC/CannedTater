@@ -1,6 +1,7 @@
 package io.github.fukkitmc.fukkit.prelaunch;
 
 import com.chocohead.mm.api.ClassTinkerers;
+import io.github.fukkitmc.fukkit.jar.Remapper;
 import net.fabricmc.loader.api.FabricLoader;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.tree.ClassNode;
@@ -19,6 +20,8 @@ public class FukkitEarlyRiser {
     }
 
     public static void run() throws IOException {
+        Remapper.run(); //TODO: yeef
+
         Path path = FabricLoader.getInstance().getModContainer("canned-tater").get().getRootPath();
 
         Files.walkFileTree(path, new SimpleFileVisitor<Path>() {

@@ -36,7 +36,10 @@ dependencies {
     include("com.github.Chocohead", "Fabric-ASM", "v2.1")
 
     // Nullable fixes
-    implementation("com.google.code.findbugs", "jsr305", "3.0.2");
+    implementation("com.google.code.findbugs", "jsr305", "3.0.2")
+
+    // CB Remapping
+    implementation("net.fabricmc", "tiny-remapper", "0.3.1.72")
 }
 
 sourceSets {
