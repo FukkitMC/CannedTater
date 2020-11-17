@@ -191,4 +191,33 @@ public class FukkitPatcher {
 
         return null;
     }
+
+    public static void overwrite(ClassNode original, ClassNode patch) {
+        original.version = 0;
+        original.access = 0;
+        original.name = null;
+        original.signature = null;
+        original.superName = null;
+        original.interfaces = new ArrayList<>();
+        original.sourceFile = null;
+        original.sourceDebug = null;
+        original.module = null;
+        original.outerClass = null;
+        original.outerMethod = null;
+        original.outerMethodDesc = null;
+        original.visibleAnnotations = new ArrayList<>();
+        original.invisibleAnnotations = new ArrayList<>();
+        original.visibleTypeAnnotations = new ArrayList<>();
+        original.invisibleTypeAnnotations = new ArrayList<>();
+        original.attrs = new ArrayList<>();
+        original.innerClasses = new ArrayList<>();
+        original.nestHostClass = null;
+        original.nestMembers = new ArrayList<>();
+        original.permittedSubclasses = new ArrayList<>();
+        original.recordComponents = new ArrayList<>();
+        original.fields = new ArrayList<>();
+        original.methods = new ArrayList<>();
+
+        patch.accept(original);
+    }
 }
