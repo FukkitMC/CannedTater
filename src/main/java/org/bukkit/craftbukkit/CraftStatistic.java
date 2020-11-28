@@ -133,7 +133,7 @@ public enum CraftStatistic {
     public static net.minecraft.stat.Stat getNMSStatistic(org.bukkit.Statistic bukkit) {
         Preconditions.checkArgument(bukkit.getType() == Statistic.Type.UNTYPED, "This method only accepts untyped statistics");
 
-        net.minecraft.stat.Stat<Identifier> nms = Stats.CUSTOM.b(statistics.inverse().get(bukkit));
+        net.minecraft.stat.Stat<Identifier> nms = Stats.CUSTOM.getOrCreateStat(statistics.inverse().get(bukkit));
         Preconditions.checkArgument(nms != null, "NMS Statistic %s does not exist", bukkit);
 
         return nms;
@@ -142,22 +142,22 @@ public enum CraftStatistic {
     public static net.minecraft.stat.Stat getMaterialStatistic(org.bukkit.Statistic stat, Material material) {
         try {
             if (stat == Statistic.MINE_BLOCK) {
-                return Stats.MINED.b(CraftMagicNumbers.getBlock(material));
+                return Stats.MINED.getOrCreateStat(CraftMagicNumbers.getBlock(material));
             }
             if (stat == Statistic.CRAFT_ITEM) {
-                return Stats.CRAFTED.b(CraftMagicNumbers.getItem(material));
+                return Stats.CRAFTED.getOrCreateStat(CraftMagicNumbers.getItem(material));
             }
             if (stat == Statistic.USE_ITEM) {
-                return Stats.USED.b(CraftMagicNumbers.getItem(material));
+                return Stats.USED.getOrCreateStat(CraftMagicNumbers.getItem(material));
             }
             if (stat == Statistic.BREAK_ITEM) {
-                return Stats.BROKEN.b(CraftMagicNumbers.getItem(material));
+                return Stats.BROKEN.getOrCreateStat(CraftMagicNumbers.getItem(material));
             }
             if (stat == Statistic.PICKUP) {
-                return Stats.PICKED_UP.b(CraftMagicNumbers.getItem(material));
+                return Stats.PICKED_UP.getOrCreateStat(CraftMagicNumbers.getItem(material));
             }
             if (stat == Statistic.DROP) {
-                return Stats.DROPPED.b(CraftMagicNumbers.getItem(material));
+                return Stats.DROPPED.getOrCreateStat(CraftMagicNumbers.getItem(material));
             }
         } catch (ArrayIndexOutOfBoundsException e) {
             return null;
@@ -170,10 +170,10 @@ public enum CraftStatistic {
             net.minecraft.entity.EntityType<?> nmsEntity = Registry.ENTITY_TYPE.get(new Identifier(entity.getName()));
 
             if (stat == org.bukkit.Statistic.KILL_ENTITY) {
-                return net.minecraft.stat.Stats.KILLED.b(nmsEntity);
+                return net.minecraft.stat.Stats.KILLED.getOrCreateStat(nmsEntity);
             }
             if (stat == org.bukkit.Statistic.ENTITY_KILLED_BY) {
-                return net.minecraft.stat.Stats.KILLED_BY.b(nmsEntity);
+                return net.minecraft.stat.Stats.KILLED_BY.getOrCreateStat(nmsEntity);
             }
         }
         return null;

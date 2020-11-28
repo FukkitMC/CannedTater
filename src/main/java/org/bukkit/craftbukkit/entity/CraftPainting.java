@@ -56,7 +56,7 @@ public class CraftPainting extends CraftHanging implements Painting {
 
     private void update() {
         ServerWorld world = ((CraftWorld) getWorld()).getHandle();
-        PaintingEntity painting = net.minecraft.entity.EntityType.PAINTING.a(world);
+        PaintingEntity painting = net.minecraft.entity.EntityType.PAINTING.create(world);
         painting.attachmentPos = getHandle().attachmentPos;
         painting.motive = getHandle().motive;
         painting.setFacing(getHandle().getHorizontalFacing());

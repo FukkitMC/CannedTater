@@ -342,7 +342,7 @@ public final class CraftLegacy {
                     if (propMap.isPresent()) {
                         CompoundTag properties = propMap.get();
                         for (String dataKey : properties.getKeys()) {
-                            Property state = states.a(dataKey);
+                            Property state = states.getProperty(dataKey);
 
                             if (state == null) {
                                 if (whitelistedStates.contains(dataKey)) {
@@ -400,7 +400,7 @@ public final class CraftLegacy {
                 stack.putInt("id", material.getId());
                 stack.putShort("Damage", data);
 
-                Dynamic<Tag> converted = Schemas.getFixer().update(TypeReferences.ITEM_STACK, new Dynamic<Tag>(NbtOps.a, stack), -1, CraftMagicNumbers.INSTANCE.getDataVersion());
+                Dynamic<Tag> converted = Schemas.getFixer().update(TypeReferences.ITEM_STACK, new Dynamic<Tag>(NbtOps.INSTANCE, stack), -1, CraftMagicNumbers.INSTANCE.getDataVersion());
 
                 String newId = converted.get("id").asString("");
                 // Recover spawn eggs with invalid data

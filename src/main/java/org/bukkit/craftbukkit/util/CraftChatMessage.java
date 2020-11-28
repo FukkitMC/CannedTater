@@ -45,11 +45,11 @@ public final class CraftChatMessage {
         // Separate pattern with no group 3, new lines are part of previous string
         private static final Pattern INCREMENTAL_PATTERN_KEEP_NEWLINES = Pattern.compile("(" + String.valueOf(org.bukkit.ChatColor.COLOR_CHAR) + "[0-9a-fk-orx])|((?:(?:https?):\\/\\/)?(?:[-\\w_\\.]{2,}\\.[a-z]{2,4}.*?(?=[\\.\\?!,;:]?(?:[" + String.valueOf(org.bukkit.ChatColor.COLOR_CHAR) + " ]|$))))", Pattern.CASE_INSENSITIVE);
         // ChatColor.b does not explicitly reset, its more of empty
-        private static final Style RESET = Style.a.withBold(false).withItalic(false).setUnderline(false).setStrikethrough(false).setRandom(false);
+        private static final Style RESET = Style.EMPTY.withBold(false).withItalic(false).setUnderline(false).setStrikethrough(false).setRandom(false);
 
         private final List<Text> list = new ArrayList<Text>();
         private MutableText currentChatComponent = new LiteralText("");
-        private Style modifier = Style.a;
+        private Style modifier = Style.EMPTY;
         private final Text[] output;
         private int currentIndex;
         private StringBuilder hex;
@@ -87,7 +87,7 @@ public final class CraftChatMessage {
                         hex.append(c);
 
                         if (hex.length() == 7) {
-                            modifier = RESET.withColor(TextColor.a(hex.toString()));
+                            modifier = RESET.withColor(TextColor.parse(hex.toString()));
                             hex = null;
                         }
                     } else if (format.isModifier() && format != Formatting.RESET) {
@@ -172,7 +172,7 @@ public final class CraftChatMessage {
     }
 
     public static String toJSON(Text component) {
-        return Text.Serializer.a(component);
+        return Text.Serializer.toJson(component);
     }
 
     public static String fromComponent(Text component) {

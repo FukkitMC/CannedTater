@@ -604,7 +604,7 @@ public abstract class CraftEntity implements org.bukkit.entity.Entity {
     public boolean addPassenger(org.bukkit.entity.Entity passenger) {
         Preconditions.checkArgument(passenger != null, "passenger == null");
 
-        return ((CraftEntity) passenger).getHandle().a(getHandle(), true);
+        return ((CraftEntity) passenger).getHandle().startRiding(getHandle(), true);
     }
 
     @Override

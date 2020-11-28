@@ -192,7 +192,7 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
         if (getHandle().networkHandler == null) return;
 
         for (Text component : CraftChatMessage.fromString(message)) {
-            getHandle().networkHandler.sendPacket(new GameMessageS2CPacket(component, MessageType.CHAT, Util.NIL_UUID));
+            getHandle().networkHandler.sendPacket(new GameMessageS2CPacket(component, MessageType.SYSTEM, Util.NIL_UUID));
         }
     }
 
@@ -472,7 +472,7 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
     public void playSound(Location loc, Sound sound, org.bukkit.SoundCategory category, float volume, float pitch) {
         if (loc == null || sound == null || category == null || getHandle().networkHandler == null) return;
 
-        PlaySoundS2CPacket packet = new PlaySoundS2CPacket(CraftSound.getSoundEffect(CraftSound.getSound(sound)), net.minecraft.sound.SoundCategory.valueOf(category.name()), loc.getX(), loc.getY(), loc.getZ(), volume, pitch);
+        PlaySoundS2CPacket packet = new PlaySoundS2CPacket(CraftSound.getSoundEffect(sound), net.minecraft.sound.SoundCategory.valueOf(category.name()), loc.getX(), loc.getY(), loc.getZ(), volume, pitch);
         getHandle().networkHandler.sendPacket(packet);
     }
 
@@ -496,7 +496,7 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
 
     @Override
     public void stopSound(Sound sound, org.bukkit.SoundCategory category) {
-        stopSound(CraftSound.getSound(sound), category);
+        stopSound(sound.getKey().getKey(), category);
     }
 
     @Override
@@ -615,7 +615,7 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
         Collection<MapIcon> icons = new ArrayList<MapIcon>();
         for (MapCursor cursor : data.cursors) {
             if (cursor.isVisible()) {
-                icons.add(new MapIcon(MapIcon.Type.a(cursor.getRawType()), cursor.getX(), cursor.getY(), cursor.getDirection(), CraftChatMessage.fromStringOrNull(cursor.getCaption())));
+                icons.add(new MapIcon(MapIcon.Type.byId(cursor.getRawType()), cursor.getX(), cursor.getY(), cursor.getDirection(), CraftChatMessage.fromStringOrNull(cursor.getCaption())));
             }
         }
 
@@ -946,7 +946,7 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
             throw new IllegalArgumentException("Mode cannot be null");
         }
 
-        getHandle().a(net.minecraft.world.GameMode.byId(mode.getValue()));
+        getHandle().setGameMode(net.minecraft.world.GameMode.byId(mode.getValue()));
     }
 
     @Override
@@ -1701,7 +1701,7 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
     public void updateCommands() {
         if (getHandle().networkHandler == null) return;
 
-        getHandle().server.getCommandManager().a(getHandle());
+        getHandle().server.getCommandManager().sendCommandTree(getHandle());
     }
 
     @Override

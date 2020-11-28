@@ -254,22 +254,22 @@ public class CraftChunk implements Chunk {
                 sectionEmpty[i] = true;
             } else { // Not empty
                 CompoundTag data = new CompoundTag();
-                cs[i].getContainer().a(data, "Palette", "BlockStates");
+                cs[i].getContainer().write(data, "Palette", "BlockStates");
 
-                PalettedContainer blockids = new PalettedContainer<>(ChunkSection.PALETTE, net.minecraft.block.Block.STATE_IDS, NbtHelper::c, NbtHelper::a, Blocks.AIR.getDefaultState()); // TODO: snapshot whole ChunkSection
-                blockids.a(data.getList("Palette", CraftMagicNumbers.NBT.TAG_COMPOUND), data.getLongArray("BlockStates"));
+                PalettedContainer blockids = new PalettedContainer<>(ChunkSection.PALETTE, net.minecraft.block.Block.STATE_IDS, NbtHelper::toBlockState, NbtHelper::fromBlockState, Blocks.AIR.getDefaultState()); // TODO: snapshot whole ChunkSection
+                blockids.read(data.getList("Palette", CraftMagicNumbers.NBT.TAG_COMPOUND), data.getLongArray("BlockStates"));
 
                 sectionBlockIDs[i] = blockids;
 
                 LightingProvider lightengine = chunk.world.getChunkManager().getLightingProvider();
-                ChunkNibbleArray skyLightArray = lightengine.a(LightType.SKY).a(ChunkSectionPos.a(x, i, z));
+                ChunkNibbleArray skyLightArray = lightengine.get(LightType.SKY).getLightSection(ChunkSectionPos.from(x, i, z));
                 if (skyLightArray == null) {
                     sectionSkyLights[i] = emptyLight;
                 } else {
                     sectionSkyLights[i] = new byte[2048];
                     System.arraycopy(skyLightArray.asByteArray(), 0, sectionSkyLights[i], 0, 2048);
                 }
-                ChunkNibbleArray emitLightArray = lightengine.a(LightType.BLOCK).a(ChunkSectionPos.a(x, i, z));
+                ChunkNibbleArray emitLightArray = lightengine.get(LightType.BLOCK).getLightSection(ChunkSectionPos.from(x, i, z));
                 if (emitLightArray == null) {
                     sectionEmitLights[i] = emptyLight;
                 } else {
@@ -306,7 +306,7 @@ public class CraftChunk implements Chunk {
 
         if (includeBiome || includeBiomeTempRain) {
             BiomeSource wcm = world.getHandle().getChunkManager().getChunkGenerator().getBiomeSource();
-            biome = new BiomeArray(world.getHandle().r().b(Registry.ay), new ChunkPos(x, z), wcm);
+            biome = new BiomeArray(world.getHandle().getRegistryManager().get(Registry.BIOME_KEY), new ChunkPos(x, z), wcm);
         }
 
         /* Fill with empty data */

@@ -457,7 +457,7 @@ public final class CraftServer implements Server {
 
         // Refresh commands
         for (ServerPlayerEntity player : getHandle().players) {
-            dispatcher.a(player);
+            dispatcher.sendCommandTree(player);
         }
     }
 
@@ -974,7 +974,7 @@ public final class CraftServer implements Server {
 
         LevelStorage.Session worldSession;
         try {
-            worldSession = LevelStorage.a(getWorldContainer().toPath()).c(name, actualDimension);
+            worldSession = LevelStorage.create(getWorldContainer().toPath()).c(name, actualDimension);
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
@@ -982,8 +982,8 @@ public final class CraftServer implements Server {
 
         boolean hardcore = creator.hardcore();
 
-        RegistryOps<Tag> registryreadops = RegistryOps.a((DynamicOps) NbtOps.a, console.serverResourceManager.h(), console.registryManager);
-        LevelProperties worlddata = (LevelProperties) worldSession.a((DynamicOps) registryreadops, console.datapackconfiguration);
+        RegistryOps<Tag> registryreadops = RegistryOps.of((DynamicOps) NbtOps.INSTANCE, console.serverResourceManager.getResourceManager(), console.registryManager);
+        LevelProperties worlddata = (LevelProperties) worldSession.readLevelProperties((DynamicOps) registryreadops, console.datapackconfiguration);
 
         LevelInfo worldSettings;
         // See MinecraftServer.a(String, String, long, WorldType, JsonElement)
@@ -994,7 +994,7 @@ public final class CraftServer implements Server {
             properties.put("generate-structures", Objects.toString(creator.generateStructures()));
             properties.put("level-type", Objects.toString(creator.type().getName()));
 
-            GeneratorOptions generatorsettings = GeneratorOptions.a(console.getRegistryManager(), properties);
+            GeneratorOptions generatorsettings = GeneratorOptions.fromProperties(console.getRegistryManager(), properties);
             worldSettings = new LevelInfo(name, net.minecraft.world.GameMode.byId(getDefaultGameMode().getValue()), hardcore, Difficulty.EASY, false, new GameRules(), console.datapackconfiguration);
             worlddata = new LevelProperties(worldSettings, generatorsettings, Lifecycle.stable());
         }
@@ -1004,27 +1004,27 @@ public final class CraftServer implements Server {
         if (console.options.has("forceUpgrade")) {
             net.minecraft.server.Main.forceUpgradeWorld(worldSession, Schemas.getFixer(), console.options.has("eraseCache"), () -> {
                 return true;
-            }, worlddata.getGeneratorOptions().d().getEntries().stream().map((entry) -> {
-                return RegistryKey.a(Registry.K, ((RegistryKey) entry.getKey()).a());
+            }, worlddata.getGeneratorOptions().getDimensions().getEntries().stream().map((entry) -> {
+                return RegistryKey.of(Registry.DIMENSION_TYPE_KEY, ((RegistryKey) entry.getKey()).getValue());
             }).collect(ImmutableSet.toImmutableSet()));
         }
 
         long j = BiomeAccess.hashSeed(creator.seed());
         List<Spawner> list = ImmutableList.of(new PhantomSpawner(), new PillagerSpawner(), new CatSpawner(), new ZombieSiegeManager(), new WanderingTraderManager(worlddata));
-        SimpleRegistry<DimensionOptions> registrymaterials = worlddata.getGeneratorOptions().d();
-        DimensionOptions worlddimension = (DimensionOptions) registrymaterials.a(actualDimension);
+        SimpleRegistry<DimensionOptions> registrymaterials = worlddata.getGeneratorOptions().getDimensions();
+        DimensionOptions worlddimension = (DimensionOptions) registrymaterials.get(actualDimension);
         DimensionType dimensionmanager;
         net.minecraft.world.gen.chunk.ChunkGenerator chunkgenerator;
 
         if (worlddimension == null) {
-            dimensionmanager = (DimensionType) console.registryManager.a().d(DimensionType.OVERWORLD_REGISTRY_KEY);
-            chunkgenerator = GeneratorOptions.a(console.registryManager.b(Registry.ay), console.registryManager.b(Registry.ar), (new Random()).nextLong());
+            dimensionmanager = (DimensionType) console.registryManager.getDimensionTypes().getOrThrow(DimensionType.OVERWORLD_REGISTRY_KEY);
+            chunkgenerator = GeneratorOptions.createOverworldGenerator(console.registryManager.get(Registry.BIOME_KEY), console.registryManager.get(Registry.NOISE_SETTINGS_WORLDGEN), (new Random()).nextLong());
         } else {
-            dimensionmanager = worlddimension.b();
-            chunkgenerator = worlddimension.c();
+            dimensionmanager = worlddimension.getDimensionType();
+            chunkgenerator = worlddimension.getChunkGenerator();
         }
 
-        RegistryKey<net.minecraft.world.World> worldKey = RegistryKey.a(Registry.L, new Identifier(name.toLowerCase(java.util.Locale.ENGLISH)));
+        RegistryKey<net.minecraft.world.World> worldKey = RegistryKey.of(Registry.DIMENSION, new Identifier(name.toLowerCase(java.util.Locale.ENGLISH)));
 
         ServerWorld internal = (ServerWorld) new ServerWorld(console, console.workerExecutor, worldSession, worlddata, worldKey, dimensionmanager, getServer().worldGenerationProgressListenerFactory.create(11),
                 chunkgenerator, worlddata.getGeneratorOptions().isDebugWorld(), j, creator.environment() == Environment.NORMAL ? list : ImmutableList.of(), true, creator.environment(), generator);
@@ -1338,7 +1338,7 @@ public final class CraftServer implements Server {
     @Override
     @Deprecated
     public CraftMapView getMap(int id) {
-        MapState worldmap = console.getWorld(net.minecraft.world.World.OVERWORLD).a("map_" + id);
+        MapState worldmap = console.getWorld(net.minecraft.world.World.OVERWORLD).getMapState("map_" + id);
         if (worldmap == null) {
             return null;
         }
@@ -1373,7 +1373,7 @@ public final class CraftServer implements Server {
         net.minecraft.item.ItemStack stack = FilledMapItem.createMap(worldServer, structurePosition.getX(), structurePosition.getZ(), MapView.Scale.NORMAL.getValue(), true, true);
         FilledMapItem.fillExplorationMap(worldServer, stack);
         // "+" map ID taken from EntityVillager
-        FilledMapItem.getOrCreateMapState(stack, worldServer).addDecorationsTag(stack, structurePosition, "+", MapIcon.Type.a(structureType.getMapIcon().getValue()));
+        FilledMapItem.getOrCreateMapState(stack, worldServer).addDecorationsTag(stack, structurePosition, "+", MapIcon.Type.byId(structureType.getMapIcon().getValue()));
 
         return CraftItemStack.asBukkitCopy(stack);
     }
@@ -1566,7 +1566,7 @@ public final class CraftServer implements Server {
 
     @Override
     public File getWorldContainer() {
-        return this.getServer().session.a(net.minecraft.world.World.OVERWORLD).getParentFile();
+        return this.getServer().session.getWorldDirectory(net.minecraft.world.World.OVERWORLD).getParentFile();
     }
 
     @Override
@@ -1855,7 +1855,7 @@ public final class CraftServer implements Server {
     @Override
     public KeyedBossBar getBossBar(NamespacedKey key) {
         Preconditions.checkArgument(key != null, "key");
-        net.minecraft.entity.boss.CommandBossBar bossBattleCustom = getServer().getBossBarManager().a(CraftNamespacedKey.toMinecraft(key));
+        net.minecraft.entity.boss.CommandBossBar bossBattleCustom = getServer().getBossBarManager().get(CraftNamespacedKey.toMinecraft(key));
 
         return (bossBattleCustom == null) ? null : bossBattleCustom.getBukkitEntity();
     }
@@ -1864,7 +1864,7 @@ public final class CraftServer implements Server {
     public boolean removeBossBar(NamespacedKey key) {
         Preconditions.checkArgument(key != null, "key");
         net.minecraft.entity.boss.BossBarManager bossBattleCustomData = getServer().getBossBarManager();
-        net.minecraft.entity.boss.CommandBossBar bossBattleCustom = bossBattleCustomData.a(CraftNamespacedKey.toMinecraft(key));
+        net.minecraft.entity.boss.CommandBossBar bossBattleCustom = bossBattleCustomData.get(CraftNamespacedKey.toMinecraft(key));
 
         if (bossBattleCustom != null) {
             bossBattleCustomData.remove(bossBattleCustom);
@@ -1892,7 +1892,7 @@ public final class CraftServer implements Server {
     public org.bukkit.advancement.Advancement getAdvancement(NamespacedKey key) {
         Preconditions.checkArgument(key != null, "key");
 
-        Advancement advancement = console.getAdvancementLoader().a(CraftNamespacedKey.toMinecraft(key));
+        Advancement advancement = console.getAdvancementLoader().get(CraftNamespacedKey.toMinecraft(key));
         return (advancement == null) ? null : advancement.bukkit;
     }
 

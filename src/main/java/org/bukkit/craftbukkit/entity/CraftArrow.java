@@ -99,7 +99,7 @@ public class CraftArrow extends AbstractProjectile implements AbstractArrow {
     @Override
     public void setPickupStatus(PickupStatus status) {
         Preconditions.checkNotNull(status, "status");
-        getHandle().pickupType = PersistentProjectileEntity.PickupPermission.a(status.ordinal());
+        getHandle().pickupType = PersistentProjectileEntity.PickupPermission.fromOrdinal(status.ordinal());
     }
 
     @Override

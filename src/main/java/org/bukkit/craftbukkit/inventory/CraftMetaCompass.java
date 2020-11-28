@@ -67,7 +67,7 @@ public class CraftMetaCompass extends CraftMetaItem implements CompassMeta {
         super(map);
         String lodestoneWorldString = SerializableMeta.getString(map, LODESTONE_POS_WORLD.BUKKIT, true);
         if (lodestoneWorldString != null) {
-            lodestoneWorld = StringTag.a(lodestoneWorldString);
+            lodestoneWorld = StringTag.of(lodestoneWorldString);
             lodestoneX = (Integer) map.get(LODESTONE_POS_X.BUKKIT);
             lodestoneY = (Integer) map.get(LODESTONE_POS_Y.BUKKIT);
             lodestoneZ = (Integer) map.get(LODESTONE_POS_Z.BUKKIT);
@@ -129,7 +129,7 @@ public class CraftMetaCompass extends CraftMetaItem implements CompassMeta {
         if (lodestoneWorld == null) {
             return null;
         }
-        Optional<RegistryKey<net.minecraft.world.World>> key = net.minecraft.world.World.CODEC.parse(NbtOps.a, lodestoneWorld).result();
+        Optional<RegistryKey<net.minecraft.world.World>> key = net.minecraft.world.World.CODEC.parse(NbtOps.INSTANCE, lodestoneWorld).result();
         ServerWorld worldServer = key.isPresent() ? MinecraftServer.getServer().getWorld(key.get()) : null;
         World world = worldServer != null ? worldServer.getCraftWorld() : null;
         return new Location(world, lodestoneX, lodestoneY, lodestoneZ); // world may be null here, if the referenced world is not loaded
@@ -142,7 +142,7 @@ public class CraftMetaCompass extends CraftMetaItem implements CompassMeta {
             this.lodestoneWorld = null;
         } else {
             RegistryKey<net.minecraft.world.World> key = ((CraftWorld) lodestone.getWorld()).getHandle().getRegistryKey();
-            DataResult<Tag> dataresult = net.minecraft.world.World.CODEC.encodeStart(NbtOps.a, key);
+            DataResult<Tag> dataresult = net.minecraft.world.World.CODEC.encodeStart(NbtOps.INSTANCE, key);
             this.lodestoneWorld = (StringTag) dataresult.get().orThrow();
             this.lodestoneX = lodestone.getBlockX();
             this.lodestoneY = lodestone.getBlockY();

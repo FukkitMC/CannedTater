@@ -196,7 +196,7 @@ public final class CraftMagicNumbers implements UnsafeValues {
             return Material.getMaterial(material);
         }
 
-        Dynamic<Tag> name = new Dynamic<>(NbtOps.a, StringTag.a("minecraft:" + material.toLowerCase(Locale.ROOT)));
+        Dynamic<Tag> name = new Dynamic<>(NbtOps.INSTANCE, StringTag.of("minecraft:" + material.toLowerCase(Locale.ROOT)));
         Dynamic<Tag> converted = Schemas.getFixer().update(TypeReferences.ITEM_NAME, name, version, this.getDataVersion());
 
         if (name.equals(converted)) {
@@ -246,7 +246,7 @@ public final class CraftMagicNumbers implements UnsafeValues {
     }
 
     private static File getBukkitDataPackFolder() {
-        return new File(MinecraftServer.getServer().a(WorldSavePath.DATAPACKS).toFile(), "bukkit");
+        return new File(MinecraftServer.getServer().getSavePath(WorldSavePath.DATAPACKS).toFile(), "bukkit");
     }
 
     @Override
@@ -258,7 +258,7 @@ public final class CraftMagicNumbers implements UnsafeValues {
 
         JsonElement jsonelement = ServerAdvancementLoader.GSON.fromJson(advancement, JsonElement.class);
         JsonObject jsonobject = JsonHelper.asObject(jsonelement, "advancement");
-        net.minecraft.advancement.Advancement.Task nms = net.minecraft.advancement.Advancement.Task.a(jsonobject, new AdvancementEntityPredicateDeserializer(minecraftkey, MinecraftServer.getServer().getPredicateManager()));
+        net.minecraft.advancement.Advancement.Task nms = net.minecraft.advancement.Advancement.Task.fromJson(jsonobject, new AdvancementEntityPredicateDeserializer(minecraftkey, MinecraftServer.getServer().getPredicateManager()));
         if (nms != null) {
             MinecraftServer.getServer().getAdvancementLoader().manager.load(Maps.newHashMap(Collections.singletonMap(minecraftkey, nms)));
             Advancement bukkit = Bukkit.getAdvancement(key);

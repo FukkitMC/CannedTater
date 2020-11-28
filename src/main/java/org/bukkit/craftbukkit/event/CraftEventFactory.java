@@ -1110,7 +1110,7 @@ public class CraftEventFactory {
 
     public static ScreenHandler callInventoryOpenEvent(ServerPlayerEntity player, ScreenHandler container, boolean cancelled) {
         if (player.currentScreenHandler != player.playerScreenHandler) { // fire INVENTORY_CLOSE if one already open
-            player.networkHandler.a(new CloseHandledScreenC2SPacket(player.currentScreenHandler.syncId));
+            player.networkHandler.onCloseHandledScreen(new CloseHandledScreenC2SPacket(player.currentScreenHandler.syncId));
         }
 
         CraftServer server = player.world.getCraftServer();

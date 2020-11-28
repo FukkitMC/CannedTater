@@ -29,7 +29,7 @@ public abstract class CraftContainer<T extends LockableContainerBlockEntity> ext
 
     @Override
     public void setLock(String key) {
-        this.getSnapshot().lock = (key == null) ? ContainerLock.a : new ContainerLock(key);
+        this.getSnapshot().lock = (key == null) ? ContainerLock.EMPTY : new ContainerLock(key);
     }
 
     @Override

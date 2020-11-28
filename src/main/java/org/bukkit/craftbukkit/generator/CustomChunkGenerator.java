@@ -2,7 +2,7 @@ package org.bukkit.craftbukkit.generator;
 
 import com.google.common.base.Preconditions;
 import com.mojang.serialization.Codec;
-
+import java.util.List;
 import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockEntityProvider;
@@ -25,6 +25,7 @@ import net.minecraft.world.chunk.ChunkSection;
 import net.minecraft.world.chunk.ProtoChunk;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.StructureAccessor;
+import org.bukkit.World;
 import org.bukkit.block.Biome;
 import org.bukkit.craftbukkit.block.CraftBlock;
 import org.bukkit.generator.ChunkGenerator;
@@ -53,19 +54,19 @@ public class CustomChunkGenerator extends InternalChunkGenerator {
 
         @Override
         public void setBiome(int x, int z, Biome bio) {
-            for (int y = 0; y < world.getCraftWorld().getMaxHeight(); y += 4) {
+            for (int y = 0; y < world.getWorld().getMaxHeight(); y += 4) {
                 setBiome(x, y, z, bio);
             }
         }
 
         @Override
         public Biome getBiome(int x, int y, int z) {
-            return CraftBlock.biomeBaseToBiome((Registry<net.minecraft.world.biome.Biome>) biome.g, biome.getBiomeForNoiseGen(x >> 2, y >> 2, z >> 2));
+            return CraftBlock.biomeBaseToBiome((Registry<net.minecraft.world.biome.Biome>) biome.field_25831, biome.getBiomeForNoiseGen(x >> 2, y >> 2, z >> 2));
         }
 
         @Override
         public void setBiome(int x, int y, int z, Biome bio) {
-            biome.setBiome(x >> 2, y >> 2, z >> 2, CraftBlock.biomeToBiomeBase((Registry<net.minecraft.world.biome.Biome>) biome.g, bio));
+            biome.setBiome(x >> 2, y >> 2, z >> 2, CraftBlock.biomeToBiomeBase((Registry<net.minecraft.world.biome.Biome>) biome.field_25831, bio));
         }
     }
 
@@ -105,14 +106,14 @@ public class CustomChunkGenerator extends InternalChunkGenerator {
         random.setSeed((long) x * 341873128712L + (long) z * 132897987541L);
 
         // Get default biome data for chunk
-        CustomBiomeGrid biomegrid = new CustomBiomeGrid(new BiomeArray(world.r().b(Registry.ay), ichunkaccess.getPos(), this.getBiomeSource()));
+        CustomBiomeGrid biomegrid = new CustomBiomeGrid(new BiomeArray(world.getRegistryManager().get(Registry.BIOME_KEY), ichunkaccess.getPos(), this.getBiomeSource()));
 
         ChunkData data;
         if (generator.isParallelCapable()) {
-            data = generator.generateChunkData(this.world.getCraftWorld(), random, x, z, biomegrid);
+            data = generator.generateChunkData(this.world.getWorld(), random, x, z, biomegrid);
         } else {
             synchronized (this) {
-                data = generator.generateChunkData(this.world.getCraftWorld(), random, x, z, biomegrid);
+                data = generator.generateChunkData(this.world.getWorld(), random, x, z, biomegrid);
             }
         }
 
@@ -134,7 +135,7 @@ public class CustomChunkGenerator extends InternalChunkGenerator {
         }
 
         // Set biome grid
-        ((ProtoChunk) ichunkaccess).a(biomegrid.biome);
+        ((ProtoChunk) ichunkaccess).setBiomes(biomegrid.biome);
 
         if (craftData.getTiles() != null) {
             for (BlockPos pos : craftData.getTiles()) {
@@ -203,8 +204,8 @@ public class CustomChunkGenerator extends InternalChunkGenerator {
     }
 
     @Override
-    public BlockView a(int i, int j) {
-        return delegate.a(i, j);
+    public BlockView getColumnSample(int i, int j) {
+        return delegate.getColumnSample(i, j);
     }
 
     @Override

@@ -41,12 +41,12 @@ public class DummyGeneratorAccess implements WorldAccess {
 
     @Override
     public TickScheduler<Block> getBlockTickScheduler() {
-        return DummyClientTickScheduler.b();
+        return DummyClientTickScheduler.get();
     }
 
     @Override
     public TickScheduler<Fluid> getFluidTickScheduler() {
-        return DummyClientTickScheduler.b();
+        return DummyClientTickScheduler.get();
     }
 
     @Override
@@ -80,7 +80,7 @@ public class DummyGeneratorAccess implements WorldAccess {
     }
 
     @Override
-    public void a(PlayerEntity entityhuman, int i, BlockPos blockposition, int j) {
+    public void syncWorldEvent(PlayerEntity entityhuman, int i, BlockPos blockposition, int j) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -90,7 +90,7 @@ public class DummyGeneratorAccess implements WorldAccess {
     }
 
     @Override
-    public DynamicRegistryManager r() {
+    public DynamicRegistryManager getRegistryManager() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -100,7 +100,7 @@ public class DummyGeneratorAccess implements WorldAccess {
     }
 
     @Override
-    public <T extends Entity> List<T> a(Class<? extends T> type, Box aabb, Predicate<? super T> prdct) {
+    public <T extends Entity> List<T> getEntitiesByClass(Class<? extends T> type, Box aabb, Predicate<? super T> prdct) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -115,7 +115,7 @@ public class DummyGeneratorAccess implements WorldAccess {
     }
 
     @Override
-    public int a(Heightmap.Type type, int i, int i1) {
+    public int getTopY(Heightmap.Type type, int i, int i1) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -125,12 +125,12 @@ public class DummyGeneratorAccess implements WorldAccess {
     }
 
     @Override
-    public BiomeAccess d() {
+    public BiomeAccess getBiomeAccess() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public Biome a(int i, int i1, int i2) {
+    public Biome getGeneratorStoredBiome(int i, int i1, int i2) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -150,7 +150,7 @@ public class DummyGeneratorAccess implements WorldAccess {
     }
 
     @Override
-    public LightingProvider e() {
+    public LightingProvider getLightingProvider() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -175,22 +175,22 @@ public class DummyGeneratorAccess implements WorldAccess {
     }
 
     @Override
-    public boolean a(BlockPos bp, Predicate<BlockState> prdct) {
+    public boolean testBlockState(BlockPos bp, Predicate<BlockState> prdct) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public boolean a(BlockPos blockposition, BlockState iblockdata, int i, int j) {
+    public boolean setBlockState(BlockPos blockposition, BlockState iblockdata, int i, int j) {
         return false;
     }
 
     @Override
-    public boolean a(BlockPos blockposition, boolean flag) {
+    public boolean removeBlock(BlockPos blockposition, boolean flag) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public boolean a(BlockPos blockposition, boolean flag, Entity entity, int i) {
+    public boolean breakBlock(BlockPos blockposition, boolean flag, Entity entity, int i) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }

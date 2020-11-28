@@ -368,7 +368,7 @@ public class CraftHumanEntity extends CraftLivingEntity implements HumanEntity {
         if (((ServerPlayerEntity) getHandle()).networkHandler == null) return;
         if (getHandle().currentScreenHandler != getHandle().playerScreenHandler) {
             // fire INVENTORY_CLOSE if one already open
-            ((ServerPlayerEntity) getHandle()).networkHandler.a(new CloseHandledScreenC2SPacket(getHandle().currentScreenHandler.syncId));
+            ((ServerPlayerEntity) getHandle()).networkHandler.onCloseHandledScreen(new CloseHandledScreenC2SPacket(getHandle().currentScreenHandler.syncId));
         }
         ServerPlayerEntity player = (ServerPlayerEntity) getHandle();
         ScreenHandler container;
@@ -534,7 +534,7 @@ public class CraftHumanEntity extends CraftLivingEntity implements HumanEntity {
     @Override
     public org.bukkit.entity.Entity getShoulderEntityLeft() {
         if (!getHandle().getShoulderEntityLeft().isEmpty()) {
-            Optional<Entity> shoulder = EntityType.a(getHandle().getShoulderEntityLeft(), getHandle().world);
+            Optional<Entity> shoulder = EntityType.getEntityFromTag(getHandle().getShoulderEntityLeft(), getHandle().world);
 
             return (!shoulder.isPresent()) ? null : shoulder.get().getBukkitEntity();
         }
@@ -553,7 +553,7 @@ public class CraftHumanEntity extends CraftLivingEntity implements HumanEntity {
     @Override
     public org.bukkit.entity.Entity getShoulderEntityRight() {
         if (!getHandle().getShoulderEntityRight().isEmpty()) {
-            Optional<Entity> shoulder = EntityType.a(getHandle().getShoulderEntityRight(), getHandle().world);
+            Optional<Entity> shoulder = EntityType.getEntityFromTag(getHandle().getShoulderEntityRight(), getHandle().world);
 
             return (!shoulder.isPresent()) ? null : shoulder.get().getBukkitEntity();
         }

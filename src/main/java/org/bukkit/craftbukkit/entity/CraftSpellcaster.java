@@ -38,6 +38,6 @@ public class CraftSpellcaster extends CraftIllager implements Spellcaster {
     }
 
     public static SpellcastingIllagerEntity.Spell toNMSSpell(Spell spell) {
-        return SpellcastingIllagerEntity.Spell.a(spell.ordinal());
+        return SpellcastingIllagerEntity.Spell.byId(spell.ordinal());
     }
 }

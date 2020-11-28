@@ -27,7 +27,7 @@ public class FukkitEarlyRiser {
                 Path file = path.relativize(f);
                 String name = file.toString();
 
-                if (name.endsWith(".class") && name.startsWith("net")) {
+                if (name.endsWith(".class") && (name.startsWith("net") || name.startsWith("com"))) {
                     ClassNode patch = new ClassNode();
                     byte[] patchBytes = Files.readAllBytes(f);
                     new ClassReader(patchBytes).accept(patch, 0);
