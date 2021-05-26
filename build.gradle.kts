@@ -2,6 +2,9 @@ plugins {
     id("fabric-loom") version "0.5.35"
 }
 
+project.lifecycle("This does not work")
+return
+
 group = "io.github.fukkitmc"
 version = "1.0.0-SNAPSHOT"
 
